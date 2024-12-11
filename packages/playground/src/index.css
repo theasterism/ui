@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@import "@theanalog/ui/styles.css";
+
+@layer base {
+  body {
+    @apply min-h-dvh;
+  }
+}
