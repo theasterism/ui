@@ -33,16 +33,16 @@ export function InputsDemo() {
     <div className="flex flex-col gap-4 w-full">
       <div className="flex flex-row gap-4 w-full">
         <Input type="email" placeholder="tim@apple.com" />
-        <Input type="email" placeholder="tim@apple.com" disabled />
+        <Input type="email-disabled" placeholder="tim@apple.com" disabled />
       </div>
       <div className="flex flex-row gap-4 w-full">
         <div className="grid items-center w-full gap-2">
-          <Label htmlFor="email">Input with label</Label>
-          <Input id="email" type="email" placeholder="tim@apple.com" />
+          <Label htmlFor="email-label">Input with label</Label>
+          <Input id="email-label" type="email" placeholder="tim@apple.com" />
         </div>
         <div className="grid items-center w-full gap-2">
-          <Label htmlFor="email">Input with label</Label>
-          <Input id="email" type="email" placeholder="tim@apple.com" disabled />
+          <Label htmlFor="email-label-disabled">Input with label</Label>
+          <Input id="email-label-disabled" type="email" placeholder="tim@apple.com" disabled />
         </div>
       </div>
       <div className="flex flex-row gap-4 w-full">
@@ -51,18 +51,18 @@ export function InputsDemo() {
           <Input id="password" type="password" />
         </div>
         <div className="grid items-center w-full gap-2">
-          <Label htmlFor="password">Password</Label>
-          <Input id="password" type="password" disabled />
+          <Label htmlFor="password-disabled">Password</Label>
+          <Input id="password-disabled" type="password" disabled />
         </div>
       </div>
       <div className="flex flex-row gap-4 w-full">
         <div className="grid items-center w-full gap-2">
-          <Label htmlFor="picture">File Input</Label>
-          <Input id="picture" type="file" />
+          <Label htmlFor="file">File Input</Label>
+          <Input id="file" type="file" />
         </div>
         <div className="grid items-center w-full gap-2">
-          <Label htmlFor="picture">File Input</Label>
-          <Input id="picture" type="file" disabled />
+          <Label htmlFor="file-disabled">File Input</Label>
+          <Input id="file-disabled" type="file" disabled />
         </div>
       </div>
       <div className="flex flex-row gap-4 w-full">
@@ -71,8 +71,8 @@ export function InputsDemo() {
           <Textarea className="resize-none" id="text" />
         </div>
         <div className="grid w-full gap-2">
-          <Label htmlFor="text">Textarea</Label>
-          <Textarea value={textAreaDemoText} id="text" disabled />
+          <Label htmlFor="text-disabled">Textarea</Label>
+          <Textarea value={textAreaDemoText} id="text-disabled" disabled />
         </div>
       </div>
     </div>
