@@ -23,7 +23,8 @@
   "scripts": {
     "build": "rslib build",
     "check": "biome check --write",
-    "dev": "rslib build --watch"
+    "dev": "rslib build --watch",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@rsbuild/core": "~1.1.9",

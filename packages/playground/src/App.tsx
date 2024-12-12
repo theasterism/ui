@@ -1,10 +1,10 @@
 import { Button } from "@theanalog/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@theanalog/ui/card";
+import { Checkbox } from "@theanalog/ui/checkbox";
 import { Input } from "@theanalog/ui/input";
-import { ColorPalette } from "./components/pallete";
 import { Label } from "@theanalog/ui/label";
 import { Textarea } from "@theanalog/ui/textarea";
-import { Checkbox } from "@theanalog/ui/checkbox";
+import { ColorPalette } from "./components/pallete";
 
 const textAreaDemoText = `Here's to the crazy ones.
 The misfits.

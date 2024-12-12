@@ -1,11 +1,12 @@
 import * as LabelPrimitive from "@radix-ui/react-label";
-import { cva, type VariantProps } from "class-variance-authority";
+import { type VariantProps, cva } from "class-variance-authority";
+import type { Ref } from "react";
 import { cn } from "./lib/utils";
 
 const labelVariants = cva("text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70");
 
 export interface LabelProps extends LabelPrimitive.LabelProps, VariantProps<typeof labelVariants> {
-  ref?: any;
+  ref: Ref<HTMLLabelElement> | undefined;
 }
 
 const Label = ({ className, ref, ...props }: LabelProps) => (
