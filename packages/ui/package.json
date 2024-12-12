@@ -34,9 +34,20 @@
     "typescript": "^5.7.2"
   },
   "peerDependencies": {
+    "@types/react": "*",
+    "@types/react-dom": "*",
     "iconoir-react": ">=7.10.0",
     "react": ">=16.9.0",
-    "react-dom": "^19.0.0"
+    "react-dom": ">=19.0.0",
+    "tailwindcss": ">=4.0.0-beta.6"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "@types/react-dom": {
+      "optional": true
+    }
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.1.2",

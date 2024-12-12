@@ -3,6 +3,8 @@
 *.local
 *.log*
 
+.turbo
+
 # Dist
 node_modules
 dist/

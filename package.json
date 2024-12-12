@@ -10,11 +10,15 @@
   },
   "private": true,
   "scripts": {
-    "dev": "bun --filter '*' dev",
-    "build": "bun --filter '*' build"
+    "dev": "turbo run dev",
+    "build": "turbo run build"
   },
   "sideEffects": false,
   "trustedDependencies": ["@biomejs/biome", "core-js", "svelte-preprocess"],
   "type": "module",
-  "workspaces": ["packages/*"]
+  "workspaces": ["packages/*"],
+  "devDependencies": {
+    "turbo": "^2.3.3"
+  },
+  "packageManager": "bun@1.1.38"
 }
