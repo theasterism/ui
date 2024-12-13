@@ -23,6 +23,6 @@ await publish({
   branch: "dev",
   tag: process.env.TAG,
   ghToken: process.env.GH_TOKEN,
-});
+}).catch((err) => console.error(err));
 
 process.exit(0);
