@@ -12,9 +12,41 @@ function App() {
       <div>
         <h1 className="font-bold">The Analog Co. Design System</h1>
         <hr className="my-4" />
-        <span>Work In Progress.</span>
+        <div className="flex gap-2">
+          <Badge variant="warning" noHover>
+            Work In Progress.
+          </Badge>
+          <Badge variant="info" noHover>
+            v0
+          </Badge>
+        </div>
       </div>
       <ColorPalette />
+      <div className="flex flex-col gap-4">
+        <h2 className="">Badge</h2>
+        <div className="flex flex-row flex-wrap gap-4 w-auto">
+          <Badge noHover>Badge</Badge>
+          <Badge noHover variant="primary">
+            Badge
+          </Badge>
+          <Badge noHover variant="secondary">
+            Badge
+          </Badge>
+          <Badge noHover variant="info">
+            Badge
+          </Badge>
+          <Badge noHover variant="warning">
+            Badge
+          </Badge>
+          <Badge noHover variant="destructive">
+            Badge
+          </Badge>
+          <Badge noHover variant="success">
+            Badge
+          </Badge>
+        </div>
+      </div>
+
       <div className="flex flex-col gap-4 w-auto items-start">
         <h2 className="">Button</h2>
         <div className="flex flex-col gap-4 w-auto">
@@ -26,13 +58,7 @@ function App() {
           <Button variant="link">Button text</Button>
         </div>
       </div>
-      <div className="flex flex-col gap-4 items-start w-full">
-        <h2 className="">Form Components</h2>
-        <div className="flex flex-col gap-10 items-start w-full">
-          <InputsDemo />
-          <CheckboxDemo />
-        </div>
-      </div>
+
       <div className="flex flex-col gap-4">
         <h2 className="">Card</h2>
         <div className="flex flex-row gap-4 w-auto">
@@ -48,6 +74,13 @@ function App() {
           </Card>
         </div>
       </div>
+      <div className="flex flex-col gap-4 items-start w-full">
+        <h2 className="">Form Components</h2>
+        <div className="flex flex-col gap-10 items-start w-full">
+          <InputsDemo />
+          <CheckboxDemo />
+        </div>
+      </div>
       <div className="flex flex-col gap-4">
         <h2 className="">Tooltip</h2>
         <div className="flex flex-row gap-4 w-auto">
@@ -61,18 +94,6 @@ function App() {
               <p>Add to library</p>
             </TooltipContent>
           </Tooltip>
-        </div>
-      </div>
-      <div className="flex flex-col gap-4">
-        <h2 className="">Badge</h2>
-        <div className="flex flex-row flex-wrap gap-4 w-auto">
-          <Badge>Badge</Badge>
-          <Badge variant="primary">Badge</Badge>
-          <Badge variant="secondary">Badge</Badge>
-          <Badge variant="info">Badge</Badge>
-          <Badge variant="warning">Badge</Badge>
-          <Badge variant="destructive">Badge</Badge>
-          <Badge variant="success">Badge</Badge>
         </div>
       </div>
     </section>

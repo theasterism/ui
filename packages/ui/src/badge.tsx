@@ -19,17 +19,21 @@ const badgeVariants = cva(
         success:
           "border border-success-border-subtle bg-transparent text-success-foreground shadow hover:bg-success-background-element-hover",
       },
+      noHover: {
+        true: "pointer-events-none",
+      },
     },
     defaultVariants: {
       variant: "default",
+      noHover: false,
     },
   },
 );
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof badgeVariants> {}
 
-function Badge({ className, variant, ...props }: BadgeProps) {
-  return <div className={cn(badgeVariants({ variant }), className)} {...props} />;
+function Badge({ className, variant, noHover, ...props }: BadgeProps) {
+  return <div className={cn(badgeVariants({ variant, noHover }), className)} {...props} />;
 }
 
 export { Badge, badgeVariants };

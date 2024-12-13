@@ -13,6 +13,7 @@ const Card = ({ className, ref, ...props }: DivElementProps) => (
     {...props}
   />
 );
+
 Card.displayName = "Card";
 
 const CardHeader = ({ className, ref, ...props }: DivElementProps) => (

@@ -21,6 +21,7 @@
   "type": "module",
   "workspaces": ["packages/*"],
   "devDependencies": {
+    "@tanstack/config": "^0.14.2",
     "turbo": "^2.3.3"
   },
   "packageManager": "bun@1.1.38"
