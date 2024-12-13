@@ -41,6 +41,8 @@ jobs:
       
       - name: Publish
         run: |
+          git config --global user.name 'Bachitter Chahal'
+          git config --global user.email '143877686+bachiitter@users.noreply.github.com'
           npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
           pnpm run release
         env:
