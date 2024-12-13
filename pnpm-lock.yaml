@@ -92,8 +92,8 @@ importers:
         specifier: ^4.0.0-beta.6
         version: 4.0.0-beta.6(vite@6.0.3(@types/node@22.10.2)(jiti@2.4.1)(lightningcss@1.28.2)(yaml@2.6.1))
       '@theanalog/orphos':
-        specifier: ^0.0.1-next
-        version: 0.0.1-next(@types/react-dom@19.0.2(@types/react@19.0.1))(@types/react@19.0.1)(iconoir-react@7.10.1(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(tailwindcss@4.0.0-beta.6)
+        specifier: workspace:*
+        version: link:../orphos
       next-themes:
         specifier: ^0.4.4
         version: 0.4.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -1160,21 +1160,6 @@ packages:
     resolution: {integrity: sha512-C431mIFMWgsnQKvmwjysfUbkqGWGtNgXqIcS14h/0QUvwSCx+ctC1UrsvGY08FrNouo/iAExRoOqUbD6cNagPg==}
     engines: {node: '>=18'}
     hasBin: true
-
-  '@theanalog/orphos@0.0.1-next':
-    resolution: {integrity: sha512-bfZG6wA+tfZaE0JZYlZAtFzDFNKbTGkjC+nMtklYg0zofZ2rsGY3ka9h8J3q64kmy4wGpJG+B7x9t6dgIul9mw==}
-    peerDependencies:
-      '@types/react': '*'
-      '@types/react-dom': '*'
-      iconoir-react: '>=7.10.0'
-      react: '>=18.0.0'
-      react-dom: '>=18.0.0'
-      tailwindcss: '>=4.0.0-beta.6'
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-      '@types/react-dom':
-        optional: true
 
   '@total-typescript/tsconfig@1.0.4':
     resolution: {integrity: sha512-fO4ctMPGz1kOFOQ4RCPBRBfMy3gDn+pegUfrGyUFRMv/Rd0ZM3/SHH3hFCYG4u6bPLG8OlmOGcBLDexvyr3A5w==}
@@ -3540,25 +3525,6 @@ snapshots:
       - supports-color
       - typescript
       - vite
-
-  '@theanalog/orphos@0.0.1-next(@types/react-dom@19.0.2(@types/react@19.0.1))(@types/react@19.0.1)(iconoir-react@7.10.1(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(tailwindcss@4.0.0-beta.6)':
-    dependencies:
-      '@radix-ui/react-checkbox': 1.1.3(@types/react-dom@19.0.2(@types/react@19.0.1))(@types/react@19.0.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@radix-ui/react-label': 2.1.1(@types/react-dom@19.0.2(@types/react@19.0.1))(@types/react@19.0.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@radix-ui/react-radio-group': 1.2.2(@types/react-dom@19.0.2(@types/react@19.0.1))(@types/react@19.0.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@radix-ui/react-slot': 1.1.1(@types/react@19.0.1)(react@19.0.0)
-      '@radix-ui/react-switch': 1.1.2(@types/react-dom@19.0.2(@types/react@19.0.1))(@types/react@19.0.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@radix-ui/react-tooltip': 1.1.5(@types/react-dom@19.0.2(@types/react@19.0.1))(@types/react@19.0.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      class-variance-authority: 0.7.1
-      clsx: 2.1.1
-      iconoir-react: 7.10.1(react@19.0.0)
-      react: 19.0.0
-      react-dom: 19.0.0(react@19.0.0)
-      tailwind-merge: 2.5.5
-      tailwindcss: 4.0.0-beta.6
-    optionalDependencies:
-      '@types/react': 19.0.1
-      '@types/react-dom': 19.0.2(@types/react@19.0.1)
 
   '@total-typescript/tsconfig@1.0.4': {}
 

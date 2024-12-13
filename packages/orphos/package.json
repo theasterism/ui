@@ -13,10 +13,7 @@
   },
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": [
-    "dist",
-    "styles.css"
-  ],
+  "files": ["dist", "styles.css"],
   "repository": {
     "type": "git",
     "url": "https://github.com/theanalogcompany/ui.git",
@@ -25,7 +22,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {},
+  "scripts": {
+    "build": "rslib build",
+    "check": "biome check --write",
+    "dev": "rslib build --watch",
+    "typecheck": "tsc --noEmit"
+  },
   "devDependencies": {
     "@rsbuild/core": "~1.1.9",
     "@rsbuild/plugin-react": "^1.1.0",
