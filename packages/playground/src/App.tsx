@@ -3,6 +3,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { ColorPalette } from "./components/pallete";
 import { InputsDemo } from "./components/inputs";
 import { CheckboxDemo } from "./components/checkbox";
+import { Tooltip, TooltipTrigger, TooltipContent } from "@theanalog/ui/tooltip";
+import { Badge } from "@theanalog/ui/badge";
 
 function App() {
   return (
@@ -42,6 +44,33 @@ function App() {
               <Button className="w-full">Mark all as read</Button>
             </CardFooter>
           </Card>
+        </div>
+      </div>
+      <div className="flex flex-col gap-4">
+        <h2 className="">Tooltip</h2>
+        <div className="flex flex-row gap-4 w-auto">
+          <Tooltip delayDuration={250}>
+            <TooltipTrigger asChild>
+              <Button size="sm" variant="secondary">
+                Hover
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent side="bottom" sideOffset={8} align="start">
+              <p>Add to library</p>
+            </TooltipContent>
+          </Tooltip>
+        </div>
+      </div>
+      <div className="flex flex-col gap-4">
+        <h2 className="">Badge</h2>
+        <div className="flex flex-row flex-wrap gap-4 w-auto">
+          <Badge>Badge</Badge>
+          <Badge variant="primary">Badge</Badge>
+          <Badge variant="secondary">Badge</Badge>
+          <Badge variant="info">Badge</Badge>
+          <Badge variant="warning">Badge</Badge>
+          <Badge variant="destructive">Badge</Badge>
+          <Badge variant="success">Badge</Badge>
         </div>
       </div>
     </section>

@@ -9,11 +9,12 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "border border-element-border bg-background-element hover:bg-background-element-hover text-white active:bg-background-element-active",
+          "border border-element-border bg-background-element hover:bg-background-element-hover text-black dark:text-white  active:bg-background-element-active",
         primary: "bg-primary-solid hover:bg-primary-solid-hover active:bg-primary-solid-hover text-white",
         secondary:
-          "bg-background-element hover:bg-background-element-hover active:bg-background-element-active text-white",
-        ghost: "bg-transparent hover:bg-background-element-hover active:bg-background-element-active text-white",
+          "bg-background-element hover:bg-background-element-hover active:bg-background-element-active text-foreground dark:text-white",
+        ghost:
+          "bg-transparent hover:bg-background-element-hover active:bg-background-element-active text-foreground dark:text-white",
         link: "underline-offset-4 text-primary-solid bg-transparent hover:underline",
         danger: "bg-danger-solid hover:bg-danger-solid-hover active:bg-danger-solid-hover text-white",
       },
