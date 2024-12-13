@@ -10,7 +10,7 @@ function App() {
   return (
     <section className="flex flex-col gap-20 px-4 md:px-8 py-32 max-w-4xl w-full mx-auto">
       <div>
-        <h1 className="font-bold">The Analog Co. Design System</h1>
+        <h1 className="font-bold">Orphos Design System</h1>
         <hr className="my-4" />
         <div className="flex gap-2">
           <Badge variant="warning" noHover>
