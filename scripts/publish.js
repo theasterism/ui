@@ -20,7 +20,7 @@ await publish({
     },
   },
   rootDir: resolve(__dirname, ".."),
-  branch: process.env.BRANCH,
+  branch: "dev",
   tag: process.env.TAG,
   ghToken: process.env.GH_TOKEN,
 });
