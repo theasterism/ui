@@ -1,17 +1,22 @@
 {
   "name": "@theanalog/orphos",
-  "version": "0.1.0",
+  "version": "0.0.0-next",
   "type": "module",
+  "license": "MIT",
   "exports": {
     "./*": {
       "import": "./dist/*.js",
       "types": "./dist/*.d.ts"
     },
+    "./package.json": "./package.json",
     "./styles.css": "./styles.css"
   },
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist", "styles.css"],
+  "files": [
+    "dist",
+    "styles.css"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/theanalogcompany/ui.git",
@@ -38,8 +43,8 @@
     "@types/react": "*",
     "@types/react-dom": "*",
     "iconoir-react": ">=7.10.0",
-    "react": ">=16.9.0",
-    "react-dom": ">=19.0.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0",
     "tailwindcss": ">=4.0.0-beta.6"
   },
   "peerDependenciesMeta": {

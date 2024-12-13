@@ -1,5 +1,6 @@
 {
   "name": "ui",
+  "license": "MIT",
   "dependencies": {
     "@biomejs/biome": "^1.9.4",
     "@total-typescript/tsconfig": "^1.0.4",
@@ -14,7 +15,8 @@
     "build": "turbo run build",
     "fix": "biome check . --write",
     "format": "biome format . --write",
-    "typecheck": "bun --filter=* typecheck"
+    "typecheck": "bun --filter=* typecheck",
+    "release": "turbo run build && bun scripts/publish.ts"
   },
   "sideEffects": false,
   "trustedDependencies": ["@biomejs/biome", "core-js", "svelte-preprocess"],
