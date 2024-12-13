@@ -25,12 +25,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {
-    "build": "rslib build",
-    "check": "biome check --write",
-    "dev": "rslib build --watch",
-    "typecheck": "tsc --noEmit"
-  },
+  "scripts": {},
   "devDependencies": {
     "@rsbuild/core": "~1.1.9",
     "@rsbuild/plugin-react": "^1.1.0",
