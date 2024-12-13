@@ -13,14 +13,14 @@ export function ColorPalette() {
         <div className="flex flex-col gap-2">
           <p>Background:</p>
           <div className="flex gap-2">
-            <div className="size-12 bg-background border-3 border-border-subtle rounded-full" />
-            <div className="size-12 bg-background-subtle border-3 border-border-subtle rounded-full" />
+            <div className="size-12 bg-background-subtle dark:bg-background border-3 border-border-subtle rounded-full" />
+            <div className="size-12 bg-background dark:bg-background-subtle border-3 border-border-subtle rounded-full" />
           </div>
         </div>
         <div className="flex flex-col gap-2">
           <p>Text:</p>
           <div className="flex gap-2">
-            <div className="size-12 bg-white border-3 border-border-subtle rounded-full" />
+            <div className="size-12 bg-black dark:bg-white border-3 border-border-subtle rounded-full" />
             <div className="size-12 bg-foreground border-3 border-border-subtle rounded-full" />
             <div className="size-12 bg-foreground-subtle border-3 border-border-subtle rounded-full" />
           </div>

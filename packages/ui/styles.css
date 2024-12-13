@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 @layer base {
   :root {
     /* Border Radius */
@@ -10,8 +12,9 @@
 @layer base {
   :root {
     /* Gray - Mauve */
-    --gray-1: #faf9fb;
-    --gray-2: #fdfcfd;
+
+    --gray-1: #fdfcfd;
+    --gray-2: #faf9fb;
     --gray-3: #f2eff3;
     --gray-4: #eae7ec;
     --gray-5: #e3dfe6;
@@ -185,8 +188,8 @@
     @media (color-gamut: p3) {
       :root {
         /* Gray - Mauve */
-        --gray-1: color(display-p3 0.98 0.976 0.984);
-        --gray-2: color(display-p3 0.991 0.988 0.992);
+        --gray-1: color(display-p3 0.991 0.988 0.992);
+        --gray-2: color(display-p3 0.98 0.976 0.984);
         --gray-3: color(display-p3 0.946 0.938 0.952);
         --gray-4: color(display-p3 0.915 0.906 0.925);
         --gray-5: color(display-p3 0.886 0.876 0.901);
@@ -519,7 +522,7 @@
     font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
   }
   body {
-    @apply scroll-smooth min-w-[320px] text-base font-sans antialiased bg-background text-foreground;
+    @apply scroll-smooth min-w-[320px] text-base font-sans antialiased bg-background-subtle dark:bg-background text-foreground;
     font-synthesis-weight: none;
     text-rendering: optimizeLegibility;
     -webkit-text-size-adjust: 100%;
@@ -558,7 +561,7 @@
     @apply m-0 border-t border-border-subtle p-0;
   }
   th {
-    @apply border border-border-subtle px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right bg-background-subtle;
+    @apply border border-border-subtle px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right bg-background dark:bg-background-subtle;
   }
   td {
     @apply border border-border-subtle px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right;
@@ -570,6 +573,6 @@
     @apply my-6 ml-4 list-decimal [&>li]:mt-2 [&>li]:pl-1 marker:text-primary-solid;
   }
   code {
-    @apply relative rounded bg-background-subtle px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
+    @apply relative rounded bg-background dark:bg-background-subtle px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
   }
 }
