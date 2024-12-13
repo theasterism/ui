@@ -16,7 +16,7 @@
     "fix": "biome check . --write",
     "format": "biome format . --write",
     "typecheck": "bun --filter=* typecheck",
-    "release": "TAG=v0.0.0-next CI=true node scripts/publish.js"
+    "release": "TAG=v0.0.1-next CI=true node scripts/publish.js"
   },
   "sideEffects": false,
   "type": "module",
