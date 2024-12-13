@@ -24,3 +24,5 @@ await publish({
   tag: process.env.TAG,
   ghToken: process.env.GH_TOKEN,
 });
+
+process.exit(0);
