@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@theanalog/orphos': workspace:*
+
 importers:
 
   .:
@@ -92,7 +95,7 @@ importers:
         specifier: ^4.0.0-beta.6
         version: 4.0.0-beta.6(vite@6.0.3(@types/node@22.10.2)(jiti@2.4.1)(lightningcss@1.28.2)(yaml@2.6.1))
       '@theanalog/orphos':
-        specifier: ^0.0.0-next
+        specifier: workspace:*
         version: link:../orphos
       next-themes:
         specifier: ^0.4.4
