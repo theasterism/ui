@@ -1,7 +1,6 @@
-import { Checkbox } from "@theanalog/ui/checkbox";
-import { Label } from "@theanalog/ui/label";
-import { RadioGroup, RadioGroupItem } from "@theanalog/ui/radio-group";
-import { Switch } from "@theanalog/ui/switch";
+import { Checkbox } from "@theanalog/orphos/checkbox";
+import { Label } from "@theanalog/orphos/label";
+import { Switch } from "@theanalog/orphos/switch";
 import { Fragment } from "react";
 import RadioDemo from "./radio-group";
 

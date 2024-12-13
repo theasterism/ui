@@ -1,6 +1,6 @@
-import { Input } from "@theanalog/ui/input";
-import { Label } from "@theanalog/ui/label";
-import { Textarea } from "@theanalog/ui/textarea";
+import { Input } from "@theanalog/orphos/input";
+import { Label } from "@theanalog/orphos/label";
+import { Textarea } from "@theanalog/orphos/textarea";
 import { Fragment } from "react";
 
 const textAreaDemoText = `Here's to the crazy ones.

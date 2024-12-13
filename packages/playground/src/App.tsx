@@ -1,10 +1,10 @@
-import { Button } from "@theanalog/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@theanalog/ui/card";
+import { Button } from "@theanalog/orphos/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@theanalog/orphos/card";
 import { ColorPalette } from "./components/pallete";
 import { InputsDemo } from "./components/inputs";
 import { CheckboxDemo } from "./components/checkbox";
-import { Tooltip, TooltipTrigger, TooltipContent } from "@theanalog/ui/tooltip";
-import { Badge } from "@theanalog/ui/badge";
+import { Tooltip, TooltipTrigger, TooltipContent } from "@theanalog/orphos/tooltip";
+import { Badge } from "@theanalog/orphos/badge";
 
 function App() {
   return (

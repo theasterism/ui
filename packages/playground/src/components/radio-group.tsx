@@ -1,5 +1,5 @@
-import { Label } from "@theanalog/ui/label";
-import { RadioGroup, RadioGroupItem } from "@theanalog/ui/radio-group";
+import { Label } from "@theanalog/orphos/label";
+import { RadioGroup, RadioGroupItem } from "@theanalog/orphos/radio-group";
 import { Fragment } from "react";
 
 export default function RadioDemo() {

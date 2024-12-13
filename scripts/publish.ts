@@ -7,8 +7,8 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url));
 await publish({
   packages: [
     {
-      name: "@theanalogcompany/ui",
-      packageDir: "packages/ui",
+      name: "@theanalogcompany/orphos",
+      packageDir: "packages/orphos",
     },
   ],
   branchConfigs: {
