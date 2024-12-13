@@ -8,7 +8,7 @@ import { Badge } from "@theanalog/ui/badge";
 
 function App() {
   return (
-    <section className="flex flex-col gap-32 px-4 md:px-8 py-32 max-w-4xl w-full mx-auto">
+    <section className="flex flex-col gap-20 px-4 md:px-8 py-32 max-w-4xl w-full mx-auto">
       <div>
         <h1 className="font-bold">The Analog Co. Design System</h1>
         <hr className="my-4" />
@@ -26,10 +26,12 @@ function App() {
           <Button variant="link">Button text</Button>
         </div>
       </div>
-      <div className="flex flex-col gap-10 items-start">
+      <div className="flex flex-col gap-4 items-start w-full">
         <h2 className="">Form Components</h2>
-        <InputsDemo />
-        <CheckboxDemo />
+        <div className="flex flex-col gap-10 items-start w-full">
+          <InputsDemo />
+          <CheckboxDemo />
+        </div>
       </div>
       <div className="flex flex-col gap-4">
         <h2 className="">Card</h2>
