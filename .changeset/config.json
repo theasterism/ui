@@ -2,10 +2,10 @@
   "$schema": "https://unpkg.com/@changesets/config@3.0.4/schema.json",
   "changelog": "@changesets/cli/changelog",
   "commit": true,
-  "fixed": [],
+  "fixed": [["@theanalog/orphos"]],
   "linked": [],
   "access": "public",
   "baseBranch": "dev",
   "updateInternalDependencies": "patch",
-  "ignore": []
+  "ignore": ["@theanalog/playground"]
 }
