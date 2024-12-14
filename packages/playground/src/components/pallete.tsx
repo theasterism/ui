@@ -34,7 +34,7 @@ export function ColorPalette() {
         <h2>Palette</h2>
         <div className="flex flex-col sm:flex-row sm:flex-wrap gap-6">
           {palette.map((color) => (
-            <div key={color} className="grid grid-cols-5">
+            <div key={color} className="grid grid-cols-5 w-fit">
               {colorScaleNumbers.map((shade) => (
                 <span
                   style={{
