@@ -9,7 +9,7 @@ const inputVariants = cva(
     variants: {
       variant: {
         default: "",
-        file: "file:h-full file:border-solid file:border-element-border file:bg-background-element file:px-3 overflow-hidden file:text-sm file:font-medium file:not-italic file:text-foreground p-0 pe-3 file:me-3 file:border-0 file:border-e disabled:cursor-not-allowed disabled:placeholder:text-foreground-subtle/50 disabled:bg-background-subtle disabled:file:text-foreground-subtle/50 disabled:text-foreground-subtle/50",
+        file: "file:h-full file:border-solid file:border-element-border file:bg-background-element file:px-3 overflow-hidden file:text-sm file:font-medium file:not-italic file:text-foreground p-0 pe-3 file:me-3 file:border-0 file:border-e file:border-e-border-subtle disabled:cursor-not-allowed disabled:placeholder:text-foreground-subtle/50 disabled:bg-background-subtle disabled:file:text-foreground-subtle/50 disabled:text-foreground-subtle/50",
         password: "pe-9",
       },
     },
