@@ -11,8 +11,7 @@
     "build": "turbo run build",
     "fix": "biome check . --write",
     "format": "biome format . --write",
-    "prepublishOnly": "turbo run build --filter=@theanalog/orphos",
-    "release": "changeset version && changeset publish"
+    "release": "turbo run build --filter=@theanalog/orphos && changeset publish"
   },
   "sideEffects": false,
   "type": "module",
