@@ -8,6 +8,7 @@ import { Badge } from "@theanalog/orphos/badge";
 import { DropdownDemo } from "./components/dropdown";
 import { FormDemo } from "./components/form";
 import { AvatarDemo } from "./components/avatar";
+import { CalloutDemo } from "./components/callout";
 
 function App() {
   return (
@@ -66,7 +67,12 @@ function App() {
           <Button variant="link">Button text</Button>
         </div>
       </div>
-
+      <div className="flex flex-col gap-4 w-auto items-start">
+        <h2 className="">Callout</h2>
+        <div className="flex flex-col gap-4 w-full max-w-xl">
+          <CalloutDemo />
+        </div>
+      </div>
       <div className="flex flex-col gap-4">
         <h2 className="">Card</h2>
         <div className="flex flex-row gap-4 w-auto">
