@@ -5,7 +5,7 @@
   "fixed": [["@theanalog/orphos"]],
   "linked": [],
   "access": "public",
-  "baseBranch": "dev",
+  "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "ignore": ["@theanalog/playground"]
 }
