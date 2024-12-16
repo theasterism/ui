@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.3.2
+
+### Patch Changes
+
+- 97533ce: update ring offset color
+
 ## 0.3.1
 
 ### Patch Changes
