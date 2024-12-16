@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.3.0
+
+### Minor Changes
+
+- 062bab5: add form component
+
 ## 0.2.1
 
 ### Patch Changes
