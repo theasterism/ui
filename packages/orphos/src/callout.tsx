@@ -53,7 +53,7 @@ const Callout = React.forwardRef<
       tabIndex={-1}
       className={cn(
         calloutVariants({ variant }),
-        bordered ? (transparent ? "border bg-background" : "border") : null,
+        bordered ? (transparent ? "border bg-transparent" : "border") : null,
         className,
       )}
       {...props}
