@@ -6,6 +6,7 @@ import { CheckboxDemo } from "./components/checkbox";
 import { Tooltip, TooltipTrigger, TooltipContent } from "@theanalog/orphos/tooltip";
 import { Badge } from "@theanalog/orphos/badge";
 import { DropdownDemo } from "./components/dropdown";
+import { FormDemo } from "./components/form";
 
 function App() {
   return (
@@ -79,6 +80,12 @@ function App() {
         <h2 className="">Dropdown Menu</h2>
         <div className="flex flex-col gap-10 items-start w-full">
           <DropdownDemo />
+        </div>
+      </div>
+      <div className="flex flex-col gap-4 items-start w-full">
+        <h2 className="">Form</h2>
+        <div className="flex flex-col gap-10 items-start w-full">
+          <FormDemo />
         </div>
       </div>
       <div className="flex flex-col gap-4 items-start w-full">

@@ -2,6 +2,8 @@ import { type VariantProps, cva } from "class-variance-authority";
 import { Eye, EyeClosed } from "iconoir-react";
 import * as React from "react";
 import { cn } from "./lib/utils";
+import type { FieldError } from "react-hook-form";
+import { useFormField } from "./form";
 
 const inputVariants = cva(
   "flex h-9 w-full bg-background-subtle dark:bg-background rounded-md border border-element-border focus-visible:border-transparent focus-visible:ring-2 focus-visible:ring-offset-background focus-visible:ring-info-focus-ring focus-visible:outline-none px-3 py-1 text-base shadow-sm transition-all placeholder:text-foreground-subtle placeholder:text-sm disabled:cursor-not-allowed disabled:placeholder:text-foreground-subtle/50 disabled:text-foreground-subtle disabled:bg-background-element md:text-sm",
@@ -21,9 +23,10 @@ const inputVariants = cva(
 
 export interface InputProps extends React.ComponentProps<"input">, VariantProps<typeof inputVariants> {
   icon?: React.ReactNode;
+  error: FieldError | undefined;
 }
 
-const Input = ({ className, type, ref, icon, disabled, ...props }: InputProps) => {
+const Input = ({ className, type, ref, icon, error, disabled, ...props }: InputProps) => {
   const variant = type === "file" ? "file" : "default";
 
   if (type === "password") {
@@ -34,7 +37,11 @@ const Input = ({ className, type, ref, icon, disabled, ...props }: InputProps) =
       <div className="relative">
         <input
           disabled={disabled}
-          className={cn(inputVariants({ variant, className }), "peer-focus-visible:border-transparent")}
+          className={cn(
+            inputVariants({ variant, className }),
+            error && "border-danger-element-border",
+            "peer-focus-visible:border-transparent",
+          )}
           type={isVisible ? "text" : "password"}
           ref={ref}
           {...props}
@@ -64,7 +71,7 @@ const Input = ({ className, type, ref, icon, disabled, ...props }: InputProps) =
         <input
           disabled={disabled}
           type={type}
-          className={cn(inputVariants({ variant, className }), "peer ps-9")}
+          className={cn(inputVariants({ variant, className }), error && "border-danger-element-border", "peer ps-9")}
           ref={ref}
           {...props}
         />
@@ -75,7 +82,13 @@ const Input = ({ className, type, ref, icon, disabled, ...props }: InputProps) =
     );
 
   return (
-    <input disabled={disabled} type={type} className={cn(inputVariants({ variant, className }))} ref={ref} {...props} />
+    <input
+      disabled={disabled}
+      type={type}
+      className={cn(inputVariants({ variant, className }), error && "border-danger-element-border")}
+      ref={ref}
+      {...props}
+    />
   );
 };
 
