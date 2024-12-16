@@ -32,7 +32,7 @@ export function DropdownDemo() {
       <DropdownMenuTrigger asChild>
         <Button size="sm">Open</Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
+      <DropdownMenuContent className="w-56" align="start">
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
