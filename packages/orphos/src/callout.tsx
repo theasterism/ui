@@ -59,7 +59,7 @@ const Callout = React.forwardRef<
       {...props}
     >
       <div className={cn("flex gap-2", title && !hideTitle ? "" : "items-center")}>
-        <span className={cn("[&>svg]:size-[18px] [&>svg]:stroke-2", title && !hideTitle ? "mt-0.5" : "")}>
+        <span className={cn("flex-none [&>svg]:size-[18px] [&>svg]:stroke-2", title && !hideTitle ? "mt-0.5" : "")}>
           {icon && supportsCustomIcon ? icon : iconForVariant[variant!]}
         </span>
         <div className="flex flex-col gap-1">
@@ -74,7 +74,7 @@ const Callout = React.forwardRef<
         </div>
         {dismissible ? (
           <Button
-            className="ml-auto px-2.5 overflow-hidden! w-[20px]! h-[20px]! rounded-sm bg-transparent border-none"
+            className="flex-none ml-auto px-2.5 overflow-hidden! w-[20px]! h-[20px]! rounded-sm bg-transparent border-none"
             variant="default"
             aria-label="Dismiss callout"
             onClick={onDismiss}
