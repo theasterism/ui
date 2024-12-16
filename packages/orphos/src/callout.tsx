@@ -74,7 +74,7 @@ const Callout = React.forwardRef<
         </div>
         {dismissible ? (
           <Button
-            className="ml-auto size-5 rounded-sm bg-transparent border-none"
+            className="ml-auto px-2.5 overflow-hidden! w-[20px]! h-[20px]! rounded-sm bg-transparent border-none"
             variant="default"
             aria-label="Dismiss callout"
             onClick={onDismiss}
