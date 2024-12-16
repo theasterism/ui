@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.5.1
+
+### Patch Changes
+
+- 18cbde4: remove avatar fallback border radius
+
 ## 0.5.0
 
 ### Minor Changes
