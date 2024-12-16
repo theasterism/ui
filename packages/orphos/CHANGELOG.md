@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.4.0
+
+### Minor Changes
+
+- 5049958: add avatar component
+
 ## 0.3.2
 
 ### Patch Changes
