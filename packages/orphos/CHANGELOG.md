@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.5.4
+
+### Patch Changes
+
+- 27c3d4d: fix callout button and icon shinking
+
 ## 0.5.3
 
 ### Patch Changes
