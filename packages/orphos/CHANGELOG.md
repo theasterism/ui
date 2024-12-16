@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.5.3
+
+### Patch Changes
+
+- 331b944: fix callout button styles
+
 ## 0.5.2
 
 ### Patch Changes
