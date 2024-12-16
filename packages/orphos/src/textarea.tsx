@@ -1,6 +1,6 @@
 import * as React from "react";
-import { cn } from "./lib/utils";
 import type { FieldError } from "react-hook-form";
+import { cn } from "./lib/utils";
 
 export interface TextAreaProps extends React.ComponentProps<"textarea"> {
   error: FieldError | undefined;

@@ -1,14 +1,14 @@
+import { Badge } from "@theanalog/orphos/badge";
 import { Button } from "@theanalog/orphos/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@theanalog/orphos/card";
-import { ColorPalette } from "./components/pallete";
-import { InputsDemo } from "./components/inputs";
-import { CheckboxDemo } from "./components/checkbox";
-import { Tooltip, TooltipTrigger, TooltipContent } from "@theanalog/orphos/tooltip";
-import { Badge } from "@theanalog/orphos/badge";
-import { DropdownDemo } from "./components/dropdown";
-import { FormDemo } from "./components/form";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@theanalog/orphos/tooltip";
 import { AvatarDemo } from "./components/avatar";
 import { CalloutDemo } from "./components/callout";
+import { CheckboxDemo } from "./components/checkbox";
+import { DropdownDemo } from "./components/dropdown";
+import { FormDemo } from "./components/form";
+import { InputsDemo } from "./components/inputs";
+import { ColorPalette } from "./components/pallete";
 
 function App() {
   return (

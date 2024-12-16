@@ -1,24 +1,24 @@
 import { Button } from "@theanalog/orphos/button";
 import {
   DropdownMenu,
-  DropdownMenuTrigger,
+  DropdownMenuCheckboxItem,
   DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubTrigger,
+  DropdownMenuLabel,
   DropdownMenuPortal,
-  DropdownMenuSubContent,
-  DropdownMenuCheckboxItem,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
 } from "@theanalog/orphos/dropdown-menu";
 import React from "react";
 
-type Checked = any;
+type Checked = boolean;
 
 export function DropdownDemo() {
   const [showStatusBar, setShowStatusBar] = React.useState<Checked>(true);

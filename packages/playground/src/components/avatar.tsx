@@ -1,4 +1,4 @@
-import { Avatar, AvatarImage, AvatarFallback } from "@theanalog/orphos/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@theanalog/orphos/avatar";
 import { Fragment } from "react/jsx-runtime";
 
 export function AvatarDemo() {
