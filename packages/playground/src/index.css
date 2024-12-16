@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "@theanalog/orphos/styles.css";
 
 @layer base {
   body {
