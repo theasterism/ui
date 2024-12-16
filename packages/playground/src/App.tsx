@@ -7,6 +7,7 @@ import { Tooltip, TooltipTrigger, TooltipContent } from "@theanalog/orphos/toolt
 import { Badge } from "@theanalog/orphos/badge";
 import { DropdownDemo } from "./components/dropdown";
 import { FormDemo } from "./components/form";
+import { AvatarDemo } from "./components/avatar";
 
 function App() {
   return (
@@ -24,6 +25,12 @@ function App() {
         </div>
       </div>
       <ColorPalette />
+      <div className="flex flex-col gap-4">
+        <h2 className="">Avatar</h2>
+        <div className="flex flex-row flex-wrap gap-4 w-auto">
+          <AvatarDemo />
+        </div>
+      </div>
       <div className="flex flex-col gap-4">
         <h2 className="">Badge</h2>
         <div className="flex flex-row flex-wrap gap-4 w-auto">
@@ -48,7 +55,6 @@ function App() {
           </Badge>
         </div>
       </div>
-
       <div className="flex flex-col gap-4 w-auto items-start">
         <h2 className="">Button</h2>
         <div className="flex flex-col gap-4 w-auto">
