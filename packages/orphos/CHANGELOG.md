@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.3.1
+
+### Patch Changes
+
+- db9f619: update tailwind
+
 ## 0.3.0
 
 ### Minor Changes
