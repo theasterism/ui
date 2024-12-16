@@ -23,5 +23,9 @@
     "typescript": "^5.7.2"
   },
   "workspaces": ["packages/orphos", "packages/playground"],
-  "packageManager": "bun@1.1.38"
+  "packageManager": "bun@1.1.38",
+  "trustedDependencies": [
+    "@biomejs/biome",
+    "core-js"
+  ]
 }
