@@ -8,6 +8,7 @@
   "private": true,
   "scripts": {
     "dev": "turbo run dev",
+    "deploy": "turbo run deploy --filter=@theanalog/playground",
     "build": "turbo run build",
     "fix": "biome check . --write",
     "format": "biome format . --write",
