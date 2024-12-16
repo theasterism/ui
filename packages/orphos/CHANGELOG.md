@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.5.2
+
+### Patch Changes
+
+- c654b15: change callout background color to transparent
+
 ## 0.5.1
 
 ### Patch Changes
