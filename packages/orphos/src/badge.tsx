@@ -7,17 +7,17 @@ const badgeVariants = cva(
   {
     variants: {
       variant: {
-        default: "border border-border-subtle bg-transparent text-foreground shadow hover:bg-background-element-hover",
+        default: "border border-border-subtle bg-transparent text-foreground hover:bg-background-element-hover",
         primary:
-          "border border-primary-border-subtle bg-transparent text-primary-foreground-subtle shadow hover:bg-primary-background-element-hover",
+          "border border-primary-border-subtle bg-transparent text-primary-foreground-subtle hover:bg-primary-background-element-hover",
         secondary: "border-transparent bg-background-element text-foreground hover:bg-background-element-hover",
-        info: "border border-info-border-subtle bg-transparent text-info-foreground shadow hover:bg-info-background-element-hover",
+        info: "border border-info-border-subtle bg-transparent text-info-foreground hover:bg-info-background-element-hover",
         warning:
-          "border border-warning-border-subtle bg-transparent text-warning-foreground shadow hover:bg-warning-background-element-hover",
+          "border border-warning-border-subtle bg-transparent text-warning-foreground hover:bg-warning-background-element-hover",
         destructive:
-          "border border-danger-border-subtle bg-transparent text-danger-foreground shadow hover:bg-danger-background-element-hover",
+          "border border-danger-border-subtle bg-transparent text-danger-foreground hover:bg-danger-background-element-hover",
         success:
-          "border border-success-border-subtle bg-transparent text-success-foreground shadow hover:bg-success-background-element-hover",
+          "border border-success-border-subtle bg-transparent text-success-foreground hover:bg-success-background-element-hover",
       },
       noHover: {
         true: "pointer-events-none",

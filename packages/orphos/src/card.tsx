@@ -7,7 +7,7 @@ const Card = ({ className, ref, ...props }: DivElementProps) => (
   <div
     ref={ref}
     className={cn(
-      "rounded-3xl border border-border-subtle bg-background dark:bg-background-subtle text-foreground shadow",
+      "rounded-3xl border border-border-subtle bg-background dark:bg-background-subtle text-foregroung",
       className,
     )}
     {...props}
