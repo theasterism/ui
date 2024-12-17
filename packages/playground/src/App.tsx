@@ -9,6 +9,9 @@ import { DropdownDemo } from "./components/dropdown";
 import { FormDemo } from "./components/form";
 import { InputsDemo } from "./components/inputs";
 import { ColorPalette } from "./components/pallete";
+import { Separator } from "@theanalog/orphos/separator";
+import { SheetSide } from "./components/sheet";
+import { SkeletonDemo } from "./components/skeleton";
 
 function App() {
   return (
@@ -105,6 +108,24 @@ function App() {
         <div className="flex flex-col gap-10 items-start w-full">
           <InputsDemo />
           <CheckboxDemo />
+        </div>
+      </div>
+      <div className="flex flex-col gap-4">
+        <h2 className="">Separator</h2>
+        <div className="flex flex-row gap-4 w-auto">
+          <Separator />
+        </div>
+      </div>
+      <div className="flex flex-col gap-4">
+        <h2 className="">Sheet</h2>
+        <div className="flex flex-row gap-4 w-auto">
+          <SheetSide />
+        </div>
+      </div>
+      <div className="flex flex-col gap-4">
+        <h2 className="">Skeleton</h2>
+        <div className="flex flex-row gap-4 w-auto">
+          <SkeletonDemo />
         </div>
       </div>
       <div className="flex flex-col gap-4">

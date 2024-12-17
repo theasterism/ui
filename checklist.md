@@ -33,10 +33,10 @@
 [x] radio group
 [ ] resizable
 [ ] select
-[ ] separator
-[ ] sheet
+[x] separator
+[x] sheet
 [ ] sidebar
-[ ] skeleton
+[x] skeleton
 [ ] slider
 [ ] sonner
 [x] switch
@@ -45,5 +45,5 @@
 [x] textarea
 [ ] toggle
 [ ] toggle group
-[ ] tooltip
+[x] tooltip
 
