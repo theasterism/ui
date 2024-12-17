@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.5.5
+
+### Patch Changes
+
+- bf32a6f: remove shadows
+
 ## 0.5.4
 
 ### Patch Changes
