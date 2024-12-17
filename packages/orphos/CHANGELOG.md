@@ -1,5 +1,13 @@
 # @theanalog/orphos
 
+## 0.6.0
+
+### Minor Changes
+
+- b8e1b3e: add separator
+- 4ebf250: add skeleton component
+- bd0b69a: add sheet component
+
 ## 0.5.5
 
 ### Patch Changes
