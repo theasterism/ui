@@ -540,9 +540,6 @@
   h4 {
     @apply scroll-m-20 mt-8 font-semibold text-[18px] leading-[1.4] tracking-tight text-black dark:text-white;
   }
-  a {
-    @apply relative isolate w-fit inline-flex items-center justify-center gap-x-2 whitespace-nowrap text-sm font-semibold transition-colors underline-offset-4 text-primary-solid bg-transparent hover:underline h-auto! ring-offset-background ring-offset-1 focus-visible:ring-2 focus-visible:ring-info-focus-ring focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0;
-  }
   p {
     @apply text-sm leading-7 not-first:mt-6;
   }
