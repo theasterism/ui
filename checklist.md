@@ -12,7 +12,7 @@
 [ ] carousel
 [ ] chart
 [x] checkbox
-[ ] collapsible
+[x] collapsible
 [ ] combobox
 [ ] command
 [ ] context menu
@@ -35,7 +35,7 @@
 [ ] select
 [x] separator
 [x] sheet
-[ ] sidebar
+[x] sidebar
 [x] skeleton
 [ ] slider
 [ ] sonner
