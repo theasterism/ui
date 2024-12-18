@@ -1,5 +1,17 @@
 # @theanalog/orphos
 
+## 0.7.0
+
+### Minor Changes
+
+- a8e30c2: add collapsible
+- 0179af1: add sidebar
+
+### Patch Changes
+
+- 22e42d8: change input text color
+- 2b7ff31: change sheet styles
+
 ## 0.6.0
 
 ### Minor Changes
