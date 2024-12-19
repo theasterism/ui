@@ -14,6 +14,7 @@ import { SheetSide } from "./components/sheet";
 import { SkeletonDemo } from "./components/skeleton";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@theanalog/orphos/sidebar";
 import { AppSidebar } from "./components/sidebar";
+import { CollapsibleDemo } from "./components/collapsible";
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
               <Button>Button text</Button>
               <Button variant="primary">Button text</Button>
               <Button variant="secondary">Button text</Button>
+              <Button variant="soft">Button text</Button>
               <Button variant="ghost">Button text</Button>
               <Button variant="danger">Button text</Button>
               <Button variant="link">Button text</Button>
@@ -94,6 +96,12 @@ function App() {
                   <Button className="w-full">Mark all as read</Button>
                 </CardFooter>
               </Card>
+            </div>
+          </div>
+          <div className="flex flex-col gap-4 items-start w-full">
+            <h2 className="">Collapsible</h2>
+            <div className="flex flex-col gap-10 items-start w-full">
+              <CollapsibleDemo />
             </div>
           </div>
           <div className="flex flex-col gap-4 items-start w-full">
@@ -144,7 +152,7 @@ function App() {
             <div className="flex flex-row gap-4 w-auto">
               <Tooltip delayDuration={250}>
                 <TooltipTrigger asChild>
-                  <Button size="sm" variant="secondary">
+                  <Button size="sm" variant="soft">
                     Hover
                   </Button>
                 </TooltipTrigger>
