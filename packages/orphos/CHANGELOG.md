@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.7.1
+
+### Patch Changes
+
+- 6d8995e: fix sidebar button styles
+
 ## 0.7.0
 
 ### Minor Changes
