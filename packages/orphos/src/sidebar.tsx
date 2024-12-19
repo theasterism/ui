@@ -275,10 +275,10 @@ SidebarRail.displayName = "SidebarRail";
 
 const SidebarInset = React.forwardRef<HTMLDivElement, React.ComponentProps<"main">>(({ className, ...props }, ref) => {
   return (
-    <main
+    <div
       ref={ref}
       className={cn(
-        "relative flex min-h-svh flex-1 flex-col bg-background-subtle dark:bg-background",
+        "relative flex min-h-svh min-w-0 h-full flex-1 flex-col bg-background-subtle dark:bg-background",
         "peer-data-[variant=inset]:min-h-[calc(100svh-calc(var(--spacing)*4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[variant=inset]:peer-data-[state=collapsed]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow-sm",
         className,
       )}
@@ -411,7 +411,7 @@ const SidebarMenuItem = React.forwardRef<HTMLLIElement, React.ComponentProps<"li
 SidebarMenuItem.displayName = "SidebarMenuItem";
 
 const sidebarMenuButtonVariants = cva(
-  "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left text-sm outline-hidden ring-info-focus-ring transition-[width,height,padding] hover:bg-background-element-active hover:text-foreground focus-visible:ring-2 active:bg-border-subtle active:text-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-border-subtle data-[active=true]:font-medium data-[active=true]:text-foreground data-[state=open]:hover:bg-background-element-hover data-[state=open]:hover:text-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
+  "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left text-sm outline-hidden ring-info-focus-ring transition-[width,height,padding] hover:bg-background-element-active hover:text-foreground focus-visible:ring-2 active:bg-border-subtle active:text-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-background-element-active data-[active=true]:font-medium data-[active=true]:text-foreground data-[state=open]:hover:bg-background-element-active data-[state=open]:hover:text-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -487,7 +487,7 @@ const SidebarMenuAction = React.forwardRef<
       ref={ref}
       data-sidebar="menu-action"
       className={cn(
-        "absolute right-1 top-1.5 flex aspect-square w-5 items-center justify-center rounded-sm px-1 py-0.5 text-foreground outline-hidden ring-info-focus-ring transition-transform hover:bg-background-element-active hover:text-foreground focus-visible:ring-2 peer-hover/menu-button:text-foreground-subtle [&>svg]:size-4 [&>svg]:shrink-0",
+        "absolute right-1 top-1.5 flex aspect-square w-5 items-center justify-center rounded-sm px-1 py-0.5 text-foreground-subtle outline-hidden ring-info-focus-ring transition-transform hover:bg-background-element-active hover:text-foreground focus-visible:ring-2 peer-hover/menu-button:text-foreground-subtle [&>svg]:size-4 [&>svg]:shrink-0",
         // Increases the hit area of the button on mobile.
         "after:absolute after:-inset-2 md:after:hidden",
         "peer-data-[size=sm]/menu-button:top-1",
