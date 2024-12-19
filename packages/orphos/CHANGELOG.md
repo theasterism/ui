@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.7.2
+
+### Patch Changes
+
+- 1caa938: add new secondary variant
+- 81ef0be: change sheet button variant
+
 ## 0.7.1
 
 ### Patch Changes
