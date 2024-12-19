@@ -11,8 +11,8 @@ const buttonVariants = cva(
         default:
           "border border-element-border bg-background-element hover:bg-background-element-hover text-black dark:text-white  active:bg-background-element-active",
         primary: "bg-primary-solid hover:bg-primary-solid-hover active:bg-primary-solid-hover text-white",
-        secondary:
-          "bg-background-element hover:bg-background-element-hover active:bg-background-element-active text-foreground dark:text-white",
+        secondary: "bg-foreground hover:bg-foreground/90 active:bg-foreground/90 text-background",
+        soft: "bg-background-element hover:bg-background-element-hover active:bg-background-element-active text-foreground dark:text-white",
         ghost:
           "bg-transparent hover:bg-background-element-hover active:bg-background-element-active text-foreground dark:text-white",
         link: "underline-offset-4 text-primary-solid bg-transparent hover:underline",
