@@ -59,7 +59,7 @@ const SheetContent = React.forwardRef<React.ElementRef<typeof SheetPrimitive.Con
       <SheetOverlay />
       <SheetPrimitive.Content ref={ref} className={cn(sheetVariants({ side }), className)} {...props}>
         <SheetPrimitive.Close className="absolute right-6 top-6">
-          <Button variant="secondary" size="icon" className="px-2.5 overflow-hidden! w-[24px]! h-[24px]! rounded-sm">
+          <Button variant="soft" size="icon" className="px-2.5 overflow-hidden! w-[24px]! h-[24px]! rounded-sm">
             <Xmark className="h-4 w-4" />
             <span className="sr-only">Close</span>
           </Button>
