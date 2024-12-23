@@ -115,7 +115,7 @@ const FormDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttribu
       <p
         ref={ref}
         id={formDescriptionId}
-        className={cn("text-[0.8rem] text-foreground-subtle -mt-1 leading-normal", className)}
+        className={cn("text-xs text-foreground-subtle -mt-1 leading-normal", className)}
         {...props}
       />
     );
@@ -136,7 +136,7 @@ const FormMessage = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<
       <p
         ref={ref}
         id={formMessageId}
-        className={cn("text-[0.8rem] font-medium text-danger-solid -mt-1 leading-normal", className)}
+        className={cn("text-xs font-medium text-danger-solid -mt-1 leading-normal", className)}
         {...props}
       >
         {body}

@@ -1,11 +1,12 @@
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
-import { type VariantProps, cva } from "class-variance-authority";
+import { type VariantProps, cva } from "cva";
 import { CheckCircle, InfoCircle, WarningCircle, WarningTriangle, Xmark } from "iconoir-react";
 import * as React from "react";
 import { Button } from "./button";
 import { cn } from "./lib/utils";
 
-const calloutVariants = cva("relative flex flex-col gap-3 w-full rounded-lg p-4 text-sm", {
+const calloutVariants = cva({
+  base: "relative flex flex-col gap-3 w-full rounded-lg p-4 text-sm",
   variants: {
     variant: {
       default: "bg-primary-background-element border-primary-border-subtle text-primary-foreground-subtle",

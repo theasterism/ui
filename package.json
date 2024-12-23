@@ -23,7 +23,7 @@
     "turbo": "^2.3.3",
     "typescript": "^5.7.2"
   },
-  "workspaces": ["packages/orphos", "packages/playground"],
-  "packageManager": "bun@1.1.38",
-  "trustedDependencies": ["@biomejs/biome", "core-js"]
+  "workspaces": ["packages/*"],
+  "packageManager": "bun@1.1.42",
+  "trustedDependencies": ["@biomejs/biome", "core-js", "esbuild", "workerd"]
 }

@@ -28,5 +28,14 @@
     "formatter": {
       "trailingCommas": "none"
     }
+  },
+  "css": {
+    "parser": {
+      "cssModules": false,
+      "allowWrongLineComments": true
+    },
+    "linter": {
+      "enabled": false
+    }
   }
 }

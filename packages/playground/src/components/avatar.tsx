@@ -6,11 +6,11 @@ export function AvatarDemo() {
     <Fragment>
       <Avatar square>
         <AvatarImage src="https://github.com/bachiitter.png" alt="@bachiitter" />
-        <AvatarFallback>CH</AvatarFallback>
+        <AvatarFallback>B</AvatarFallback>
       </Avatar>
       <Avatar>
-        <AvatarImage src="" alt="@shadcn" />
-        <AvatarFallback>CH</AvatarFallback>
+        <AvatarImage src="" alt="@bachiitter" />
+        <AvatarFallback>B</AvatarFallback>
       </Avatar>
     </Fragment>
   );

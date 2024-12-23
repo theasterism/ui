@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
-import { type VariantProps, cva } from "class-variance-authority";
+import { type VariantProps, cva } from "cva";
 import { useIsMobile } from "./hooks/use-mobile";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./tooltip";
 import { cn } from "./lib/utils";
@@ -72,6 +72,7 @@ const SidebarProvider = React.forwardRef<
   );
 
   // Helper to toggle the sidebar.
+  // biome-ignore lint/correctness/useExhaustiveDependencies: shut up!
   const toggleSidebar = React.useCallback(() => {
     return isMobile ? setOpenMobile((open) => !open) : setOpen((open) => !open);
   }, [isMobile, setOpen, setOpenMobile]);
@@ -93,6 +94,7 @@ const SidebarProvider = React.forwardRef<
   // This makes it easier to style the sidebar with Tailwind classes.
   const state = open ? "expanded" : "collapsed";
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: shut up!
   const contextValue = React.useMemo<SidebarContext>(
     () => ({
       state,
@@ -410,27 +412,25 @@ const SidebarMenuItem = React.forwardRef<HTMLLIElement, React.ComponentProps<"li
 ));
 SidebarMenuItem.displayName = "SidebarMenuItem";
 
-const sidebarMenuButtonVariants = cva(
-  "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left text-sm outline-hidden ring-info-focus-ring transition-[width,height,padding] hover:bg-background-element-active hover:text-foreground focus-visible:ring-2 active:bg-border-subtle active:text-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-background-element-active data-[active=true]:font-medium data-[active=true]:text-foreground data-[state=open]:hover:bg-background-element-active data-[state=open]:hover:text-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
-  {
-    variants: {
-      variant: {
-        default: "hover:bg-background-element-active hover:text-foreground",
-        outline:
-          "bg-background-element shadow-[0_0_0_1px_var(--gray-6)] hover:bg-background-element-active hover:text-foreground hover:shadow-[0_0_0_1px_var(--gray-7)]",
-      },
-      size: {
-        default: "h-8 text-sm",
-        sm: "h-7 text-xs",
-        lg: "h-12 text-sm group-data-[collapsible=icon]:p-0!",
-      },
+const sidebarMenuButtonVariants = cva({
+  base: "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left text-sm outline-hidden ring-info-focus-ring transition-[width,height,padding] hover:bg-background-element-active hover:text-foreground focus-visible:ring-2 active:bg-border-subtle active:text-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-background-element-active data-[active=true]:font-medium data-[active=true]:text-foreground data-[state=open]:hover:bg-background-element-active data-[state=open]:hover:text-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
+  variants: {
+    variant: {
+      default: "hover:bg-background-element-active hover:text-foreground",
+      outline:
+        "bg-background-element shadow-[0_0_0_1px_var(--gray-6)] hover:bg-background-element-active hover:text-foreground hover:shadow-[0_0_0_1px_var(--gray-7)]",
     },
-    defaultVariants: {
-      variant: "default",
-      size: "default",
+    size: {
+      default: "h-8 text-sm",
+      sm: "h-7 text-xs",
+      lg: "h-12 text-sm group-data-[collapsible=icon]:p-0!",
     },
   },
-);
+  defaultVariants: {
+    variant: "default",
+    size: "default",
+  },
+});
 
 const SidebarMenuButton = React.forwardRef<
   HTMLButtonElement,
