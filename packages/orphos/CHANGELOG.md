@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.8.3
+
+### Patch Changes
+
+- faa1148: fix sidebar trigger icon state
+
 ## 0.8.2
 
 ### Patch Changes
