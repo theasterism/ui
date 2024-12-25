@@ -13,11 +13,11 @@ export function TabsDemo() {
       </TabsList>
       <TabsContent value="account">
         <Card>
-          <CardHeader>
+          <CardHeader className="border-b-[0.5px] border-border-subtle">
             <CardTitle>Account</CardTitle>
             <CardDescription>Make changes to your account here. Click save when you're done.</CardDescription>
           </CardHeader>
-          <CardContent className="space-y-2 pb-3.5">
+          <CardContent className="space-y-2 py-3.5">
             <div className="space-y-1">
               <Label htmlFor="name">Name</Label>
               <Input id="name" defaultValue="Pedro Duarte" />
@@ -34,11 +34,11 @@ export function TabsDemo() {
       </TabsContent>
       <TabsContent value="password">
         <Card>
-          <CardHeader>
+          <CardHeader className="border-b-[0.5px] border-border-subtle">
             <CardTitle>Password</CardTitle>
             <CardDescription>Change your password here. After saving, you'll be logged out.</CardDescription>
           </CardHeader>
-          <CardContent className="space-y-2 pb-3.5">
+          <CardContent className="space-y-2 py-3.5">
             <div className="space-y-1">
               <Label htmlFor="current">Current password</Label>
               <Input error={undefined} id="current" type="password" />
