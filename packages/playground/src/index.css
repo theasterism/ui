@@ -3,6 +3,6 @@
 
 @layer base {
   body {
-    @apply min-h-dvh bg-background-element;
+    @apply min-h-dvh bg-background-subtle dark:bg-background min-w-[320px];
   }
 }

@@ -6,8 +6,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@theanalog/orphos/tabs
 
 export function TabsDemo() {
   return (
-    <Tabs defaultValue="account" className="w-[400px]">
-      <TabsList className="grid w-full grid-cols-2">
+    <Tabs defaultValue="account" className="max-w-[400px] w-full">
+      <TabsList className="w-full">
         <TabsTrigger value="account">Account</TabsTrigger>
         <TabsTrigger value="password">Password</TabsTrigger>
       </TabsList>
