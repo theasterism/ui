@@ -18,22 +18,12 @@ const inputVariants = cva({
   },
 });
 
-export interface InputProps
-  extends React.ComponentProps<"input">,
-    VariantProps<typeof inputVariants> {
+export interface InputProps extends React.ComponentProps<"input">, VariantProps<typeof inputVariants> {
   icon?: React.ReactNode;
-  error: FieldError | undefined;
+  error?: FieldError | undefined;
 }
 
-const Input = ({
-  className,
-  type,
-  ref,
-  icon,
-  error,
-  disabled,
-  ...props
-}: InputProps) => {
+const Input = ({ className, type, ref, icon, error, disabled, ...props }: InputProps) => {
   const variant = type === "file" ? "file" : "default";
 
   if (type === "password") {
@@ -47,7 +37,7 @@ const Input = ({
           className={cn(
             inputVariants({ variant, className }),
             error && "border-danger-element-border",
-            "peer-focus-visible:border-transparent"
+            "peer-focus-visible:border-transparent",
           )}
           type={isVisible ? "text" : "password"}
           ref={ref}
@@ -78,11 +68,7 @@ const Input = ({
         <input
           disabled={disabled}
           type={type}
-          className={cn(
-            inputVariants({ variant, className }),
-            error && "border-danger-element-border",
-            "peer ps-9"
-          )}
+          className={cn(inputVariants({ variant, className }), error && "border-danger-element-border", "peer ps-9")}
           ref={ref}
           {...props}
         />
@@ -96,10 +82,7 @@ const Input = ({
     <input
       disabled={disabled}
       type={type}
-      className={cn(
-        inputVariants({ variant, className }),
-        error && "border-danger-element-border"
-      )}
+      className={cn(inputVariants({ variant, className }), error && "border-danger-element-border")}
       ref={ref}
       {...props}
     />

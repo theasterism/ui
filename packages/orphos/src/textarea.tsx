@@ -3,7 +3,7 @@ import type { FieldError } from "react-hook-form";
 import { cn } from "./lib/utils";
 
 export interface TextAreaProps extends React.ComponentProps<"textarea"> {
-  error: FieldError | undefined;
+  error?: FieldError | undefined;
 }
 
 const Textarea = ({ className, ref, error, ...props }: TextAreaProps) => {
@@ -12,7 +12,7 @@ const Textarea = ({ className, ref, error, ...props }: TextAreaProps) => {
       className={cn(
         "flex text-[14px] leading-loose min-h-[74px] w-full bg-background-subtle dark:bg-background-element rounded-sm border-[0.5px] border-border-element pl-2 pr-2 pt-2 pb-6 no-drag resize-none scrollbar-hide overflow-y-auto transition-all focus-visible:border-transparent focus-visible:ring-2 focus-visible:ring-info-focus-ring focus-visible:outline-none placeholder:text-foreground-subtle placeholder:text-sm disabled:cursor-not-allowed disabled:opacity-75 disabled:placeholder:text-foreground-subtle/50 disabled:text-foreground-subtle",
         className,
-        error && "border-danger-element-border"
+        error && "border-danger-element-border",
       )}
       ref={ref}
       {...props}
