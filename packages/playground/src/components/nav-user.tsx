@@ -11,7 +11,10 @@ import {
   DropdownMenuTrigger,
 } from "@theanalog/orphos/dropdown-menu";
 import { SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from "@theanalog/orphos/sidebar";
+import { Switch } from "@theanalog/orphos/switch";
+import { HalfMoon } from "iconoir-react/regular";
 import { BadgeCheck, Bell, ChevronsUpDown, CreditCard, LogOut, Sparkles } from "lucide-react";
+import { useTheme } from "next-themes";
 
 export function NavUser({
   user,
@@ -23,6 +26,8 @@ export function NavUser({
   };
 }) {
   const { isMobile } = useSidebar();
+
+  const { setTheme, resolvedTheme, theme, systemTheme } = useTheme();
 
   return (
     <SidebarMenu>
@@ -83,9 +88,24 @@ export function NavUser({
                 <Bell />
                 Notifications
               </DropdownMenuItem>
+              <DropdownMenuLabel className="py-0 font-normal flex items-center justify-between">
+                <span className="flex gap-2 items-center">
+                  <HalfMoon className="size-4" />
+                  Dark mode
+                </span>
+                <Switch
+                  checked={resolvedTheme === "dark"}
+                  onCheckedChange={() => {
+                    const resolvedTheme = theme === "system" ? systemTheme : theme;
+                    const newTheme = resolvedTheme === "dark" ? "light" : "dark";
+                    const newThemeMatchesSystem = newTheme === systemTheme;
+                    setTheme(newThemeMatchesSystem ? "system" : newTheme);
+                  }}
+                />
+              </DropdownMenuLabel>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <DropdownMenuItem className="text-danger-solid">
               <LogOut />
               Log out
             </DropdownMenuItem>
