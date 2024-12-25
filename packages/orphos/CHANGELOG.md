@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.8.2
+
+### Patch Changes
+
+- 7307988: change callout danger variant icon
+
 ## 0.8.1
 
 ### Patch Changes
