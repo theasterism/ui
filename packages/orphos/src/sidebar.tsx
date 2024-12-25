@@ -2,7 +2,7 @@
 
 import { Slot } from "@radix-ui/react-slot";
 import { type VariantProps, cva } from "cva";
-import { SidebarExpand } from "iconoir-react";
+import { SidebarCollapse, SidebarExpand } from "iconoir-react";
 import * as React from "react";
 import { Button } from "./button";
 import { useIsMobile } from "./hooks/use-mobile";
@@ -227,7 +227,7 @@ Sidebar.displayName = "Sidebar";
 
 const SidebarTrigger = React.forwardRef<React.ElementRef<typeof Button>, React.ComponentProps<typeof Button>>(
   ({ className, onClick, ...props }, ref) => {
-    const { toggleSidebar } = useSidebar();
+    const { toggleSidebar, state } = useSidebar();
 
     return (
       <Button
@@ -235,14 +235,14 @@ const SidebarTrigger = React.forwardRef<React.ElementRef<typeof Button>, React.C
         data-sidebar="trigger"
         variant="ghost"
         size="icon"
-        className={cn("h-7 w-7", className)}
+        className={cn("h-8 w-8", className)}
         onClick={(event) => {
           onClick?.(event);
           toggleSidebar();
         }}
         {...props}
       >
-        <SidebarExpand />
+        {state === "collapsed" ? <SidebarExpand /> : <SidebarCollapse />}
         <span className="sr-only">Toggle Sidebar</span>
       </Button>
     );
