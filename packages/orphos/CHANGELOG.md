@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.8.4
+
+### Patch Changes
+
+- 07bbcee: change back sidebar trigger icon
+
 ## 0.8.3
 
 ### Patch Changes
