@@ -1,5 +1,17 @@
 # @theanalog/orphos
 
+## 0.8.0
+
+### Minor Changes
+
+- b9d0002: rework styles
+- 5c8da71: add tabs
+
+### Patch Changes
+
+- f40f429: change error to optional for input and text area
+- 0ae93b8: change sidebar sperator height
+
 ## 0.7.2
 
 ### Patch Changes
