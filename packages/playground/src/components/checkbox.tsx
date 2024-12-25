@@ -20,11 +20,11 @@ export function CheckboxDemo() {
         </div>
         <div className="flex flex-row gap-4 w-full">
           <div className="flex items-center w-full gap-2">
-            <Checkbox id="terms-checked" checked />
+            <Checkbox id="terms-checked" defaultChecked />
             <Label htmlFor="terms-checked">Checkbox</Label>
           </div>
           <div className="flex items-center w-full gap-2">
-            <Checkbox id="terms-checked-disabled" checked disabled />
+            <Checkbox id="terms-checked-disabled" defaultChecked disabled />
             <Label htmlFor="terms-checked-disabled">Checkbox</Label>
           </div>
         </div>
@@ -42,11 +42,11 @@ export function CheckboxDemo() {
         </div>
         <div className="flex flex-row gap-4 w-full">
           <div className="flex items-center w-full gap-2">
-            <Switch id="switch-checked" checked />
+            <Switch id="switch-checked" defaultChecked />
             <Label htmlFor="switch-checked">Switch</Label>
           </div>
           <div className="flex items-center w-full gap-2">
-            <Switch id="switch-checked-disabled" checked disabled />
+            <Switch id="switch-checked-disabled" defaultChecked disabled />
             <Label htmlFor="switch-checked-disabled">Switch</Label>
           </div>
         </div>

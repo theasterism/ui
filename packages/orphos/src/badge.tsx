@@ -3,20 +3,20 @@ import * as React from "react";
 import { cn } from "./lib/utils";
 
 const badgeVariants = cva({
-  base: "inline-flex min-w-fit items-center rounded-sm border px-2.5 py-0.5 text-xs leading-relaxed font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-info-focus-ring focus:ring-offset-2 focus:ring-offset-background-subtle dark:focus:ring-offset-background",
+  base: "inline-flex min-w-fit items-center rounded-sm px-2.5 py-0.5 border-[0.5px] text-xs leading-relaxed font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-info-focus-ring focus:ring-offset-2 focus:ring-offset-background-subtle dark:focus:ring-offset-background",
   variants: {
     variant: {
-      default: "border border-border-subtle bg-transparent text-foreground hover:bg-background-element-hover",
+      default: "bg-foreground text-background hover:bg-foreground-subtle",
       primary:
-        "border border-primary-border-subtle bg-transparent text-primary-foreground-subtle hover:bg-primary-background-element-hover",
-      secondary: "border-transparent bg-background-element text-foreground hover:bg-background-element-hover",
-      info: "border border-info-border-subtle bg-transparent text-info-foreground hover:bg-info-background-element-hover",
+        "border-primary-element-border bg-primary-background-element text-primary-foreground-subtle hover:bg-primary-background-element-active",
+      secondary: "border-element-border bg-background-element text-foreground hover:bg-background-element-active",
+      info: "border-info-element-border bg-info-background-element text-info-foreground hover:bg-info-background-element-active",
       warning:
-        "border border-warning-border-subtle bg-transparent text-warning-foreground hover:bg-warning-background-element-hover",
+        "border-warning-element-border bg-warning-background-element text-warning-foreground hover:bg-warning-background-element-active",
       destructive:
-        "border border-danger-border-subtle bg-transparent text-danger-foreground hover:bg-danger-background-element-hover",
+        "border-danger-element-border bg-danger-background-element text-danger-foreground hover:bg-danger-background-element-active",
       success:
-        "border border-success-border-subtle bg-transparent text-success-foreground hover:bg-success-background-element-hover",
+        "border-success-element-border bg-success-background-element text-success-foreground hover:bg-success-background-element-active",
     },
     noHover: {
       true: "pointer-events-none",

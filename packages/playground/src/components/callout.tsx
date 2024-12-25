@@ -14,7 +14,6 @@ export function CalloutDemo() {
       <Callout
         onDismiss={() => alert("dismissed")}
         bordered
-        transparent
         variant="warning"
         title="Not Hidden Title"
         description="With Hidden Title! This should be much longer like 50 words or more. dismissable"
@@ -23,7 +22,6 @@ export function CalloutDemo() {
       <Callout
         onDismiss={() => alert("dismissed")}
         bordered
-        transparent
         variant="success"
         hideTitle
         title="Hidden Title"

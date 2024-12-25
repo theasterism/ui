@@ -1,22 +1,22 @@
 "use client";
 
-import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { type VariantProps, cva } from "cva";
-import { useIsMobile } from "./hooks/use-mobile";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./tooltip";
-import { cn } from "./lib/utils";
-import { Sheet, SheetContent } from "./sheet";
-import { Button } from "./button";
 import { SidebarExpand } from "iconoir-react";
+import * as React from "react";
+import { Button } from "./button";
+import { useIsMobile } from "./hooks/use-mobile";
 import { Input } from "./input";
+import { cn } from "./lib/utils";
 import { Separator } from "./separator";
+import { Sheet, SheetContent } from "./sheet";
 import { Skeleton } from "./skeleton";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./tooltip";
 
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
-const SIDEBAR_WIDTH = "16rem";
-const SIDEBAR_WIDTH_MOBILE = "18rem";
+const SIDEBAR_WIDTH = "15rem";
+const SIDEBAR_WIDTH_MOBILE = "17rem";
 const SIDEBAR_WIDTH_ICON = "3rem";
 const SIDEBAR_KEYBOARD_SHORTCUT = "b";
 
@@ -120,7 +120,7 @@ const SidebarProvider = React.forwardRef<
             } as React.CSSProperties
           }
           className={cn(
-            "group/sidebar-wrapper flex min-h-svh w-full has-data-[variant=inset]:bg-background-element",
+            "group/sidebar-wrapper flex min-h-svh w-full has-data-[variant=inset]:bg-background dark:has-data-[variant=inset]:bg-background-subtle",
             className,
           )}
           ref={ref}
@@ -147,7 +147,10 @@ const Sidebar = React.forwardRef<
   if (collapsible === "none") {
     return (
       <div
-        className={cn("flex h-full w-(--sidebar-width) flex-col bg-background-element text-foreground", className)}
+        className={cn(
+          "flex h-full w-(--sidebar-width) flex-col bg-background-subtle dark:bg-background text-foreground",
+          className,
+        )}
         ref={ref}
         {...props}
       >
@@ -162,7 +165,7 @@ const Sidebar = React.forwardRef<
         <SheetContent
           data-sidebar="sidebar"
           data-mobile="true"
-          className="w-(--sidebar-width) bg-background-element p-0 text-foreground [&>button]:hidden"
+          className="w-(--sidebar-width)! bg-background-subtle dark:bg-background p-0 text-foreground [&>button]:hidden"
           style={
             {
               "--sidebar-width": SIDEBAR_WIDTH_MOBILE,
@@ -205,14 +208,14 @@ const Sidebar = React.forwardRef<
           // Adjust the padding for floating and inset variants.
           variant === "floating" || variant === "inset"
             ? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+calc(var(--spacing)*4)+2px)]"
-            : "group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l",
+            : "group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r-[0.5px] group-data-[side=right]:border-l-[0.5px]",
           className,
         )}
         {...props}
       >
         <div
           data-sidebar="sidebar"
-          className="flex h-full w-full flex-col bg-background-element group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-border-element group-data-[variant=floating]:shadow-sm"
+          className="flex h-full w-full flex-col bg-background-subtle dark:bg-background group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border-[0.5px] group-data-[variant=floating]:border-border-element group-data-[variant=floating]:shadow-sm"
         >
           {children}
         </div>
@@ -563,7 +566,7 @@ const SidebarMenuSub = React.forwardRef<HTMLUListElement, React.ComponentProps<"
       ref={ref}
       data-sidebar="menu-sub"
       className={cn(
-        "mx-3.5 flex min-w-0 translate-x-px flex-col gap-1 border-l border-element-border px-2.5 py-0.5 my-0 list-none [&>li]:mt-0 [&>li]:pl-0",
+        "mx-3.5 flex min-w-0 translate-x-px flex-col gap-1 border-l-[0.5px] border-element-border px-2.5 py-0.5 my-0 list-none [&>li]:mt-0 [&>li]:pl-0",
         "group-data-[collapsible=icon]:hidden",
         className,
       )}

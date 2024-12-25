@@ -86,7 +86,6 @@ function App() {
                   <CardTitle>Notifications</CardTitle>
                   <CardDescription>You have 3 unread messages.</CardDescription>
                 </CardHeader>
-                <CardContent className="grid gap-4"></CardContent>
                 <CardFooter>
                   <Button className="w-full">Mark all as read</Button>
                 </CardFooter>

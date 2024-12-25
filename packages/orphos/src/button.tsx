@@ -8,16 +8,14 @@ const buttonVariants = cva({
   variants: {
     variant: {
       default:
-        "border border-element-border bg-background-element hover:bg-background-element-hover text-black dark:text-white  active:bg-background-element-active",
-      primary:
-        "bg-primary-solid hover:bg-primary-solid-hover active:bg-primary-solid-hover text-white",
+        "border-[0.5px] border-element-border bg-background-element hover:bg-background-element-hover text-black dark:text-white  active:bg-background-element-active",
+      primary: "bg-primary-solid hover:bg-primary-solid-hover active:bg-primary-solid-hover text-white",
       secondary:
         "bg-background-element hover:bg-background-element-hover active:bg-background-element-active text-foreground dark:text-white",
       ghost:
         "bg-transparent hover:bg-background-element-hover active:bg-background-element-active text-foreground dark:text-white",
       link: "underline-offset-4 text-primary-solid bg-transparent hover:underline",
-      danger:
-        "bg-danger-solid hover:bg-danger-solid-hover active:bg-danger-solid-hover text-white",
+      danger: "bg-danger-solid hover:bg-danger-solid-hover active:bg-danger-solid-hover text-white",
     },
     size: {
       sm: "h-[26px] text-sm px-3 rounded-xs",
@@ -32,28 +30,13 @@ const buttonVariants = cva({
   },
 });
 
-export interface ButtonProps
-  extends React.ComponentProps<"button">,
-    VariantProps<typeof buttonVariants> {
+export interface ButtonProps extends React.ComponentProps<"button">, VariantProps<typeof buttonVariants> {
   asChild?: boolean;
 }
 
-const Button = ({
-  className,
-  variant,
-  size,
-  ref,
-  asChild = false,
-  ...props
-}: ButtonProps) => {
+const Button = ({ className, variant, size, ref, asChild = false, ...props }: ButtonProps) => {
   const Comp = asChild ? Slot : "button";
-  return (
-    <Comp
-      className={cn(buttonVariants({ variant, size, className }))}
-      ref={ref}
-      {...props}
-    />
-  );
+  return <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />;
 };
 
 Button.displayName = "Button";
