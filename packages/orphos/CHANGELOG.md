@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.9.0
+
+### Minor Changes
+
+- eedc206: replace iconset with heroicons
+
 ## 0.8.4
 
 ### Patch Changes
