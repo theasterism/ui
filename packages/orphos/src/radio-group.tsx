@@ -1,7 +1,6 @@
 "use client";
 
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group";
-import { Circle } from "iconoir-react";
 import * as React from "react";
 import { cn } from "./lib/utils";
 
@@ -21,13 +20,13 @@ const RadioGroupItem = React.forwardRef<
     <RadioGroupPrimitive.Item
       ref={ref}
       className={cn(
-        "size-5 group rounded-full bg-background text-primary data-[state=unchecked]:border-[0.5px] disabled:data-[state=unchecked]:bg-background-element focus:outline-none focus-visible:ring-2 focus-visible:ring-info-focus-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background-subtle dark:focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50",
+        "size-5 group rounded-full bg-background text-primary border-[0.5px] disabled:data-[state=unchecked]:bg-background-element focus:outline-none focus-visible:ring-2 focus-visible:ring-info-focus-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background-subtle dark:focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50",
         className,
       )}
       {...props}
     >
       <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
-        <Circle className="size-5 stroke-7 text-primary-solid fill-background rounded-full group-disabled:group-data-[state=checked]:fill-primary-background-element group-disabled:group-data-[state=checked]:bg-primary-background-element" />
+        <div className="size-[9px] rounded-full bg-primary-solid" />
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>
   );

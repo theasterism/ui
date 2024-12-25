@@ -1,14 +1,13 @@
+import {
+  CheckBadgeIcon,
+  ExclamationCircleIcon,
+  ExclamationTriangleIcon,
+  InformationCircleIcon,
+  MegaphoneIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 import { type VariantProps, cva } from "cva";
-import {
-  CheckCircle,
-  InfoCircle,
-  WarningCircle,
-  WarningHexagon,
-  WarningSquare,
-  WarningTriangle,
-  Xmark,
-} from "iconoir-react";
 import * as React from "react";
 import { Button } from "./button";
 import { cn } from "./lib/utils";
@@ -37,7 +36,7 @@ const iconForVariant: Record<VariantProps<typeof calloutVariants>["variant"], Re
         "flex-none flex items-center justify-center rounded-full size-10 bg-white dark:bg-background-subtle [&>svg]:size-[20px] [&>svg]:stroke-2",
       )}
     >
-      <InfoCircle className="text-primary-solid" />
+      <MegaphoneIcon className="text-primary-solid" />
     </span>
   ),
   success: (
@@ -46,7 +45,7 @@ const iconForVariant: Record<VariantProps<typeof calloutVariants>["variant"], Re
         "flex-none flex items-center justify-center rounded-full size-10 bg-white dark:bg-background-subtle [&>svg]:size-[20px] [&>svg]:stroke-2",
       )}
     >
-      <CheckCircle className="text-success-solid" />
+      <CheckBadgeIcon className="text-success-solid" />
     </span>
   ),
   warning: (
@@ -55,7 +54,7 @@ const iconForVariant: Record<VariantProps<typeof calloutVariants>["variant"], Re
         "flex-none flex items-center justify-center rounded-full size-10 bg-white dark:bg-background-subtle [&>svg]:size-[20px] [&>svg]:stroke-2",
       )}
     >
-      <WarningCircle className="text-warning-solid" />
+      <ExclamationCircleIcon className="text-warning-solid" />
     </span>
   ),
   info: (
@@ -64,7 +63,7 @@ const iconForVariant: Record<VariantProps<typeof calloutVariants>["variant"], Re
         "flex-none flex items-center justify-center rounded-full size-10 bg-white dark:bg-background-subtle [&>svg]:size-[20px] [&>svg]:stroke-2",
       )}
     >
-      <InfoCircle className="text-info-solid" />
+      <InformationCircleIcon className="text-info-solid" />
     </span>
   ),
   critical: (
@@ -73,7 +72,7 @@ const iconForVariant: Record<VariantProps<typeof calloutVariants>["variant"], Re
         "flex-none flex items-center justify-center rounded-full size-10 bg-white dark:bg-background-subtle [&>svg]:size-[20px] [&>svg]:stroke-2",
       )}
     >
-      <WarningCircle className="text-danger-solid" />
+      <ExclamationTriangleIcon className="text-danger-solid" />
     </span>
   ),
 };
@@ -104,13 +103,23 @@ const Callout = React.forwardRef<
     >
       <div className={cn("flex gap-2", title && !hideTitle ? "" : "items-center")}>
         <div className="flex flex-row gap-2 items-center">
-          {icon && supportsCustomIcon ? icon : iconForVariant[variant!]}
+          {icon && supportsCustomIcon ? (
+            <span
+              className={cn(
+                "flex-none flex items-center justify-center rounded-full size-10 bg-white dark:bg-background-subtle [&>svg]:size-[20px] [&>svg]:stroke-2",
+              )}
+            >
+              {icon}
+            </span>
+          ) : (
+            iconForVariant[variant!]
+          )}
           <div className="flex flex-col">
             {title ? (
               hideTitle ? (
                 <VisuallyHidden.Root>{title}</VisuallyHidden.Root>
               ) : (
-                <h2 className="mt-0 pb-0 text-base font-medium leading-snug">{title}</h2>
+                <h2 className="mt-0 pb-0.5 text-base font-medium leading-snug">{title}</h2>
               )
             ) : null}
             {description ? (
@@ -127,7 +136,7 @@ const Callout = React.forwardRef<
             onClick={onDismiss}
             size="icon"
           >
-            <Xmark />
+            <XMarkIcon className="stroke-2" />
           </Button>
         ) : null}
       </div>

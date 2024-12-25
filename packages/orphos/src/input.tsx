@@ -1,5 +1,5 @@
+import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 import { type VariantProps, cva } from "cva";
-import { Eye, EyeClosed } from "iconoir-react";
 import * as React from "react";
 import type { FieldError } from "react-hook-form";
 import { cn } from "./lib/utils";
@@ -53,9 +53,9 @@ const Input = ({ className, type, ref, icon, error, disabled, ...props }: InputP
           aria-controls="password"
         >
           {isVisible ? (
-            <EyeClosed className="size-4 stroke-2" aria-hidden="true" />
+            <EyeSlashIcon className="size-4 stroke-2" aria-hidden="true" />
           ) : (
-            <Eye className="size-4 stroke-2" aria-hidden="true" />
+            <EyeIcon className="size-4 stroke-2" aria-hidden="true" />
           )}
         </button>
       </div>

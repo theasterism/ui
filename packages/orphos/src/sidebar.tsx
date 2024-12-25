@@ -1,8 +1,8 @@
 "use client";
 
+import { Bars2Icon } from "@heroicons/react/24/outline";
 import { Slot } from "@radix-ui/react-slot";
 import { type VariantProps, cva } from "cva";
-import { SidebarCollapse, SidebarExpand } from "iconoir-react";
 import * as React from "react";
 import { Button } from "./button";
 import { useIsMobile } from "./hooks/use-mobile";
@@ -242,7 +242,7 @@ const SidebarTrigger = React.forwardRef<React.ElementRef<typeof Button>, React.C
         }}
         {...props}
       >
-        <SidebarExpand />
+        <Bars2Icon className="stroke-2" />
         <span className="sr-only">Toggle Sidebar</span>
       </Button>
     );

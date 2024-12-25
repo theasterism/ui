@@ -1,7 +1,6 @@
 "use client";
-
+import { CheckIcon } from "@heroicons/react/24/outline";
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
-import { Check } from "iconoir-react";
 import * as React from "react";
 import { cn } from "./lib/utils";
 
@@ -18,7 +17,7 @@ const Checkbox = React.forwardRef<
     {...props}
   >
     <CheckboxPrimitive.Indicator className={cn("flex items-center justify-center text-current transition-all")}>
-      <Check className="size-4 stroke-3 stroke-none text-white group-disabled:group-data-[state=checked]:text-primary-solid/50 dark:group-disabled:group-data-[state=checked]:text-foreground/50 fill-none" />
+      <CheckIcon className="size-3.5 stroke-3 stroke-white group-disabled:group-data-[state=checked]:stroke-primary-solid/50 dark:group-disabled:group-data-[state=checked]:stroke-foreground/50" />
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
 ));

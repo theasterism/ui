@@ -1,8 +1,8 @@
 "use client";
 
+import { XMarkIcon } from "@heroicons/react/24/outline";
 import * as SheetPrimitive from "@radix-ui/react-dialog";
 import { type VariantProps, cva } from "cva";
-import { Xmark } from "iconoir-react";
 import * as React from "react";
 import { Button } from "./button";
 import { cn } from "./lib/utils";
@@ -56,9 +56,9 @@ const SheetContent = React.forwardRef<React.ElementRef<typeof SheetPrimitive.Con
     <SheetPortal>
       <SheetOverlay />
       <SheetPrimitive.Content ref={ref} className={cn(sheetVariants({ side }), className)} {...props}>
-        <SheetPrimitive.Close asChild className="absolute right-6 top-6">
+        <SheetPrimitive.Close asChild className="absolute right-6 top-7">
           <Button variant="secondary" size="icon" className="px-2.5 overflow-hidden! w-[24px]! h-[24px]! rounded-sm">
-            <Xmark className="h-4 w-4" />
+            <XMarkIcon className="h-4 w-4 stroke-2" />
             <span className="sr-only">Close</span>
           </Button>
         </SheetPrimitive.Close>
@@ -84,7 +84,7 @@ const SheetTitle = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
 >(({ className, ...props }, ref) => (
-  <SheetPrimitive.Title ref={ref} className={cn("text-lg mt-0 pb-0 mb-0", className)} {...props} />
+  <SheetPrimitive.Title ref={ref} className={cn("text-lg font-medium mt-0 pb-0 mb-0", className)} {...props} />
 ));
 SheetTitle.displayName = SheetPrimitive.Title.displayName;
 
