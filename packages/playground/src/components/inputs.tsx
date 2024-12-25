@@ -31,74 +31,48 @@ they can change the world, are the ones who do.`;
 export function InputsDemo() {
   return (
     <div className="flex flex-col gap-4 w-full">
-      <div className="flex flex-row gap-4 w-full">
-        <Input error={undefined} type="email" placeholder="tim@apple.com" />
-        <Input
-          error={undefined}
-          type="email-disabled"
-          placeholder="tim@apple.com"
-          disabled
-        />
+      <div className="flex flex-col xs:flex-row gap-4 w-full">
+        <Input type="email" placeholder="tim@apple.com" />
+        <Input type="email-disabled" placeholder="tim@apple.com" disabled />
       </div>
-      <div className="flex flex-row gap-4 w-full">
+      <div className="flex flex-col xs:flex-row gap-4 w-full">
         <div className="grid items-center w-full gap-2">
           <Label htmlFor="email-label">Input with label</Label>
-          <Input
-            error={undefined}
-            id="email-label"
-            type="email"
-            placeholder="tim@apple.com"
-          />
+          <Input id="email-label" type="email" placeholder="tim@apple.com" />
         </div>
         <div className="grid items-center w-full gap-2">
           <Label htmlFor="email-label-disabled">Input with label</Label>
-          <Input
-            error={undefined}
-            id="email-label-disabled"
-            type="email"
-            placeholder="tim@apple.com"
-            disabled
-          />
+          <Input id="email-label-disabled" type="email" placeholder="tim@apple.com" disabled />
         </div>
       </div>
-      <div className="flex flex-row gap-4 w-full">
+      <div className="flex flex-col xs:flex-row gap-4 w-full">
         <div className="grid items-center w-full gap-2">
           <Label htmlFor="password">Password</Label>
-          <Input error={undefined} id="password" type="password" />
+          <Input id="password" type="password" />
         </div>
         <div className="grid items-center w-full gap-2">
           <Label htmlFor="password-disabled">Password</Label>
-          <Input
-            error={undefined}
-            id="password-disabled"
-            type="password"
-            disabled
-          />
+          <Input id="password-disabled" type="password" disabled />
         </div>
       </div>
-      <div className="flex flex-row gap-4 w-full">
+      <div className="flex flex-col xs:flex-row gap-4 w-full">
         <div className="grid items-center w-full gap-2">
           <Label htmlFor="file">File Input</Label>
-          <Input error={undefined} id="file" type="file" />
+          <Input id="file" type="file" />
         </div>
         <div className="grid items-center w-full gap-2">
           <Label htmlFor="file-disabled">File Input</Label>
-          <Input error={undefined} id="file-disabled" type="file" disabled />
+          <Input id="file-disabled" type="file" disabled />
         </div>
       </div>
-      <div className="flex flex-row gap-4 w-full">
+      <div className="flex flex-col xs:flex-row gap-4 w-full">
         <div className="grid w-full gap-2">
           <Label htmlFor="text">Textarea</Label>
-          <Textarea error={undefined} className="resize-none" id="text" />
+          <Textarea className="resize-none h-32" id="text" />
         </div>
         <div className="grid w-full gap-2">
           <Label htmlFor="text-disabled">Textarea</Label>
-          <Textarea
-            error={undefined}
-            value={textAreaDemoText}
-            id="text-disabled"
-            disabled
-          />
+          <Textarea value={textAreaDemoText} id="text-disabled" className="h-32" disabled />
         </div>
       </div>
     </div>

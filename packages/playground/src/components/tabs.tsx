@@ -41,11 +41,11 @@ export function TabsDemo() {
           <CardContent className="space-y-2 py-3.5">
             <div className="space-y-1">
               <Label htmlFor="current">Current password</Label>
-              <Input error={undefined} id="current" type="password" />
+              <Input id="current" type="password" />
             </div>
             <div className="space-y-1">
               <Label htmlFor="new">New password</Label>
-              <Input error={undefined} id="new" type="password" />
+              <Input id="new" type="password" />
             </div>
           </CardContent>
           <CardFooter>

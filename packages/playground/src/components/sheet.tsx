@@ -3,13 +3,13 @@ import { Input } from "@theanalog/orphos/input";
 import { Label } from "@theanalog/orphos/label";
 import {
   Sheet,
-  SheetTrigger,
+  SheetClose,
   SheetContent,
-  SheetHeader,
-  SheetTitle,
   SheetDescription,
   SheetFooter,
-  SheetClose,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
 } from "@theanalog/orphos/sheet";
 
 const SHEET_SIDES = ["top", "right", "bottom", "left"] as const;
@@ -34,13 +34,13 @@ export function SheetSide() {
                 <Label htmlFor="name" className="text-right">
                   Name
                 </Label>
-                <Input error={undefined} id="name" value="Pedro Duarte" className="col-span-3" />
+                <Input id="name" value="Pedro Duarte" className="col-span-3" />
               </div>
               <div className="grid grid-cols-4 items-center gap-4">
                 <Label htmlFor="username" className="text-right">
                   Username
                 </Label>
-                <Input error={undefined} id="username" value="@peduarte" className="col-span-3" />
+                <Input id="username" value="@peduarte" className="col-span-3" />
               </div>
             </div>
             <SheetFooter>
