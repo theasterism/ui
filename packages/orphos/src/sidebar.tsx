@@ -227,7 +227,7 @@ Sidebar.displayName = "Sidebar";
 
 const SidebarTrigger = React.forwardRef<React.ElementRef<typeof Button>, React.ComponentProps<typeof Button>>(
   ({ className, onClick, ...props }, ref) => {
-    const { toggleSidebar, open, openMobile } = useSidebar();
+    const { toggleSidebar } = useSidebar();
 
     return (
       <Button
@@ -242,7 +242,7 @@ const SidebarTrigger = React.forwardRef<React.ElementRef<typeof Button>, React.C
         }}
         {...props}
       >
-        {open || openMobile ? <SidebarCollapse /> : <SidebarExpand />}
+        <SidebarExpand />
         <span className="sr-only">Toggle Sidebar</span>
       </Button>
     );
