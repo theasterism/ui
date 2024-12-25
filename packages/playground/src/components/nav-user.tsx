@@ -1,5 +1,12 @@
 "use client";
 
+import { BellIcon } from "@heroicons/react/24/outline";
+import { SparklesIcon } from "@heroicons/react/24/outline";
+import { CheckBadgeIcon } from "@heroicons/react/24/outline";
+import { CreditCardIcon } from "@heroicons/react/24/outline";
+import { ChevronUpDownIcon } from "@heroicons/react/24/outline";
+import { ArrowRightStartOnRectangleIcon } from "@heroicons/react/24/outline";
+import { MoonIcon } from "@heroicons/react/24/outline";
 import { Avatar, AvatarFallback, AvatarImage } from "@theanalog/orphos/avatar";
 import {
   DropdownMenu,
@@ -12,8 +19,6 @@ import {
 } from "@theanalog/orphos/dropdown-menu";
 import { SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from "@theanalog/orphos/sidebar";
 import { Switch } from "@theanalog/orphos/switch";
-import { HalfMoon } from "iconoir-react/regular";
-import { BadgeCheck, Bell, ChevronsUpDown, CreditCard, LogOut, Sparkles } from "lucide-react";
 import { useTheme } from "next-themes";
 
 export function NavUser({
@@ -45,7 +50,7 @@ export function NavUser({
               <div className="grid flex-1 text-left text-sm leading-tight">
                 <span className="truncate font-semibold">{user.name}</span>
               </div>
-              <ChevronsUpDown className="ml-auto size-4" />
+              <ChevronUpDownIcon className="ml-auto size-4" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
@@ -69,27 +74,27 @@ export function NavUser({
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem>
-                <Sparkles />
+                <SparklesIcon />
                 Upgrade to Pro
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem>
-                <BadgeCheck />
+                <CheckBadgeIcon />
                 Account
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <CreditCard />
+                <CreditCardIcon />
                 Billing
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <Bell />
+                <BellIcon />
                 Notifications
               </DropdownMenuItem>
               <DropdownMenuLabel className="py-0 font-normal flex items-center justify-between">
                 <span className="flex gap-2 items-center">
-                  <HalfMoon className="size-4" />
+                  <MoonIcon className="size-4" />
                   Dark mode
                 </span>
                 <Switch
@@ -105,7 +110,7 @@ export function NavUser({
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuItem className="text-danger-solid">
-              <LogOut />
+              <ArrowRightStartOnRectangleIcon />
               Log out
             </DropdownMenuItem>
           </DropdownMenuContent>

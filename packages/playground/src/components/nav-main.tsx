@@ -1,3 +1,5 @@
+import type { HeroIcon } from "@/types";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@theanalog/orphos/collapsible";
 import {
   SidebarGroup,
@@ -9,7 +11,6 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@theanalog/orphos/sidebar";
-import { ChevronRight, type LucideIcon } from "lucide-react";
 
 export function NavMain({
   items,
@@ -17,7 +18,7 @@ export function NavMain({
   items: {
     title: string;
     url: string;
-    icon?: LucideIcon;
+    icon?: HeroIcon;
     isActive?: boolean;
     items?: {
       title: string;
@@ -36,7 +37,7 @@ export function NavMain({
                 <SidebarMenuButton isActive={item.isActive} tooltip={item.title}>
                   {item.icon && <item.icon />}
                   <span>{item.title}</span>
-                  <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
+                  <ChevronRightIcon className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                 </SidebarMenuButton>
               </CollapsibleTrigger>
               <CollapsibleContent>

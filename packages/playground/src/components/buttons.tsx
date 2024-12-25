@@ -1,5 +1,4 @@
 import { Button } from "@theanalog/orphos/button";
-import { Home } from "iconoir-react";
 
 export function ButtonsDemo() {
   return (

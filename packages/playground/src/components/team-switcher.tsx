@@ -1,3 +1,5 @@
+import { PlusIcon } from "@heroicons/react/24/outline";
+import { ChevronUpDownIcon } from "@heroicons/react/24/outline";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,7 +10,6 @@ import {
   DropdownMenuTrigger,
 } from "@theanalog/orphos/dropdown-menu";
 import { SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from "@theanalog/orphos/sidebar";
-import { ChevronsUpDown, Plus } from "lucide-react";
 import * as React from "react";
 
 export function TeamSwitcher({
@@ -39,7 +40,7 @@ export function TeamSwitcher({
                 <span className="truncate font-semibold">{activeTeam.name}</span>
                 <span className="truncate text-xs">{activeTeam.plan}</span>
               </div>
-              <ChevronsUpDown className="ml-auto" />
+              <ChevronUpDownIcon className="ml-auto" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
@@ -61,7 +62,7 @@ export function TeamSwitcher({
             <DropdownMenuSeparator />
             <DropdownMenuItem className="gap-2 p-2">
               <div className="flex size-7 items-center justify-center rounded-md border bg-background">
-                <Plus className="size-4 text-foreground" />
+                <PlusIcon className="size-4 text-foreground" />
               </div>
               <div className="font-medium">Add team</div>
             </DropdownMenuItem>

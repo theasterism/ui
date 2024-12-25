@@ -1,3 +1,8 @@
+import type { HeroIcon } from "@/types";
+import { FolderIcon } from "@heroicons/react/24/outline";
+import { TrashIcon } from "@heroicons/react/24/outline";
+import { ShareIcon } from "@heroicons/react/24/outline";
+import { EllipsisHorizontalIcon } from "@heroicons/react/24/outline";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -15,7 +20,6 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@theanalog/orphos/sidebar";
-import { Folder, Forward, type LucideIcon, MoreHorizontal, Trash2 } from "lucide-react";
 
 export function NavProjects({
   projects,
@@ -23,7 +27,7 @@ export function NavProjects({
   projects: {
     name: string;
     url: string;
-    icon: LucideIcon;
+    icon: HeroIcon;
   }[];
 }) {
   const { isMobile } = useSidebar();
@@ -42,7 +46,7 @@ export function NavProjects({
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <SidebarMenuAction>
-                  <MoreHorizontal />
+                  <EllipsisHorizontalIcon />
                   <span className="sr-only">More</span>
                 </SidebarMenuAction>
               </DropdownMenuTrigger>
@@ -52,16 +56,16 @@ export function NavProjects({
                 align={isMobile ? "end" : "start"}
               >
                 <DropdownMenuItem>
-                  <Folder className="text-muted-foreground" />
+                  <FolderIcon />
                   <span>View Project</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <Forward className="text-muted-foreground" />
+                  <ShareIcon />
                   <span>Share Project</span>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>
-                  <Trash2 className="text-muted-foreground" />
+                <DropdownMenuItem className="text-danger-solid">
+                  <TrashIcon />
                   <span>Delete Project</span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -70,7 +74,7 @@ export function NavProjects({
         ))}
         <SidebarMenuItem>
           <SidebarMenuButton className="text-foreground">
-            <MoreHorizontal />
+            <EllipsisHorizontalIcon />
             <span>More</span>
           </SidebarMenuButton>
           <SidebarMenuBadge>2</SidebarMenuBadge>

@@ -1,7 +1,7 @@
-import * as React from "react";
-import { ChevronsUpDown } from "lucide-react";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@theanalog/orphos/collapsible";
+import { ChevronUpDownIcon } from "@heroicons/react/24/outline";
 import { Button } from "@theanalog/orphos/button";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@theanalog/orphos/collapsible";
+import * as React from "react";
 
 export function CollapsibleDemo() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -12,7 +12,7 @@ export function CollapsibleDemo() {
         <h4 className="text-sm font-semibold">@peduarte starred 3 repositories</h4>
         <CollapsibleTrigger asChild>
           <Button variant="ghost" size="sm">
-            <ChevronsUpDown className="h-4 w-4" />
+            <ChevronUpDownIcon className="h-4 w-4" />
             <span className="sr-only">Toggle</span>
           </Button>
         </CollapsibleTrigger>

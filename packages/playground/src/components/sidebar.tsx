@@ -1,17 +1,17 @@
-import {
-  AudioWaveform,
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
-  GalleryVerticalEnd,
-  Map as MapIcon,
-  PieChart,
-  Settings2,
-  SquareTerminal,
-} from "lucide-react";
 import * as React from "react";
 
+import {
+  AcademicCapIcon,
+  BoltIcon,
+  BookOpenIcon,
+  Cog6ToothIcon,
+  CommandLineIcon,
+  GlobeAmericasIcon,
+  MapIcon,
+  PresentationChartLineIcon,
+  RectangleStackIcon,
+  SwatchIcon,
+} from "@heroicons/react/24/outline";
 import {
   Sidebar,
   SidebarContent,
@@ -35,17 +35,17 @@ const data = {
   teams: [
     {
       name: "Acme Inc",
-      logo: GalleryVerticalEnd,
+      logo: AcademicCapIcon,
       plan: "Enterprise",
     },
     {
       name: "Acme Corp.",
-      logo: AudioWaveform,
+      logo: RectangleStackIcon,
       plan: "Startup",
     },
     {
       name: "Evil Corp.",
-      logo: Command,
+      logo: GlobeAmericasIcon,
       plan: "Free",
     },
   ],
@@ -53,7 +53,7 @@ const data = {
     {
       title: "Playground",
       url: "#",
-      icon: SquareTerminal,
+      icon: CommandLineIcon,
       items: [
         {
           title: "History",
@@ -72,7 +72,7 @@ const data = {
     {
       title: "Models",
       url: "#",
-      icon: Bot,
+      icon: BoltIcon,
       items: [
         {
           title: "Genesis",
@@ -91,7 +91,7 @@ const data = {
     {
       title: "Documentation",
       url: "#",
-      icon: BookOpen,
+      icon: BookOpenIcon,
       items: [
         {
           title: "Introduction",
@@ -114,7 +114,7 @@ const data = {
     {
       title: "Settings",
       url: "#",
-      icon: Settings2,
+      icon: Cog6ToothIcon,
       items: [
         {
           title: "General",
@@ -139,12 +139,12 @@ const data = {
     {
       name: "Design Engineering",
       url: "#",
-      icon: Frame,
+      icon: SwatchIcon,
     },
     {
       name: "Sales & Marketing",
       url: "#",
-      icon: PieChart,
+      icon: PresentationChartLineIcon,
     },
     {
       name: "Travel",
