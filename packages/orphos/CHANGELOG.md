@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.8.1
+
+### Patch Changes
+
+- 61b2d34: fix tab overflow safari
+
 ## 0.8.0
 
 ### Minor Changes
