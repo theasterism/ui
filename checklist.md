@@ -41,9 +41,8 @@
 [ ] sonner
 [x] switch
 [ ] table
-[ ] tabs
+[x] tabs
 [x] textarea
 [ ] toggle
 [ ] toggle group
 [x] tooltip
-
