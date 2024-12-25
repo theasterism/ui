@@ -1,6 +1,14 @@
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 import { type VariantProps, cva } from "cva";
-import { CheckCircle, InfoCircle, WarningCircle, WarningTriangle, Xmark } from "iconoir-react";
+import {
+  CheckCircle,
+  InfoCircle,
+  WarningCircle,
+  WarningHexagon,
+  WarningSquare,
+  WarningTriangle,
+  Xmark,
+} from "iconoir-react";
 import * as React from "react";
 import { Button } from "./button";
 import { cn } from "./lib/utils";
@@ -65,7 +73,7 @@ const iconForVariant: Record<VariantProps<typeof calloutVariants>["variant"], Re
         "flex-none flex items-center justify-center rounded-full size-10 bg-white dark:bg-background-subtle [&>svg]:size-[20px] [&>svg]:stroke-2",
       )}
     >
-      <WarningTriangle className="text-danger-solid" />
+      <WarningCircle className="text-danger-solid" />
     </span>
   ),
 };
