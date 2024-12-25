@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.9.1
+
+### Patch Changes
+
+- 117d74a: change sidebarmenu lg button border radius
+
 ## 0.9.0
 
 ### Minor Changes
