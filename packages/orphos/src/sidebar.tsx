@@ -316,7 +316,7 @@ const SidebarSeparator = React.forwardRef<React.ElementRef<typeof Separator>, Re
       <Separator
         ref={ref}
         data-sidebar="separator"
-        className={cn("mx-2 w-auto bg-border-subtle", className)}
+        className={cn("w-auto bg-border-subtle h-[0.5px]", className)}
         {...props}
       />
     );
