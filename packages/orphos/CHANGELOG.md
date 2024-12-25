@@ -1,5 +1,13 @@
 # @theanalog/orphos
 
+## 0.9.2
+
+### Patch Changes
+
+- c754f59: add xs breakpoint
+- 6001cd4: fix radio circle width
+- a79394a: fix switch initial position
+
 ## 0.9.1
 
 ### Patch Changes
