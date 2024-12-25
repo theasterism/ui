@@ -30,7 +30,7 @@ export function TeamSwitcher({
           <DropdownMenuTrigger asChild>
             <SidebarMenuButton
               size="lg"
-              className="data-[state=open]:bg-background-element-active data-[state=open]:text-foreground"
+              className="h-10 data-[state=open]:bg-background-element-active data-[state=open]:text-foreground"
             >
               <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-background-element text-foreground">
                 <activeTeam.logo className="size-4" />
@@ -51,7 +51,7 @@ export function TeamSwitcher({
             <DropdownMenuLabel className="text-xs text-foreground-subtle">Teams</DropdownMenuLabel>
             {teams.map((team, index) => (
               <DropdownMenuItem key={team.name} onClick={() => setActiveTeam(team)} className="gap-2 p-2">
-                <div className="flex size-6 items-center justify-center rounded-sm border">
+                <div className="flex size-7 items-center justify-center rounded-sm border bg-background">
                   <team.logo className="size-4 shrink-0" />
                 </div>
                 {team.name}
@@ -60,7 +60,7 @@ export function TeamSwitcher({
             ))}
             <DropdownMenuSeparator />
             <DropdownMenuItem className="gap-2 p-2">
-              <div className="flex size-6 items-center justify-center rounded-md border bg-background">
+              <div className="flex size-7 items-center justify-center rounded-md border bg-background">
                 <Plus className="size-4 text-foreground" />
               </div>
               <div className="font-medium">Add team</div>
