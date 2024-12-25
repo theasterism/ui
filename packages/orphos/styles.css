@@ -385,6 +385,9 @@
 
 /* Theme */
 @theme {
+
+  --breakpoint-xs: 450px;
+
   --text-*: initial;
   --color-*: initial;
 
