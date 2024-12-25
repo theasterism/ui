@@ -17,6 +17,7 @@ import { ColorPalette } from "./components/pallete";
 import { SheetSide } from "./components/sheet";
 import { AppSidebar } from "./components/sidebar";
 import { SkeletonDemo } from "./components/skeleton";
+import { TabsDemo } from "./components/tabs";
 
 function App() {
   return (
@@ -143,6 +144,12 @@ function App() {
             <h2 className="text-2xl font-bold leading-tight tracking-tight">Skeleton</h2>
             <div className="flex flex-row gap-4 w-auto">
               <SkeletonDemo />
+            </div>
+          </div>
+          <div className="flex flex-col gap-6">
+            <h2 className="text-2xl font-bold leading-tight tracking-tight">Tabs</h2>
+            <div className="flex flex-row gap-4 w-auto">
+              <TabsDemo />
             </div>
           </div>
           <div className="flex flex-col gap-6">

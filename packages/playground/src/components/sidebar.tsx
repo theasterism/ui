@@ -12,7 +12,14 @@ import {
 } from "lucide-react";
 import * as React from "react";
 
-import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail } from "@theanalog/orphos/sidebar";
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarFooter,
+  SidebarHeader,
+  SidebarRail,
+  SidebarSeparator,
+} from "@theanalog/orphos/sidebar";
 import { NavMain } from "./nav-main";
 import { NavProjects } from "./nav-projects";
 import { NavUser } from "./nav-user";
@@ -47,7 +54,6 @@ const data = {
       title: "Playground",
       url: "#",
       icon: SquareTerminal,
-      isActive: true,
       items: [
         {
           title: "History",
@@ -154,6 +160,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader>
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader>
+      <SidebarSeparator />
       <SidebarContent>
         <NavMain items={data.navMain} />
         <NavProjects projects={data.projects} />
