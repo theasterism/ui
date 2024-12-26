@@ -1,6 +1,6 @@
 import { Badge } from "@theanalog/orphos/badge";
 import { Button } from "@theanalog/orphos/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@theanalog/orphos/card";
+import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@theanalog/orphos/card";
 import { Separator } from "@theanalog/orphos/separator";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@theanalog/orphos/sidebar";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@theanalog/orphos/tooltip";
@@ -8,7 +8,6 @@ import { AvatarDemo } from "./components/avatar";
 import { ButtonDisabledDemo, ButtonsDemo } from "./components/buttons";
 import { CalloutDemo } from "./components/callout";
 import { CheckboxDemo } from "./components/checkbox";
-import { CollapsibleDemo } from "./components/collapsible";
 import { DropdownDemo } from "./components/dropdown";
 import { FormDemo } from "./components/form";
 import { IconButtonDemo } from "./components/icon-button";
