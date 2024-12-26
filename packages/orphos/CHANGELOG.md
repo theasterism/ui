@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.9.3
+
+### Patch Changes
+
+- 39362da: change sidebar button styles
+
 ## 0.9.2
 
 ### Patch Changes
