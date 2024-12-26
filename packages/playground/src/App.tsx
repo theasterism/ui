@@ -94,12 +94,6 @@ function App() {
             </div>
           </div>
           <div className="flex flex-col gap-6 items-start w-full">
-            <h2 className="text-2xl font-bold leading-tight tracking-tight">Collapsible</h2>
-            <div className="flex flex-col gap-10 items-start w-full">
-              <CollapsibleDemo />
-            </div>
-          </div>
-          <div className="flex flex-col gap-6 items-start w-full">
             <h2 className="text-2xl font-bold leading-tight tracking-tight">Dropdown Menu</h2>
             <div className="flex flex-col gap-10 items-start w-full">
               <DropdownDemo />
