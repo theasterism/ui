@@ -416,10 +416,11 @@ const SidebarMenuItem = React.forwardRef<HTMLLIElement, React.ComponentProps<"li
 SidebarMenuItem.displayName = "SidebarMenuItem";
 
 const sidebarMenuButtonVariants = cva({
-  base: "peer/menu-button text-foreground-subtle flex w-full items-center gap-2 overflow-hidden rounded-sm p-2 text-left text-sm outline-hidden ring-info-focus-ring transition-[width,height,padding] hover:bg-background-element-hover hover:text-foreground focus-visible:ring-2 active:bg-background-element-active active:text-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:border-[0.5px] data-[active=true]:border-element-border data-[active=true]:bg-background dark:data-[active=true]:bg-background-subtle data-[active=true]:font-medium data-[active=true]:text-foreground data-[state=open]:hover:bg-background-element-hover data-[state=open]:hover:text-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
+  base: "peer/menu-button text-foreground-subtle flex w-full items-center gap-2 overflow-hidden rounded-sm p-2 text-left text-sm outline-hidden ring-info-focus-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-background-element-active active:text-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:border-[0.5px] data-[active=true]:border-element-border data-[active=true]:bg-background dark:data-[active=true]:bg-background-subtle data-[active=true]:font-medium data-[active=true]:text-foreground data-[state=open]:bg-background-element-selected data-[state=open]:border-element-border-hover data-[state=open]:text-foreground data-[state=open]:border-[0.5px] data-[state=open]:hover:border-element-border-hover data-[state=open]:hover:text-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
   variants: {
     variant: {
-      default: "hover:bg-background-element-hover hover:text-foreground",
+      default:
+        "hover:border-[0.5px] hover:border-element-border-hover hover:bg-background-element-hover hover:text-foreground",
       soft: "hover:bg-background-element-hover hover:text-foreground",
     },
     size: {
