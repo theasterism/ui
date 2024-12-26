@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.9.4
+
+### Patch Changes
+
+- 625c04b: decrease border radius for dropdown items
+
 ## 0.9.3
 
 ### Patch Changes
