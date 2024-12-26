@@ -7,9 +7,7 @@ export function ColorPalette() {
   return (
     <Fragment>
       <div className="flex flex-col gap-6 items-start">
-        <h2 className="text-2xl font-bold leading-tight tracking-tight">
-          Colors
-        </h2>
+        <h2 className="text-2xl font-bold leading-tight tracking-tight">Colors</h2>
         <div className="flex flex-col gap-4 w-auto">
           <div className="flex flex-col gap-2">
             <p>Brand:</p>
@@ -33,9 +31,7 @@ export function ColorPalette() {
         </div>
       </div>
       <div className="flex flex-col gap-6">
-        <h2 className="text-2xl font-bold leading-tight tracking-tight">
-          Palette
-        </h2>
+        <h2 className="text-2xl font-bold leading-tight tracking-tight">Palette</h2>
         <div className="flex flex-col sm:flex-row sm:flex-wrap gap-6">
           {palette.map((color) => (
             <div key={color} className="grid grid-cols-5 w-fit">

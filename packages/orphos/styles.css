@@ -385,17 +385,16 @@
 
 /* Theme */
 @theme {
-
   --breakpoint-xs: 450px;
 
   --text-*: initial;
   --color-*: initial;
 
   /* Fonts */
-  --font-sans: InterVariable, Inter, ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-mono: IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, Monaco,
-    Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-sans: InterVariable, Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
 
   --text-5xl: var(--text-5xl); /* 56px */
   --text-4xl: var(--text-4xl); /* 48px */
