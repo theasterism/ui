@@ -24,7 +24,7 @@ function App() {
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <section className="flex flex-col flex-1 gap-20 px-4 md:px-8 pt-0 pb-8">
+        <section className="flex flex-col flex-1 gap-20 px-6 md:px-8 pt-0 pb-8">
           <div>
             <h1 className="text-5xl leading-none text-balance tracking-tight font-bold mt-8">Orphos Design System</h1>
             <hr className="my-4" />
