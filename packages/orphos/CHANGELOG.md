@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.9.5
+
+### Patch Changes
+
+- 22757af: reduce callout padding
+
 ## 0.9.4
 
 ### Patch Changes
