@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.10.0
+
+### Minor Changes
+
+- 2879ca4: add dialog component
+
 ## 0.9.5
 
 ### Patch Changes
