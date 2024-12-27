@@ -13,7 +13,7 @@ import { Button } from "./button";
 import { cn } from "./lib/utils";
 
 const calloutVariants = cva({
-  base: "relative flex flex-col gap-3 w-full rounded-md p-4 text-sm",
+  base: "relative flex flex-col gap-3 w-full rounded-md p-3 text-sm",
   variants: {
     variant: {
       default: "bg-primary-background-element border-primary-border-subtle text-primary-foreground-subtle",
@@ -33,7 +33,7 @@ const iconForVariant: Record<VariantProps<typeof calloutVariants>["variant"], Re
   default: (
     <span
       className={cn(
-        "flex-none flex items-center justify-center rounded-full size-10 bg-white dark:bg-background-subtle [&>svg]:size-[20px] [&>svg]:stroke-2",
+        "flex-none flex items-center justify-center rounded-full size-9 bg-white dark:bg-background-subtle [&>svg]:size-[20px] [&>svg]:stroke-2",
       )}
     >
       <MegaphoneIcon className="text-primary-solid" />
@@ -42,7 +42,7 @@ const iconForVariant: Record<VariantProps<typeof calloutVariants>["variant"], Re
   success: (
     <span
       className={cn(
-        "flex-none flex items-center justify-center rounded-full size-10 bg-white dark:bg-background-subtle [&>svg]:size-[20px] [&>svg]:stroke-2",
+        "flex-none flex items-center justify-center rounded-full size-9 bg-white dark:bg-background-subtle [&>svg]:size-[20px] [&>svg]:stroke-2",
       )}
     >
       <CheckBadgeIcon className="text-success-solid" />
@@ -51,7 +51,7 @@ const iconForVariant: Record<VariantProps<typeof calloutVariants>["variant"], Re
   warning: (
     <span
       className={cn(
-        "flex-none flex items-center justify-center rounded-full size-10 bg-white dark:bg-background-subtle [&>svg]:size-[20px] [&>svg]:stroke-2",
+        "flex-none flex items-center justify-center rounded-full size-9 bg-white dark:bg-background-subtle [&>svg]:size-[20px] [&>svg]:stroke-2",
       )}
     >
       <ExclamationCircleIcon className="text-warning-solid" />
@@ -60,7 +60,7 @@ const iconForVariant: Record<VariantProps<typeof calloutVariants>["variant"], Re
   info: (
     <span
       className={cn(
-        "flex-none flex items-center justify-center rounded-full size-10 bg-white dark:bg-background-subtle [&>svg]:size-[20px] [&>svg]:stroke-2",
+        "flex-none flex items-center justify-center rounded-full size-9 bg-white dark:bg-background-subtle [&>svg]:size-[20px] [&>svg]:stroke-2",
       )}
     >
       <InformationCircleIcon className="text-info-solid" />
@@ -69,7 +69,7 @@ const iconForVariant: Record<VariantProps<typeof calloutVariants>["variant"], Re
   critical: (
     <span
       className={cn(
-        "flex-none flex items-center justify-center rounded-full size-10 bg-white dark:bg-background-subtle [&>svg]:size-[20px] [&>svg]:stroke-2",
+        "flex-none flex items-center justify-center rounded-full size-9 bg-white dark:bg-background-subtle [&>svg]:size-[20px] [&>svg]:stroke-2",
       )}
     >
       <ExclamationTriangleIcon className="text-danger-solid" />
@@ -106,7 +106,7 @@ const Callout = React.forwardRef<
           {icon && supportsCustomIcon ? (
             <span
               className={cn(
-                "flex-none flex items-center justify-center rounded-full size-10 bg-white dark:bg-background-subtle [&>svg]:size-[20px] [&>svg]:stroke-2",
+                "flex-none flex items-center justify-center rounded-full size-9 bg-white dark:bg-background-subtle [&>svg]:size-[20px] [&>svg]:stroke-2",
               )}
             >
               {icon}
