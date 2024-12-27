@@ -17,6 +17,7 @@ import { SheetSide } from "./components/sheet";
 import { AppSidebar } from "./components/sidebar";
 import { SkeletonDemo } from "./components/skeleton";
 import { TabsDemo } from "./components/tabs";
+import { DialogDemo } from "./dialog";
 
 function App() {
   return (
@@ -90,6 +91,12 @@ function App() {
                   <Button className="w-full">Mark all as read</Button>
                 </CardFooter>
               </Card>
+            </div>
+          </div>
+          <div className="flex flex-col gap-6 items-start w-full">
+            <h2 className="text-2xl font-bold leading-tight tracking-tight">Dialog</h2>
+            <div className="flex flex-col gap-10 items-start w-full">
+              <DialogDemo />
             </div>
           </div>
           <div className="flex flex-col gap-6 items-start w-full">
