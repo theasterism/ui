@@ -17,7 +17,7 @@ import { SheetSide } from "./components/sheet";
 import { AppSidebar } from "./components/sidebar";
 import { SkeletonDemo } from "./components/skeleton";
 import { TabsDemo } from "./components/tabs";
-import { DialogDemo } from "./dialog";
+import { DialogDemo } from "./components/dialog";
 
 function App() {
   return (
