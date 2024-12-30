@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.10.1
+
+### Patch Changes
+
+- caa1fe8: change tab list padding and border radius
+- 283d005: change dialog padding
+
 ## 0.10.0
 
 ### Minor Changes
