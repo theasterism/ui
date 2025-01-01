@@ -1,5 +1,13 @@
 # @theanalog/orphos
 
+## 0.10.2
+
+### Patch Changes
+
+- 8bb824f: change tab trigger styles
+- ec5a087: fix dialog styles
+- 056e152: fix sidebar scroll overflow bug
+
 ## 0.10.1
 
 ### Patch Changes
