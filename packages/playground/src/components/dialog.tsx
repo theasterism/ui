@@ -40,7 +40,7 @@ export function DialogDemo() {
             <Input id="username" value="@peduarte" className="col-span-3" />
           </div>
         </div>
-        <DialogFooter className="flex-row justify-end gap-2">
+        <DialogFooter>
           <DialogClose
             className={cn(
               buttonVariants({

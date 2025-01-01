@@ -2,7 +2,22 @@
 @import "@theanalog/orphos/styles.css";
 
 @layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+    font-synthesis-weight: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-color) transparent;
+  }
+  html {
+    @apply fixed isolate h-full w-full overflow-hidden;
+  }
   body {
-    @apply min-h-dvh bg-background-subtle dark:bg-background min-w-[320px];
+    @apply fixed isolate overflow-hidden h-full! w-full! bg-background-subtle dark:bg-background min-w-[320px];
+  }
+  #root {
+    @apply isolate h-full overflow-hidden;
+    flex: 1 1 0;
+    overflow: hidden;
+    -webkit-app-region: no-drag;
   }
 }
