@@ -36,7 +36,7 @@ const DialogContent = React.forwardRef<
     <DialogPrimitive.Content
       ref={ref}
       className={cn(
-        "fixed rounded-md left-[50%] top-[50%] z-50 grid max-w-[calc(100vw-32px)] w-full sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-3.5 border-[0.5px] bg-background dark:bg-background-subtle duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%]",
+        "fixed flex flex-col isolate rounded-md left-1/2 top-1/2 max-h-[calc(100dvh-env(safe-area-inset-bottom,0)-env(safe-area-inset-top,0)-32px)] h-auto z-50 max-w-[calc(100vw-32px)] w-full sm:max-w-xl -translate-x-1/2 -translate-y-1/2 gap-3.5 border-[0.5px] bg-background dark:bg-background-subtle duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%]",
         className,
       )}
       {...props}
@@ -55,7 +55,7 @@ DialogHeader.displayName = "DialogHeader";
 const DialogFooter = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 border-t-[0.5px] border-border-subtle py-3.5 px-3.5",
+      "flex flex-col-reverse min-h-full sm:flex-row sm:justify-end sm:space-x-2 border-t-[0.5px] border-border-subtle py-3.5 px-3.5",
       className,
     )}
     {...props}
