@@ -18,12 +18,13 @@ import { AppSidebar } from "./components/sidebar";
 import { SkeletonDemo } from "./components/skeleton";
 import { TabsDemo } from "./components/tabs";
 import { DialogDemo } from "./components/dialog";
+import { ToastDemo } from "./components/toast";
 
 function App() {
   return (
     <SidebarProvider>
       <AppSidebar />
-      <section className="flex flex-col mx-auto grow shrink basis-[0] gap-20 px-6 md:px-8 pt-0 pb-8 h-full overflow-y-auto">
+      <section className="flex flex-col mx-auto grow max-w-5xl w-full shrink basis-[0] gap-20 px-6 md:px-8 pt-0 pb-8 h-full overflow-y-auto">
         <div>
           <h1 className="text-5xl leading-none text-balance tracking-tight font-bold mt-8">Orphos Design System</h1>
           <hr className="my-4" />
@@ -149,6 +150,12 @@ function App() {
           <h2 className="text-2xl font-bold leading-tight tracking-tight">Tabs</h2>
           <div className="flex flex-row gap-4 w-auto">
             <TabsDemo />
+          </div>
+        </div>
+        <div className="flex flex-col gap-6">
+          <h2 className="text-2xl font-bold leading-tight tracking-tight">Toast</h2>
+          <div className="flex flex-row gap-4 w-auto">
+            <ToastDemo />
           </div>
         </div>
         <div className="flex flex-col gap-6">
