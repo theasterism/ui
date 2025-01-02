@@ -584,7 +584,7 @@
     @apply isolate h-full w-full;
   }
   body {
-    @apply scroll-smooth min-w-[320px] text-base leading-loose tracking-[-3%] font-sans antialiased bg-background-element dark:bg-background text-foreground;
+    @apply scroll-smooth min-w-[320px] text-base leading-loose tracking-[-3%] font-sans antialiased bg-background-element/65 dark:bg-background text-foreground;
     font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
     font-synthesis-weight: none;
     text-rendering: optimizeLegibility;
