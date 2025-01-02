@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.11.5
+
+### Patch Changes
+
+- 4604188: change sidebar and sheet trigger/close button variant
+
 ## 0.11.4
 
 ### Patch Changes
