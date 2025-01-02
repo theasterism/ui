@@ -33,7 +33,7 @@ export function TeamSwitcher({
               size="lg"
               className="h-10 data-[state=open]:bg-background-element-active data-[state=open]:text-foreground"
             >
-              <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-background-element text-foreground">
+              <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-background dark:bg-background-element text-foreground">
                 <activeTeam.logo className="size-4" />
               </div>
               <div className="grid flex-1 text-left text-sm leading-tight">

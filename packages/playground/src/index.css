@@ -12,7 +12,7 @@
     @apply fixed isolate h-full w-full overflow-hidden;
   }
   body {
-    @apply fixed isolate overflow-hidden h-full! w-full! bg-background-subtle dark:bg-background min-w-[320px];
+    @apply fixed isolate overflow-hidden h-full! w-full!  min-w-[320px];
   }
   #root {
     @apply isolate h-full overflow-hidden;
