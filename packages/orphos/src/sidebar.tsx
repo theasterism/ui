@@ -233,7 +233,6 @@ const SidebarTrigger = React.forwardRef<React.ElementRef<typeof Button>, React.C
       <Button
         ref={ref}
         data-sidebar="trigger"
-        variant="secondary"
         size="icon"
         className={cn("h-8 w-8", className)}
         onClick={(event) => {

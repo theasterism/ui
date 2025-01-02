@@ -57,7 +57,7 @@ const SheetContent = React.forwardRef<React.ElementRef<typeof SheetPrimitive.Con
       <SheetOverlay />
       <SheetPrimitive.Content ref={ref} className={cn(sheetVariants({ side }), className)} {...props}>
         <SheetPrimitive.Close asChild className="absolute right-6 top-7">
-          <Button variant="secondary" size="icon" className="px-2.5 overflow-hidden! w-[24px]! h-[24px]! rounded-sm">
+          <Button variant="ghost" size="icon" className="px-2.5 overflow-hidden! w-[24px]! h-[24px]! rounded-sm">
             <XMarkIcon className="h-4 w-4 stroke-2" />
             <span className="sr-only">Close</span>
           </Button>
@@ -84,7 +84,7 @@ const SheetTitle = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
 >(({ className, ...props }, ref) => (
-  <SheetPrimitive.Title ref={ref} className={cn("text-lg font-medium mt-0 pb-0 mb-0", className)} {...props} />
+  <SheetPrimitive.Title ref={ref} className={cn("text-lg font-semibold mt-0 pb-0 mb-0", className)} {...props} />
 ));
 SheetTitle.displayName = SheetPrimitive.Title.displayName;
 
