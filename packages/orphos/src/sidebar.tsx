@@ -419,7 +419,7 @@ const sidebarMenuButtonVariants = cva({
   variants: {
     variant: {
       default:
-        "hover:border-[0.5px] hover:border-element-border-hover hover:bg-background-element-hover hover:text-foreground data-[active=true]:border-[0.5px] data-[active=true]:border-element-border data-[state=open]:border-element-border-hover data-[state=open]:border-[0.5px] data-[state=open]:hover:border-element-border-hover",
+        "border-[0.5px] border-transparent hover:border-element-border-hover hover:bg-background-element-hover hover:text-foreground data-[active=true]:border-[0.5px] data-[active=true]:border-element-border data-[state=open]:border-element-border-hover data-[state=open]:border-[0.5px] data-[state=open]:hover:border-element-border-hover",
       soft: "hover:bg-background-element-hover hover:text-foreground",
     },
     size: {
