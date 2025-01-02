@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.11.0
+
+### Minor Changes
+
+- b6eb3c5: change light background color
+
 ## 0.10.2
 
 ### Patch Changes
