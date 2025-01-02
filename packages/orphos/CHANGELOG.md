@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.11.6
+
+### Patch Changes
+
+- 0fb477b: fix layoutshift caused by border
+
 ## 0.11.5
 
 ### Patch Changes
