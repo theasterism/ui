@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.11.2
+
+### Patch Changes
+
+- 43a7188: change color to add more brand color
+- 9b83636: change background color
+
 ## 0.11.1
 
 ### Patch Changes
