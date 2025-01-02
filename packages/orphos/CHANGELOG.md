@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.11.3
+
+### Patch Changes
+
+- 42f81f3: change sidebar colors
+
 ## 0.11.2
 
 ### Patch Changes
