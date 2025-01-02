@@ -16,11 +16,12 @@ const Toaster = ({ ...props }: ToasterProps) => {
         duration: Infinity,
         unstyled: true,
         classNames: {
-          toast: "bg-background p-3.5 rounded-md border-[0.5px] border-border-element",
+          toast: "bg-background p-3.5 rounded-md border-[0.5px] border-border-element grid grid-cols-2 gap-2",
+          content: "col-span-2",
           title: "text-base font-medium! text-foreground!",
           description: "text-[12px]! text-foreground-subtle!",
-          actionButton: "px-3 h-7 text-sm bg-primary-solid rounded-sm",
-          cancelButton: "px-3 h-7 text-sm bg-background-element! rounded-sm",
+          actionButton: "px-3 h-7 text-sm bg-primary-solid rounded-sm text-white w-fit",
+          cancelButton: "px-3 h-7 text-sm bg-background-element! rounded-sm w-fit",
         },
       }}
       {...props}
