@@ -16,7 +16,7 @@ export function ColorPalette() {
           <div className="flex flex-col gap-2">
             <p>Background:</p>
             <div className="flex gap-2">
-              <div className="size-12 bg-background-element dark:bg-background border-3 border-border-subtle rounded-full" />
+              <div className="size-12 bg-transparent dark:bg-background border-3 border-border-subtle rounded-full" />
               <div className="size-12 bg-background dark:bg-background-subtle border-3 border-border-subtle rounded-full" />
             </div>
           </div>
