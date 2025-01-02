@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.11.4
+
+### Patch Changes
+
+- bbf4b59: change button style for secondary
+- debe1b7: change sidebar button syles
+
 ## 0.11.3
 
 ### Patch Changes
