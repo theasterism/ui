@@ -387,8 +387,8 @@
 @theme {
   --breakpoint-xs: 450px;
 
-  --text-*: initial;
-  --color-*: initial;
+   --text-*: initial;
+   --color-*: initial; 
 
   /* Fonts */
   --font-sans: InterVariable, Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
@@ -573,7 +573,10 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    @apply border-border-subtle;
+    @apply border-0 border-border-subtle;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
   }
@@ -584,7 +587,7 @@
     @apply isolate h-full w-full;
   }
   body {
-    @apply scroll-smooth min-w-[320px] text-base leading-loose tracking-[-3%] font-sans antialiased bg-background-element/65 dark:bg-background text-foreground;
+    @apply scroll-smooth min-w-[320px] text-base leading-loose tracking-[-3%] font-sans antialiased bg-background-subtle dark:bg-background text-foreground;
     font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
     font-synthesis-weight: none;
     text-rendering: optimizeLegibility;
