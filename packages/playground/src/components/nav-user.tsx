@@ -108,7 +108,7 @@ export function NavUser({
               </DropdownMenuLabel>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem className="text-danger-solid">
+            <DropdownMenuItem className="text-danger-solid focus:bg-danger-solid">
               <ArrowRightStartOnRectangleIcon />
               Log out
             </DropdownMenuItem>

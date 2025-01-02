@@ -64,7 +64,7 @@ export function NavProjects({
                   <span>Share Project</span>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem className="text-danger-solid">
+                <DropdownMenuItem className="text-danger-solid focus:bg-danger-solid">
                   <TrashIcon />
                   <span>Delete Project</span>
                 </DropdownMenuItem>
