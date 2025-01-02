@@ -163,9 +163,7 @@ function App() {
           <div className="flex flex-row gap-4 w-auto">
             <Tooltip delayDuration={250}>
               <TooltipTrigger asChild>
-                <Button size="sm" variant="secondary">
-                  Hover
-                </Button>
+                <Button size="sm">Hover</Button>
               </TooltipTrigger>
               <TooltipContent side="bottom" sideOffset={8} align="start">
                 <p>Add to library</p>
