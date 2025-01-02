@@ -34,7 +34,7 @@ export function NavMain({
           <Collapsible key={item.title} asChild defaultOpen={item.isActive} className="group/collapsible">
             <SidebarMenuItem>
               <CollapsibleTrigger asChild>
-                <SidebarMenuButton isActive={item.isActive} tooltip={item.title}>
+                <SidebarMenuButton variant="soft" isActive={item.isActive} tooltip={item.title}>
                   {item.icon && <item.icon />}
                   <span>{item.title}</span>
                   <ChevronRightIcon className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
