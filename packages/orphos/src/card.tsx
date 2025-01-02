@@ -7,7 +7,7 @@ const Card = ({ className, ref, ...props }: DivElementProps) => (
   <div
     ref={ref}
     className={cn(
-      "rounded-md border-[0.5px] border-border-subtle bg-background dark:bg-background-subtle text-foregroung",
+      "rounded-md bg-background dark:bg-background-subtle text-foregroung shadow-sm shadow-border-subtle dark:shadow-none",
       className,
     )}
     {...props}
@@ -36,17 +36,13 @@ const CardDescription = ({ className, ref, ...props }: DivElementProps) => (
 CardDescription.displayName = "CardDescription";
 
 const CardContent = ({ className, ref, ...props }: DivElementProps) => (
-  <div ref={ref} className={cn("px-3.5", className)} {...props} />
+  <div ref={ref} className={cn("px-4", className)} {...props} />
 );
 
 CardContent.displayName = "CardContent";
 
 const CardFooter = ({ className, ref, ...props }: DivElementProps) => (
-  <div
-    ref={ref}
-    className={cn("flex items-center p-3.5 border-t-[0.5px] border-border-subtle", className)}
-    {...props}
-  />
+  <div ref={ref} className={cn("flex items-center p-4 border-t-[0.5px] border-border-subtle", className)} {...props} />
 );
 CardFooter.displayName = "CardFooter";
 
