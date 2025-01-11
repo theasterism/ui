@@ -50,7 +50,7 @@ export function DialogDemo() {
           >
             Close
           </DialogClose>
-          <Button variant="secondary" type="submit">
+          <Button variant="default" type="submit">
             Save changes
           </Button>
         </DialogFooter>
