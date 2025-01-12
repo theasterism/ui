@@ -599,9 +599,6 @@
   hr {
     @apply my-4 md:my-6;
   }
-  blockquote {
-    @apply mt-6 border-l-4 border-primary-solid pl-6 italic;
-  }
   table {
     @apply my-6 w-full overflow-y-auto rounded-lg;
   }
@@ -613,14 +610,5 @@
   }
   td {
     @apply border border-border-subtle px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right;
-  }
-  ul {
-    @apply my-6 ml-4 list-disc [&>li]:mt-2 [&>li]:pl-1 marker:text-primary-solid;
-  }
-  ol {
-    @apply my-6 ml-4 list-decimal [&>li]:mt-2 [&>li]:pl-1 marker:text-primary-solid;
-  }
-  code {
-    @apply relative rounded-xs bg-background dark:bg-background-subtle px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
   }
 }
