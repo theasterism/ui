@@ -16,7 +16,8 @@ const Toaster = ({ ...props }: ToasterProps) => {
         duration: Infinity,
         unstyled: true,
         classNames: {
-          toast: "bg-background p-3.5 rounded-md border-[0.5px] border-border-element grid grid-cols-3 gap-2",
+          toast:
+            "bg-background dark:bg-background-subtle shadow-[inset_0px_0.5px_0px_rgb(208_205_215),_inset_0px_0px_0px_0.5px_rgb(208_205_215)] dark:shadow-[inset_0px_1px_0px_rgb(255_255_255_/_0.04),_inset_0px_0px_0px_1px_rgb(255_255_255_/_0.02)] p-3.5 rounded-md grid grid-cols-3 gap-2",
           content: "col-span-3",
           title: "text-base font-medium! text-foreground!",
           description: "text-[12px]! text-foreground-subtle!",
