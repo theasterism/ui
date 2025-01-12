@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.11.8
+
+### Patch Changes
+
+- a72858a: add tab border
+- 6671b86: add border with shadow instead of border
+
 ## 0.11.7
 
 ### Patch Changes
