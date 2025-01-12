@@ -1,5 +1,15 @@
 # @theanalog/orphos
 
+## 0.12.0
+
+### Minor Changes
+
+- 4f0f959: add typography styles
+
+### Patch Changes
+
+- 2a63c56: add border to card, toast and tooltip
+
 ## 0.11.8
 
 ### Patch Changes
