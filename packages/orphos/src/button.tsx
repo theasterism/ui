@@ -4,11 +4,11 @@ import * as React from "react";
 import { cn } from "./lib/utils";
 
 const buttonVariants = cva({
-  base: "inline-flex items-center justify-center gap-x-2 leading-relaxed whitespace-nowrap text-[14px] font-semibold transition-colors focus-visible:ring-2 focus-visible:ring-offset-background-subtle dark:focus-visible:ring-offset-background focus-visible:ring-offset-2 focus-visible:ring-info-focus-ring focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  base: "inline-flex items-center justify-center gap-x-2 shrink-0 leading-relaxed whitespace-nowrap text-[14px] font-semibold transition-colors focus-visible:ring-2 focus-visible:ring-offset-background-subtle dark:focus-visible:ring-offset-background focus-visible:ring-offset-2 focus-visible:ring-info-focus-ring focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   variants: {
     variant: {
       default:
-        "border-[0.5px] border-element-border bg-background-element hover:bg-background-element-hover text-black dark:text-white active:bg-background-element-active",
+        "shadow-[inset_0px_0.5px_0px_rgb(208_205_215),_inset_0px_0px_0px_0.5px_rgb(208_205_215)] dark:shadow-[inset_0px_1px_0px_rgb(255_255_255_/_0.04),_inset_0px_0px_0px_1px_rgb(255_255_255_/_0.02)] dark:border-0 bg-background-element hover:bg-background-element-hover text-black dark:text-white active:bg-background-element-active",
       primary: "bg-primary-solid hover:bg-primary-solid-hover active:bg-primary-solid-hover text-white",
       secondary: "bg-foreground hover:bg-foreground/90 active:bg-foreground/75 text-background dark:text-background",
       ghost:
