@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.12.1
+
+### Patch Changes
+
+- f5731d7: change dialog border opacity
+
 ## 0.12.0
 
 ### Minor Changes
