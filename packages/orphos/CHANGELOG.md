@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.12.2
+
+### Patch Changes
+
+- a1cd0c6: replace React ElementRef<@deprecated> with ComponentRef
+
 ## 0.12.1
 
 ### Patch Changes
