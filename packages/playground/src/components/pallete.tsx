@@ -30,7 +30,7 @@ export function ColorPalette() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 w-full max-w-4xl">
         <h2 className="text-2xl font-bold leading-tight tracking-tight">Palette</h2>
         <div className="flex flex-col sm:flex-row sm:flex-wrap gap-6">
           {palette.map((color) => (

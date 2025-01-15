@@ -24,7 +24,7 @@ function App() {
   return (
     <SidebarProvider>
       <AppSidebar />
-      <section className="flex flex-col mx-auto grow max-w-5xl w-full shrink basis-[0] gap-20 px-6 md:px-8 pt-0 pb-8 h-full overflow-y-auto">
+      <section className="flex flex-col mx-auto grow w-full shrink basis-[0] gap-20 px-6 md:px-8 pt-0 pb-8 h-full overflow-y-auto">
         <div>
           <h1 className="text-5xl leading-none text-balance tracking-tight font-bold mt-8">Orphos Design System</h1>
           <hr className="my-4" />
@@ -113,7 +113,7 @@ function App() {
         </div>
         <div className="flex flex-col gap-6 items-start w-full">
           <h2 className="text-2xl font-bold leading-tight tracking-tight">Form Components</h2>
-          <div className="flex flex-col gap-10 items-start w-full">
+          <div className="flex flex-col gap-10 items-start w-full max-w-4xl">
             <InputsDemo />
             <CheckboxDemo />
           </div>
