@@ -215,7 +215,7 @@ const Sidebar = React.forwardRef<
       >
         <div
           data-sidebar="sidebar"
-          className="flex h-full w-full flex-col bg-background-subtle dark:bg-background group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border-[0.5px] group-data-[variant=floating]:border-border-element group-data-[variant=floating]:shadow-sm"
+          className="fixed top-0 bottom-0 border-r-[0.5px] isolate z-30 flex h-full w-(--sidebar-width) flex-col bg-background-subtle dark:bg-background group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border-[0.5px] group-data-[variant=floating]:border-border-element group-data-[variant=floating]:shadow-sm"
         >
           {children}
         </div>
@@ -262,7 +262,7 @@ const SidebarRail = React.forwardRef<HTMLButtonElement, React.ComponentProps<"bu
         onClick={toggleSidebar}
         title="Toggle Sidebar"
         className={cn(
-          "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-border-element group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex",
+          "absolute inset-y-0 z-40 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-border-element group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex",
           "in-data-[side=left]:cursor-w-resize in-data-[side=right]:cursor-e-resize",
           "[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize",
           "group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after:left-full hover:group-data-[collapsible=offcanvas]:bg-background-element",
