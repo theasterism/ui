@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.12.4
+
+### Patch Changes
+
+- 935ae11: update deps
+
 ## 0.12.3
 
 ### Patch Changes
