@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.12.3
+
+### Patch Changes
+
+- ef8407e: change button border and fix sidebar issues
+
 ## 0.12.2
 
 ### Patch Changes
