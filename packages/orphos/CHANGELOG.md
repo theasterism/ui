@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.13.1
+
+### Patch Changes
+
+- ea36c8e: fix margin issue alert dialog
+
 ## 0.13.0
 
 ### Minor Changes
