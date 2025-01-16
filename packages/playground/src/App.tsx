@@ -19,6 +19,7 @@ import { SkeletonDemo } from "./components/skeleton";
 import { TabsDemo } from "./components/tabs";
 import { DialogDemo } from "./components/dialog";
 import { ToastDemo } from "./components/toast";
+import { AlertDialogDemo } from "./components/alert-dialog";
 
 function App() {
   return (
@@ -38,6 +39,12 @@ function App() {
           </div>
         </div>
         <ColorPalette />
+        <div className="flex flex-col gap-6 items-start w-full">
+          <h2 className="text-2xl font-bold leading-tight tracking-tight">Alert Dialog</h2>
+          <div className="flex flex-col gap-10 items-start w-full">
+            <AlertDialogDemo />
+          </div>
+        </div>
         <div className="flex flex-col gap-6">
           <h2 className="text-2xl font-bold leading-tight tracking-tight">Avatar</h2>
           <div className="flex flex-row flex-wrap gap-4 w-auto">
