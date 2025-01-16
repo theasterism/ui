@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.12.5
+
+### Patch Changes
+
+- d7e5044: change tooltip border
+- 6a6605f: change border colors for button card and tabs
+
 ## 0.12.4
 
 ### Patch Changes
