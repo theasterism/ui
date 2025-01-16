@@ -36,7 +36,7 @@ const CardDescription = ({ className, ref, ...props }: DivElementProps) => (
 CardDescription.displayName = "CardDescription";
 
 const CardContent = ({ className, ref, ...props }: DivElementProps) => (
-  <div ref={ref} className={cn("px-4", className)} {...props} />
+  <div ref={ref} className={cn("px-3.5", className)} {...props} />
 );
 
 CardContent.displayName = "CardContent";
