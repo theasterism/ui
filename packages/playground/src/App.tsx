@@ -4,10 +4,12 @@ import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@thean
 import { Separator } from "@theanalog/orphos/separator";
 import { SidebarProvider, SidebarTrigger } from "@theanalog/orphos/sidebar";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@theanalog/orphos/tooltip";
+import { AlertDialogDemo } from "./components/alert-dialog";
 import { AvatarDemo } from "./components/avatar";
 import { ButtonDisabledDemo, ButtonsDemo } from "./components/buttons";
 import { CalloutDemo } from "./components/callout";
 import { CheckboxDemo } from "./components/checkbox";
+import { DialogDemo } from "./components/dialog";
 import { DropdownDemo } from "./components/dropdown";
 import { FormDemo } from "./components/form";
 import { IconButtonDemo } from "./components/icon-button";
@@ -17,9 +19,7 @@ import { SheetSide } from "./components/sheet";
 import { AppSidebar } from "./components/sidebar";
 import { SkeletonDemo } from "./components/skeleton";
 import { TabsDemo } from "./components/tabs";
-import { DialogDemo } from "./components/dialog";
 import { ToastDemo } from "./components/toast";
-import { AlertDialogDemo } from "./components/alert-dialog";
 
 function App() {
   return (

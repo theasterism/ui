@@ -1,13 +1,13 @@
 import { Button, buttonVariants } from "@theanalog/orphos/button";
 import {
   Dialog,
-  DialogTrigger,
+  DialogClose,
   DialogContent,
-  DialogHeader,
-  DialogTitle,
   DialogDescription,
   DialogFooter,
-  DialogClose,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
 } from "@theanalog/orphos/dialog";
 import { Input } from "@theanalog/orphos/input";
 import { Label } from "@theanalog/orphos/label";
