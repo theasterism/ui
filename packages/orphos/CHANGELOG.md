@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.13.2
+
+### Patch Changes
+
+- 75f1870: change flex direction(footer) and text alignment(header)
+- 3a73e54: change alert dialog action button variant
+
 ## 0.13.1
 
 ### Patch Changes
