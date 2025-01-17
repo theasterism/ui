@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.13.4
+
+### Patch Changes
+
+- c51d77d: change alert dialog description text color
+
 ## 0.13.3
 
 ### Patch Changes
