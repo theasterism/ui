@@ -1,3 +1,4 @@
+import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Button, buttonVariants } from "@theanalog/orphos/button";
 import {
   Dialog,
@@ -22,7 +23,20 @@ export function DialogDemo() {
 
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Edit profile</DialogTitle>
+          <div className="flex items-center justify-between">
+            <DialogTitle>Edit profile</DialogTitle>
+            <DialogClose
+              className={cn(
+                buttonVariants({
+                  variant: "ghost",
+                  size: "icon",
+                  className: "size-5.5 px-2",
+                }),
+              )}
+            >
+              <XMarkIcon />
+            </DialogClose>
+          </div>
           <DialogDescription>Make changes to your profile here. Click save when you're done.</DialogDescription>
         </DialogHeader>
 
@@ -41,15 +55,6 @@ export function DialogDemo() {
           </div>
         </div>
         <DialogFooter>
-          <DialogClose
-            className={cn(
-              buttonVariants({
-                variant: "ghost",
-              }),
-            )}
-          >
-            Close
-          </DialogClose>
           <Button variant="default" type="submit">
             Save changes
           </Button>
