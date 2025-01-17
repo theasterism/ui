@@ -1,7 +1,7 @@
 # SHADCN/UI Component List
 
 [x] alert/callout
-[ ] alert dialog
+[x] alert dialog
 [ ] aspect ratio
 [x] avatar
 [x] badge
@@ -18,7 +18,7 @@
 [ ] context menu
 [ ] data table
 [ ] date picker
-[ ] dialog
+[x] dialog
 [ ] drawer
 [x] dropdown menu
 [x] form
