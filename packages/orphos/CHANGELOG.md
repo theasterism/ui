@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.13.3
+
+### Patch Changes
+
+- eca520e: change alert-dialog and dialog title styles
+
 ## 0.13.2
 
 ### Patch Changes
