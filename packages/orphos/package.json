@@ -1,6 +1,6 @@
 {
   "name": "@theanalog/orphos",
-  "version": "0.13.1",
+  "version": "0.13.2",
   "type": "module",
   "license": "MIT",
   "exports": {
