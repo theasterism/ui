@@ -27,7 +27,7 @@ function App() {
       <AppSidebar />
       <section className="flex flex-col mx-auto grow w-full shrink basis-[0] gap-20 px-6 md:px-8 pt-0 pb-8 h-full overflow-y-auto">
         <div>
-          <h1 className="text-5xl leading-none text-balance tracking-tight font-bold mt-8">Orphos Design System</h1>
+          <h1 className="text-3xl leading-none text-balance tracking-tight font-bold mt-8">Orphos Design System</h1>
           <hr className="my-4" />
           <div className="flex gap-2">
             <Badge variant="warning" noHover>
