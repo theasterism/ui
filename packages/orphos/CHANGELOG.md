@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.13.5
+
+### Patch Changes
+
+- 2e6e3d6: set default line height
+
 ## 0.13.4
 
 ### Patch Changes
