@@ -22,11 +22,7 @@ const CardHeader = ({ className, ref, ...props }: DivElementProps) => (
 CardHeader.displayName = "CardHeader";
 
 const CardTitle = ({ className, ref, ...props }: DivElementProps) => (
-  <div
-    ref={ref}
-    className={cn("font-semibold text-[16px] leading-[24px] tracking-tight text-foreground", className)}
-    {...props}
-  />
+  <div ref={ref} className={cn("font-semibold text-[16px] tracking-tight text-foreground", className)} {...props} />
 );
 CardTitle.displayName = "CardTitle";
 

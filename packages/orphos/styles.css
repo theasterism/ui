@@ -593,6 +593,21 @@
     text-rendering: optimizeLegibility;
     -webkit-text-size-adjust: 100%;
   }
+  h1 {
+    @apply leading-snug;
+  }
+  h2 {
+    @apply leading-normal;
+  }
+  h3 {
+    @apply leading-relaxed;
+  }
+  h4 {
+    @apply leading-relaxed;
+  }
+  body {
+    @apply leading-loose;
+  }
   img {
     @apply rounded-md;
   }
