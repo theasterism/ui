@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.13.6
+
+### Patch Changes
+
+- fe92229: change tooltip colors
+
 ## 0.13.5
 
 ### Patch Changes
