@@ -2,9 +2,6 @@
   "name": "ui",
   "license": "MIT",
   "dependencies": {},
-  "engines": {
-    "node": ">=20"
-  },
   "private": true,
   "scripts": {
     "check": "biome check .",
