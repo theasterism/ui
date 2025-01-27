@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.14.1
+
+### Patch Changes
+
+- 74ee152: change card footer background color
+
 ## 0.14.0
 
 ### Minor Changes
