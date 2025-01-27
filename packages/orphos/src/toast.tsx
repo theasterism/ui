@@ -1,10 +1,10 @@
 "use client";
 
-import * as React from "react";
-import * as ToastPrimitives from "@radix-ui/react-toast";
-import { cn } from "./lib/utils";
-import { cva, type VariantProps } from "cva";
 import { XMarkIcon } from "@heroicons/react/24/outline";
+import * as ToastPrimitives from "@radix-ui/react-toast";
+import { type VariantProps, cva } from "cva";
+import * as React from "react";
+import { cn } from "./lib/utils";
 
 const ToastProvider = ToastPrimitives.Provider;
 

@@ -3,6 +3,7 @@ import { Button } from "@theanalog/orphos/button";
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@theanalog/orphos/card";
 import { Separator } from "@theanalog/orphos/separator";
 import { Tooltip, TooltipArrow, TooltipContent, TooltipTrigger } from "@theanalog/orphos/tooltip";
+import { typographyVariants } from "@theanalog/orphos/typography";
 import { AvatarDemo } from "./components/avatar";
 import { ButtonDisabledDemo, ButtonsDemo } from "./components/buttons";
 import { CalloutDemo } from "./components/callout";
@@ -15,7 +16,6 @@ import { ColorPalette } from "./components/pallete";
 import { SkeletonDemo } from "./components/skeleton";
 import { TabsDemo } from "./components/tabs";
 import { ToastDemo } from "./components/toast";
-import { typographyVariants } from "@theanalog/orphos/typography";
 
 function App() {
   return (
