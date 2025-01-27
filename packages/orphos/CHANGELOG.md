@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.14.0
+
+### Minor Changes
+
+- 88ed8d4: change colors tokens and update styling
+
 ## 0.13.6
 
 ### Patch Changes
