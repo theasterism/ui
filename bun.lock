@@ -13,7 +13,7 @@
     },
     "packages/orphos": {
       "name": "@theanalog/orphos",
-      "version": "0.13.6",
+      "version": "0.14.0",
       "dependencies": {
         "@heroicons/react": "^2.2.0",
         "@radix-ui/react-avatar": "^1.1.2",
@@ -68,6 +68,7 @@
         "@hookform/resolvers": "^3.10.0",
         "@tailwindcss/vite": "^4.0.0",
         "@theanalog/orphos": "workspace:*",
+        "babel-plugin-react-compiler": "^19.0.0-beta-27714ef-20250124",
         "next-themes": "^0.4.4",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
@@ -509,6 +510,8 @@
     "array-union": ["array-union@2.1.0", "", {}, "sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw=="],
 
     "as-table": ["as-table@1.0.55", "", { "dependencies": { "printable-characters": "^1.0.42" } }, "sha512-xvsWESUJn0JN421Xb9MQw6AsMHRCUknCe0Wjlxvjud80mU4E6hQf1A6NzQKcYNmYw62MfzEtXc+badstZP3JpQ=="],
+
+    "babel-plugin-react-compiler": ["babel-plugin-react-compiler@19.0.0-beta-27714ef-20250124", "", { "dependencies": { "@babel/types": "^7.19.0" } }, "sha512-1AnF/dlvbIJzAjw5jEbDx7csHx772VP9AtrEg2CgUUD6MIu24j5ShxmBZ0tpfdb2pZtLVwcsoGylfZTzUoCr9w=="],
 
     "better-path-resolve": ["better-path-resolve@1.0.0", "", { "dependencies": { "is-windows": "^1.0.0" } }, "sha512-pbnl5XzGBdrFU/wT4jqmJVPn2B6UHPBOhzMQkY/SPUPB6QtUXtmBHBIwCbXJol93mOpGMnQyP/+BB19q04xj7g=="],
 

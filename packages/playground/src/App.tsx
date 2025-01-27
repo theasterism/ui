@@ -19,7 +19,7 @@ import { ToastDemo } from "./components/toast";
 
 function App() {
   return (
-    <section className="flex flex-col mx-auto grow w-full shrink basis-[0] gap-20 px-6 md:px-8 pt-0 pb-12 h-full overflow-y-auto">
+    <section className="flex flex-col max-w-4xl mx-auto grow w-full shrink basis-[0] gap-20 px-6 md:px-8 pt-0 pb-12 h-full overflow-y-auto">
       <div>
         <h1
           className={typographyVariants({
