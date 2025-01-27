@@ -12,10 +12,7 @@ const TabsList = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <TabsPrimitive.List
     ref={ref}
-    className={cn(
-      "inline-flex h-9 items-center justify-center rounded-md bg-background dark:bg-background-subtle p-1 text-foreground-subtle shadow-[inset_0px_0.5px_0px_var(--gray-7),_inset_0px_0px_0px_0.5px_var(--gray-7)]",
-      className,
-    )}
+    className={cn("inline-flex gap-1 h-9 items-center rounded-lg p-[3px] text-foreground", className)}
     {...props}
   />
 ));
@@ -28,7 +25,7 @@ const TabsTrigger = React.forwardRef<
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
-      "inline-flex h-full w-full items-center justify-center whitespace-nowrap rounded-[4.75px] px-3 py-1 text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-info-focus-ring focus-visible:ring-offset-background-subtle dark:focus-visible:ring-offset-background focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background-element data-[state=active]:text-foreground",
+      "inline-flex h-full w-fit items-center justify-center whitespace-nowrap hover:bg-background-element data-[state=active]:bg-background-element data-[state=active]:text-foreground rounded-md px-3 py-1 text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 ring-focus-ring ring-offset-background-subtle ring-offset-1 disabled:pointer-events-none disabled:opacity-50 ",
       className,
     )}
     {...props}
@@ -43,7 +40,7 @@ const TabsContent = React.forwardRef<
   <TabsPrimitive.Content
     ref={ref}
     className={cn(
-      "mt-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-info-focus-ring focus-visible:ring-offset-background-subtle dark:focus-visible:ring-offset-background focus-visible:ring-offset-2",
+      "mt-2 focus-visible:outline-none focus-visible:ring-2 ring-focus-ring ring-offset-background-subtle focus-visible:ring-offset-0 rounded-2xl",
       className,
     )}
     {...props}

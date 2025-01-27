@@ -6,15 +6,9 @@ import { cn } from "./lib/utils";
 
 const Avatar = React.forwardRef<
   React.ComponentRef<typeof AvatarPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root> & {
-    square?: boolean;
-  }
->(({ className, square = false, ...props }, ref) => (
-  <AvatarPrimitive.Root
-    ref={ref}
-    className={cn("relative flex size-9 shrink-0 overflow-hidden", square ? "rounded-md" : "rounded-full", className)}
-    {...props}
-  />
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>
+>(({ className, ...props }, ref) => (
+  <AvatarPrimitive.Root ref={ref} className={cn("relative flex size-9 shrink-0", className)} {...props} />
 ));
 Avatar.displayName = AvatarPrimitive.Root.displayName;
 
@@ -22,7 +16,7 @@ const AvatarImage = React.forwardRef<
   React.ComponentRef<typeof AvatarPrimitive.Image>,
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>
 >(({ className, ...props }, ref) => (
-  <AvatarPrimitive.Image ref={ref} className={cn("aspect-square h-full w-full", className)} {...props} />
+  <AvatarPrimitive.Image ref={ref} className={cn("aspect-square h-full w-full rounded-full", className)} {...props} />
 ));
 AvatarImage.displayName = AvatarPrimitive.Image.displayName;
 
@@ -33,7 +27,7 @@ const AvatarFallback = React.forwardRef<
   <AvatarPrimitive.Fallback
     ref={ref}
     className={cn(
-      "flex h-full w-full items-center text-background dark:text-foreground text-sm leading-relaxed justify-center bg-solid",
+      "flex h-full w-full items-center text-foreground text-sm leading-relaxed justify-center rounded-full border bg-background-element border-border-element/60",
       className,
     )}
     {...props}
