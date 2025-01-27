@@ -5,28 +5,14 @@ export function CalloutDemo() {
   return (
     <Fragment>
       <Callout variant="default" description="You can add components to your app using the cli." />
+      <Callout bordered variant="info" description="You can add components to your app using the cli." />
       <Callout
-        bordered
-        variant="info"
-        title="Hello World"
-        description="You can add components to your app using the cli."
-      />
-      <Callout
-        onDismiss={() => alert("dismissed")}
         bordered
         variant="warning"
-        title="Not Hidden Title"
         description="With Hidden Title! This should be much longer like 50 words or more. dismissable"
       />
-      <Callout bordered variant="critical" hideTitle title="Hidden Title" description="With Hidden Title!" />
-      <Callout
-        onDismiss={() => alert("dismissed")}
-        bordered
-        variant="success"
-        hideTitle
-        title="Hidden Title"
-        description="With Hidden Title! dismissable"
-      />
+      <Callout bordered variant="critical" description="With Hidden Title!" />
+      <Callout bordered variant="success" description="With Hidden Title! dismissable" />
     </Fragment>
   );
 }

@@ -42,12 +42,18 @@ export function FormDemo() {
           control={form.control}
           name="username"
           render={({ field }) => {
-            const { error } = useFormField();
             return (
               <FormItem>
                 <FormLabel>Username</FormLabel>
                 <FormControl>
-                  <Input error={error} placeholder="shadcn" {...field} />
+                  <Input
+                    error={{
+                      type: "too_small",
+                      message: "Username must be at least 2 characters.",
+                    }}
+                    placeholder="shadcn"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
                 <FormDescription>This is your public display name.</FormDescription>

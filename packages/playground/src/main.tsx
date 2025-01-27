@@ -3,18 +3,17 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 
-import { Toaster } from "@theanalog/orphos/toast";
 import { TooltipProvider } from "@theanalog/orphos/tooltip";
 
 import { App } from "./App";
+import { ToastProvider } from "@theanalog/orphos/toast";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+    <ToastProvider>
       <TooltipProvider>
         <App />
       </TooltipProvider>
-      <Toaster />
-    </ThemeProvider>
+    </ToastProvider>
   </StrictMode>,
 );

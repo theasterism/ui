@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-export const palette = ["gray", "tomato", "red", "grass", "amber", "blue"];
+export const palette = ["gray", "accent", "red", "green", "yellow", "blue"];
 export const colorScaleNumbers = [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 export function ColorPalette() {
@@ -11,21 +11,20 @@ export function ColorPalette() {
         <div className="flex flex-col gap-4 w-auto">
           <div className="flex flex-col gap-2">
             <p>Brand:</p>
-            <div className="size-12 bg-primary-solid border-3 border-border-subtle rounded-full" />
+            <div className="size-12 bg-primary border-3 rounded-full" />
           </div>
           <div className="flex flex-col gap-2">
             <p>Background:</p>
             <div className="flex gap-2">
-              <div className="size-12 bg-background-subtle dark:bg-background border-3 border-border-subtle rounded-full" />
-              <div className="size-12 bg-background dark:bg-background-subtle border-3 border-border-subtle rounded-full" />
+              <div className="size-12 bg-background-subtle border-3 rounded-full" />
+              <div className="size-12 bg-background border-3 rounded-full" />
             </div>
           </div>
           <div className="flex flex-col gap-2">
             <p>Text:</p>
             <div className="flex gap-2">
-              <div className="size-12 bg-black dark:bg-white border-3 border-border-subtle rounded-full" />
-              <div className="size-12 bg-foreground border-3 border-border-subtle rounded-full" />
-              <div className="size-12 bg-foreground-subtle border-3 border-border-subtle rounded-full" />
+              <div className="size-12 bg-foreground border-3 rounded-full" />
+              <div className="size-12 bg-foreground-subtle border-3 rounded-full" />
             </div>
           </div>
         </div>
@@ -40,7 +39,7 @@ export function ColorPalette() {
                   style={{
                     backgroundColor: `var(--${color}-${shade})`,
                   }}
-                  className="size-12 border-3 border-border-subtle rounded-full"
+                  className="size-12 border-3 rounded-full"
                   key={shade}
                 />
               ))}

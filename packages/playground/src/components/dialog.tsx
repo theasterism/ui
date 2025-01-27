@@ -25,17 +25,6 @@ export function DialogDemo() {
         <DialogHeader>
           <div className="flex items-center justify-between">
             <DialogTitle>Edit profile</DialogTitle>
-            <DialogClose
-              className={cn(
-                buttonVariants({
-                  variant: "ghost",
-                  size: "icon",
-                  className: "size-5.5 px-2",
-                }),
-              )}
-            >
-              <XMarkIcon />
-            </DialogClose>
           </div>
           <DialogDescription>Make changes to your profile here. Click save when you're done.</DialogDescription>
         </DialogHeader>
@@ -55,7 +44,8 @@ export function DialogDemo() {
           </div>
         </div>
         <DialogFooter>
-          <Button variant="default" type="submit">
+          <DialogClose className={cn(buttonVariants({}))}>Close</DialogClose>
+          <Button variant="secondary" type="submit">
             Save changes
           </Button>
         </DialogFooter>

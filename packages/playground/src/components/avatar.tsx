@@ -4,7 +4,7 @@ import { Fragment } from "react/jsx-runtime";
 export function AvatarDemo() {
   return (
     <Fragment>
-      <Avatar square>
+      <Avatar>
         <AvatarImage src="https://github.com/bachiitter.png" alt="@bachiitter" />
         <AvatarFallback>B</AvatarFallback>
       </Avatar>
