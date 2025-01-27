@@ -35,7 +35,11 @@ const CardContent = ({ className, ref, ...props }: DivElementProps) => (
 CardContent.displayName = "CardContent";
 
 const CardFooter = ({ className, ref, ...props }: DivElementProps) => (
-  <div ref={ref} className={cn("flex items-center p-4 border-t border-border/60", className)} {...props} />
+  <div
+    ref={ref}
+    className={cn("flex items-center p-4 border-t border-border/60 bg-background-subtle", className)}
+    {...props}
+  />
 );
 CardFooter.displayName = "CardFooter";
 
