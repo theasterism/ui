@@ -16,7 +16,8 @@ const buttonVariants = cva({
       danger: "bg-danger hover:bg-danger-hover active:bg-danger-hover text-danger-foreground",
     },
     size: {
-      sm: "h-[28px] text-sm px-3 rounded-sm",
+      xs: "h-[28px] text-[0.8125rem] px-3 rounded-md",
+      sm: "h-[30px] text-sm px-3 rounded-md",
       md: "h-[32px] px-4 rounded-md",
       lg: "h-[38px] px-6 rounded-lg",
       icon: "w-[32px] h-[32px] px-4 rounded-md",
