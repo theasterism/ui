@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.16.3
+
+### Patch Changes
+
+- 3931752: decrease border radius for card, dialog, popover, tab content and nav menu
+
 ## 0.16.2
 
 ### Patch Changes
