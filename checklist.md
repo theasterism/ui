@@ -24,9 +24,9 @@
 [x] separator
 [x] skeleton
 [x] slider
+[x] switch
 [ ] toast
 [ ] table
 [x] tabs
 [x] textarea
-[ ] toggle
 [x] tooltip
