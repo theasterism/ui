@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.16.1
+
+### Patch Changes
+
+- 351ec44: sync lock file
+
 ## 0.16.0
 
 ### Minor Changes
