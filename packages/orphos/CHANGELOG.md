@@ -1,5 +1,15 @@
 # @theanalog/orphos
 
+## 0.15.0
+
+### Minor Changes
+
+- 3567000: add context-menu, nav-menu, popover, select, slider and change styles for dropdown, input
+
+### Patch Changes
+
+- 55736b4: change element ref with component ref
+
 ## 0.14.1
 
 ### Patch Changes
