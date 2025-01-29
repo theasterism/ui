@@ -1,7 +1,14 @@
 {
   "name": "ui",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@changesets/cli": "^2.27.12",
+    "@total-typescript/tsconfig": "^1.0.4",
+    "turbo": "^2.3.4",
+    "typescript": "^5.7.3"
+  },
   "license": "MIT",
-  "dependencies": {},
+  "packageManager": "bun@1.2.0",
   "private": true,
   "scripts": {
     "check": "biome check .",
@@ -13,15 +20,7 @@
     "release": "turbo run build --filter=@theanalog/orphos && changeset publish"
   },
   "sideEffects": false,
+  "trustedDependencies": ["@biomejs/biome", "core-js", "esbuild", "workerd"],
   "type": "module",
-  "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "@changesets/cli": "^2.27.12",
-    "@total-typescript/tsconfig": "^1.0.4",
-    "turbo": "^2.3.4",
-    "typescript": "^5.7.3"
-  },
-  "workspaces": ["packages/*"],
-  "packageManager": "bun@1.2.0",
-  "trustedDependencies": ["@biomejs/biome", "core-js", "esbuild", "workerd"]
+  "workspaces": ["packages/*"]
 }
