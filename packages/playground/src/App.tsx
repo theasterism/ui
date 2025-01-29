@@ -16,6 +16,11 @@ import { ColorPalette } from "./components/pallete";
 import { SkeletonDemo } from "./components/skeleton";
 import { TabsDemo } from "./components/tabs";
 import { ToastDemo } from "./components/toast";
+import { SelectScrollable } from "./components/select";
+import { SliderDemo } from "./components/slider";
+import { PopoverDemo } from "./components/popover";
+import { NavigationMenuDemo } from "./components/nav-menu";
+import { ContextMenuDemo } from "./components/context-menu";
 
 function App() {
   return (
@@ -120,6 +125,19 @@ function App() {
             className: "mt-0!",
           })}
         >
+          Context Menu
+        </h2>
+        <div className="flex flex-col gap-10 items-start w-full">
+          <ContextMenuDemo />
+        </div>
+      </div>
+      <div className="flex flex-col gap-6 items-start w-full">
+        <h2
+          className={typographyVariants({
+            variant: "heading2",
+            className: "mt-0!",
+          })}
+        >
           Dialog
         </h2>
         <div className="flex flex-col gap-10 items-start w-full">
@@ -164,6 +182,43 @@ function App() {
         </h2>
         <IconButtonDemo />
       </div>
+      <div className="flex flex-col gap-6 w-auto items-start">
+        <h2
+          className={typographyVariants({
+            variant: "heading2",
+            className: "mt-0!",
+          })}
+        >
+          Nav Menu
+        </h2>
+        <NavigationMenuDemo />
+      </div>
+      <div className="flex flex-col gap-6">
+        <h2
+          className={typographyVariants({
+            variant: "heading2",
+            className: "mt-0!",
+          })}
+        >
+          Popover
+        </h2>
+        <div className="flex flex-row gap-4 w-auto">
+          <PopoverDemo />
+        </div>
+      </div>
+      <div className="flex flex-col gap-6">
+        <h2
+          className={typographyVariants({
+            variant: "heading2",
+            className: "mt-0!",
+          })}
+        >
+          Select
+        </h2>
+        <div className="flex flex-row gap-4 w-auto">
+          <SelectScrollable />
+        </div>
+      </div>
       <div className="flex flex-col gap-6">
         <h2
           className={typographyVariants({
@@ -188,6 +243,19 @@ function App() {
         </h2>
         <div className="flex flex-row gap-4 w-auto">
           <SkeletonDemo />
+        </div>
+      </div>
+      <div className="flex flex-col gap-6">
+        <h2
+          className={typographyVariants({
+            variant: "heading2",
+            className: "mt-0!",
+          })}
+        >
+          Slider
+        </h2>
+        <div className="flex flex-row gap-4 w-auto">
+          <SliderDemo />
         </div>
       </div>
       <div className="flex flex-col gap-6">
