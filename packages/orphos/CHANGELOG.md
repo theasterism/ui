@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.16.4
+
+### Patch Changes
+
+- 2e494c0: add button xs variant
+
 ## 0.16.3
 
 ### Patch Changes
