@@ -21,6 +21,7 @@ import { SliderDemo } from "./components/slider";
 import { PopoverDemo } from "./components/popover";
 import { NavigationMenuDemo } from "./components/nav-menu";
 import { ContextMenuDemo } from "./components/context-menu";
+import { SwitchDemo } from "./components/switch";
 
 function App() {
   return (
@@ -256,6 +257,19 @@ function App() {
         </h2>
         <div className="flex flex-row gap-4 w-auto">
           <SliderDemo />
+        </div>
+      </div>
+      <div className="flex flex-col gap-6">
+        <h2
+          className={typographyVariants({
+            variant: "heading2",
+            className: "mt-0!",
+          })}
+        >
+          Switch
+        </h2>
+        <div className="flex flex-row gap-4 w-auto">
+          <SwitchDemo />
         </div>
       </div>
       <div className="flex flex-col gap-6">
