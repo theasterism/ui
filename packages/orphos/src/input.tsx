@@ -45,7 +45,7 @@ const Input = ({ className, type, ref, icon, error, disabled, ...props }: InputP
         />
         <button
           disabled={disabled}
-          className="absolute mr-1.5 mt-1.5 inset-y-0 end-0 flex size-5 items-center justify-center rounded-xs text-foreground-subtle transition-colors peer hover:text-foreground focus:z-10 focus-visible:ring-1 ring-offset-transparent ring-offset-1 ring-focus-ring focus-visible:outline-none disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+          className="absolute mr-2 mt-1.5 inset-y-0 end-0 flex size-5 items-center justify-center rounded-xs text-foreground-subtle transition-colors peer hover:text-foreground focus:z-10 focus-visible:ring-1 ring-offset-transparent ring-offset-1 ring-focus-ring focus-visible:outline-none disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
           type="button"
           onClick={toggleVisibility}
           aria-label={isVisible ? "Hide password" : "Show password"}
@@ -71,7 +71,7 @@ const Input = ({ className, type, ref, icon, error, disabled, ...props }: InputP
           className={cn(
             inputVariants({ variant, className }),
             error &&
-              "border-danger-border ring-3 ring-danger-element focus-visible:ring-3 focus-visible:border-danger-border",
+              "border-danger-border ring-3 ring-danger-element focus-visible:ring-2 focus-visible:border-danger-border",
             "peer ps-9",
           )}
           ref={ref}
@@ -90,7 +90,7 @@ const Input = ({ className, type, ref, icon, error, disabled, ...props }: InputP
       className={cn(
         inputVariants({ variant, className }),
         error &&
-          "border-danger-border ring-3 ring-danger-element focus-visible:ring-3 focus-visible:border-danger-border",
+          "border-danger-border ring-3 ring-danger-element focus-visible:ring-2 focus-visible:border-danger-border",
       )}
       ref={ref}
       {...props}
