@@ -6,7 +6,7 @@ type DivElementProps = React.ComponentProps<"div">;
 const Card = ({ className, ref, ...props }: DivElementProps) => (
   <div
     ref={ref}
-    className={cn("rounded-2xl text-foregroung bg-background border border-border/60 overflow-hidden", className)}
+    className={cn("rounded-lg text-foregroung bg-background border border-border/60 overflow-hidden", className)}
     {...props}
   />
 );
