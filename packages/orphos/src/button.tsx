@@ -10,7 +10,7 @@ const buttonVariants = cva({
       default:
         "border border-border-element/60 bg-background hover:bg-background-element-hover text-foreground active:bg-background-element-active",
       primary: "bg-primary hover:bg-primary-hover active:bg-primary-hover text-primary-foreground",
-      secondary: "bg-foreground hover:bg-foreground/90 active:bg-foreground/75 text-background dark:text-background",
+      secondary: "bg-foreground hover:bg-foreground/90 active:bg-foreground/75 text-background",
       ghost: "bg-transparent hover:bg-background-element-hover active:bg-background-element-active text-foreground",
       link: "underline-offset-4 text-primary bg-transparent hover:underline",
       danger: "bg-danger hover:bg-danger-hover active:bg-danger-hover text-danger-foreground",
