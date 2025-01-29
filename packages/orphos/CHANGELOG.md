@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.16.2
+
+### Patch Changes
+
+- cc18d2e: change navmenu trigger styles
+- 6df743f: change dialog max width
+
 ## 0.16.1
 
 ### Patch Changes
