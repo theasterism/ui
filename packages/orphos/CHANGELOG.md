@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.16.0
+
+### Minor Changes
+
+- 875ace2: add switch
+
 ## 0.15.0
 
 ### Minor Changes
