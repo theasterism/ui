@@ -27,6 +27,8 @@
 @import "@radix-ui/colors/blue-dark.css";
 @import "@radix-ui/colors/blue-dark-alpha.css";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   :root {
     /* Base font size */
