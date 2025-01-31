@@ -6,13 +6,16 @@ import { TooltipProvider } from "@theanalog/orphos/tooltip";
 
 import { ToastProvider } from "@theanalog/orphos/toast";
 import { App } from "./App";
+import { ThemeProvider } from "next-themes";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ToastProvider>
-      <TooltipProvider>
-        <App />
-      </TooltipProvider>
-    </ToastProvider>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+      <ToastProvider>
+        <TooltipProvider>
+          <App />
+        </TooltipProvider>
+      </ToastProvider>
+    </ThemeProvider>
   </StrictMode>,
 );
