@@ -120,7 +120,7 @@ const SidebarProvider = React.forwardRef<
             } as React.CSSProperties
           }
           className={cn(
-            "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-background",
+            "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-background has-[[data-variant=inset]]:dark:bg-background-subtle",
             className,
           )}
           ref={ref}
@@ -147,7 +147,10 @@ const Sidebar = React.forwardRef<
   if (collapsible === "none") {
     return (
       <div
-        className={cn("flex h-full w-(--sidebar-width) flex-col bg-background text-foreground", className)}
+        className={cn(
+          "flex h-full w-(--sidebar-width) flex-col bg-background dark:bg-background-subtle text-foreground",
+          className,
+        )}
         ref={ref}
         {...props}
       >
@@ -162,7 +165,7 @@ const Sidebar = React.forwardRef<
         <SheetContent
           data-sidebar="sidebar"
           data-mobile="true"
-          className="w-(--sidebar-width) bg-background p-0 text-foreground [&>button]:hidden"
+          className="w-(--sidebar-width) bg-background dark:bg-background-subtle p-0 text-foreground [&>button]:hidden"
           style={
             {
               "--sidebar-width": SIDEBAR_WIDTH_MOBILE,
@@ -212,7 +215,7 @@ const Sidebar = React.forwardRef<
       >
         <div
           data-sidebar="sidebar"
-          className="flex h-full w-full flex-col bg-background group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-border-element/60"
+          className="flex h-full w-full flex-col bg-background dark:bg-background-subtle group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-border-element/60"
         >
           {children}
         </div>
@@ -280,7 +283,7 @@ const SidebarInset = React.forwardRef<HTMLDivElement, React.ComponentProps<"main
     <main
       ref={ref}
       className={cn(
-        "relative flex min-h-svh flex-1 flex-col bg-background-subtle",
+        "relative flex min-h-svh flex-1 flex-col bg-background-subtle dark:bg-background",
         "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl",
         className,
       )}

@@ -1,5 +1,31 @@
 @import "tailwindcss";
 @plugin "tailwindcss-animate";
+@import "@radix-ui/colors/gray.css";
+@import "@radix-ui/colors/gray-alpha.css";
+@import "@radix-ui/colors/tomato.css";
+@import "@radix-ui/colors/tomato-alpha.css";
+@import "@radix-ui/colors/red.css";
+@import "@radix-ui/colors/red-alpha.css";
+@import "@radix-ui/colors/amber.css";
+@import "@radix-ui/colors/amber-alpha.css";
+@import "@radix-ui/colors/green.css";
+@import "@radix-ui/colors/green-alpha.css";
+@import "@radix-ui/colors/blue.css";
+@import "@radix-ui/colors/blue-alpha.css";
+
+/* Dark */
+@import "@radix-ui/colors/gray-dark.css";
+@import "@radix-ui/colors/gray-dark-alpha.css";
+@import "@radix-ui/colors/tomato-dark.css";
+@import "@radix-ui/colors/tomato-dark-alpha.css";
+@import "@radix-ui/colors/red-dark.css";
+@import "@radix-ui/colors/red-dark-alpha.css";
+@import "@radix-ui/colors/amber-dark.css";
+@import "@radix-ui/colors/amber-dark-alpha.css";
+@import "@radix-ui/colors/green-dark.css";
+@import "@radix-ui/colors/green-dark-alpha.css";
+@import "@radix-ui/colors/blue-dark.css";
+@import "@radix-ui/colors/blue-dark-alpha.css";
 
 @layer base {
   :root {
@@ -7,168 +33,6 @@
     font-size: 16px;
     /* Base border radius */
     --radius: 6px;
-  }
-
-  :root,
-  .light {
-    --background: oklch(100.00% 0.0 none);
-    --background-subtle: oklch(98.51% 0.0 none);
-
-    --gray-1: oklch(98.1% 0 none);
-    --gray-2: oklch(97.1% 0 none);
-    --gray-3: oklch(94.2% 0 none);
-    --gray-4: oklch(91.8% 0 none);
-    --gray-5: oklch(89.5% 0 none);
-    --gray-6: oklch(87.1% 0 none);
-    --gray-7: oklch(83.7% 0 none);
-    --gray-8: oklch(77.7% 0 none);
-    --gray-9: oklch(62.9% 0 none);
-    --gray-10: oklch(59.4% 0 none);
-    --gray-11: oklch(48.9% 0 none);
-    --gray-12: oklch(24.3% 0 none);
-
-    --gray-a1: color(display-p3 0 0 0 / 0.0119);
-    --gray-a2: color(display-p3 0 0 0 / 0.0278);
-    --gray-a3: color(display-p3 0 0 0 / 0.0635);
-    --gray-a4: color(display-p3 0 0 0 / 0.0952);
-    --gray-a5: color(display-p3 0 0 0 / 0.127);
-    --gray-a6: color(display-p3 0 0 0 / 0.1587);
-    --gray-a7: color(display-p3 0 0 0 / 0.2024);
-    --gray-a8: color(display-p3 0 0 0 / 0.2778);
-    --gray-a9: color(display-p3 0 0 0 / 0.4563);
-    --gray-a10: color(display-p3 0 0 0 / 0.5);
-    --gray-a11: color(display-p3 0 0 0 / 0.619);
-    --gray-a12: color(display-p3 0 0 0 / 0.873);
-
-    --accent-1: oklch(98.4% 0.0033 33.77);
-    --accent-2: oklch(97.4% 0.0076 33.77);
-    --accent-3: oklch(94.3% 0.0232 33.77);
-    --accent-4: oklch(91.4% 0.0499 33.77);
-    --accent-5: oklch(88% 0.0662 33.77);
-    --accent-6: oklch(83.9% 0.0813 33.77);
-    --accent-7: oklch(78.9% 0.0995 33.77);
-    --accent-8: oklch(72.7% 0.1249 33.77);
-    --accent-9: oklch(61.7% 0.2053 33.77);
-    --accent-10: oklch(57.5% 0.2069 33.77);
-    --accent-11: oklch(55.2% 0.2053 33.77);
-    --accent-12: oklch(34.6% 0.0864 33.77);
-
-    --accent-a1: color(display-p3 0.7451 0.2549 0.0118 / 0.016);
-    --accent-a2: color(display-p3 0.7725 0.2275 0.0118 / 0.036);
-    --accent-a3: color(display-p3 0.8314 0.2039 0.0078 / 0.1);
-    --accent-a4: color(display-p3 0.9255 0.2235 0.0039 / 0.179);
-    --accent-a5: color(display-p3 0.8941 0.2039 0 / 0.25);
-    --accent-a6: color(display-p3 0.8549 0.2 0.0039 / 0.322);
-    --accent-a7: color(display-p3 0.7922 0.1725 0.0039 / 0.413);
-    --accent-a8: color(display-p3 0.7608 0.1647 0 / 0.528);
-    --accent-a9: color(display-p3 0.7961 0.1569 0 / 0.81);
-    --accent-a10: color(display-p3 0.749 0.149 0 / 0.874);
-    --accent-a11: color(display-p3 0.7098 0.1294 0 / 0.885);
-    --accent-a12: color(display-p3 0.2588 0.0471 0 / 0.885);
-
-    --red-1: oklch(98.4% 0.0031 23.03);
-    --red-2: oklch(97.3% 0.0083 23.03);
-    --red-3: oklch(94.5% 0.021 23.03);
-    --red-4: oklch(91.6% 0.0472 23.03);
-    --red-5: oklch(88.4% 0.0619 23.03);
-    --red-6: oklch(84.4% 0.0746 23.03);
-    --red-7: oklch(79.3% 0.0894 23.03);
-    --red-8: oklch(73.1% 0.1132 23.03);
-    --red-9: oklch(62.6% 0.1933 23.03);
-    --red-10: oklch(58.4% 0.1951 23.03);
-    --red-11: oklch(54.3% 0.1933 23.03);
-    --red-12: oklch(33.9% 0.109 23.03);
-
-    --red-a1: color(display-p3 0.6627 0.0118 0.0118 / 0.012);
-    --red-a2: color(display-p3 0.8824 0.1176 0.0118 / 0.036);
-    --red-a3: color(display-p3 0.8039 0.102 0.0078 / 0.084);
-    --red-a4: color(display-p3 0.9137 0.0824 0.0039 / 0.151);
-    --red-a5: color(display-p3 0.898 0.0784 0.0039 / 0.211);
-    --red-a6: color(display-p3 0.8039 0.0745 0.0039 / 0.274);
-    --red-a7: color(display-p3 0.7333 0.0588 0.0039 / 0.354);
-    --red-a8: color(display-p3 0.6902 0.0471 0.0039 / 0.457);
-    --red-a9: color(display-p3 0.7529 0.0078 0 / 0.671);
-    --red-a10: color(display-p3 0.6941 0 0 / 0.723);
-    --red-a11: color(display-p3 0.6392 0 0.0118 / 0.774);
-    --red-a12: color(display-p3 0.2745 0 0 / 0.881);
-
-    --blue-1: oklch(98.4% 0.0033 251.8);
-    --blue-2: oklch(97.1% 0.0096 251.8);
-    --blue-3: oklch(94.9% 0.0199 251.8);
-    --blue-4: oklch(92.5% 0.0371 251.8);
-    --blue-5: oklch(89.3% 0.0535 251.8);
-    --blue-6: oklch(85.1% 0.0686 251.8);
-    --blue-7: oklch(79.5% 0.0884 251.8);
-    --blue-8: oklch(72% 0.1211 251.8);
-    --blue-9: oklch(64.9% 0.193 251.8);
-    --blue-10: oklch(60.9% 0.1837 251.8);
-    --blue-11: oklch(54.4% 0.1889 251.8);
-    --blue-12: oklch(32.4% 0.0965 251.8);
-
-    --blue-a1: color(display-p3 0.0118 0.502 0.9922 / 0.016);
-    --blue-a2: color(display-p3 0.0118 0.4039 0.8941 / 0.04);
-    --blue-a3: color(display-p3 0.0078 0.3843 0.898 / 0.084);
-    --blue-a4: color(display-p3 0.5804 0.7569 1 / 0.334);
-    --blue-a5: color(display-p3 0.0039 0.4235 0.9882 / 0.207);
-    --blue-a6: color(display-p3 0.0039 0.3922 0.9059 / 0.282);
-    --blue-a7: color(display-p3 0.0039 0.3686 0.8588 / 0.385);
-    --blue-a8: color(display-p3 0 0.3529 0.8392 / 0.524);
-    --blue-a9: color(display-p3 0 0.4118 0.9608 / 0.75);
-    --blue-a10: color(display-p3 0 0.3686 0.8706 / 0.774);
-    --blue-a11: color(display-p3 0 0.298 0.7804 / 0.814);
-    --blue-a12: color(display-p3 0 0.1412 0.3294 / 0.929);
-
-    --green-1: oklch(98.4% 0.0053 147.4);
-    --green-2: oklch(97.2% 0.0092 147.4);
-    --green-3: oklch(95% 0.0231 147.4);
-    --green-4: oklch(92.2% 0.037 147.4);
-    --green-5: oklch(88.9% 0.0529 147.4);
-    --green-6: oklch(84.5% 0.0713 147.4);
-    --green-7: oklch(78.5% 0.0949 147.4);
-    --green-8: oklch(70.2% 0.1299 147.4);
-    --green-9: oklch(65.1% 0.1468 147.4);
-    --green-10: oklch(61.1% 0.1415 147.4);
-    --green-11: oklch(51.3% 0.1296 147.4);
-    --green-12: oklch(32.7% 0.0534 147.4);
-
-    --green-a1: color(display-p3 0.2549 0.7451 0.0118 / 0.016);
-    --green-a2: color(display-p3 0.1098 0.502 0.0118 / 0.04);
-    --green-a3: color(display-p3 0.0549 0.5686 0.0078 / 0.084);
-    --green-a4: color(display-p3 0.0039 0.5255 0.0039 / 0.135);
-    --green-a5: color(display-p3 0.0235 0.5059 0.0039 / 0.203);
-    --green-a6: color(display-p3 0.0314 0.4902 0.0039 / 0.282);
-    --green-a7: color(display-p3 0.0235 0.4667 0.0039 / 0.389);
-    --green-a8: color(display-p3 0 0.451 0 / 0.532);
-    --green-a9: color(display-p3 0.0078 0.4392 0 / 0.62);
-    --green-a10: color(display-p3 0 0.3882 0 / 0.655);
-    --green-a11: color(display-p3 0 0.298 0 / 0.75);
-    --green-a12: color(display-p3 0.0039 0.098 0 / 0.85);
-
-    --yellow-1: oklch(98.4% 0.003 84.13);
-    --yellow-2: oklch(97.6% 0.0224 84.13);
-    --yellow-3: oklch(95.9% 0.0664 84.13);
-    --yellow-4: oklch(93.5% 0.0987 84.13);
-    --yellow-5: oklch(90.7% 0.1245 84.13);
-    --yellow-6: oklch(86.8% 0.1162 84.13);
-    --yellow-7: oklch(81.5% 0.1122 84.13);
-    --yellow-8: oklch(74.6% 0.1284 84.13);
-    --yellow-9: oklch(85.6% 0.1683 84.13);
-    --yellow-10: oklch(82.5% 0.1572 84.13);
-    --yellow-11: oklch(55.6% 0.1307 84.13);
-    --yellow-12: oklch(35.3% 0.0431 84.13);
-
-    --yellow-a1: color(display-p3 0.7451 0.502 0.0118 / 0.016);
-    --yellow-a2: color(display-p3 1 0.9216 0.7686 / 0.334);
-    --yellow-a3: color(display-p3 0.9882 0.7804 0.0039 / 0.223);
-    --yellow-a4: color(display-p3 0.9765 0.7412 0.0039 / 0.346);
-    --yellow-a5: color(display-p3 0.9647 0.7059 0.0039 / 0.457);
-    --yellow-a6: color(display-p3 0.898 0.6235 0.0039 / 0.481);
-    --yellow-a7: color(display-p3 0.7765 0.5412 0 / 0.536);
-    --yellow-a8: color(display-p3 0.7098 0.4941 0 / 0.675);
-    --yellow-a9: color(display-p3 0.9529 0.6902 0 / 0.695);
-    --yellow-a10: color(display-p3 0.898 0.6353 0 / 0.687);
-    --yellow-a11: color(display-p3 0.498 0.3412 0 / 0.866);
-    --yellow-a12: color(display-p3 0.1451 0.102 0 / 0.858);
   }
 }
 
@@ -186,8 +50,8 @@
 
   --color-focus-ring: var(--blue-8);
 
-  --color-background: var(--background);
-  --color-background-subtle: var(--background-subtle);
+  --color-background: var(--gray-1);
+  --color-background-subtle: var(--gray-2);
   --color-background-element: var(--gray-3);
   --color-background-element-hover: var(--gray-4);
   --color-background-element-active: var(--gray-5);
@@ -199,11 +63,11 @@
   --color-foreground-subtle: var(--gray-11);
   --color-foreground: var(--gray-12);
 
-  --color-primary: var(--accent-9);
-  --color-primary-hover: var(--accent-10);
-  --color-primary-element: var(--accent-a3);
-  --color-primary-element-foreground: var(--accent-a11);
-  --color-primary-border: var(--accent-a7);
+  --color-primary: var(--tomato-9);
+  --color-primary-hover: var(--tomato-10);
+  --color-primary-element: var(--tomato-a3);
+  --color-primary-element-foreground: var(--tomato-a11);
+  --color-primary-border: var(--tomato-a7);
   --color-primary-foreground: oklch(100.00% 0.0 none);
 
   --color-danger: var(--red-9);
@@ -213,12 +77,12 @@
   --color-danger-border: var(--red-a7);
   --color-danger-foreground: oklch(100.00% 0.0 none);
 
-  --color-warning: var(--yellow-9);
-  --color-warning-hover: var(--yellow-10);
-  --color-warning-element: var(--yellow-a3);
-  --color-warning-element-foreground: var(--yellow-a11);
-  --color-warning-border: var(--yellow-a7);
-  --color-warning-foreground: var(--gray-12);
+  --color-warning: var(--amber-9);
+  --color-warning-hover: var(--amber-10);
+  --color-warning-element: var(--amber-a3);
+  --color-warning-element-foreground: var(--amber-a11);
+  --color-warning-border: var(--amber-a7);
+  --color-warning-foreground: var(--amber-12);
 
   --color-success: var(--green-9);
   --color-success-hover: var(--green-10);

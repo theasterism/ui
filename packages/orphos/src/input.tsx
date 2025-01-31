@@ -5,7 +5,7 @@ import type { FieldError } from "react-hook-form";
 import { cn } from "./lib/utils";
 
 const inputVariants = cva({
-  base: "flex text-sm h-[32px] w-full rounded-md border border-border-element/60 bg-background py-2 pl-2 pr-8 no-drag transition-all focus-visible:border-transparent focus-visible:ring-2 ring-focus-ring focus-visible:outline-none placeholder:text-foreground-subtle placeholder:text-sm disabled:opacity-75 disabled:cursor-not-allowed disabled:placeholder:text-foreground-subtle/50 disabled:text-foreground-subtle",
+  base: "flex text-sm h-[32px] w-full rounded-md border border-border-element/60 bg-background dark:bg-background-subtle py-2 pl-2 pr-8 no-drag transition-all focus-visible:border-transparent focus-visible:ring-2 ring-focus-ring focus-visible:outline-none placeholder:text-foreground-subtle placeholder:text-sm disabled:opacity-75 disabled:cursor-not-allowed disabled:placeholder:text-foreground-subtle/50 disabled:text-foreground-subtle",
   variants: {
     variant: {
       default: "",
