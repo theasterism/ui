@@ -1,5 +1,15 @@
 # @theanalog/orphos
 
+## 0.17.0
+
+### Minor Changes
+
+- ad80374: add sidebar and sheet
+
+### Patch Changes
+
+- f11db84: change border opacity for various components
+
 ## 0.16.4
 
 ### Patch Changes
