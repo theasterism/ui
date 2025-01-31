@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.18.1
+
+### Patch Changes
+
+- fbe7d43: change card, dialog and button bg color
+- b8b5f45: add dark mode variant
+
 ## 0.18.0
 
 ### Minor Changes
