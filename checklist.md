@@ -1,4 +1,4 @@
-# SHADCN/UI Component List
+# Component List
 
 [x] alert/callout
 [x] avatar
@@ -22,6 +22,7 @@
 [x] radio group
 [x] select
 [x] separator
+[x] sheet
 [x] skeleton
 [x] slider
 [x] switch
