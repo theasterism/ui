@@ -9,6 +9,6 @@
     scrollbar-color: var(--scrollbar-color) transparent;
   }
   body {
-    @apply min-w-[320px] bg-background-subtle;
+    @apply min-w-[320px] bg-background-subtle overscroll-none;
   }
 }

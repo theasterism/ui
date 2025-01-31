@@ -53,8 +53,8 @@ export function ButtonsDemo() {
 
 export function ButtonDisabledDemo() {
   return (
-    <div className="flex flex-row flex-wrap gap-8">
-      <div className="flex flex-col gap-4 w-auto">
+    <div className="flex flex-row flex-wrap gap-8 z-auto">
+      <div className="flex flex-col gap-4 w-auto z-auto">
         <Button disabled size="sm">
           Button text
         </Button>
@@ -74,7 +74,7 @@ export function ButtonDisabledDemo() {
           Button text
         </Button>
       </div>
-      <div className="flex flex-col gap-4 w-auto">
+      <div className="flex flex-col gap-4 w-auto z-auto">
         <Button disabled>Button text</Button>
         <Button disabled variant="primary">
           Button text
@@ -92,7 +92,7 @@ export function ButtonDisabledDemo() {
           Button text
         </Button>
       </div>
-      <div className="flex flex-col gap-4 w-auto">
+      <div className="flex flex-col gap-4 w-auto z-auto">
         <Button disabled size="lg">
           Button text
         </Button>
