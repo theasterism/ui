@@ -95,7 +95,7 @@ export function NavigationMenuDemo() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink href="/docs" className={navigationMenuTriggerStyle()}>
-            Documentation
+            Docs
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
