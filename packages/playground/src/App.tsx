@@ -35,7 +35,7 @@ function App() {
           <SidebarTrigger className="-ml-1" />
           <Separator orientation="vertical" className="mr-2 h-4" />
         </header>
-        <div className="flex flex-1 flex-col gap-20 p-4">
+        <div className="flex flex-1 flex-col gap-20 p-6">
           <div>
             <h1
               className={typographyVariants({
@@ -381,6 +381,14 @@ function App() {
               >
                 The principles of the typographic craft are difficult to master
               </h4>
+              <h5
+                className={typographyVariants({
+                  variant: "heading5",
+                  className: "mt-0!",
+                })}
+              >
+                The principles of the typographic craft are difficult to master
+              </h5>
               <p
                 className={typographyVariants({
                   variant: "paragraph",
