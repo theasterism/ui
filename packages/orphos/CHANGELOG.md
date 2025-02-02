@@ -1,5 +1,15 @@
 # @theanalog/orphos
 
+## 0.19.0
+
+### Minor Changes
+
+- 8187575: add h5 and change text size
+
+### Patch Changes
+
+- 720bcd3: change type to ComponentRef to ElementRef
+
 ## 0.18.1
 
 ### Patch Changes
