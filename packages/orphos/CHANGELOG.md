@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.20.1
+
+### Patch Changes
+
+- 3ab52d1: fix colors.css not being included in package
+
 ## 0.20.0
 
 ### Minor Changes
