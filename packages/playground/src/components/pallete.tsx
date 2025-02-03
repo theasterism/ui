@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-export const palette = ["gray", "tomato", "red", "green", "amber", "blue"];
+export const palette = ["gray", "orange", "red", "green", "yellow", "blue"];
 export const colorScaleNumbers = [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 export function ColorPalette() {
