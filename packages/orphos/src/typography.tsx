@@ -13,7 +13,7 @@ export const typographyVariants = cva({
       blockquote: "mt-6 border-l-4 border-primary pl-6 italic",
       ul: "my-6 ml-4 list-disc [&>li]:mt-2 [&>li]:pl-1 marker:text-primary",
       ol: "my-6 ml-4 list-decimal [&>li]:mt-2 [&>li]:pl-1 marker:text-primary",
-      code: "px-[0.3rem] py-[0.2rem] w-fit break-words text-sm rounded-sm bg-primary-element text-primary-element-foreground [box-decoration-break:clone]",
+      code: "px-[0.3rem] py-[0.2rem] before:content-(--code-marker) after:content-(--code-marker) w-fit break-words text-sm rounded-sm bg-primary-element text-primary-element-foreground [box-decoration-break:clone]",
       kbd: "inline w-fit rounded-sm border border-border/60 bg-background px-1 text-sm text-foreground [box-decoration-break:clone]",
     },
   },
