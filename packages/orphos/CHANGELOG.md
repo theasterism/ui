@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.20.3
+
+### Patch Changes
+
+- 7e1b63c: fix textarea cn import
+
 ## 0.20.2
 
 ### Patch Changes
