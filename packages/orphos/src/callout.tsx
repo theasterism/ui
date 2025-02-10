@@ -7,7 +7,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { type VariantProps, cva } from "cva";
 import * as React from "react";
-import { cn } from "./lib/utils";
+import { cn } from "./utils";
 
 const calloutVariants = cva({
   base: "relative flex flex-col items-center justify-center gap-3 w-full rounded-lg p-3 text-sm",

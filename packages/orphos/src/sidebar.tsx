@@ -5,7 +5,7 @@ import { Slot } from "@radix-ui/react-slot";
 import { type VariantProps, cva } from "cva";
 import { useIsMobile } from "./hooks/use-mobile";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./tooltip";
-import { cn } from "./lib/utils";
+import { cn } from "./utils";
 import { Separator } from "./separator";
 import { Button } from "./button";
 import { Input } from "./input";
@@ -16,7 +16,7 @@ import { Bars3Icon } from "@heroicons/react/24/outline";
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
 const SIDEBAR_WIDTH = "16rem";
-const SIDEBAR_WIDTH_MOBILE = "18rem";
+const SIDEBAR_WIDTH_MOBILE = "17rem";
 const SIDEBAR_WIDTH_ICON = "3rem";
 const SIDEBAR_KEYBOARD_SHORTCUT = "b";
 
@@ -165,7 +165,7 @@ const Sidebar = React.forwardRef<
         <SheetContent
           data-sidebar="sidebar"
           data-mobile="true"
-          className="w-(--sidebar-width) bg-background dark:bg-background-subtle p-0 text-foreground [&>button]:hidden"
+          className="w-(--sidebar-width)! bg-background dark:bg-background-subtle p-0 text-foreground [&>button]:hidden"
           style={
             {
               "--sidebar-width": SIDEBAR_WIDTH_MOBILE,
