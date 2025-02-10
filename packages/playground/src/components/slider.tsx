@@ -1,4 +1,4 @@
-import { cn } from "@theanalog/orphos/lib/utils";
+import { cn } from "@theanalog/orphos/utils";
 import { Slider } from "@theanalog/orphos/slider";
 
 type SliderProps = React.ComponentProps<typeof Slider>;

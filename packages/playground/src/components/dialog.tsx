@@ -12,7 +12,7 @@ import {
 } from "@theanalog/orphos/dialog";
 import { Input } from "@theanalog/orphos/input";
 import { Label } from "@theanalog/orphos/label";
-import { cn } from "@theanalog/orphos/lib/utils";
+import { cn } from "@theanalog/orphos/utils";
 
 export function DialogDemo() {
   return (

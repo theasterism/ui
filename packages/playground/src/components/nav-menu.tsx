@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { cn } from "@theanalog/orphos/lib/utils";
+import { cn } from "@theanalog/orphos/utils";
 import {
   NavigationMenu,
   NavigationMenuList,
