@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.20.2
+
+### Patch Changes
+
+- c1ecb70: fix sidebar width not respecting css var
+
 ## 0.20.1
 
 ### Patch Changes
