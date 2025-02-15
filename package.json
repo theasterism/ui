@@ -4,7 +4,7 @@
     "@biomejs/biome": "^1.9.4",
     "@changesets/cli": "^2.27.12",
     "@total-typescript/tsconfig": "^1.0.4",
-    "turbo": "^2.4.0",
+    "turbo": "^2.4.1",
     "typescript": "^5.7.3"
   },
   "license": "MIT",
@@ -20,7 +20,7 @@
     "release": "turbo run build --filter=@theanalog/orphos && changeset publish"
   },
   "sideEffects": false,
-  "trustedDependencies": ["@biomejs/biome", "core-js", "esbuild", "workerd"],
+  "trustedDependencies": ["@biomejs/biome", "core-js", "esbuild", "sharp", "workerd"],
   "type": "module",
   "workspaces": ["packages/*"]
 }

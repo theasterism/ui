@@ -8,9 +8,6 @@ export function ButtonsDemo() {
         <Button size="sm" variant="primary">
           Button text
         </Button>
-        <Button size="sm" variant="secondary">
-          Button text
-        </Button>
         <Button size="sm" variant="ghost">
           Button text
         </Button>
@@ -24,7 +21,6 @@ export function ButtonsDemo() {
       <div className="flex flex-col gap-4 w-auto">
         <Button>Button text</Button>
         <Button variant="primary">Button text</Button>
-        <Button variant="secondary">Button text</Button>
         <Button variant="ghost">Button text</Button>
         <Button variant="danger">Button text</Button>
         <Button variant="link">Button text</Button>
@@ -32,9 +28,6 @@ export function ButtonsDemo() {
       <div className="flex flex-col gap-4 w-auto">
         <Button size="lg">Button text</Button>
         <Button size="lg" variant="primary">
-          Button text
-        </Button>
-        <Button size="lg" variant="secondary">
           Button text
         </Button>
         <Button size="lg" variant="ghost">
@@ -61,9 +54,6 @@ export function ButtonDisabledDemo() {
         <Button disabled size="sm" variant="primary">
           Button text
         </Button>
-        <Button disabled size="sm" variant="secondary">
-          Button text
-        </Button>
         <Button disabled size="sm" variant="ghost">
           Button text
         </Button>
@@ -77,9 +67,6 @@ export function ButtonDisabledDemo() {
       <div className="flex flex-col gap-4 w-auto z-auto">
         <Button disabled>Button text</Button>
         <Button disabled variant="primary">
-          Button text
-        </Button>
-        <Button disabled variant="secondary">
           Button text
         </Button>
         <Button disabled variant="ghost">
@@ -97,9 +84,6 @@ export function ButtonDisabledDemo() {
           Button text
         </Button>
         <Button disabled size="lg" variant="primary">
-          Button text
-        </Button>
-        <Button disabled size="lg" variant="secondary">
           Button text
         </Button>
         <Button disabled size="lg" variant="ghost">

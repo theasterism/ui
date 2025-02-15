@@ -1,4 +1,3 @@
-import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Button, buttonVariants } from "@theanalog/orphos/button";
 import {
   Dialog,
@@ -45,7 +44,7 @@ export function DialogDemo() {
         </div>
         <DialogFooter>
           <DialogClose className={cn(buttonVariants({}))}>Close</DialogClose>
-          <Button variant="secondary" type="submit">
+          <Button variant="primary" type="submit">
             Save changes
           </Button>
         </DialogFooter>

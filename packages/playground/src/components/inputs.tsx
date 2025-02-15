@@ -1,7 +1,6 @@
 import { Input } from "@theanalog/orphos/input";
 import { Label } from "@theanalog/orphos/label";
 import { Textarea } from "@theanalog/orphos/textarea";
-import { Fragment } from "react";
 
 const textAreaDemoText = `Here's to the crazy ones.
 The misfits.

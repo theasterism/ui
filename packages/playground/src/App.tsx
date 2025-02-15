@@ -19,7 +19,6 @@ import { ToastDemo } from "./components/toast";
 import { SelectScrollable } from "./components/select";
 import { SliderDemo } from "./components/slider";
 import { PopoverDemo } from "./components/popover";
-import { NavigationMenuDemo } from "./components/nav-menu";
 import { ContextMenuDemo } from "./components/context-menu";
 import { SwitchDemo } from "./components/switch";
 import { SheetSide } from "./components/sheet";
@@ -31,11 +30,12 @@ function App() {
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <header className="flex sticky top-0 bg-background h-16 shrink-0 items-center gap-2 border-b px-4 z-[5]">
-          <SidebarTrigger className="-ml-1" />
-          <Separator orientation="vertical" className="mr-2 h-4" />
+        <header className="flex h-16 shrink-0 items-center gap-2">
+          <div className="flex items-center gap-2 px-4">
+            <SidebarTrigger className="-ml-1" />
+          </div>
         </header>
-        <div className="flex flex-1 flex-col gap-20 p-6">
+        <div className="flex flex-1 flex-col gap-20 p-6 overflow-auto">
           <div>
             <h1
               className={typographyVariants({
@@ -48,7 +48,7 @@ function App() {
             <hr className="my-4" />
             <div className="flex gap-2">
               <Badge variant="warning">Work In Progress.</Badge>
-              <Badge variant="info">v0</Badge>
+              <Badge variant="success">v0</Badge>
             </div>
           </div>
           <ColorPalette />
@@ -77,9 +77,8 @@ function App() {
             <div className="flex flex-row flex-wrap gap-4 w-auto">
               <Badge>Badge</Badge>
               <Badge variant="primary">Badge</Badge>
-              <Badge variant="info">Badge</Badge>
-              <Badge variant="warning">Badge</Badge>
               <Badge variant="destructive">Badge</Badge>
+              <Badge variant="warning">Badge</Badge>
               <Badge variant="success">Badge</Badge>
             </div>
           </div>
@@ -192,17 +191,6 @@ function App() {
               Icon Button
             </h2>
             <IconButtonDemo />
-          </div>
-          <div className="flex flex-col gap-6 w-auto items-start">
-            <h2
-              className={typographyVariants({
-                variant: "heading2",
-                className: "mt-0!",
-              })}
-            >
-              Nav Menu
-            </h2>
-            <NavigationMenuDemo />
           </div>
           <div className="flex flex-col gap-6">
             <h2
@@ -331,7 +319,7 @@ function App() {
               Tooltip
             </h2>
             <div className="flex flex-row gap-4 w-auto">
-              <Tooltip delayDuration={0}>
+              <Tooltip delayDuration={0} open>
                 <TooltipTrigger asChild>
                   <Button size="sm">Hover</Button>
                 </TooltipTrigger>

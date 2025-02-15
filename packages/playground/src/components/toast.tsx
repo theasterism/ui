@@ -1,4 +1,3 @@
-import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Button } from "@theanalog/orphos/button";
 import { Toast, ToastAction, ToastDescription, ToastTitle, ToastViewport } from "@theanalog/orphos/toast";
 import { useState } from "react";

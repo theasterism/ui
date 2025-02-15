@@ -1,4 +1,4 @@
-import { RocketLaunchIcon } from "@heroicons/react/24/outline";
+import { HomeIcon, ShadowIcon } from "@radix-ui/react-icons";
 import { Button } from "@theanalog/orphos/button";
 
 export function IconButtonDemo() {
@@ -6,36 +6,30 @@ export function IconButtonDemo() {
     <div className="flex flex-row flex-wrap gap-8">
       <div className="flex flex-col gap-4 w-auto">
         <Button size="icon">
-          <RocketLaunchIcon />
+          <HomeIcon />
         </Button>
         <Button size="icon" variant="primary">
-          <RocketLaunchIcon />
-        </Button>
-        <Button size="icon" variant="secondary">
-          <RocketLaunchIcon />
+          <HomeIcon />
         </Button>
         <Button size="icon" variant="ghost">
-          <RocketLaunchIcon />
+          <HomeIcon />
         </Button>
         <Button size="icon" variant="danger">
-          <RocketLaunchIcon />
+          <HomeIcon />
         </Button>
       </div>
       <div className="flex flex-col gap-4 w-auto">
         <Button disabled size="icon">
-          <RocketLaunchIcon />
+          <HomeIcon />
         </Button>
         <Button disabled size="icon" variant="primary">
-          <RocketLaunchIcon />
-        </Button>
-        <Button disabled size="icon" variant="secondary">
-          <RocketLaunchIcon />
+          <HomeIcon />
         </Button>
         <Button disabled size="icon" variant="ghost">
-          <RocketLaunchIcon />
+          <HomeIcon />
         </Button>
         <Button disabled size="icon" variant="danger">
-          <RocketLaunchIcon />
+          <HomeIcon />
         </Button>
       </div>
     </div>
