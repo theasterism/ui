@@ -1,5 +1,19 @@
 # @theanalog/orphos
 
+## 0.21.0
+
+### Minor Changes
+
+- 760d67d: change primary color to emrald green
+
+### Patch Changes
+
+- aeffb5b: change text area bg color
+- 2f1e23d: change sidbar outline button color
+- f60a745: fix button sizing
+- fe7740b: remove unused imports
+- 75a572d: remove collapisble
+
 ## 0.20.3
 
 ### Patch Changes
