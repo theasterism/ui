@@ -1,4 +1,3 @@
-import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@theanalog/orphos/collapsible";
 import {
   Sidebar,
   SidebarHeader,
@@ -14,6 +13,7 @@ import * as React from "react";
 import { SearchForm } from "./search-form";
 import { VersionSwitcher } from "./version-switcher";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@radix-ui/react-collapsible";
 
 // This is sample data.
 
