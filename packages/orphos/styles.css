@@ -42,11 +42,11 @@
   --color-foreground-subtle: var(--gray-11);
   --color-foreground: var(--gray-12);
 
-  --color-primary: var(--orange-9);
-  --color-primary-hover: var(--orange-10);
-  --color-primary-element: var(--orange-a3);
-  --color-primary-element-foreground: var(--orange-a11);
-  --color-primary-border: var(--orange-a7);
+  --color-primary: var(--green-9);
+  --color-primary-hover: var(--green-10);
+  --color-primary-element: var(--green-a3);
+  --color-primary-element-foreground: var(--green-a11);
+  --color-primary-border: var(--green-a7);
   --color-primary-foreground: oklch(100.00% 0.0 none);
 
   --color-danger: var(--red-9);
@@ -56,26 +56,19 @@
   --color-danger-border: var(--red-a7);
   --color-danger-foreground: oklch(100.00% 0.0 none);
 
-  --color-warning: var(--yellow-9);
-  --color-warning-hover: var(--yellow-10);
-  --color-warning-element: var(--yellow-a3);
-  --color-warning-element-foreground: var(--yellow-a11);
-  --color-warning-border: var(--yellow-a7);
-  --color-warning-foreground: oklch(8.82% 0.0123 84.89);
+  --color-warning: var(--orange-9);
+  --color-warning-hover: var(--orange-10);
+  --color-warning-element: var(--orange-a3);
+  --color-warning-element-foreground: var(--orange-a11);
+  --color-warning-border: var(--orange-a7);
+  --color-warning-foreground: oklch(100.00% 0.0 none);
 
-  --color-success: var(--green-9);
-  --color-success-hover: var(--green-10);
-  --color-success-element: var(--green-a3);
-  --color-success-element-foreground: var(--green-a11);
-  --color-success-border: var(--green-a7);
+  --color-success: var(--blue-9);
+  --color-success-hover: var(--blue-10);
+  --color-success-element: var(--blue-a3);
+  --color-success-element-foreground: var(--blue-a11);
+  --color-success-border: var(--blue-a7);
   --color-success-foreground: oklch(100.00% 0.0 none);
-
-  --color-info: var(--blue-9);
-  --color-info-hover: var(--blue-10);
-  --color-info-element: var(--blue-a3);
-  --color-info-element-foreground: var(--blue-a11);
-  --color-info-border: var(--blue-a7);
-  --color-info-foreground: oklch(100.00% 0.0 none);
 
   /* Typography */
   --text-4xl: 2.25rem; /* 36px */

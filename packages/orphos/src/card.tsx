@@ -6,10 +6,7 @@ type DivElementProps = React.ComponentProps<"div">;
 const Card = ({ className, ref, ...props }: DivElementProps) => (
   <div
     ref={ref}
-    className={cn(
-      "rounded-lg text-foregroung bg-background dark:bg-background-subtle border border-border/60 overflow-hidden",
-      className,
-    )}
+    className={cn("rounded-lg text-foregroung bg-background-subtle border border-border/60 overflow-hidden", className)}
     {...props}
   />
 );
@@ -38,14 +35,7 @@ const CardContent = ({ className, ref, ...props }: DivElementProps) => (
 CardContent.displayName = "CardContent";
 
 const CardFooter = ({ className, ref, ...props }: DivElementProps) => (
-  <div
-    ref={ref}
-    className={cn(
-      "flex items-center p-4 border-t border-border/60 bg-background-subtle dark:bg-background-subtle",
-      className,
-    )}
-    {...props}
-  />
+  <div ref={ref} className={cn("flex items-center p-4 border-t border-border/60", className)} {...props} />
 );
 CardFooter.displayName = "CardFooter";
 

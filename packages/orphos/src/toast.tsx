@@ -1,10 +1,10 @@
 "use client";
 
-import { XMarkIcon } from "@heroicons/react/24/outline";
 import * as ToastPrimitives from "@radix-ui/react-toast";
 import { type VariantProps, cva } from "cva";
 import * as React from "react";
 import { cn } from "./utils";
+import { Cross2Icon } from "@radix-ui/react-icons";
 
 const ToastProvider = ToastPrimitives.Provider;
 
@@ -72,7 +72,7 @@ const ToastClose = React.forwardRef<
     toast-close=""
     {...props}
   >
-    <XMarkIcon className="h-4 w-4" />
+    <Cross2Icon className="h-4 w-4" />
   </ToastPrimitives.Close>
 ));
 ToastClose.displayName = ToastPrimitives.Close.displayName;

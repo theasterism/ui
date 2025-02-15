@@ -1,11 +1,11 @@
-import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
+import { EyeOpenIcon, EyeClosedIcon } from "@radix-ui/react-icons";
 import { type VariantProps, cva } from "cva";
 import * as React from "react";
 import type { FieldError } from "react-hook-form";
 import { cn } from "./utils";
 
 const inputVariants = cva({
-  base: "flex text-sm h-[32px] w-full rounded-md border border-border-element/60 bg-background dark:bg-background-subtle py-2 pl-2 pr-8 no-drag transition-all focus-visible:border-transparent focus-visible:ring-2 ring-focus-ring focus-visible:outline-none placeholder:text-foreground-subtle placeholder:text-sm disabled:opacity-75 disabled:cursor-not-allowed disabled:placeholder:text-foreground-subtle/50 disabled:text-foreground-subtle",
+  base: "flex text-sm h-[32px] w-full rounded-md border border-border-element/60 bg-background-element/60 py-2 pl-2 pr-8 no-drag transition-all focus-visible:border-transparent focus-visible:ring-2 ring-focus-ring focus-visible:outline-none placeholder:text-foreground-subtle placeholder:text-sm disabled:opacity-75 disabled:cursor-not-allowed disabled:placeholder:text-foreground-subtle/50 disabled:text-foreground-subtle",
   variants: {
     variant: {
       default: "",
@@ -53,9 +53,9 @@ const Input = ({ className, type, ref, icon, error, disabled, ...props }: InputP
           aria-controls="password"
         >
           {isVisible ? (
-            <EyeSlashIcon className="size-4 stroke-2" aria-hidden="true" />
+            <EyeClosedIcon className="size-4 stroke-2" aria-hidden="true" />
           ) : (
-            <EyeIcon className="size-4 stroke-2" aria-hidden="true" />
+            <EyeOpenIcon className="size-4 stroke-2" aria-hidden="true" />
           )}
         </button>
       </div>

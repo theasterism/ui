@@ -11,7 +11,7 @@ import { Button } from "./button";
 import { Input } from "./input";
 import { Sheet, SheetContent } from "./sheet";
 import { Skeleton } from "./skeleton";
-import { Bars3Icon } from "@heroicons/react/24/outline";
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
@@ -120,7 +120,7 @@ const SidebarProvider = React.forwardRef<
             } as React.CSSProperties
           }
           className={cn(
-            "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-background has-[[data-variant=inset]]:dark:bg-background-subtle",
+            "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-background-subtle",
             className,
           )}
           ref={ref}
@@ -147,10 +147,7 @@ const Sidebar = React.forwardRef<
   if (collapsible === "none") {
     return (
       <div
-        className={cn(
-          "flex h-full w-(--sidebar-width) flex-col bg-background dark:bg-background-subtle text-foreground",
-          className,
-        )}
+        className={cn("flex h-full w-(--sidebar-width) flex-col bg-background-subtle text-foreground", className)}
         ref={ref}
         {...props}
       >
@@ -165,7 +162,7 @@ const Sidebar = React.forwardRef<
         <SheetContent
           data-sidebar="sidebar"
           data-mobile="true"
-          className="w-(--sidebar-width)! bg-background dark:bg-background-subtle p-0 text-foreground [&>button]:hidden"
+          className="w-(--sidebar-width)! bg-background-subtle p-0 text-foreground [&>button]:hidden"
           style={
             {
               "--sidebar-width": SIDEBAR_WIDTH_MOBILE,
@@ -215,7 +212,7 @@ const Sidebar = React.forwardRef<
       >
         <div
           data-sidebar="sidebar"
-          className="flex h-full w-full flex-col bg-background dark:bg-background-subtle group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-border-element/60"
+          className="flex h-full w-full flex-col bg-background-subtle group-data-[variant=floating]:rounded-md group-data-[variant=floating]:border group-data-[variant=floating]:border-border-element/60"
         >
           {children}
         </div>
@@ -242,7 +239,7 @@ const SidebarTrigger = React.forwardRef<React.ComponentRef<typeof Button>, React
         }}
         {...props}
       >
-        <Bars3Icon />
+        <HamburgerMenuIcon />
         <span className="sr-only">Toggle Sidebar</span>
       </Button>
     );
@@ -283,8 +280,8 @@ const SidebarInset = React.forwardRef<HTMLDivElement, React.ComponentProps<"main
     <main
       ref={ref}
       className={cn(
-        "relative flex min-h-svh flex-1 flex-col bg-background-subtle dark:bg-background",
-        "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl",
+        "relative flex min-h-svh flex-1 flex-col bg-background",
+        "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-lg",
         className,
       )}
       {...props}
@@ -375,7 +372,7 @@ const SidebarGroupAction = React.forwardRef<HTMLButtonElement, React.ComponentPr
         ref={ref}
         data-sidebar="group-action"
         className={cn(
-          "absolute right-3 top-3.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-foreground-subtle outline-none ring-sidebar-ring transition-transform hover:bg-background-element hover:text-foreground focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
+          "absolute right-3 top-3.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-foreground-subtle outline-none ring-focus-ring transition-transform hover:bg-background-element-hover hover:text-foreground focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
           // Increases the hit area of the button on mobile.
           "after:absolute after:-inset-2 after:md:hidden",
           "group-data-[collapsible=icon]:hidden",
@@ -406,11 +403,11 @@ const SidebarMenuItem = React.forwardRef<HTMLLIElement, React.ComponentProps<"li
 SidebarMenuItem.displayName = "SidebarMenuItem";
 
 const sidebarMenuButtonVariants = cva({
-  base: "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left text-sm outline-none ring-focus-ring transition-[width,height,padding] hover:bg-background-element hover:text-foreground focus-visible:ring-2 active:bg-background-element-hover active:text-foreground disabled:pointer-events-none disabled:opacity-50 group-has-[[data-sidebar=menu-action]]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-background-element-hover data-[active=true]:font-medium data-[active=true]:text-foreground data-[state=open]:hover:bg-background-element-active data-[state=open]:hover:text-foreground group-data-[collapsible=icon]:!size-8 group-data-[collapsible=icon]:!p-2 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
+  base: "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md py-2 px-2.5 text-foreground-subtle text-left text-sm outline-none ring-focus-ring transition-[width,height,padding] hover:bg-background-element-hover hover:text-foreground focus-visible:ring-2 active:bg-background-element-active active:text-foreground disabled:pointer-events-none disabled:opacity-50 group-has-[[data-sidebar=menu-action]]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-primary/25 data-[active=true]:text-foreground data-[state=open]:hover:bg-background-element-active/60 data-[state=open]:hover:text-foreground group-data-[collapsible=icon]:!size-8 group-data-[collapsible=icon]:!p-2 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
   variants: {
     variant: {
-      default: "hover:bg-background-element hover:text-foreground",
-      outline: "bg-transparent border border-border-element hover:bg-background-element hover:text-foreground",
+      default: "hover:bg-background-element-hover hover:text-foreground",
+      outline: "border border-border-element/60 bg-background hover:bg-background-element-hover hover:text-foreground",
     },
     size: {
       default: "h-8 text-sm",
@@ -479,7 +476,7 @@ const SidebarMenuAction = React.forwardRef<
       ref={ref}
       data-sidebar="menu-action"
       className={cn(
-        "absolute right-1 top-1.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-foreground outline-none ring-focus-ring transition-transform hover:bg-background-element hover:text-foreground focus-visible:ring-2 peer-hover/menu-button:text-foreground [&>svg]:size-4 [&>svg]:shrink-0",
+        "absolute right-1 top-1.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-foreground outline-none ring-focus-ring transition-transform hover:bg-background-element-hover hover:text-foreground focus-visible:ring-2 peer-hover/menu-button:text-foreground [&>svg]:size-4 [&>svg]:shrink-0",
         // Increases the hit area of the button on mobile.
         "after:absolute after:-inset-2 after:md:hidden",
         "peer-data-[size=sm]/menu-button:top-1",
@@ -587,8 +584,8 @@ const SidebarMenuSubButton = React.forwardRef<
       data-size={size}
       data-active={isActive}
       className={cn(
-        "flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 text-foreground-subtle outline-none ring-focus-ring hover:bg-background-element hover:text-foreground focus-visible:ring-2 active:bg-background-element-hover active:text-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:text-foreground-subtle",
-        "data-[active=true]:bg-background-element data-[active=true]:text-foreground-subtle",
+        "flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 text-foreground-subtle outline-none ring-focus-ring hover:bg-background-element-hover hover:text-foreground focus-visible:ring-2 active:bg-primary/35 active:text-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:text-foreground-subtle",
+        "data-[active=true]:bg-primary/35 data-[active=true]:text-foreground",
         size === "sm" && "text-xs",
         size === "md" && "text-sm",
         "group-data-[collapsible=icon]:hidden",
