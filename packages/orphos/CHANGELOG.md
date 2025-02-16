@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.21.2
+
+### Patch Changes
+
+- e66e448: match opacity for danger and primary button variant
+- ed9ab98: change primary and danger button variant styles
+
 ## 0.21.1
 
 ### Patch Changes
