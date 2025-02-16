@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.21.1
+
+### Patch Changes
+
+- 24bbc2c: fix inconsistent check styles in checkbox and dropdown
+
 ## 0.21.0
 
 ### Minor Changes
