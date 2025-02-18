@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.21.4
+
+### Patch Changes
+
+- 90b27ae: inline theme
+
 ## 0.21.3
 
 ### Patch Changes
