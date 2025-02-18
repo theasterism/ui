@@ -16,7 +16,7 @@
 }
 
 /* Theme */
-@theme {
+@theme inline {
   --breakpoint-xs: 450px;
 
   /* Fonts */
