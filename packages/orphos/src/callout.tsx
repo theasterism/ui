@@ -1,10 +1,9 @@
 import { type VariantProps, cva } from "cva";
 import * as React from "react";
 import { cn } from "./utils";
-import { InfoCircledIcon, CheckCircledIcon, ExclamationTriangleIcon } from "@radix-ui/react-icons";
 
 const calloutVariants = cva({
-  base: "relative flex flex-col justify-center gap-1 w-full rounded-md p-3.5 text-sm",
+  base: "relative w-full rounded-md p-3.5 text-sm grid has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] grid-cols-[0_1fr] has-[>svg]:gap-x-3 gap-y-0.5 items-start [&>svg]:size-4 [&>svg]:translate-y-0.5 [&>svg]:text-current",
   variants: {
     variant: {
       default: "bg-primary-element border-primary-border text-primary-element-foreground",
@@ -24,67 +23,41 @@ const calloutVariants = cva({
   },
 });
 
-// @ts-expect-error shut up!
-const iconForVariant: Record<VariantProps<typeof calloutVariants>["variant"], React.ReactNode> = {
-  default: (
-    <span className={cn("flex-none flex items-center justify-center [&>svg]:size-4.5 [&>svg]:stroke-2")}>
-      <InfoCircledIcon className="text-primary-element-foreground" />
-    </span>
-  ),
-  success: (
-    <span className={cn("flex-none flex items-center justify-center [&>svg]:size-4.5 [&>svg]:stroke-2")}>
-      <CheckCircledIcon className="text-success-element-foreground" />
-    </span>
-  ),
-  warning: (
-    <span className={cn("flex-none flex items-center justify-center [&>svg]:size-4.5 [&>svg]:stroke-2")}>
-      <ExclamationTriangleIcon className="text-warning-element-foreground" />
-    </span>
-  ),
-  critical: (
-    <span className={cn("flex-none flex items-center justify-center [&>svg]:size-4.5 [&>svg]:stroke-2")}>
-      <ExclamationTriangleIcon className="text-danger-element-foreground" />
-    </span>
-  ),
-};
-
-const Callout = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> &
-    VariantProps<typeof calloutVariants> & {
-      description: React.ReactNode;
-      icon?: React.ReactNode;
-      bordered?: boolean;
-    }
->(({ className, variant, bordered, transparent, description, icon, ...props }, ref) => {
-  const supportsCustomIcon = variant === "success" || variant === "default";
-
+function Callout({
+  className,
+  variant,
+  transparent,
+  bordered,
+  ...props
+}: React.ComponentProps<"div"> & VariantProps<typeof calloutVariants>) {
   return (
-    <section
-      ref={ref}
+    <div
+      data-slot="alert"
       role="alert"
-      tabIndex={-1}
       className={cn(calloutVariants({ variant, transparent, bordered }), className)}
       {...props}
-    >
-      <div className={cn("flex gap-2 items-center")}>
-        <div className="flex flex-row gap-2 items-center">
-          {icon && supportsCustomIcon ? (
-            <span className={cn("flex-none flex items-center justify-center [&>svg]:size-4.5 [&>svg]:stroke-2")}>
-              {icon}
-            </span>
-          ) : (
-            iconForVariant[variant!]
-          )}
-          <div className="flex flex-col">
-            {description ? <div className={cn("text-sm w-full leading-6 font-medium")}>{description}</div> : null}
-          </div>
-        </div>
-      </div>
-      {props.children}
-    </section>
+    />
   );
-});
-Callout.displayName = "Callout";
+}
 
-export { Callout };
+function CalloutTitle({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="alert-title"
+      className={cn("col-start-2 line-clamp-1 min-h-4 font-medium tracking-tight", className)}
+      {...props}
+    />
+  );
+}
+
+function CalloutDescription({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="alert-description"
+      className={cn("col-start-2 grid justify-items-start gap-1 text-sm [&_p]:leading-relaxed", className)}
+      {...props}
+    />
+  );
+}
+
+export { Callout, CalloutTitle, CalloutDescription };
