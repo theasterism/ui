@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.21.6
+
+### Patch Changes
+
+- 0e3151d: change sub menu button active background color
+
 ## 0.21.5
 
 ### Patch Changes
