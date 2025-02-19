@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.21.5
+
+### Patch Changes
+
+- 10363c0: remove button border
+
 ## 0.21.4
 
 ### Patch Changes
