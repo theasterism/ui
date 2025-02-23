@@ -4,18 +4,17 @@ import "./index.css";
 
 import { TooltipProvider } from "@theanalog/orphos/tooltip";
 
-import { ToastProvider } from "@theanalog/orphos/toast";
 import { App } from "./App";
 import { ThemeProvider } from "next-themes";
+import { Toaster } from "@theanalog/orphos/toaster";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
-      <ToastProvider>
-        <TooltipProvider>
-          <App />
-        </TooltipProvider>
-      </ToastProvider>
+      <TooltipProvider>
+        <App />
+        <Toaster />
+      </TooltipProvider>
     </ThemeProvider>
   </StrictMode>,
 );

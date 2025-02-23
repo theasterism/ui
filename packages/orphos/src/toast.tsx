@@ -1,110 +1,162 @@
 "use client";
 
+import React from "react";
 import * as ToastPrimitives from "@radix-ui/react-toast";
-import { type VariantProps, cva } from "cva";
-import * as React from "react";
 import { cn } from "./utils";
-import { Cross2Icon } from "@radix-ui/react-icons";
+import {
+  CheckCircledIcon,
+  CrossCircledIcon,
+  ExclamationTriangleIcon,
+  InfoCircledIcon,
+  ReloadIcon,
+} from "@radix-ui/react-icons";
 
 const ToastProvider = ToastPrimitives.Provider;
+ToastProvider.displayName = "ToastProvider";
 
 const ToastViewport = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Viewport>,
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Viewport>
->(({ className, ...props }, ref) => (
+>(({ className, ...props }, forwardedRef) => (
   <ToastPrimitives.Viewport
-    ref={ref}
+    ref={forwardedRef}
     className={cn(
-      "fixed top-auto bottom-0 left-0 right-0 z-[100] flex max-h-screen w-full p-4 flex-col max-w-[420px] mx-auto",
+      "fixed right-0 top-0 z-[9999] m-0 flex w-full max-w-[100vw] list-none flex-col gap-2 p-[var(--viewport-padding)] [--viewport-padding:_15px] sm:max-w-md sm:gap-4",
       className,
     )}
     {...props}
   />
 ));
-ToastViewport.displayName = ToastPrimitives.Viewport.displayName;
 
-const toastVariants = cva({
-  base: "group pointer-events-auto relative flex w-full items-center justify-between space-x-2 overflow-hidden rounded-full border p-4 pr-6 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full",
-  variants: {
-    variant: {
-      default: "border bg-background text-foreground",
-      danger: "destructive group border-danger-border bg-danger-element text-destructive-foreground",
-    },
+ToastViewport.displayName = "ToastViewport";
+
+interface ActionProps {
+  label: string;
+  altText: string;
+  onClick: () => void | Promise<void>;
+}
+
+interface ToastProps extends React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> {
+  variant?: "info" | "success" | "warning" | "error" | "loading";
+  title?: string;
+  description?: string;
+  action?: ActionProps;
+  disableDismiss?: boolean;
+}
+
+const Toast = React.forwardRef<React.ElementRef<typeof ToastPrimitives.Root>, ToastProps>(
+  ({ className, variant, title, description, action, disableDismiss = false, ...props }: ToastProps, forwardedRef) => {
+    let Icon: React.ReactNode;
+
+    switch (variant) {
+      case "success":
+        Icon = (
+          <CheckCircledIcon className="size-5 shrink-0 text-emerald-600 dark:text-emerald-500" aria-hidden="true" />
+        );
+        break;
+      case "warning":
+        Icon = (
+          <ExclamationTriangleIcon className="size-5 shrink-0 text-amber-500 dark:text-amber-500" aria-hidden="true" />
+        );
+        break;
+      case "error":
+        Icon = <CrossCircledIcon className="size-5 shrink-0 text-red-600 dark:text-red-500" aria-hidden="true" />;
+        break;
+      case "loading":
+        Icon = (
+          <ReloadIcon className="size-5 shrink-0 animate-spin text-gray-600 dark:text-gray-500" aria-hidden="true" />
+        );
+        break;
+      default:
+        Icon = <InfoCircledIcon className="size-5 shrink-0" aria-hidden="true" />;
+        break;
+    }
+
+    return (
+      <ToastPrimitives.Root
+        ref={forwardedRef}
+        className={cn(
+          "flex h-fit min-h-16 w-full overflow-hidden rounded-md border bg-background-element border-border-element",
+          // swipe
+          "data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none",
+          // transition
+          "data-[state=open]:animate-slideLeftAndFade",
+          "data-[state=closed]:animate-hide",
+          className,
+        )}
+        tremor-id="tremor-raw"
+        {...props}
+      >
+        <div
+          className={cn(
+            // base
+            "flex flex-1 items-start gap-3 p-4",
+            // border
+            !disableDismiss || action ? "border-r border-border-element" : "",
+          )}
+        >
+          {Icon}
+          <div className="flex flex-col gap-1">
+            {title && (
+              <ToastPrimitives.Title className="text-sm font-semibold text-foreground">{title}</ToastPrimitives.Title>
+            )}
+            {description && (
+              <ToastPrimitives.Description className="text-sm text-foreground-subtle">
+                {description}
+              </ToastPrimitives.Description>
+            )}
+          </div>
+        </div>
+        <div className="flex flex-col">
+          {action && (
+            <>
+              <ToastPrimitives.Action
+                altText={action.altText}
+                className={cn(
+                  // base
+                  "flex flex-1 items-center justify-center px-6 text-sm font-semibold transition-colors",
+                  // hover
+                  "hover:bg-gray-50 hover:dark:bg-gray-900/30",
+                  // text color
+                  "text-gray-800 dark:text-gray-100",
+                  // active
+                  "active:bg-gray-100 active:dark:bg-gray-800",
+                  {
+                    "text-red-600 dark:text-red-500": variant === "error",
+                  },
+                )}
+                onClick={(event) => {
+                  event.preventDefault();
+                  action.onClick();
+                }}
+                type="button"
+              >
+                {action.label}
+              </ToastPrimitives.Action>
+              <div className="h-px w-full bg-gray-200 dark:bg-gray-800" />
+            </>
+          )}
+          {!disableDismiss && (
+            <ToastPrimitives.Close
+              className={cn(
+                // base
+                "flex items-center justify-center p-2 text-sm transition-colors",
+                "hover:bg-background-element-hover",
+                "active:bg-background-element-active",
+                action ? "h-1/2" : "h-full",
+              )}
+              aria-label="Close"
+            >
+              Close
+            </ToastPrimitives.Close>
+          )}
+        </div>
+      </ToastPrimitives.Root>
+    );
   },
-  defaultVariants: {
-    variant: "default",
-  },
-});
+);
+Toast.displayName = "Toast";
 
-const Toast = React.forwardRef<
-  React.ElementRef<typeof ToastPrimitives.Root>,
-  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> & VariantProps<typeof toastVariants>
->(({ className, variant, ...props }, ref) => {
-  return <ToastPrimitives.Root ref={ref} className={cn(toastVariants({ variant }), className)} {...props} />;
-});
-Toast.displayName = ToastPrimitives.Root.displayName;
+type ToastActionElement = ActionProps;
 
-const ToastAction = React.forwardRef<
-  React.ElementRef<typeof ToastPrimitives.Action>,
-  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Action>
->(({ className, ...props }, ref) => (
-  <ToastPrimitives.Action
-    ref={ref}
-    className={cn(
-      "inline-flex h-8 shrink-0 items-center justify-center rounded-md border bg-transparent px-3 text-sm font-medium transition-colors hover:bg-secondary focus:outline-none focus:ring-1 focus:ring-ring disabled:pointer-events-none disabled:opacity-50 group-[.destructive]:border-muted/40 group-[.destructive]:hover:border-destructive/30 group-[.destructive]:hover:bg-destructive group-[.destructive]:hover:text-destructive-foreground group-[.destructive]:focus:ring-destructive",
-      className,
-    )}
-    {...props}
-  />
-));
-ToastAction.displayName = ToastPrimitives.Action.displayName;
-
-const ToastClose = React.forwardRef<
-  React.ElementRef<typeof ToastPrimitives.Close>,
-  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Close>
->(({ className, ...props }, ref) => (
-  <ToastPrimitives.Close
-    ref={ref}
-    className={cn(
-      "absolute right-1 top-1 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity hover:text-foreground focus:opacity-100 focus:outline-none focus:ring-1 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600",
-      className,
-    )}
-    toast-close=""
-    {...props}
-  >
-    <Cross2Icon className="h-4 w-4" />
-  </ToastPrimitives.Close>
-));
-ToastClose.displayName = ToastPrimitives.Close.displayName;
-
-const ToastTitle = React.forwardRef<
-  React.ComponentRef<typeof ToastPrimitives.Title>,
-  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Title>
->(({ className, ...props }, ref) => (
-  <ToastPrimitives.Title ref={ref} className={cn("text-sm font-semibold [&+div]:text-xs", className)} {...props} />
-));
-ToastTitle.displayName = ToastPrimitives.Title.displayName;
-
-const ToastDescription = React.forwardRef<
-  React.ComponentRef<typeof ToastPrimitives.Description>,
-  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Description>
->(({ className, ...props }, ref) => (
-  <ToastPrimitives.Description ref={ref} className={cn("text-sm opacity-90", className)} {...props} />
-));
-ToastDescription.displayName = ToastPrimitives.Description.displayName;
-
-type ToastProps = React.ComponentPropsWithoutRef<typeof Toast>;
-
-type ToastActionElement = React.ReactElement<typeof ToastAction>;
-
-export {
-  type ToastProps,
-  type ToastActionElement,
-  ToastProvider,
-  ToastViewport,
-  Toast,
-  ToastTitle,
-  ToastDescription,
-  ToastClose,
-  ToastAction,
-};
+export { Toast, ToastProvider, ToastViewport, type ToastActionElement, type ToastProps };
