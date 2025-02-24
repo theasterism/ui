@@ -1,4 +1,4 @@
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { Label } from "@theanalog/orphos/label";
 import { SidebarGroup, SidebarGroupContent, SidebarInput } from "@theanalog/orphos/sidebar";
 

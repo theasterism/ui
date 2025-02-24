@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckIcon, ChevronUpDownIcon, ServerStackIcon } from "@heroicons/react/24/outline";
+import { CaretSortIcon, CheckIcon, StackIcon } from "@radix-ui/react-icons";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -30,13 +30,13 @@ export function VersionSwitcher({
               className="data-[state=open]:bg-background-element data-[state=open]:text-foreground"
             >
               <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-foreground text-background">
-                <ServerStackIcon className="size-4" />
+                <StackIcon className="size-4" />
               </div>
               <div className="flex flex-col gap-0.5 leading-none">
                 <span className="font-semibold">Documentation</span>
                 <span className="">v{selectedVersion}</span>
               </div>
-              <ChevronUpDownIcon className="ml-auto" />
+              <CaretSortIcon className="ml-auto" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-(--radix-dropdown-menu-trigger-width)" align="start">

@@ -1,6 +1,4 @@
-:root,
-.dark,
-.dark-theme {
+:root {
   --gray-1: #18181b;
   --gray-2: #1f1f22;
   --gray-3: #27272b;
@@ -134,9 +132,7 @@
 
 @supports (color: color(display-p3 1 1 1)) {
   @media (color-gamut: p3) {
-    :root,
-    .dark,
-    .dark-theme {
+    :root {
       --gray-1: oklch(21% 0.0058 286);
       --gray-2: oklch(23.9% 0.006 286);
       --gray-3: oklch(27.4% 0.0084 286);
