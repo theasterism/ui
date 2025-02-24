@@ -1,5 +1,13 @@
 # @theanalog/orphos
 
+## 0.21.7
+
+### Patch Changes
+
+- 6b35882: lock file
+- 0d335e7: update deps
+- f3b7aa4: downgrade tailwind version
+
 ## 0.21.6
 
 ### Patch Changes
