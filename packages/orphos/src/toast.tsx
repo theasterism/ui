@@ -3,13 +3,7 @@
 import React from "react";
 import * as ToastPrimitives from "@radix-ui/react-toast";
 import { cn } from "./utils";
-import {
-  CheckCircledIcon,
-  CrossCircledIcon,
-  ExclamationTriangleIcon,
-  InfoCircledIcon,
-  ReloadIcon,
-} from "@radix-ui/react-icons";
+import { Cross1Icon } from "@radix-ui/react-icons";
 
 const ToastProvider = ToastPrimitives.Provider;
 ToastProvider.displayName = "ToastProvider";
@@ -21,7 +15,7 @@ const ToastViewport = React.forwardRef<
   <ToastPrimitives.Viewport
     ref={forwardedRef}
     className={cn(
-      "fixed right-0 top-0 z-[9999] m-0 flex w-full max-w-[100vw] list-none flex-col gap-2 p-[var(--viewport-padding)] [--viewport-padding:_15px] sm:max-w-md sm:gap-4",
+      "fixed right-0 bottom-0 z-[9999] m-0 flex w-full max-w-[100vw] list-none flex-col gap-2 p-[var(--viewport-padding)] [--viewport-padding:_24px] xs:max-w-sm sm:gap-4",
       className,
     )}
     {...props}
@@ -37,46 +31,18 @@ interface ActionProps {
 }
 
 interface ToastProps extends React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> {
-  variant?: "info" | "success" | "warning" | "error" | "loading";
-  title?: string;
-  description?: string;
+  variant?: "default" | "success" | "warning" | "error";
+  message?: string;
   action?: ActionProps;
-  disableDismiss?: boolean;
 }
 
 const Toast = React.forwardRef<React.ElementRef<typeof ToastPrimitives.Root>, ToastProps>(
-  ({ className, variant, title, description, action, disableDismiss = false, ...props }: ToastProps, forwardedRef) => {
-    let Icon: React.ReactNode;
-
-    switch (variant) {
-      case "success":
-        Icon = (
-          <CheckCircledIcon className="size-5 shrink-0 text-emerald-600 dark:text-emerald-500" aria-hidden="true" />
-        );
-        break;
-      case "warning":
-        Icon = (
-          <ExclamationTriangleIcon className="size-5 shrink-0 text-amber-500 dark:text-amber-500" aria-hidden="true" />
-        );
-        break;
-      case "error":
-        Icon = <CrossCircledIcon className="size-5 shrink-0 text-red-600 dark:text-red-500" aria-hidden="true" />;
-        break;
-      case "loading":
-        Icon = (
-          <ReloadIcon className="size-5 shrink-0 animate-spin text-gray-600 dark:text-gray-500" aria-hidden="true" />
-        );
-        break;
-      default:
-        Icon = <InfoCircledIcon className="size-5 shrink-0" aria-hidden="true" />;
-        break;
-    }
-
+  ({ className, variant, message, action, ...props }: ToastProps, forwardedRef) => {
     return (
       <ToastPrimitives.Root
         ref={forwardedRef}
         className={cn(
-          "flex h-fit min-h-16 w-full overflow-hidden rounded-md border bg-background-element border-border-element",
+          "flex items-center justify-bettween max-h-[63px] p-4 h-fit w-full overflow-hidden rounded-lg border bg-background-subtle border-border-element",
           // swipe
           "data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none",
           // transition
@@ -84,30 +50,12 @@ const Toast = React.forwardRef<React.ElementRef<typeof ToastPrimitives.Root>, To
           "data-[state=closed]:animate-hide",
           className,
         )}
-        tremor-id="tremor-raw"
         {...props}
       >
-        <div
-          className={cn(
-            // base
-            "flex flex-1 items-start gap-3 p-4",
-            // border
-            !disableDismiss || action ? "border-r border-border-element" : "",
-          )}
-        >
-          {Icon}
-          <div className="flex flex-col gap-1">
-            {title && (
-              <ToastPrimitives.Title className="text-sm font-semibold text-foreground">{title}</ToastPrimitives.Title>
-            )}
-            {description && (
-              <ToastPrimitives.Description className="text-sm text-foreground-subtle">
-                {description}
-              </ToastPrimitives.Description>
-            )}
-          </div>
-        </div>
-        <div className="flex flex-col">
+        <ToastPrimitives.Description className="w-full text-sm leading-7 text-foreground">
+          {message}
+        </ToastPrimitives.Description>
+        <div className="flex flex-col w-fit">
           {action && (
             <>
               <ToastPrimitives.Action
@@ -136,20 +84,16 @@ const Toast = React.forwardRef<React.ElementRef<typeof ToastPrimitives.Root>, To
               <div className="h-px w-full bg-gray-200 dark:bg-gray-800" />
             </>
           )}
-          {!disableDismiss && (
-            <ToastPrimitives.Close
-              className={cn(
-                // base
-                "flex items-center justify-center p-2 text-sm transition-colors",
-                "hover:bg-background-element-hover",
-                "active:bg-background-element-active",
-                action ? "h-1/2" : "h-full",
-              )}
-              aria-label="Close"
-            >
-              Close
-            </ToastPrimitives.Close>
-          )}
+          <ToastPrimitives.Close
+            className={cn(
+              "flex items-center justify-center rounded-md p-2 text-sm size-8 transition-colors",
+              "hover:bg-background-element-hover",
+              "active:bg-background-element-active",
+            )}
+            aria-label="Close"
+          >
+            <Cross1Icon className="stroke-2" />
+          </ToastPrimitives.Close>
         </div>
       </ToastPrimitives.Root>
     );

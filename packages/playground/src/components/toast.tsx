@@ -9,8 +9,7 @@ export function ToastDemo() {
           className="mx-auto flex"
           onClick={() =>
             toast({
-              title: "🍞",
-              description: "Here is your toast.",
+              message: "Here is your toast.",
             })
           }
         >
