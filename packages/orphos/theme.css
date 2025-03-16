@@ -1,6 +1,5 @@
-@import "tailwindcss";
-@plugin "tailwindcss-animate";
 @import "./colors.css";
+@plugin "tailwindcss-animate";
 
 :root {
   /* Base font size */
@@ -128,10 +127,6 @@
   input::placeholder,
   textarea::placeholder {
     color: var(--gray-a11);
-  }
-
-  * {
-    @apply min-w-0!;
   }
 
   body {
