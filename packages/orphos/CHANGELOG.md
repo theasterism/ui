@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.22.0
+
+### Minor Changes
+
+- 087bb39: update deps
+
 ## 0.21.7
 
 ### Patch Changes
