@@ -1,6 +1,6 @@
 {
   "name": "@theanalog/orphos",
-  "version": "0.22.0",
+  "version": "0.22.1",
   "type": "module",
   "license": "MIT",
   "exports": {
@@ -11,7 +11,11 @@
     "./package.json": "./package.json",
     "./theme.css": "./theme.css"
   },
-  "files": ["dist", "theme.css", "colors.css"],
+  "files": [
+    "dist",
+    "theme.css",
+    "colors.css"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/theanalogcompany/ui.git",
