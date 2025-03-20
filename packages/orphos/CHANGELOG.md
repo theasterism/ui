@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.22.1
+
+### Patch Changes
+
+- c76cadd: replace tailwindcss-animate with tw-animate-css
+
 ## 0.22.0
 
 ### Minor Changes
