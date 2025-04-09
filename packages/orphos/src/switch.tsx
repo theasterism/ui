@@ -1,27 +1,29 @@
 "use client";
 
-import * as SwitchPrimitives from "@radix-ui/react-switch";
+import * as SwitchPrimitive from "@radix-ui/react-switch";
 import * as React from "react";
 import { cn } from "./utils";
 
-const Switch = React.forwardRef<
-  React.ComponentRef<typeof SwitchPrimitives.Root>,
-  React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
->(({ className, ...props }, ref) => (
-  <SwitchPrimitives.Root
-    className={cn(
-      "relative h-[25px] w-[42px] cursor-default rounded-full bg-background-element focus-visible:outline-none focus-visible:ring-2 ring-offset-1 ring-offset-background-subtle ring-focus-ring disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary",
-      className
-    )}
-    {...props}
-    ref={ref}>
-    <SwitchPrimitives.Thumb
+function Switch({
+  className,
+  ...props
+}: React.ComponentProps<typeof SwitchPrimitive.Root>) {
+  return (
+    <SwitchPrimitive.Root
+      data-slot="switch"
       className={cn(
-        "block pointer-events-none ring-0 size-[21px] translate-x-0.5 rounded-full bg-white transition-transform duration-100 will-change-transform data-[state=checked]:translate-x-[19px]"
+        "relative h-[25px] w-[42px] cursor-default rounded-full bg-background-element focus-visible:outline-none focus-visible:ring-2 ring-offset-1 ring-offset-background-subtle ring-focus-ring disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary",
+        className
       )}
-    />
-  </SwitchPrimitives.Root>
-));
-Switch.displayName = SwitchPrimitives.Root.displayName;
+      {...props}>
+      <SwitchPrimitive.Thumb
+        data-slot="switch-thumb"
+        className={cn(
+          "block pointer-events-none ring-0 size-[21px] translate-x-0.5 rounded-full bg-white transition-transform duration-100 will-change-transform data-[state=checked]:translate-x-[19px]"
+        )}
+      />
+    </SwitchPrimitive.Root>
+  );
+}
 
 export { Switch };

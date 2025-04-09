@@ -1,7 +1,6 @@
 import { EyeClosedIcon, EyeOpenIcon } from "@radix-ui/react-icons";
 import { type VariantProps, cva } from "cva";
 import * as React from "react";
-import type { FieldError } from "react-hook-form";
 import { cn } from "./utils";
 
 const inputVariants = cva({
@@ -22,18 +21,17 @@ export interface InputProps
   extends React.ComponentProps<"input">,
     VariantProps<typeof inputVariants> {
   icon?: React.ReactNode;
-  error?: FieldError | undefined;
+  error?: string | undefined;
 }
 
-const Input = ({
+function Input({
   className,
   type,
-  ref,
   icon,
   error,
   disabled,
   ...props
-}: InputProps) => {
+}: InputProps) {
   const variant = type === "file" ? "file" : "default";
 
   if (type === "password") {
@@ -44,18 +42,18 @@ const Input = ({
       <div className="relative">
         <input
           disabled={disabled}
+          data-slot="input"
           className={cn(
             inputVariants({ variant, className }),
             error && "border-danger-element-border",
             "peer-focus-visible:border-transparent"
           )}
           type={isVisible ? "text" : "password"}
-          ref={ref}
           {...props}
         />
         <button
           disabled={disabled}
-          className="absolute mr-2 mt-1.5 inset-y-0 end-0 flex size-5 items-center justify-center rounded-xs text-foreground-subtle transition-colors peer hover:text-foreground focus:z-10 focus-visible:ring-1 ring-offset-transparent ring-offset-1 ring-focus-ring focus-visible:outline-none disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+          className="absolute mr-2 mt-1.5 inset-y-0 end-0 flex size-5 items-center justify-center rounded-sm text-foreground-subtle transition-colors peer hover:text-foreground focus:z-10 focus-visible:ring-1 ring-offset-transparent ring-offset-1 ring-focus-ring focus-visible:outline-none disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
           type="button"
           onClick={toggleVisibility}
           aria-label={isVisible ? "Hide password" : "Show password"}
@@ -76,14 +74,14 @@ const Input = ({
       <div className="relative">
         <input
           disabled={disabled}
-          type={type}
+          data-slot="input"
           className={cn(
             inputVariants({ variant, className }),
             error &&
               "border-danger-border ring-3 ring-danger-element focus-visible:ring-2 focus-visible:border-danger-border",
             "peer ps-9"
           )}
-          ref={ref}
+          type={type}
           {...props}
         />
         <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 text-foreground-subtle/80 peer-disabled:opacity-50">
@@ -95,18 +93,16 @@ const Input = ({
   return (
     <input
       disabled={disabled}
-      type={type}
+      data-slot="input"
       className={cn(
         inputVariants({ variant, className }),
         error &&
           "border-danger-border ring-3 ring-danger-element focus-visible:ring-2 focus-visible:border-danger-border"
       )}
-      ref={ref}
+      type={type}
       {...props}
     />
   );
-};
-
-Input.displayName = "Input";
+}
 
 export { Input };

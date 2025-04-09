@@ -3,7 +3,7 @@
 import { useToast } from "./hooks/use-toast";
 import { Toast, ToastProvider, ToastViewport } from "./toast";
 
-const Toaster = () => {
+function Toaster() {
   const { toasts } = useToast();
 
   return (
@@ -14,6 +14,6 @@ const Toaster = () => {
       <ToastViewport />
     </ToastProvider>
   );
-};
+}
 
 export { Toaster };
