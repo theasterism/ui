@@ -1,5 +1,19 @@
 # @theanalog/orphos
 
+## 0.23.0
+
+### Minor Changes
+
+- b41a779: replace forward ref with prop
+- 25ca608: change card layout
+
+### Patch Changes
+
+- 82693a4: update deps
+- 90409e6: update avatar styles
+- 4f2f1b2: remove forwardRef
+- 76b75d5: change primary button color opacity
+
 ## 0.22.1
 
 ### Patch Changes
