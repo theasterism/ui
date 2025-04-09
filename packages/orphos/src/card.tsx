@@ -1,62 +1,74 @@
-import * as React from "react";
+import type { DivElementProps } from "./types";
 import { cn } from "./utils";
 
-type DivElementProps = React.ComponentProps<"div">;
+function Card({ className, ...props }: DivElementProps) {
+  return (
+    <div
+      data-slot="card"
+      className={cn(
+        "rounded-lg py-4 text-foregroung bg-background-subtle flex flex-col gap-4 border border-border/60 overflow-hidden",
+        className
+      )}
+      {...props}
+    />
+  );
+}
 
-const Card = ({ className, ref, ...props }: DivElementProps) => (
-  <div
-    ref={ref}
-    className={cn(
-      "rounded-lg text-foregroung bg-background-subtle border border-border/60 overflow-hidden",
-      className
-    )}
-    {...props}
-  />
-);
+function CardHeader({ className, ...props }: DivElementProps) {
+  return (
+    <div
+      data-slot="card-header"
+      className={cn(
+        "@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-4 [.border-b]:pb-4 border-border/60",
+        className
+      )}
+      {...props}
+    />
+  );
+}
 
-Card.displayName = "Card";
+function CardTitle({ className, ...props }: DivElementProps) {
+  return (
+    <div
+      data-slot="card-title"
+      className={cn("font-semibold text-xl text-foreground", className)}
+      {...props}
+    />
+  );
+}
 
-const CardHeader = ({ className, ref, ...props }: DivElementProps) => (
-  <div
-    ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-3.5", className)}
-    {...props}
-  />
-);
-CardHeader.displayName = "CardHeader";
+function CardDescription({ className, ...props }: DivElementProps) {
+  return (
+    <div
+      data-slot="card-description"
+      className={cn("text-sm leading-5 text-foreground-subtle", className)}
+      {...props}
+    />
+  );
+}
 
-const CardTitle = ({ className, ref, ...props }: DivElementProps) => (
-  <div
-    ref={ref}
-    className={cn("font-semibold text-xl text-foreground", className)}
-    {...props}
-  />
-);
-CardTitle.displayName = "CardTitle";
+function CardContent({ className, ...props }: DivElementProps) {
+  return (
+    <div
+      data-slot="card-content"
+      className={cn("px-4", className)}
+      {...props}
+    />
+  );
+}
 
-const CardDescription = ({ className, ref, ...props }: DivElementProps) => (
-  <div
-    ref={ref}
-    className={cn("text-sm leading-5 text-foreground-subtle", className)}
-    {...props}
-  />
-);
-CardDescription.displayName = "CardDescription";
-
-const CardContent = ({ className, ref, ...props }: DivElementProps) => (
-  <div ref={ref} className={cn("px-3.5", className)} {...props} />
-);
-
-CardContent.displayName = "CardContent";
-
-const CardFooter = ({ className, ref, ...props }: DivElementProps) => (
-  <div
-    ref={ref}
-    className={cn("flex items-center p-4 border-t border-border/60", className)}
-    {...props}
-  />
-);
-CardFooter.displayName = "CardFooter";
+function CardFooter({ className, ...props }: DivElementProps) {
+  return (
+    <div
+      data-slot="card-footer"
+      className={cn(
+        "flex items-center px-4 [.border-t]:pt-6 border-border/60",
+        className
+      )}
+      {...props}
+    />
+  );
+}
 
 export {
   Card,
