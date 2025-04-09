@@ -25,7 +25,9 @@ export function DialogDemo() {
           <div className="flex items-center justify-between">
             <DialogTitle>Edit profile</DialogTitle>
           </div>
-          <DialogDescription>Make changes to your profile here. Click save when you're done.</DialogDescription>
+          <DialogDescription>
+            Make changes to your profile here. Click save when you're done.
+          </DialogDescription>
         </DialogHeader>
 
         <div className="flex flex-col gap-4 px-3.5">

@@ -41,7 +41,12 @@ export function InputsDemo() {
         </div>
         <div className="grid items-center w-full gap-2">
           <Label htmlFor="email-label-disabled">Input with label</Label>
-          <Input id="email-label-disabled" type="email" placeholder="tim@apple.com" disabled />
+          <Input
+            id="email-label-disabled"
+            type="email"
+            placeholder="tim@apple.com"
+            disabled
+          />
         </div>
       </div>
       <div className="flex flex-col xs:flex-row gap-4 w-full">
@@ -71,7 +76,12 @@ export function InputsDemo() {
         </div>
         <div className="grid w-full gap-2">
           <Label htmlFor="text-disabled">Textarea</Label>
-          <Textarea value={textAreaDemoText} id="text-disabled" className="h-32" disabled />
+          <Textarea
+            value={textAreaDemoText}
+            id="text-disabled"
+            className="h-32"
+            disabled
+          />
         </div>
       </div>
     </div>

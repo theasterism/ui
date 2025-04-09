@@ -1,4 +1,4 @@
-import { EyeOpenIcon, EyeClosedIcon } from "@radix-ui/react-icons";
+import { EyeClosedIcon, EyeOpenIcon } from "@radix-ui/react-icons";
 import { type VariantProps, cva } from "cva";
 import * as React from "react";
 import type { FieldError } from "react-hook-form";
@@ -18,12 +18,22 @@ const inputVariants = cva({
   },
 });
 
-export interface InputProps extends React.ComponentProps<"input">, VariantProps<typeof inputVariants> {
+export interface InputProps
+  extends React.ComponentProps<"input">,
+    VariantProps<typeof inputVariants> {
   icon?: React.ReactNode;
   error?: FieldError | undefined;
 }
 
-const Input = ({ className, type, ref, icon, error, disabled, ...props }: InputProps) => {
+const Input = ({
+  className,
+  type,
+  ref,
+  icon,
+  error,
+  disabled,
+  ...props
+}: InputProps) => {
   const variant = type === "file" ? "file" : "default";
 
   if (type === "password") {
@@ -37,7 +47,7 @@ const Input = ({ className, type, ref, icon, error, disabled, ...props }: InputP
           className={cn(
             inputVariants({ variant, className }),
             error && "border-danger-element-border",
-            "peer-focus-visible:border-transparent",
+            "peer-focus-visible:border-transparent"
           )}
           type={isVisible ? "text" : "password"}
           ref={ref}
@@ -50,8 +60,7 @@ const Input = ({ className, type, ref, icon, error, disabled, ...props }: InputP
           onClick={toggleVisibility}
           aria-label={isVisible ? "Hide password" : "Show password"}
           aria-pressed={isVisible}
-          aria-controls="password"
-        >
+          aria-controls="password">
           {isVisible ? (
             <EyeClosedIcon className="size-4 stroke-2" aria-hidden="true" />
           ) : (
@@ -72,7 +81,7 @@ const Input = ({ className, type, ref, icon, error, disabled, ...props }: InputP
             inputVariants({ variant, className }),
             error &&
               "border-danger-border ring-3 ring-danger-element focus-visible:ring-2 focus-visible:border-danger-border",
-            "peer ps-9",
+            "peer ps-9"
           )}
           ref={ref}
           {...props}
@@ -90,7 +99,7 @@ const Input = ({ className, type, ref, icon, error, disabled, ...props }: InputP
       className={cn(
         inputVariants({ variant, className }),
         error &&
-          "border-danger-border ring-3 ring-danger-element focus-visible:ring-2 focus-visible:border-danger-border",
+          "border-danger-border ring-3 ring-danger-element focus-visible:ring-2 focus-visible:border-danger-border"
       )}
       ref={ref}
       {...props}

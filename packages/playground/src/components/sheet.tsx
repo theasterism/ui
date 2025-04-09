@@ -3,13 +3,13 @@ import { Input } from "@theanalog/orphos/input";
 import { Label } from "@theanalog/orphos/label";
 import {
   Sheet,
-  SheetTrigger,
+  SheetClose,
   SheetContent,
-  SheetHeader,
-  SheetTitle,
   SheetDescription,
   SheetFooter,
-  SheetClose,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
 } from "@theanalog/orphos/sheet";
 
 const SHEET_SIDES = ["top", "right", "bottom", "left"] as const;
@@ -27,7 +27,9 @@ export function SheetSide() {
           <SheetContent side={side}>
             <SheetHeader>
               <SheetTitle>Edit profile</SheetTitle>
-              <SheetDescription>Make changes to your profile here. Click save when you're done.</SheetDescription>
+              <SheetDescription>
+                Make changes to your profile here. Click save when you're done.
+              </SheetDescription>
             </SheetHeader>
             <div className="grid gap-4 py-4">
               <div className="grid grid-cols-4 items-center gap-4">

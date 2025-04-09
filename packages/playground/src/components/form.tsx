@@ -36,7 +36,9 @@ export function FormDemo() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-6">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="flex flex-col gap-6">
         <FormField
           control={form.control}
           name="username"
@@ -55,7 +57,9 @@ export function FormDemo() {
                   />
                 </FormControl>
                 <FormMessage />
-                <FormDescription>This is your public display name.</FormDescription>
+                <FormDescription>
+                  This is your public display name.
+                </FormDescription>
               </FormItem>
             );
           }}

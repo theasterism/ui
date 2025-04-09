@@ -4,8 +4,8 @@ import "./index.css";
 
 import { TooltipProvider } from "@theanalog/orphos/tooltip";
 
-import { App } from "./App";
 import { Toaster } from "@theanalog/orphos/toaster";
+import { App } from "./App";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -13,5 +13,5 @@ createRoot(document.getElementById("root")!).render(
       <App />
       <Toaster />
     </TooltipProvider>
-  </StrictMode>,
+  </StrictMode>
 );

@@ -11,11 +11,7 @@
     "./package.json": "./package.json",
     "./theme.css": "./theme.css"
   },
-  "files": [
-    "dist",
-    "theme.css",
-    "colors.css"
-  ],
+  "files": ["dist", "theme.css", "colors.css"],
   "repository": {
     "type": "git",
     "url": "https://github.com/theanalogcompany/ui.git",

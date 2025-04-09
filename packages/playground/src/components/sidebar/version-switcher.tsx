@@ -3,11 +3,15 @@
 import { CaretSortIcon, CheckIcon, StackIcon } from "@radix-ui/react-icons";
 import {
   DropdownMenu,
-  DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuTrigger,
 } from "@theanalog/orphos/dropdown-menu";
-import { SidebarMenu, SidebarMenuItem, SidebarMenuButton } from "@theanalog/orphos/sidebar";
+import {
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+} from "@theanalog/orphos/sidebar";
 import * as React from "react";
 
 export function VersionSwitcher({
@@ -27,8 +31,7 @@ export function VersionSwitcher({
             <SidebarMenuButton
               size="lg"
               variant="outline"
-              className="data-[state=open]:bg-background-element data-[state=open]:text-foreground"
-            >
+              className="data-[state=open]:bg-background-element data-[state=open]:text-foreground">
               <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-foreground text-background">
                 <StackIcon className="size-4" />
               </div>
@@ -39,10 +42,17 @@ export function VersionSwitcher({
               <CaretSortIcon className="ml-auto" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-(--radix-dropdown-menu-trigger-width)" align="start">
+          <DropdownMenuContent
+            className="w-(--radix-dropdown-menu-trigger-width)"
+            align="start">
             {versions.map((version) => (
-              <DropdownMenuItem key={version} onSelect={() => setSelectedVersion(version)}>
-                v{version} {version === selectedVersion && <CheckIcon className="ml-auto" />}
+              <DropdownMenuItem
+                key={version}
+                onSelect={() => setSelectedVersion(version)}>
+                v{version}{" "}
+                {version === selectedVersion && (
+                  <CheckIcon className="ml-auto" />
+                )}
               </DropdownMenuItem>
             ))}
           </DropdownMenuContent>

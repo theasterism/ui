@@ -11,8 +11,7 @@ export function ToastDemo() {
             toast({
               message: "Here is your toast.",
             })
-          }
-        >
+          }>
           Make me a toast
         </Button>
       </div>

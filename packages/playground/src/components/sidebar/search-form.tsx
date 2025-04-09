@@ -1,6 +1,10 @@
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { Label } from "@theanalog/orphos/label";
-import { SidebarGroup, SidebarGroupContent, SidebarInput } from "@theanalog/orphos/sidebar";
+import {
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarInput,
+} from "@theanalog/orphos/sidebar";
 
 export function SearchForm({ ...props }: React.ComponentProps<"form">) {
   return (
@@ -10,7 +14,11 @@ export function SearchForm({ ...props }: React.ComponentProps<"form">) {
           <Label htmlFor="search" className="sr-only">
             Search
           </Label>
-          <SidebarInput id="search" placeholder="Search the docs..." className="pl-8" />
+          <SidebarInput
+            id="search"
+            placeholder="Search the docs..."
+            className="pl-8"
+          />
           <MagnifyingGlassIcon className="pointer-events-none absolute left-2 top-1/2 size-4 -translate-y-1/2 select-none opacity-50" />
         </SidebarGroupContent>
       </SidebarGroup>

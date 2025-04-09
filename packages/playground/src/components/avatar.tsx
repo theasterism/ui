@@ -5,7 +5,10 @@ export function AvatarDemo() {
   return (
     <Fragment>
       <Avatar>
-        <AvatarImage src="https://github.com/bachiitter.png" alt="@bachiitter" />
+        <AvatarImage
+          src="https://github.com/bachiitter.png"
+          alt="@bachiitter"
+        />
         <AvatarFallback>B</AvatarFallback>
       </Avatar>
       <Avatar>

@@ -20,7 +20,13 @@
     "release": "turbo run build --filter=@theanalog/orphos && changeset publish"
   },
   "sideEffects": false,
-  "trustedDependencies": ["@biomejs/biome", "core-js", "esbuild", "sharp", "workerd"],
+  "trustedDependencies": [
+    "@biomejs/biome",
+    "core-js",
+    "esbuild",
+    "sharp",
+    "workerd"
+  ],
   "type": "module",
   "workspaces": ["packages/*"]
 }

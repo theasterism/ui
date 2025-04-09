@@ -9,10 +9,13 @@ const buttonVariants = cva({
     variant: {
       default:
         "border border-border-element bg-background-element hover:bg-background-element-hover text-foreground active:bg-background-element-active active:border-border-element-active",
-      primary: "bg-primary hover:bg-primary active:bg-primary-hover text-primary-foreground",
-      ghost: "bg-transparent hover:bg-background-element-hover active:bg-background-element-active text-foreground",
+      primary:
+        "bg-primary hover:bg-primary active:bg-primary-hover text-primary-foreground",
+      ghost:
+        "bg-transparent hover:bg-background-element-hover active:bg-background-element-active text-foreground",
       link: "underline-offset-4 text-primary-element-foreground bg-transparent hover:underline",
-      danger: "bg-danger/80 hover:bg-danger active:bg-danger-hover text-danger-foreground",
+      danger:
+        "bg-danger/80 hover:bg-danger active:bg-danger-hover text-danger-foreground",
     },
     size: {
       xs: "h-[28px] text-[0.8125rem] px-3 rounded-md",
@@ -28,13 +31,26 @@ const buttonVariants = cva({
   },
 });
 
-export interface ButtonProps extends React.ComponentProps<"button">, VariantProps<typeof buttonVariants> {
+export interface ButtonProps
+  extends React.ComponentProps<"button">,
+    VariantProps<typeof buttonVariants> {
   asChild?: boolean;
 }
 
-const Button = ({ className, variant, size, ref, asChild = false, ...props }: ButtonProps) => {
+const Button = ({
+  className,
+  variant,
+  size,
+  asChild = false,
+  ...props
+}: ButtonProps) => {
   const Comp = asChild ? Slot : "button";
-  return <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />;
+  return (
+    <Comp
+      className={cn(buttonVariants({ variant, size, className }))}
+      {...props}
+    />
+  );
 };
 
 Button.displayName = "Button";

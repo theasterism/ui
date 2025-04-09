@@ -1,19 +1,23 @@
 import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@radix-ui/react-collapsible";
+import { ChevronRightIcon } from "@radix-ui/react-icons";
+import {
   Sidebar,
-  SidebarHeader,
   SidebarContent,
   SidebarGroup,
-  SidebarGroupLabel,
   SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarHeader,
   SidebarMenu,
-  SidebarMenuItem,
   SidebarMenuButton,
+  SidebarMenuItem,
 } from "@theanalog/orphos/sidebar";
 import * as React from "react";
 import { SearchForm } from "./search-form";
 import { VersionSwitcher } from "./version-switcher";
-import { ChevronRightIcon } from "@radix-ui/react-icons";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@radix-ui/react-collapsible";
 
 // This is sample data.
 
@@ -161,18 +165,24 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props} variant="inset">
       <SidebarHeader>
-        <VersionSwitcher versions={data.versions} defaultVersion={data.versions[0]} />
+        <VersionSwitcher
+          versions={data.versions}
+          defaultVersion={data.versions[0]}
+        />
         <SearchForm />
       </SidebarHeader>
       <SidebarContent className="gap-0">
         {/* We create a collapsible SidebarGroup for each parent. */}
         {data.navMain.map((item) => (
-          <Collapsible key={item.title} title={item.title} defaultOpen className="group/collapsible">
+          <Collapsible
+            key={item.title}
+            title={item.title}
+            defaultOpen
+            className="group/collapsible">
             <SidebarGroup>
               <SidebarGroupLabel
                 asChild
-                className="group/label text-sm text-foreground-subtle hover:bg-background-element-hover hover:text-foreground"
-              >
+                className="group/label text-sm text-foreground-subtle hover:bg-background-element-hover hover:text-foreground">
                 <CollapsibleTrigger>
                   {item.title}{" "}
                   <ChevronRightIcon className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90" />

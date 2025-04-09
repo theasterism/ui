@@ -1,9 +1,9 @@
 "use client";
 
-import React from "react";
-import * as ToastPrimitives from "@radix-ui/react-toast";
-import { cn } from "./utils";
 import { Cross1Icon } from "@radix-ui/react-icons";
+import * as ToastPrimitives from "@radix-ui/react-toast";
+import React from "react";
+import { cn } from "./utils";
 
 const ToastProvider = ToastPrimitives.Provider;
 ToastProvider.displayName = "ToastProvider";
@@ -16,7 +16,7 @@ const ToastViewport = React.forwardRef<
     ref={forwardedRef}
     className={cn(
       "fixed right-0 bottom-0 z-[9999] m-0 flex w-full max-w-[100vw] list-none flex-col gap-2 p-[var(--viewport-padding)] [--viewport-padding:_24px] xs:max-w-sm sm:gap-4",
-      className,
+      className
     )}
     {...props}
   />
@@ -30,14 +30,21 @@ interface ActionProps {
   onClick: () => void | Promise<void>;
 }
 
-interface ToastProps extends React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> {
+interface ToastProps
+  extends React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> {
   variant?: "default" | "success" | "warning" | "error";
   message?: string;
   action?: ActionProps;
 }
 
-const Toast = React.forwardRef<React.ElementRef<typeof ToastPrimitives.Root>, ToastProps>(
-  ({ className, variant, message, action, ...props }: ToastProps, forwardedRef) => {
+const Toast = React.forwardRef<
+  React.ElementRef<typeof ToastPrimitives.Root>,
+  ToastProps
+>(
+  (
+    { className, variant, message, action, ...props }: ToastProps,
+    forwardedRef
+  ) => {
     return (
       <ToastPrimitives.Root
         ref={forwardedRef}
@@ -48,10 +55,9 @@ const Toast = React.forwardRef<React.ElementRef<typeof ToastPrimitives.Root>, To
           // transition
           "data-[state=open]:animate-slideLeftAndFade",
           "data-[state=closed]:animate-hide",
-          className,
+          className
         )}
-        {...props}
-      >
+        {...props}>
         <ToastPrimitives.Description className="w-full text-sm leading-7 text-foreground">
           {message}
         </ToastPrimitives.Description>
@@ -71,14 +77,13 @@ const Toast = React.forwardRef<React.ElementRef<typeof ToastPrimitives.Root>, To
                   "active:bg-gray-100 active:dark:bg-gray-800",
                   {
                     "text-red-600 dark:text-red-500": variant === "error",
-                  },
+                  }
                 )}
                 onClick={(event) => {
                   event.preventDefault();
                   action.onClick();
                 }}
-                type="button"
-              >
+                type="button">
                 {action.label}
               </ToastPrimitives.Action>
               <div className="h-px w-full bg-gray-200 dark:bg-gray-800" />
@@ -88,19 +93,24 @@ const Toast = React.forwardRef<React.ElementRef<typeof ToastPrimitives.Root>, To
             className={cn(
               "flex items-center justify-center rounded-md p-2 text-sm size-8 transition-colors",
               "hover:bg-background-element-hover",
-              "active:bg-background-element-active",
+              "active:bg-background-element-active"
             )}
-            aria-label="Close"
-          >
+            aria-label="Close">
             <Cross1Icon className="stroke-2" />
           </ToastPrimitives.Close>
         </div>
       </ToastPrimitives.Root>
     );
-  },
+  }
 );
 Toast.displayName = "Toast";
 
 type ToastActionElement = ActionProps;
 
-export { Toast, ToastProvider, ToastViewport, type ToastActionElement, type ToastProps };
+export {
+  Toast,
+  ToastProvider,
+  ToastViewport,
+  type ToastActionElement,
+  type ToastProps,
+};

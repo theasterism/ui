@@ -1,8 +1,20 @@
 import { Button } from "@theanalog/orphos/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@theanalog/orphos/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@theanalog/orphos/card";
 import { Input } from "@theanalog/orphos/input";
 import { Label } from "@theanalog/orphos/label";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@theanalog/orphos/tabs";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@theanalog/orphos/tabs";
 
 export function TabsDemo() {
   return (
@@ -15,7 +27,9 @@ export function TabsDemo() {
         <Card>
           <CardHeader className="border-b-[0.5px] border-border-subtle">
             <CardTitle>Account</CardTitle>
-            <CardDescription>Make changes to your account here. Click save when you're done.</CardDescription>
+            <CardDescription>
+              Make changes to your account here. Click save when you're done.
+            </CardDescription>
           </CardHeader>
           <CardContent className="space-y-2 py-3.5">
             <div className="space-y-1">
@@ -36,7 +50,9 @@ export function TabsDemo() {
         <Card>
           <CardHeader className="border-b-[0.5px] border-border-subtle">
             <CardTitle>Password</CardTitle>
-            <CardDescription>Change your password here. After saving, you'll be logged out.</CardDescription>
+            <CardDescription>
+              Change your password here. After saving, you'll be logged out.
+            </CardDescription>
           </CardHeader>
           <CardContent className="space-y-2 py-3.5">
             <div className="space-y-1">

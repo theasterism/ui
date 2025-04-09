@@ -79,7 +79,9 @@ export const reducer = (state: State, action: Action): State => {
     case "UPDATE_TOAST":
       return {
         ...state,
-        toasts: state.toasts.map((t) => (t.id === action.toast.id ? { ...t, ...action.toast } : t)),
+        toasts: state.toasts.map((t) =>
+          t.id === action.toast.id ? { ...t, ...action.toast } : t
+        ),
       };
 
     case "DISMISS_TOAST": {
@@ -101,7 +103,7 @@ export const reducer = (state: State, action: Action): State => {
                 ...t,
                 open: false,
               }
-            : t,
+            : t
         ),
       };
     }
@@ -126,7 +128,9 @@ let memoryState: State = { toasts: [] };
 // Updated with https://github.com/shadcn-ui/ui/pull/1038/files
 function dispatch(action: Action) {
   if (action.type === "ADD_TOAST") {
-    const toastExists = memoryState.toasts.some((t) => t.id === action.toast.id);
+    const toastExists = memoryState.toasts.some(
+      (t) => t.id === action.toast.id
+    );
     if (toastExists) {
       return;
     }
