@@ -1,9 +1,9 @@
 import { type VariantProps, cva } from "cva";
-import * as React from "react";
+import type { DivElementProps } from "./types";
 import { cn } from "./utils";
 
 const calloutVariants = cva({
-  base: "relative w-full rounded-md p-3.5 text-sm grid has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] grid-cols-[0_1fr] has-[>svg]:gap-x-3 gap-y-0.5 items-start [&>svg]:size-4 [&>svg]:translate-y-0.5 [&>svg]:text-current",
+  base: "relative w-full rounded-md p-4 text-sm grid has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] grid-cols-[0_1fr] has-[>svg]:gap-x-3 gap-y-0.5 items-start [&>svg]:size-4 [&>svg]:translate-y-0.5 [&>svg]:text-current",
   variants: {
     variant: {
       default:
@@ -33,7 +33,7 @@ function Callout({
   transparent,
   bordered,
   ...props
-}: React.ComponentProps<"div"> & VariantProps<typeof calloutVariants>) {
+}: DivElementProps & VariantProps<typeof calloutVariants>) {
   return (
     <div
       data-slot="alert"
@@ -47,7 +47,7 @@ function Callout({
   );
 }
 
-function CalloutTitle({ className, ...props }: React.ComponentProps<"div">) {
+function CalloutTitle({ className, ...props }: DivElementProps) {
   return (
     <div
       data-slot="alert-title"
@@ -60,10 +60,7 @@ function CalloutTitle({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-function CalloutDescription({
-  className,
-  ...props
-}: React.ComponentProps<"div">) {
+function CalloutDescription({ className, ...props }: DivElementProps) {
   return (
     <div
       data-slot="alert-description"
