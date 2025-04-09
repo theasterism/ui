@@ -19,7 +19,7 @@ function CardHeader({ className, ...props }: DivElementProps) {
     <div
       data-slot="card-header"
       className={cn(
-        "@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-4 [.border-b]:pb-4 border-border/60",
+        "@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1 px-4 [.border-b]:pb-4 border-border/60",
         className
       )}
       {...props}
