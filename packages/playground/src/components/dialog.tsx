@@ -19,8 +19,7 @@ export function DialogDemo() {
       <DialogTrigger asChild>
         <Button>Edit Profile</Button>
       </DialogTrigger>
-
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] gap-6">
         <DialogHeader>
           <div className="flex items-center justify-between">
             <DialogTitle>Edit profile</DialogTitle>
@@ -30,17 +29,13 @@ export function DialogDemo() {
           </DialogDescription>
         </DialogHeader>
 
-        <div className="flex flex-col gap-4 px-3.5">
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
-              Name
-            </Label>
+        <div className="flex flex-col gap-4">
+          <div className="grid gap-1.5">
+            <Label htmlFor="name">Name</Label>
             <Input id="name" value="Pedro Duarte" className="col-span-3" />
           </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
-              Username
-            </Label>
+          <div className="grid gap-1.5">
+            <Label htmlFor="username">Username</Label>
             <Input id="username" value="@peduarte" className="col-span-3" />
           </div>
         </div>

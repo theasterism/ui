@@ -13,7 +13,7 @@
 [ ] date picker
 [x] dialog
 [x] dropdown menu
-[x] form
+[ ] form
 [ ] hover card
 [x] input
 [x] label
@@ -23,7 +23,7 @@
 [x] select
 [x] separator
 [x] sheet
-[x] sidebar
+[ ] sidebar
 [x] skeleton
 [x] slider
 [x] switch

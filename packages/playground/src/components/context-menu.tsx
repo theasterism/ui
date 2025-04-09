@@ -1,3 +1,4 @@
+import { TrashIcon } from "@radix-ui/react-icons";
 import {
   ContextMenu,
   ContextMenuCheckboxItem,
@@ -44,6 +45,8 @@ export function ContextMenuDemo() {
             <ContextMenuItem>Name Window...</ContextMenuItem>
             <ContextMenuSeparator />
             <ContextMenuItem>Developer Tools</ContextMenuItem>
+            <ContextMenuSeparator />
+            <ContextMenuItem>Delete</ContextMenuItem>
           </ContextMenuSubContent>
         </ContextMenuSub>
         <ContextMenuSeparator />

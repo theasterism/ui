@@ -33,11 +33,11 @@ export function TabsDemo() {
           </CardHeader>
           <CardContent>
             <div className="flex flex-col gap-2.5">
-              <div className="space-y-1">
+              <div className="space-y-1.5">
                 <Label htmlFor="name">Name</Label>
                 <Input id="name" defaultValue="Pedro Duarte" />
               </div>
-              <div className="space-y-1">
+              <div className="space-y-1.5">
                 <Label htmlFor="username">Username</Label>
                 <Input id="username" defaultValue="@peduarte" />
               </div>
@@ -58,11 +58,11 @@ export function TabsDemo() {
           </CardHeader>
           <CardContent>
             <div className="flex flex-col gap-2.5">
-              <div className="space-y-1">
+              <div className="space-y-1.5">
                 <Label htmlFor="current">Current password</Label>
                 <Input id="current" type="password" />
               </div>
-              <div className="space-y-1">
+              <div className="space-y-1.5">
                 <Label htmlFor="new">New password</Label>
                 <Input id="new" type="password" />
               </div>
