@@ -23,7 +23,7 @@
 [x] select
 [x] separator
 [x] sheet
-[ ] sidebar
+[x] sidebar
 [x] skeleton
 [x] slider
 [x] switch
