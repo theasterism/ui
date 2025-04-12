@@ -1,5 +1,13 @@
 # @theanalog/orphos
 
+## 0.24.1
+
+### Patch Changes
+
+- d8219e1: change sidebar input color
+- 1659d83: change sheet and select content bg
+- 308ceca: change input bg color
+
 ## 0.24.0
 
 ### Minor Changes
