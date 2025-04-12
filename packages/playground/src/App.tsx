@@ -299,7 +299,7 @@ function App() {
               })}>
               Toast
             </h2>
-            <div className="flex flex-row gap-4 w-auto">
+            <div className="flex items-center gap-4">
               <ToastDemo />
             </div>
           </div>

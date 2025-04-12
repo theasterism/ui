@@ -4,7 +4,7 @@ import "./index.css";
 
 import { TooltipProvider } from "@theanalog/orphos/tooltip";
 
-import { Toaster } from "@theanalog/orphos/toaster";
+import { Toaster } from "@theanalog/orphos/toast";
 import { App } from "./App";
 
 createRoot(document.getElementById("root")!).render(
