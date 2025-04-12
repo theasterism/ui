@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.24.0
+
+### Minor Changes
+
+- 6ad67f2: add toast component
+
 ## 0.23.0
 
 ### Minor Changes
