@@ -334,7 +334,7 @@ const SidebarInput = React.forwardRef<
     <Input
       ref={ref}
       data-sidebar="input"
-      className={cn("h-8 w-full", className)}
+      className={cn("h-8 w-full bg-background", className)}
       {...props}
     />
   );
@@ -503,12 +503,12 @@ const SidebarMenuItem = React.forwardRef<
 SidebarMenuItem.displayName = "SidebarMenuItem";
 
 const sidebarMenuButtonVariants = cva({
-  base: "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md py-2 px-2.5 text-foreground-subtle text-left text-sm outline-none ring-focus-ring transition-[width,height,padding] hover:bg-background-element-hover hover:text-foreground focus-visible:ring-2 active:bg-background-element-active active:text-foreground disabled:pointer-events-none disabled:opacity-50 group-has-[[data-sidebar=menu-action]]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-primary/25 data-[active=true]:text-foreground data-[state=open]:hover:bg-background-element-active/60 data-[state=open]:hover:text-foreground group-data-[collapsible=icon]:!size-8 group-data-[collapsible=icon]:!p-2 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
+  base: "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md py-2 px-2.5 text-foreground-subtle text-left text-sm outline-none ring-focus-ring transition-[colors,width,height,padding] hover:bg-background-element-hover hover:text-foreground focus-visible:ring-2 active:bg-background-element-active active:text-foreground disabled:pointer-events-none disabled:opacity-50 group-has-[[data-sidebar=menu-action]]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-primary/25 data-[active=true]:text-foreground data-[state=open]:hover:bg-background-element-active/60 data-[state=open]:hover:text-foreground group-data-[collapsible=icon]:!size-8 group-data-[collapsible=icon]:!p-2 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
   variants: {
     variant: {
-      default: "hover:bg-background-element-hover hover:text-foreground",
+      default: "hover:bg-background hover:text-foreground",
       outline:
-        "border border-border-element/60 bg-background-element/60 hover:bg-background-element-hover hover:text-foreground",
+        "border border-border-element/60 bg-background-element hover:bg-background-element-hover hover:text-foreground",
     },
     size: {
       default: "h-8 text-sm",
