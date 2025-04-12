@@ -27,7 +27,7 @@
 [x] skeleton
 [x] slider
 [x] switch
-[ ] toast
+[x] toast
 [ ] table
 [x] tabs
 [x] textarea
