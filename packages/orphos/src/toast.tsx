@@ -31,7 +31,6 @@ const Toaster = ({ ...props }: ToasterProps) => {
             "border! border-border-element/60! bg-background-subtle! text-foreground!",
           cancelButton: "bg-background! text-foreground!",
         },
-        duration: Infinity,
       }}
       {...props}
       icons={{
