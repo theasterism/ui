@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.25.2
+
+### Patch Changes
+
+- 6953988: change input and disabled background color
+
 ## 0.25.1
 
 ### Patch Changes
