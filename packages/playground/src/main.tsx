@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
+import { ThemeProvider } from "next-themes";
 
 import { TooltipProvider } from "@theanalog/orphos/tooltip";
 
@@ -9,9 +10,15 @@ import { App } from "./App";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <TooltipProvider>
-      <App />
-      <Toaster />
-    </TooltipProvider>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange>
+      <TooltipProvider>
+        <App />
+        <Toaster />
+      </TooltipProvider>
+    </ThemeProvider>
   </StrictMode>
 );

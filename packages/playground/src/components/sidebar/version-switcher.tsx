@@ -1,12 +1,16 @@
 "use client";
 
-import { CaretSortIcon, CheckIcon, StackIcon } from "@radix-ui/react-icons";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@theanalog/orphos/dropdown-menu";
+import {
+  CheckIcon,
+  ChevronUpDownIcon,
+  RectangleStackIcon,
+} from "@theanalog/orphos/icons";
 import {
   SidebarMenu,
   SidebarMenuButton,
@@ -33,13 +37,13 @@ export function VersionSwitcher({
               variant="outline"
               className="data-[state=open]:bg-background-element data-[state=open]:text-foreground">
               <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-foreground text-background">
-                <StackIcon className="size-4" />
+                <RectangleStackIcon className="size-4" />
               </div>
               <div className="flex flex-col gap-0.5 leading-none">
                 <span className="font-semibold">Documentation</span>
                 <span className="">v{selectedVersion}</span>
               </div>
-              <CaretSortIcon className="ml-auto" />
+              <ChevronUpDownIcon className="ml-auto" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent

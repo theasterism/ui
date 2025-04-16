@@ -1,4 +1,3 @@
-import { TrashIcon } from "@radix-ui/react-icons";
 import {
   ContextMenu,
   ContextMenuCheckboxItem,

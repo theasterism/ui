@@ -29,17 +29,17 @@ they can change the world, are the ones who do.`;
 
 export function InputsDemo() {
   return (
-    <div className="flex flex-col gap-4 w-full">
-      <div className="flex flex-col xs:flex-row gap-4 w-full">
+    <div className="flex w-full flex-col gap-4">
+      <div className="flex w-full xs:flex-row flex-col gap-4">
         <Input type="email" placeholder="tim@apple.com" />
         <Input type="email-disabled" placeholder="tim@apple.com" disabled />
       </div>
-      <div className="flex flex-col xs:flex-row gap-4 w-full">
-        <div className="grid items-center w-full gap-2">
+      <div className="flex w-full xs:flex-row flex-col gap-4">
+        <div className="grid w-full items-center gap-2">
           <Label htmlFor="email-label">Input with label</Label>
           <Input id="email-label" type="email" placeholder="tim@apple.com" />
         </div>
-        <div className="grid items-center w-full gap-2">
+        <div className="grid w-full items-center gap-2">
           <Label htmlFor="email-label-disabled">Input with label</Label>
           <Input
             id="email-label-disabled"
@@ -49,30 +49,30 @@ export function InputsDemo() {
           />
         </div>
       </div>
-      <div className="flex flex-col xs:flex-row gap-4 w-full">
-        <div className="grid items-center w-full gap-2">
+      <div className="flex w-full xs:flex-row flex-col gap-4">
+        <div className="grid w-full items-center gap-2">
           <Label htmlFor="password">Password</Label>
           <Input id="password" type="password" />
         </div>
-        <div className="grid items-center w-full gap-2">
+        <div className="grid w-full items-center gap-2">
           <Label htmlFor="password-disabled">Password</Label>
           <Input id="password-disabled" type="password" disabled />
         </div>
       </div>
-      <div className="flex flex-col xs:flex-row gap-4 w-full">
-        <div className="grid items-center w-full gap-2">
+      <div className="flex w-full xs:flex-row flex-col gap-4">
+        <div className="grid w-full items-center gap-2">
           <Label htmlFor="file">File Input</Label>
           <Input id="file" type="file" />
         </div>
-        <div className="grid items-center w-full gap-2">
+        <div className="grid w-full items-center gap-2">
           <Label htmlFor="file-disabled">File Input</Label>
           <Input id="file-disabled" type="file" disabled />
         </div>
       </div>
-      <div className="flex flex-col xs:flex-row gap-4 w-full">
+      <div className="flex w-full xs:flex-row flex-col gap-4">
         <div className="grid w-full gap-2">
           <Label htmlFor="text">Textarea</Label>
-          <Textarea className="resize-none h-32" id="text" />
+          <Textarea className="h-32 resize-none" id="text" />
         </div>
         <div className="grid w-full gap-2">
           <Label htmlFor="text-disabled">Textarea</Label>

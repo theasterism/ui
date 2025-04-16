@@ -3,7 +3,7 @@ import { Button } from "@theanalog/orphos/button";
 export function ButtonsDemo() {
   return (
     <div className="flex flex-row flex-wrap gap-8">
-      <div className="flex flex-col gap-4 w-auto">
+      <div className="flex w-auto flex-col gap-4">
         <Button size="sm">Button text</Button>
         <Button size="sm" variant="primary">
           Button text
@@ -18,14 +18,14 @@ export function ButtonsDemo() {
           Button text
         </Button>
       </div>
-      <div className="flex flex-col gap-4 w-auto">
+      <div className="flex w-auto flex-col gap-4">
         <Button>Button text</Button>
         <Button variant="primary">Button text</Button>
         <Button variant="ghost">Button text</Button>
         <Button variant="danger">Button text</Button>
         <Button variant="link">Button text</Button>
       </div>
-      <div className="flex flex-col gap-4 w-auto">
+      <div className="flex w-auto flex-col gap-4">
         <Button size="lg">Button text</Button>
         <Button size="lg" variant="primary">
           Button text
@@ -46,8 +46,8 @@ export function ButtonsDemo() {
 
 export function ButtonDisabledDemo() {
   return (
-    <div className="flex flex-row flex-wrap gap-8 z-auto">
-      <div className="flex flex-col gap-4 w-auto z-auto">
+    <div className="z-auto flex flex-row flex-wrap gap-8">
+      <div className="z-auto flex w-auto flex-col gap-4">
         <Button disabled size="sm">
           Button text
         </Button>
@@ -64,7 +64,7 @@ export function ButtonDisabledDemo() {
           Button text
         </Button>
       </div>
-      <div className="flex flex-col gap-4 w-auto z-auto">
+      <div className="z-auto flex w-auto flex-col gap-4">
         <Button disabled>Button text</Button>
         <Button disabled variant="primary">
           Button text
@@ -79,7 +79,7 @@ export function ButtonDisabledDemo() {
           Button text
         </Button>
       </div>
-      <div className="flex flex-col gap-4 w-auto z-auto">
+      <div className="z-auto flex w-auto flex-col gap-4">
         <Button disabled size="lg">
           Button text
         </Button>

@@ -19,7 +19,7 @@ export function DialogDemo() {
       <DialogTrigger asChild>
         <Button>Edit Profile</Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] gap-6">
+      <DialogContent className="gap-6 sm:max-w-[425px]">
         <DialogHeader>
           <div className="flex items-center justify-between">
             <DialogTitle>Edit profile</DialogTitle>

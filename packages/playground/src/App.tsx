@@ -49,7 +49,7 @@ function App() {
             <SidebarTrigger className="-ml-1" />
           </div>
         </header>
-        <div className="flex flex-1 flex-col gap-20 p-6 overflow-auto">
+        <div className="flex flex-1 flex-col gap-20 overflow-auto p-6">
           <div>
             <h1
               className={typographyVariants({
@@ -73,7 +73,7 @@ function App() {
               })}>
               Avatar
             </h2>
-            <div className="flex flex-row flex-wrap gap-4 w-auto">
+            <div className="flex w-auto flex-row flex-wrap gap-4">
               <AvatarDemo />
             </div>
           </div>
@@ -85,15 +85,23 @@ function App() {
               })}>
               Badge
             </h2>
-            <div className="flex flex-row flex-wrap gap-4 w-auto">
-              <Badge>Badge</Badge>
-              <Badge variant="primary">Badge</Badge>
-              <Badge variant="destructive">Badge</Badge>
-              <Badge variant="warning">Badge</Badge>
-              <Badge variant="success">Badge</Badge>
+            <div className="flex w-auto flex-row flex-wrap gap-4">
+              <Badge>Default</Badge>
+              <Badge variant="primary">Primary</Badge>
+              <Badge variant="warning" soft>
+                Warning
+              </Badge>
+              <Badge variant="danger" soft>
+                Danger
+              </Badge>
+              <Badge variant="success">Success</Badge>
+              <Badge variant="info">Info</Badge>
+              <Badge variant="upsell" soft>
+                Upsell
+              </Badge>
             </div>
           </div>
-          <div className="flex flex-col gap-6 w-auto items-start">
+          <div className="flex w-auto flex-col items-start gap-6">
             <h2
               className={typographyVariants({
                 variant: "heading2",
@@ -104,7 +112,7 @@ function App() {
             <ButtonsDemo />
             <ButtonDisabledDemo />
           </div>
-          <div className="flex flex-col gap-6 w-auto items-start">
+          <div className="flex w-auto flex-col items-start gap-6">
             <h2
               className={typographyVariants({
                 variant: "heading2",
@@ -112,7 +120,7 @@ function App() {
               })}>
               Callout
             </h2>
-            <div className="flex flex-col gap-4 w-full max-w-xl">
+            <div className="flex w-full max-w-xl flex-col gap-4">
               <CalloutDemo />
             </div>
           </div>
@@ -124,8 +132,8 @@ function App() {
               })}>
               Card
             </h2>
-            <div className="flex flex-row gap-4 w-auto">
-              <Card className={"w-[380px]"}>
+            <div className="flex w-auto flex-row gap-4">
+              <Card className={"w-full max-w-[380px]"}>
                 <CardHeader>
                   <CardTitle>Notifications</CardTitle>
                   <CardDescription>You have 3 unread messages.</CardDescription>
@@ -136,7 +144,7 @@ function App() {
               </Card>
             </div>
           </div>
-          <div className="flex flex-col gap-6 items-start w-full">
+          <div className="flex w-full flex-col items-start gap-6">
             <h2
               className={typographyVariants({
                 variant: "heading2",
@@ -144,11 +152,11 @@ function App() {
               })}>
               Context Menu
             </h2>
-            <div className="flex flex-col gap-10 items-start w-full">
+            <div className="flex w-full flex-col items-start gap-10">
               <ContextMenuDemo />
             </div>
           </div>
-          <div className="flex flex-col gap-6 items-start w-full">
+          <div className="flex w-full flex-col items-start gap-6">
             <h2
               className={typographyVariants({
                 variant: "heading2",
@@ -156,11 +164,11 @@ function App() {
               })}>
               Dialog
             </h2>
-            <div className="flex flex-col gap-10 items-start w-full">
+            <div className="flex w-full flex-col items-start gap-10">
               <DialogDemo />
             </div>
           </div>
-          <div className="flex flex-col gap-6 items-start w-full">
+          <div className="flex w-full flex-col items-start gap-6">
             <h2
               className={typographyVariants({
                 variant: "heading2",
@@ -168,11 +176,11 @@ function App() {
               })}>
               Dropdown Menu
             </h2>
-            <div className="flex flex-col gap-10 items-start w-full">
+            <div className="flex w-full flex-col items-start gap-10">
               <DropdownDemo />
             </div>
           </div>
-          <div className="flex flex-col gap-6 items-start w-full">
+          <div className="flex w-full flex-col items-start gap-6">
             <h2
               className={typographyVariants({
                 variant: "heading2",
@@ -180,12 +188,12 @@ function App() {
               })}>
               Form Components
             </h2>
-            <div className="flex flex-col gap-10 items-start w-full max-w-4xl">
+            <div className="flex w-full max-w-4xl flex-col items-start gap-10">
               <InputsDemo />
               <CheckboxDemo />
             </div>
           </div>
-          <div className="flex flex-col gap-6 w-auto items-start">
+          <div className="flex w-auto flex-col items-start gap-6">
             <h2
               className={typographyVariants({
                 variant: "heading2",
@@ -203,7 +211,7 @@ function App() {
               })}>
               Popover
             </h2>
-            <div className="flex flex-row gap-4 w-auto">
+            <div className="flex w-auto flex-row gap-4">
               <PopoverDemo />
             </div>
           </div>
@@ -215,7 +223,7 @@ function App() {
               })}>
               Select
             </h2>
-            <div className="flex flex-row gap-4 w-auto">
+            <div className="flex w-auto flex-row gap-4">
               <SelectScrollable />
             </div>
           </div>
@@ -227,7 +235,7 @@ function App() {
               })}>
               Separator
             </h2>
-            <div className="flex flex-row gap-4 w-auto">
+            <div className="flex w-auto flex-row gap-4">
               <Separator />
             </div>
           </div>
@@ -239,7 +247,7 @@ function App() {
               })}>
               Sheet
             </h2>
-            <div className="flex flex-row gap-4 w-auto">
+            <div className="flex w-auto flex-row gap-4">
               <SheetSide />
             </div>
           </div>
@@ -251,7 +259,7 @@ function App() {
               })}>
               Skeleton
             </h2>
-            <div className="flex flex-row gap-4 w-auto">
+            <div className="flex w-auto flex-row gap-4">
               <SkeletonDemo />
             </div>
           </div>
@@ -263,7 +271,7 @@ function App() {
               })}>
               Slider
             </h2>
-            <div className="flex flex-row gap-4 w-auto">
+            <div className="flex w-auto flex-row gap-4">
               <SliderDemo />
             </div>
           </div>
@@ -275,7 +283,7 @@ function App() {
               })}>
               Switch
             </h2>
-            <div className="flex flex-row gap-4 w-auto">
+            <div className="flex w-auto flex-row gap-4">
               <SwitchDemo />
             </div>
           </div>
@@ -287,7 +295,7 @@ function App() {
               })}>
               Tabs
             </h2>
-            <div className="flex flex-row gap-4 w-auto">
+            <div className="flex w-auto flex-row gap-4">
               <TabsDemo />
             </div>
           </div>
@@ -311,7 +319,7 @@ function App() {
               })}>
               Tooltip
             </h2>
-            <div className="flex flex-row gap-4 w-auto">
+            <div className="flex w-auto flex-row gap-4">
               <Tooltip delayDuration={0} open>
                 <TooltipTrigger asChild>
                   <Button size="sm">Hover</Button>
@@ -329,7 +337,7 @@ function App() {
               })}>
               Typography
             </h2>
-            <div className="flex flex-col gap-4 w-auto">
+            <div className="flex w-auto flex-col gap-4">
               <h1
                 className={typographyVariants({
                   variant: "heading1",

@@ -1,20 +1,20 @@
 import {
-  CheckCircledIcon,
-  ExclamationTriangleIcon,
-  InfoCircledIcon,
-} from "@radix-ui/react-icons";
-import {
   Callout,
   CalloutDescription,
   CalloutTitle,
 } from "@theanalog/orphos/callout";
+import {
+  CheckCircleIcon,
+  ExclamationTriangleIcon,
+  InformationCircleIcon,
+} from "@theanalog/orphos/icons";
 import { Fragment } from "react/jsx-runtime";
 
 export function CalloutDemo() {
   return (
     <Fragment>
-      <Callout variant="default">
-        <InfoCircledIcon />
+      <Callout variant="default" bordered>
+        <InformationCircleIcon />
         <CalloutTitle>
           The selected emails have been marked as spam.
         </CalloutTitle>
@@ -22,7 +22,16 @@ export function CalloutDemo() {
           This is an alert with icon, title and description.
         </CalloutDescription>
       </Callout>
-      <Callout bordered variant="warning">
+      <Callout variant="primary" bordered>
+        <InformationCircleIcon />
+        <CalloutTitle>
+          The selected emails have been marked as spam.
+        </CalloutTitle>
+        <CalloutDescription>
+          This is an alert with icon, title and description.
+        </CalloutDescription>
+      </Callout>
+      <Callout variant="warning" bordered>
         <ExclamationTriangleIcon />
         <CalloutTitle>
           The selected emails have been marked as spam.
@@ -31,7 +40,7 @@ export function CalloutDemo() {
           This is an alert with icon, title and description.
         </CalloutDescription>
       </Callout>
-      <Callout bordered variant="critical">
+      <Callout variant="danger" bordered>
         <ExclamationTriangleIcon />
         <CalloutTitle>
           The selected emails have been marked as spam.
@@ -40,15 +49,33 @@ export function CalloutDemo() {
           This is an alert with icon, title and description.
         </CalloutDescription>
       </Callout>
-      <Callout transparent variant="success">
-        <CheckCircledIcon />
+      <Callout variant="success" bordered>
+        <CheckCircleIcon />
         <CalloutTitle>
           The selected emails have been marked as spam.
         </CalloutTitle>
         <CalloutDescription>
           This is an alert with icon, title and description.
         </CalloutDescription>
-      </Callout>{" "}
+      </Callout>
+      <Callout variant="info" bordered>
+        <CheckCircleIcon />
+        <CalloutTitle>
+          The selected emails have been marked as spam.
+        </CalloutTitle>
+        <CalloutDescription>
+          This is an alert with icon, title and description.
+        </CalloutDescription>
+      </Callout>
+      <Callout variant="upsell">
+        <CheckCircleIcon />
+        <CalloutTitle>
+          The selected emails have been marked as spam.
+        </CalloutTitle>
+        <CalloutDescription>
+          This is an alert with icon, title and description.
+        </CalloutDescription>
+      </Callout>
     </Fragment>
   );
 }

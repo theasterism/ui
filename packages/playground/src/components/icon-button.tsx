@@ -1,10 +1,10 @@
-import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { Button } from "@theanalog/orphos/button";
+import { MagnifyingGlassIcon } from "@theanalog/orphos/icons";
 
 export function IconButtonDemo() {
   return (
     <div className="flex flex-row flex-wrap gap-8">
-      <div className="flex flex-col gap-4 w-auto">
+      <div className="flex w-auto flex-col gap-4">
         <Button size="icon">
           <MagnifyingGlassIcon />
         </Button>

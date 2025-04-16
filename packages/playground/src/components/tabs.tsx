@@ -18,7 +18,7 @@ import {
 
 export function TabsDemo() {
   return (
-    <Tabs defaultValue="account" className="max-w-[400px] w-full">
+    <Tabs defaultValue="account" className="w-full max-w-[400px]">
       <TabsList className="w-full">
         <TabsTrigger value="account">Account</TabsTrigger>
         <TabsTrigger value="password">Password</TabsTrigger>

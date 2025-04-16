@@ -31,6 +31,16 @@
       },
       "style": {
         "all": false
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "fix": "safe",
+          "level": "info",
+          "options": {
+            "attributes": ["classList"],
+            "functions": ["clsx", "cva", "tw"]
+          }
+        }
       }
     },
     "ignore": ["node_modules", "dist"]

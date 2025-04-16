@@ -5,8 +5,8 @@ import { Fragment } from "react";
 export default function RadioDemo() {
   return (
     <Fragment>
-      <div className="flex flex-col gap-2 w-full">
-        <div className="flex flex-row gap-4 w-full">
+      <div className="flex w-full flex-col gap-2">
+        <div className="flex w-full flex-row gap-4">
           <RadioGroup defaultValue="option-2" className="w-full">
             <div className="flex items-center space-x-2">
               <RadioGroupItem value="option-1" id="r1" />
@@ -28,7 +28,7 @@ export default function RadioDemo() {
             </div>
           </RadioGroup>
         </div>
-        <RadioGroup defaultValue="option-6" className="flex flex-row w-full">
+        <RadioGroup defaultValue="option-6" className="flex w-full flex-row">
           <div className="flex items-center space-x-2">
             <RadioGroupItem value="option-5" id="r5" />
             <Label htmlFor="r5">Option 5</Label>

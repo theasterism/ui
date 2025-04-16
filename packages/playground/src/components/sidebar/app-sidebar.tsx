@@ -3,7 +3,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@radix-ui/react-collapsible";
-import { ChevronRightIcon } from "@radix-ui/react-icons";
+import { ChevronRightIcon } from "@theanalog/orphos/icons";
 import {
   Sidebar,
   SidebarContent,
@@ -14,6 +14,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarRail,
 } from "@theanalog/orphos/sidebar";
 import * as React from "react";
 import { SearchForm } from "./search-form";
@@ -163,7 +164,7 @@ const data = {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar {...props} variant="inset">
+    <Sidebar {...props}>
       <SidebarHeader>
         <VersionSwitcher
           versions={data.versions}
@@ -182,7 +183,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarGroup>
               <SidebarGroupLabel
                 asChild
-                className="group/label text-sm text-foreground-subtle hover:bg-background-element-hover hover:text-foreground">
+                className="group/label text-foreground-subtle text-sm hover:bg-background-element-hover hover:text-foreground">
                 <CollapsibleTrigger>
                   {item.title}{" "}
                   <ChevronRightIcon className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90" />
@@ -205,6 +206,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           </Collapsible>
         ))}
       </SidebarContent>
+      <SidebarRail />
     </Sidebar>
   );
 }
