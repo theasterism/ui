@@ -1,13 +1,13 @@
 "use client";
 
 import {
-  CheckCircledIcon,
-  Cross2Icon,
+  ArrowPathIcon,
+  CheckCircleIcon,
+  ExclamationCircleIcon,
   ExclamationTriangleIcon,
-  InfoCircledIcon,
-} from "@radix-ui/react-icons";
+  InformationCircleIcon,
+} from "@heroicons/react/24/solid";
 import { Toaster as Sonner, type ToasterProps, toast } from "sonner";
-import { SpinnerIcon } from "./icons";
 
 const Toaster = ({ ...props }: ToasterProps) => {
   return (
@@ -17,7 +17,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
         {
           "--normal-bg": "var(--color-background-element)",
           "--normal-text": "var(--color-foreground)",
-          "--": "",
+          "": "",
         } as React.CSSProperties
       }
       toastOptions={{
@@ -25,24 +25,25 @@ const Toaster = ({ ...props }: ToasterProps) => {
           boxShadow: "none",
         },
         classNames: {
-          toast: "border-border-element/60!",
+          toast: "border-border-element/60! rounded-md!",
           description: "text-foreground-subtle!",
           actionButton:
             "border! border-border-element/60! bg-background-subtle! text-foreground!",
-          cancelButton: "bg-solid! text-foreground!",
-          closeButton: "bg-solid! text-foreground! border-0!",
+          cancelButton: "bg-background! text-foreground!",
         },
+        duration: Infinity,
       }}
       {...props}
       icons={{
-        success: <CheckCircledIcon className="text-success! size-4!" />,
-        info: <InfoCircledIcon className="text-foreground-subtle! size-4!" />,
+        success: <CheckCircleIcon className="size-5! text-success!" />,
+        info: <InformationCircleIcon className="size-5! text-info!" />,
         warning: (
-          <ExclamationTriangleIcon className="text-warning-element-foreground! size-4!" />
+          <ExclamationTriangleIcon className="size-5! text-warning-hover!" />
         ),
-        error: <ExclamationTriangleIcon className="text-danger! size-4!" />,
-        close: <Cross2Icon className="text-foreground-subtle!" />,
-        loading: <SpinnerIcon className="text-foreground! size-4!" />,
+        error: <ExclamationCircleIcon className="size-5! text-danger!" />,
+        loading: (
+          <ArrowPathIcon className="size-5! animate-spin text-foreground-subtle!" />
+        ),
       }}
     />
   );

@@ -4,24 +4,24 @@ import * as React from "react";
 import { cn } from "./utils";
 
 const buttonVariants = cva({
-  base: "inline-flex items-center justify-center gap-x-2 shrink-0 leading-relaxed whitespace-nowrap text-sm font-semibold transition-colors focus-visible:ring-2 ring-offset-background-subtle ring-offset-2 ring-focus-ring focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  base: "inline-flex shrink-0 items-center justify-center gap-x-2 whitespace-nowrap border font-semibold text-sm leading-relaxed ring-focus-ring ring-offset-2 ring-offset-background-subtle transition-colors focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-background [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   variants: {
     variant: {
       default:
-        "border border-border-element/60 bg-background-element hover:bg-background-element-hover text-foreground active:bg-background-element-active active:border-border-element-active",
+        "border border-border-element/60 bg-background-element text-foreground-subtle hover:bg-background-element-hover",
       primary:
-        "bg-primary hover:bg-primary-hover active:bg-primary-hover/90 text-primary-foreground",
+        "border-transparent bg-primary/95 text-primary-foreground hover:bg-primary-hover",
       ghost:
-        "bg-transparent hover:bg-background-element-hover active:bg-background-element-active text-foreground",
-      link: "underline-offset-4 text-primary-element-foreground bg-transparent hover:underline",
+        "border-transparent bg-transparent text-foreground-subtle hover:bg-background-element-hover",
+      link: "border-transparent bg-transparent text-primary-surface-foreground underline-offset-4 hover:underline",
       danger:
-        "bg-danger/80 hover:bg-danger active:bg-danger-hover text-danger-foreground",
+        "border-transparent bg-danger/90 text-danger-foreground hover:bg-danger-hover",
     },
     size: {
-      xs: "h-[28px] text-[0.8125rem] px-3 rounded-md",
-      sm: "h-[30px] text-sm px-3 rounded-md",
-      md: "h-[32px] px-4 rounded-md",
-      lg: "h-[38px] px-6 rounded-lg",
+      xs: "h-[28px] rounded-md px-3 text-[0.8125rem]",
+      sm: "h-[30px] rounded-md px-3 text-sm",
+      md: "h-[32px] rounded-md px-4",
+      lg: "h-[38px] rounded-lg px-6",
       icon: "size-8 rounded-md",
     },
   },

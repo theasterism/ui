@@ -25,14 +25,14 @@ function RadioGroupItem({
     <RadioGroupPrimitive.Item
       data-slot="radio-group-item"
       className={cn(
-        "size-5 group rounded-full bg-background text-primary border border-border-element/60 disabled:data-[state=unchecked]:bg-background-element focus:outline-none focus-visible:ring-2 ring-focus-ring ring-offset-2 ring-offset-background-subtle disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:border-primary-border data-[state=checked]:bg-primary-element",
+        "group size-5 rounded-full border border-border-element/60 bg-transparent text-primary ring-focus-ring ring-offset-2 ring-offset-background-subtle focus:outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:border-primary-border data-[state=checked]:bg-primary-surface disabled:data-[state=unchecked]:bg-background-element dark:ring-offset-background",
         className
       )}
       {...props}>
       <RadioGroupPrimitive.Indicator
         data-slot="radio-group-indicator"
         className="flex items-center justify-center">
-        <div className="min-w-[9px] min-h-[9px] max-w-[9px] max-h-[9px] w-full h-full rounded-full bg-primary-element-foreground" />
+        <div className="h-full max-h-[9px] min-h-[9px] w-full min-w-[9px] max-w-[9px] rounded-full bg-primary-surface-foreground" />
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>
   );

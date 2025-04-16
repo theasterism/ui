@@ -10,6 +10,8 @@
   --code-marker: "`";
 }
 
+@custom-variant dark (&:is(.dark *));
+
 /* Theme */
 @theme {
   --breakpoint-xs: 450px;
@@ -22,48 +24,59 @@
 
   /* Colors  */
 
-  --color-focus-ring: var(--blue-8);
+  --color-focus-ring: var(--blue-a8);
 
   --color-background: var(--gray-1);
   --color-background-subtle: var(--gray-2);
   --color-background-element: var(--gray-3);
   --color-background-element-hover: var(--gray-4);
-  --color-background-element-active: var(--gray-5);
-  --color-border: var(--gray-a6);
+  --color-border-subtle: var(--gray-a6);
   --color-border-element: var(--gray-a7);
-  --color-border-element-active: var(--gray-a8);
   --color-solid: var(--gray-9);
-  --color-solid-hover: var(--gray-10);
-  --color-foreground-subtle: var(--gray-11);
+  --color-foreground-subtle: var(--gray-a11);
   --color-foreground: var(--gray-12);
 
   --color-primary: var(--green-9);
   --color-primary-hover: var(--green-10);
-  --color-primary-element: var(--green-a3);
-  --color-primary-element-foreground: var(--green-a11);
   --color-primary-border: var(--green-a7);
-  --color-primary-foreground: oklch(100.00% 0.0 none);
+  --color-primary-foreground: #fff;
+  --color-primary-surface: var(--green-a3);
+  --color-primary-surface-foreground: var(--green-a11);
 
-  --color-danger: var(--red-9);
-  --color-danger-hover: var(--red-10);
-  --color-danger-element: var(--red-a3);
-  --color-danger-element-foreground: var(--red-a11);
-  --color-danger-border: var(--red-a7);
-  --color-danger-foreground: oklch(100.00% 0.0 none);
+  --color-danger: var(--pink-9);
+  --color-danger-hover: var(--pink-10);
+  --color-danger-border: var(--pink-a7);
+  --color-danger-foreground: #fff;
+  --color-danger-surface: var(--pink-a3);
+  --color-danger-surface-foreground: var(--pink-a11);
 
-  --color-warning: var(--orange-9);
-  --color-warning-hover: var(--orange-10);
-  --color-warning-element: var(--orange-a3);
-  --color-warning-element-foreground: var(--orange-a11);
-  --color-warning-border: var(--orange-a7);
-  --color-warning-foreground: oklch(100.00% 0.0 none);
+  --color-warning: var(--yellow-9);
+  --color-warning-hover: var(--yellow-10);
+  --color-warning-border: var(--yellow-a7);
+  --color-warning-foreground: #000;
+  --color-warning-surface: var(--yellow-a3);
+  --color-warning-surface-foreground: var(--yellow-a11);
 
-  --color-success: var(--blue-9);
-  --color-success-hover: var(--blue-10);
-  --color-success-element: var(--blue-a3);
-  --color-success-element-foreground: var(--blue-a11);
-  --color-success-border: var(--blue-a7);
-  --color-success-foreground: oklch(100.00% 0.0 none);
+  --color-success: var(--lime-9);
+  --color-success-hover: var(--lime-10);
+  --color-success-border: var(--lime-a7);
+  --color-success-foreground: #fff;
+  --color-success-surface: var(--lime-a3);
+  --color-success-surface-foreground: var(--lime-a11);
+
+  --color-info: var(--blue-9);
+  --color-info-hover: var(--blue-10);
+  --color-info-border: var(--blue-a7);
+  --color-info-foreground: #fff;
+  --color-info-surface: var(--blue-a3);
+  --color-info-surface-foreground: var(--blue-a11);
+
+  --color-upsell: var(--purple-9);
+  --color-upsell-hover: var(--pink-10);
+  --color-upsell-border: var(--purple-a7);
+  --color-upsell-foreground: #fff;
+  --color-upsell-surface: var(--purple-a3);
+  --color-upsell-surface-foreground: var(--purple-a11);
 
   /* Typography */
   --text-4xl: 2.25rem; /* 36px */
@@ -81,6 +94,7 @@
   --radius-lg: calc(var(--radius) + 2px);
   --radius-md: var(--radius);
   --radius-sm: calc(var(--radius) - 2px);
+  --radius-xs: cal(var(--radius) - 4px);
 }
 
 @utility container {
@@ -100,7 +114,7 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--gray-6, currentColor);
+    border-color: var(--gray-a6, currentColor);
   }
 
   input::placeholder,
@@ -109,7 +123,7 @@
   }
 
   body {
-    @apply scroll-smooth min-w-[320px] text-base text-foreground font-sans antialiased;
+    @apply scroll-smooth min-w-[320px] text-base font-sans antialiased;
     letter-spacing: -0.03rem;
     font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
     font-synthesis-weight: none;

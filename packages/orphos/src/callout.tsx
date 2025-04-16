@@ -3,34 +3,61 @@ import type { DivElementProps } from "./types";
 import { cn } from "./utils";
 
 const calloutVariants = cva({
-  base: "relative w-full rounded-md p-4 text-sm grid has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] grid-cols-[0_1fr] has-[>svg]:gap-x-3 gap-y-0.5 items-start [&>svg]:size-4 [&>svg]:translate-y-0.5 [&>svg]:text-current",
+  base: "relative grid w-full grid-cols-[0_1fr] items-start gap-y-0.5 rounded-md p-4 text-sm has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] has-[>svg]:gap-x-3 [&>svg]:size-4.5 [&>svg]:translate-y-0.5 [&>svg]:text-current",
   variants: {
     variant: {
-      default:
-        "bg-primary-element border-primary-border text-primary-element-foreground",
-      critical:
-        "bg-danger-element border-danger-border text-danger-element-foreground",
-      warning:
-        "bg-warning-element border-warning-border text-warning-element-foreground",
-      success:
-        "bg-success-element border-success-border text-success-element-foreground",
-    },
-    transparent: {
-      true: "bg-transparent border",
+      default: "border-border-element text-foreground-subtle",
+      primary: "border-primary-border text-primary-surface-foreground",
+      warning: "border-warning-border text-warning-surface-foreground",
+      danger: "border-danger-border text-danger-surface-foreground",
+      success: "border-success-border text-success-surface-foreground",
+      info: "border-info-border text-info-surface-foreground",
+      upsell: "border-upsell-border text-upsell-surface-foreground",
     },
     bordered: {
       true: "border",
+      false: "border border-transparent",
     },
   },
+  compoundVariants: [
+    {
+      variant: "default",
+      className: "bg-background-element/65",
+    },
+    {
+      variant: "primary",
+      className: "bg-primary-surface/65",
+    },
+    {
+      variant: "warning",
+      className: "bg-warning-surface/65",
+    },
+    {
+      variant: "danger",
+      className: "bg-danger-surface/65",
+    },
+    {
+      variant: "success",
+      className: "bg-success-surface/65",
+    },
+    {
+      variant: "info",
+      className: "bg-info-surface/65",
+    },
+    {
+      variant: "upsell",
+      className: "bg-upsell-surface/65",
+    },
+  ],
   defaultVariants: {
     variant: "default",
+    bordered: false,
   },
 });
 
 function Callout({
   className,
   variant,
-  transparent,
   bordered,
   ...props
 }: DivElementProps & VariantProps<typeof calloutVariants>) {
@@ -38,10 +65,7 @@ function Callout({
     <div
       data-slot="alert"
       role="alert"
-      className={cn(
-        calloutVariants({ variant, transparent, bordered }),
-        className
-      )}
+      className={cn(calloutVariants({ variant, bordered }), className)}
       {...props}
     />
   );

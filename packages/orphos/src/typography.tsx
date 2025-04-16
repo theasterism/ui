@@ -6,20 +6,20 @@ export const typographyVariants = cva({
       small: "text-sm leading-[1.4]",
       paragraph: "text-base leading-[1.6] [&:not(:first-child)]:mt-6",
       heading1:
-        "text-4xl  font-bold text-balance leading-[1.2] tracking-tight mt-8",
+        "mt-8 text-balance font-bold text-4xl leading-[1.2] tracking-tight",
       heading2:
-        "text-3xl font-bold text-balance leading-[1.3] tracking-tight mt-8",
+        "mt-8 text-balance font-bold text-3xl leading-[1.3] tracking-tight",
       heading3:
-        "text-2xl font-semibold text-balance leading-[1.3] tracking-tight mt-8",
+        "mt-8 text-balance font-semibold text-2xl leading-[1.3] tracking-tight",
       heading4:
-        "text-xl font-semibold text-balance leading-[1.4] tracking-tight mt-8",
+        "mt-8 text-balance font-semibold text-xl leading-[1.4] tracking-tight",
       heading5:
-        "text-lg font-semibold text-balance leading-[1.4] tracking-tight mt-8",
-      blockquote: "mt-6 border-l-4 border-primary pl-6 italic",
-      ul: "my-6 ml-4 list-disc [&>li]:mt-2 [&>li]:pl-1 marker:text-primary",
-      ol: "my-6 ml-4 list-decimal [&>li]:mt-2 [&>li]:pl-1 marker:text-primary",
-      code: "px-[0.3rem] py-[0.2rem] before:content-(--code-marker) after:content-(--code-marker) w-fit break-words text-sm rounded-sm bg-primary-element text-primary-element-foreground [box-decoration-break:clone]",
-      kbd: "inline w-fit rounded-sm border border-border/60 bg-background px-1 text-sm text-foreground [box-decoration-break:clone]",
+        "mt-8 text-balance font-semibold text-lg leading-[1.4] tracking-tight",
+      blockquote: "mt-6 border-primary border-l-4 pl-6 italic",
+      ul: "my-6 ml-4 list-disc marker:text-primary [&>li]:mt-2 [&>li]:pl-1",
+      ol: "my-6 ml-4 list-decimal marker:text-primary [&>li]:mt-2 [&>li]:pl-1",
+      code: "w-fit break-words rounded-sm bg-primary-element px-[0.3rem] py-[0.2rem] text-primary-element-foreground text-sm [box-decoration-break:clone] before:content-(--code-marker) after:content-(--code-marker)",
+      kbd: "inline w-fit rounded-sm border border-border/60 bg-background px-1 text-foreground text-sm [box-decoration-break:clone]",
     },
   },
   defaultVariants: {

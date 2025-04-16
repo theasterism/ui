@@ -14,7 +14,7 @@ function Separator({
     <SeparatorPrimitive.Root
       data-slot="separator-root"
       className={cn(
-        "shrink-0 bg-border",
+        "shrink-0 bg-border-subtle/60",
         orientation === "horizontal" ? "h-px w-full" : "h-full w-px",
         className
       )}
