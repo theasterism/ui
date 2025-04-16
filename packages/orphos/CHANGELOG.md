@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.25.0
+
+### Minor Changes
+
+- 90748b7: update color palette and add dark mode
+
 ## 0.24.1
 
 ### Patch Changes
