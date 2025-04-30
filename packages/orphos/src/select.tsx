@@ -36,7 +36,7 @@ function SelectTrigger({
     <SelectPrimitive.Trigger
       data-slot="select-trigger"
       className={cn(
-        "flex h-8 w-fit items-center justify-between whitespace-nowrap rounded-md border border-border-element/75 bg-transparent px-2 py-2 text-sm font-medium ring-focus-ring ring-offset-2 ring-offset-background placeholder:text-foreground-subtle focus:outline-none focus:ring-2 disabled:cursor-not-allowed disabled:opacity-50 data-[placeholder]:text-foreground-subtle *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 dark:ring-offset-background [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-foreground-subtle [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "flex h-8 w-fit items-center justify-between whitespace-nowrap rounded-md border border-border-element/75 bg-transparent px-2 py-2 text-sm font-medium ring-focus-ring ring-offset-2 ring-offset-background placeholder:text-foreground-subtle focus:outline-none focus:ring-2 disabled:cursor-not-allowed disabled:opacity-50 data-[placeholder]:text-foreground-subtle *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-foreground-subtle [&_svg]:pointer-events-none [&_svg]:shrink-0",
         className
       )}
       {...props}>

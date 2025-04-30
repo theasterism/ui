@@ -46,7 +46,7 @@ function SheetOverlay({
 }
 
 const sheetVariants = cva({
-  base: "fixed z-50 gap-4 border-border-element/75 bg-background p-6 transition ease-in-out data-[state=closed]:animate-out data-[state=open]:animate-in data-[state=closed]:duration-300 data-[state=open]:duration-500 dark:bg-background-subtle",
+  base: "fixed z-50 gap-4 border-border-element/75 bg-background p-6 transition ease-in-out data-[state=closed]:animate-out data-[state=open]:animate-in data-[state=closed]:duration-300 data-[state=open]:duration-500",
   variants: {
     side: {
       top: "data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top inset-x-0 top-0 border-b",
