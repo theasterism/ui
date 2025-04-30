@@ -6,13 +6,13 @@ const calloutVariants = cva({
   base: "relative grid w-full grid-cols-[0_1fr] items-start gap-y-0.5 rounded-md p-4 text-sm has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] has-[>svg]:gap-x-3 [&>svg]:size-4.5 [&>svg]:translate-y-0.5 [&>svg]:text-current",
   variants: {
     variant: {
-      default: "border-border-element text-foreground-subtle",
-      primary: "border-primary-border text-primary-surface-foreground",
-      warning: "border-warning-border text-warning-surface-foreground",
-      danger: "border-danger-border text-danger-surface-foreground",
-      success: "border-success-border text-success-surface-foreground",
-      info: "border-info-border text-info-surface-foreground",
-      upsell: "border-upsell-border text-upsell-surface-foreground",
+      default: "border-border-element/75 text-foreground-subtle",
+      primary: "border-primary-border/60 text-primary-surface-foreground",
+      warning: "border-warning-border/60 text-warning-surface-foreground",
+      danger: "border-danger-border/60 text-danger-surface-foreground",
+      success: "border-success-border/60 text-success-surface-foreground",
+      info: "border-info-border/60 text-info-surface-foreground",
+      upsell: "border-upsell-border/60 text-upsell-surface-foreground",
     },
     bordered: {
       true: "border",
@@ -22,7 +22,7 @@ const calloutVariants = cva({
   compoundVariants: [
     {
       variant: "default",
-      className: "bg-background-element/65",
+      className: "bg-background-element",
     },
     {
       variant: "primary",
@@ -30,23 +30,23 @@ const calloutVariants = cva({
     },
     {
       variant: "warning",
-      className: "bg-warning-surface/65",
+      className: "bg-warning-surface/60",
     },
     {
       variant: "danger",
-      className: "bg-danger-surface/65",
+      className: "bg-danger-surface/85",
     },
     {
       variant: "success",
-      className: "bg-success-surface/65",
+      className: "bg-success-surface/55",
     },
     {
       variant: "info",
-      className: "bg-info-surface/65",
+      className: "bg-info-surface/75",
     },
     {
       variant: "upsell",
-      className: "bg-upsell-surface/65",
+      className: "bg-upsell-surface/85",
     },
   ],
   defaultVariants: {

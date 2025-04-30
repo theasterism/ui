@@ -142,7 +142,7 @@ const SidebarProvider = React.forwardRef<
               } as React.CSSProperties
             }
             className={cn(
-              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-background dark:has-[[data-variant=inset]]:bg-background-subtle",
+              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-background-subtle",
               className
             )}
             ref={ref}
@@ -181,7 +181,7 @@ const Sidebar = React.forwardRef<
       return (
         <div
           className={cn(
-            "flex h-full w-(--sidebar-width) flex-col bg-background text-foreground dark:bg-background-subtle",
+            "flex h-full w-(--sidebar-width) flex-col bg-background-subtle text-foreground",
             className
           )}
           ref={ref}
@@ -197,7 +197,7 @@ const Sidebar = React.forwardRef<
           <SheetContent
             data-sidebar="sidebar"
             data-mobile="true"
-            className="w-(--sidebar-width)! bg-background p-0 text-foreground dark:bg-background-subtle [&>button]:hidden"
+            className="w-(--sidebar-width)! bg-background p-0 text-foreground [&>button]:hidden"
             style={
               {
                 "--sidebar-width": SIDEBAR_WIDTH_MOBILE,
@@ -244,7 +244,7 @@ const Sidebar = React.forwardRef<
           {...props}>
           <div
             data-sidebar="sidebar"
-            className="flex h-full w-full flex-col p-1.5 bg-background group-data-[variant=floating]:rounded-md group-data-[variant=floating]:border group-data-[variant=floating]:border-border-element/60 dark:bg-background-subtle">
+            className="flex h-full w-full flex-col p-1.5 bg-background-subtle group-data-[variant=floating]:rounded-md group-data-[variant=floating]:border group-data-[variant=floating]:border-border-element/60">
             {children}
           </div>
         </div>
@@ -316,7 +316,7 @@ const SidebarInset = React.forwardRef<
     <main
       ref={ref}
       className={cn(
-        "relative flex min-h-svh flex-1 flex-col bg-background-subtle dark:bg-background",
+        "relative flex min-h-svh flex-1 flex-col bg-background",
         "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:m-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-lg",
         className
       )}
@@ -379,7 +379,7 @@ const SidebarSeparator = React.forwardRef<
     <Separator
       ref={ref}
       data-sidebar="separator"
-      className={cn("mx-2 w-auto bg-border", className)}
+      className={cn("mx-2 w-auto bg-border-subtle/60", className)}
       {...props}
     />
   );
@@ -430,7 +430,7 @@ const SidebarGroupLabel = React.forwardRef<
       ref={ref}
       data-sidebar="group-label"
       className={cn(
-        "flex h-8 shrink-0 items-center rounded-md px-2 font-medium text-foreground/70 text-xs outline-none ring-focus-ring transition-[margin,opa] duration-200 ease-linear focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
+        "flex h-6.5 shrink-0 items-center rounded-md px-2 font-medium text-foreground-subtle text-xs outline-none ring-focus-ring transition-[margin,opa] duration-200 ease-linear focus-visible:ring-2 [&>svg]:size-3.5 [&>svg]:shrink-0",
         "group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0",
         className
       )}
@@ -451,7 +451,7 @@ const SidebarGroupAction = React.forwardRef<
       ref={ref}
       data-sidebar="group-action"
       className={cn(
-        "absolute top-3.5 right-3 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-foreground-subtle outline-none ring-focus-ring transition-transform hover:bg-background-element-hover hover:text-foreground focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
+        "absolute top-3.5 right-3 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-foreground-subtle outline-none ring-focus-ring transition-transform hover:bg-background-element-hover/75 focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
         // Increases the hit area of the button on mobile.
         "after:-inset-2 after:absolute after:md:hidden",
         "group-data-[collapsible=icon]:hidden",
@@ -503,12 +503,12 @@ const SidebarMenuItem = React.forwardRef<
 SidebarMenuItem.displayName = "SidebarMenuItem";
 
 const sidebarMenuButtonVariants = cva({
-  base: "peer/menu-button group-data-[collapsible=icon]:!size-8 group-data-[collapsible=icon]:!p-2 flex w-full items-center gap-2 overflow-hidden rounded-md px-2.5 py-2 text-left text-foreground-subtle text-sm outline-none ring-focus-ring transition-[colors,width,height,padding] hover:bg-background-element-hover hover:text-foreground focus-visible:ring-2 active:bg-background-element-active active:text-foreground disabled:pointer-events-none disabled:opacity-50 group-has-[[data-sidebar=menu-action]]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-primary/25 data-[active=true]:text-foreground data-[state=open]:hover:bg-background-element-active/60 data-[state=open]:hover:text-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
+  base: "peer/menu-button group-data-[collapsible=icon]:!size-8 group-data-[collapsible=icon]:!p-2 flex w-full items-center gap-2 overflow-hidden rounded-md px-2.5 py-2 text-foreground text-left font-medium text-sm outline-none ring-focus-ring transition-[colors,width,height,padding] hover:bg-background-element-hover/75 focus-visible:ring-2 active:bg-background-element-hover  disabled:pointer-events-none disabled:opacity-50 group-has-[[data-sidebar=menu-action]]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-background-element-hover data-[state=open]:hover:bg-background-element-hover [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
   variants: {
     variant: {
-      default: "hover:bg-background-element hover:text-foreground",
+      default: "hover:bg-background-element",
       outline:
-        "border border-border-element/60 bg-background-subtle hover:bg-background-element-hover hover:text-foreground dark:bg-background-element",
+        "border border-border-element/75 hover:bg-background-element-hover/75",
     },
     size: {
       default: "h-8 text-sm",
@@ -595,7 +595,7 @@ const SidebarMenuAction = React.forwardRef<
       ref={ref}
       data-sidebar="menu-action"
       className={cn(
-        "absolute top-1.5 right-1 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-foreground outline-none ring-focus-ring transition-transform hover:bg-background-element-hover hover:text-foreground focus-visible:ring-2 peer-hover/menu-button:text-foreground [&>svg]:size-4 [&>svg]:shrink-0",
+        "absolute top-1.5 right-1 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-foreground-subtle outline-none ring-focus-ring transition-transform hover:bg-background-element-hover focus-visible:ring-2 peer-hover/menu-button:text-foreground-subtle [&>svg]:size-4 [&>svg]:shrink-0",
         // Increases the hit area of the button on mobile.
         "after:-inset-2 after:absolute after:md:hidden",
         "peer-data-[size=sm]/menu-button:top-1",
@@ -678,7 +678,7 @@ const SidebarMenuSub = React.forwardRef<
     ref={ref}
     data-sidebar="menu-sub"
     className={cn(
-      "mx-3.5 flex min-w-0 translate-x-px flex-col gap-1 border-border-subtle border-l px-2.5 py-0.5",
+      "mx-3.5 flex min-w-0 translate-x-px flex-col gap-1 border-border-subtle/60 border-l px-2.5 py-0.5",
       "group-data-[collapsible=icon]:hidden",
       className
     )}
@@ -710,8 +710,8 @@ const SidebarMenuSubButton = React.forwardRef<
       data-size={size}
       data-active={isActive}
       className={cn(
-        "-translate-x-px flex h-7 min-w-0 items-center gap-2 overflow-hidden rounded-md px-2 text-foreground-subtle outline-none ring-focus-ring hover:bg-background-element-hover hover:text-foreground focus-visible:ring-2 active:bg-background-element-hover active:text-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:text-foreground-subtle",
-        "data-[active=true]:bg-primary/35 data-[active=true]:text-foreground",
+        "-translate-x-px flex h-7 min-w-0 items-center gap-2 overflow-hidden rounded-md px-2 text-foreground-subtle outline-none ring-focus-ring hover:bg-background-element-hover/75 focus-visible:ring-2 active:bg-background-element-hover disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:text-foreground-subtle",
+        "data-[active=true]:bg-background-element-hover data-[active=true]:text-foreground-subtle",
         size === "sm" && "text-xs",
         size === "md" && "text-sm",
         "group-data-[collapsible=icon]:hidden",

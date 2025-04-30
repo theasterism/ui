@@ -6,7 +6,7 @@ function Card({ className, ...props }: DivElementProps) {
     <div
       data-slot="card"
       className={cn(
-        "flex flex-col gap-4 overflow-hidden rounded-lg border border-border-element/60 bg-background py-4 text-foreground dark:bg-background-subtle",
+        "flex flex-col gap-4 overflow-hidden rounded-lg border border-border-element/75 bg-white py-4 text-foreground",
         className
       )}
       {...props}
@@ -19,7 +19,7 @@ function CardHeader({ className, ...props }: DivElementProps) {
     <div
       data-slot="card-header"
       className={cn(
-        "@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-0.5 border-border-element/60 px-4 [.border-b]:pb-4",
+        "@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-0.5 border-border-element/75 px-4 [.border-b]:pb-4",
         className
       )}
       {...props}
@@ -62,7 +62,7 @@ function CardFooter({ className, ...props }: DivElementProps) {
     <div
       data-slot="card-footer"
       className={cn(
-        "flex items-center border-border-element/60 px-4 [.border-t]:pt-6",
+        "flex items-center border-border-element/75 px-4 [.border-t]:pt-6",
         className
       )}
       {...props}

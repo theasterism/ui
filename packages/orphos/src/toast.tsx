@@ -13,23 +13,17 @@ const Toaster = ({ ...props }: ToasterProps) => {
   return (
     <Sonner
       className="toaster group"
-      style={
-        {
-          "--normal-bg": "var(--color-background-element)",
-          "--normal-text": "var(--color-foreground)",
-          "": "",
-        } as React.CSSProperties
-      }
       toastOptions={{
         style: {
           boxShadow: "none",
         },
         classNames: {
-          toast: "border-border-element/60! rounded-md!",
+          toast:
+            "border-border-element/75! bg-white! text-foreground! rounded-md!",
           description: "text-foreground-subtle!",
           actionButton:
-            "border! border-border-element/60! bg-background-subtle! text-foreground!",
-          cancelButton: "bg-background! text-foreground!",
+            "border! border-border-element/75! bg-background-element! text-foreground!",
+          cancelButton: "bg-subtle! text-foreground!",
         },
       }}
       {...props}

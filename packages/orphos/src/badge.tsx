@@ -4,22 +4,22 @@ import * as React from "react";
 import { cn } from "./utils";
 
 const badgeVariants = cva({
-  base: "inline-flex min-w-fit items-center rounded-sm border px-1.5 py-[0.5px] font-semibold text-xs leading-relaxed ring-focus-ring ring-offset-2 ring-offset-background dark:ring-offset-background transition-colors focus:outline-none focus-visible:outline-none focus-visible:ring-2",
+  base: "inline-flex min-w-fit items-center rounded-sm border px-1.5 font-semibold text-xs leading-relaxed ring-focus-ring ring-offset-2 ring-offset-background transition-colors focus:outline-none focus-visible:outline-none focus-visible:ring-2",
   variants: {
     variant: {
       default:
-        "border-border-element/60 bg-background-element text-foreground-subtle",
+        "border-border-element/75 bg-background-element text-foreground-subtle",
       primary:
-        "border-primary-border/60 bg-primary-surface text-primary-surface-foreground",
+        "border-primary-border/60 bg-primary-surface/65 text-primary-surface-foreground",
       warning:
-        "border-warning-border/60 bg-warning-surface text-warning-surface-foreground",
+        "border-warning-border/60 bg-warning-surface/60 text-warning-surface-foreground",
       danger:
-        "border-danger-border/60 bg-danger-surface text-danger-surface-foreground",
+        "border-danger-border/60 bg-danger-surface/85 text-danger-surface-foreground",
       success:
-        "border-success-border/60 bg-success-surface text-success-surface-foreground",
-      info: "border-info-border/60 bg-info-surface text-info-surface-foreground",
+        "border-success-border/60 bg-success-surface/55 text-success-surface-foreground",
+      info: "border-info-border/60 bg-info-surface/75 text-info-surface-foreground",
       upsell:
-        "border-upsell-border/60 bg-upsell-surface text-upsell-surface-foreground",
+        "border-upsell-border/60 bg-upsell-surface/85 text-upsell-surface-foreground",
     },
     soft: {
       true: "border-transparent",

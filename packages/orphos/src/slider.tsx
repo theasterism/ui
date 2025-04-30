@@ -37,7 +37,7 @@ function Slider({
       {...props}>
       <SliderPrimitive.Track
         data-slot="slider-track"
-        className="relative w-full grow overflow-hidden rounded-full bg-background-element-hover data-[orientation=horizontal]:h-1.5 data-[orientation=vertical]:h-full data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-1.5">
+        className="relative w-full grow overflow-hidden rounded-full bg-background-element data-[orientation=horizontal]:h-1.5 data-[orientation=vertical]:h-full data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-1.5">
         <SliderPrimitive.Range
           data-slot="slider-range"
           className="absolute bg-primary data-[orientation=horizontal]:h-full data-[orientation=vertical]:w-full"
@@ -48,7 +48,7 @@ function Slider({
           data-slot="slider-thumb"
           // biome-ignore lint/suspicious/noArrayIndexKey: shut up!
           key={index}
-          className="block h-4 w-4 rounded-full border-2 border-background dark:border-foreground bg-primary shadow transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring disabled:pointer-events-none disabled:opacity-50"
+          className="block h-4 w-4 rounded-full border-2 border-background bg-primary shadow transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring disabled:pointer-events-none disabled:opacity-50"
         />
       ))}
     </SliderPrimitive.Root>

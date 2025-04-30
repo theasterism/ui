@@ -4,18 +4,18 @@ import * as React from "react";
 import { cn } from "./utils";
 
 const buttonVariants = cva({
-  base: "inline-flex shrink-0 items-center justify-center gap-x-2 whitespace-nowrap border font-semibold text-sm leading-relaxed ring-focus-ring ring-offset-2 ring-offset-background-subtle transition-colors focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-background [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  base: "inline-flex shrink-0 items-center justify-center gap-x-2 whitespace-nowrap border font-semibold text-sm leading-relaxed ring-focus-ring ring-offset-2 ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   variants: {
     variant: {
       default:
-        "border border-border-element/60 bg-background-element text-foreground-subtle hover:bg-background-element-hover",
+        "border border-border-element/75 text-foreground-subtle hover:bg-background-element-hover/75 active:bg-background-element-hover/75",
       primary:
-        "border-transparent bg-primary/95 text-primary-foreground hover:bg-primary-hover",
+        "border-transparent bg-primary/95 text-primary-foreground hover:bg-primary-hover active:bg-primary-hover",
       ghost:
-        "border-transparent bg-transparent text-foreground-subtle hover:bg-background-element-hover",
+        "border-transparent bg-transparent text-foreground-subtle hover:bg-background-element-hover/75 active:bg-background-element-hover/75",
       link: "border-transparent bg-transparent text-primary-surface-foreground underline-offset-4 hover:underline",
       danger:
-        "border-transparent bg-danger/90 text-danger-foreground hover:bg-danger-hover",
+        "border-transparent bg-danger text-danger-foreground hover:bg-danger-hover active:bg-danger-hover",
     },
     size: {
       xs: "h-[28px] rounded-md px-3 text-[0.8125rem]",
