@@ -183,7 +183,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarGroup>
               <SidebarGroupLabel
                 asChild
-                className="group/label text-foreground-subtle text-sm hover:bg-background-element-hover hover:text-foreground">
+                className="group/label hover:bg-background-element-hover/75">
                 <CollapsibleTrigger>
                   {item.title}{" "}
                   <ChevronRightIcon className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90" />
