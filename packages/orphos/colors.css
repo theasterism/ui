@@ -42,11 +42,11 @@
   --yellow-contrast: #2c1f09;
   --yellow-surface: #ffbf013b;
 
-  --green-9: #39beb7;
-  --green-10: #27b2ac;
-  --green-a8: #00a9a0ca;
+  --green-9: #22a079;
+  --green-10: #18926e;
+  --green-a8: #00955ea6;
   --green-contrast: #fff;
-  --green-surface: #00d5c024;
+  --green-surface: #00b45f1b;
 
   --blue-9: #008bff;
   --blue-10: #007fec;
@@ -104,11 +104,11 @@
       --yellow-contrast: #2c1f09;
       --yellow-surface: color(display-p3 0.9451 0.7412 0.0039 / 0.212);
 
-      --green-9: oklch(73% 0.1121 189.8);
-      --green-10: oklch(69.4% 0.1121 189.8);
-      --green-a8: color(display-p3 0 0.5529 0.5216 / 0.624);
+      --green-9: oklch(63% 0.1211 166.6);
+      --green-10: oklch(58.9% 0.1157 166.6);
+      --green-a8: color(display-p3 0 0.498 0.2706 / 0.553);
       --green-contrast: #fff;
-      --green-surface: color(display-p3 0.0039 0.7686 0.702 / 0.118);
+      --green-surface: color(display-p3 0.0118 0.6157 0.3137 / 0.091);
 
       --blue-9: oklch(63.8% 0.199 253);
       --blue-10: oklch(59.7% 0.1901 253);
