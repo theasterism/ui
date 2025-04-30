@@ -64,7 +64,6 @@ function App() {
               <Badge variant="success">v0</Badge>
             </div>
           </div>
-          <ColorPalette />
           <div className="flex flex-col gap-6">
             <h2
               className={typographyVariants({
