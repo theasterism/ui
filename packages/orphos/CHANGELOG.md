@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.26.0
+
+### Minor Changes
+
+- 4901032: remove dark variants
+- 36d9d5f: update color scheme
+
 ## 0.25.2
 
 ### Patch Changes
