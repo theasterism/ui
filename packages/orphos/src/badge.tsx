@@ -4,25 +4,24 @@ import * as React from "react";
 import { cn } from "./utils";
 
 const badgeVariants = cva({
-  base: "inline-flex min-w-fit items-center rounded-sm border px-1.5 font-semibold text-xs leading-relaxed ring-focus-ring ring-offset-2 ring-offset-background transition-colors focus:outline-none focus-visible:outline-none focus-visible:ring-2",
+  base: "inset-ring-1 inline-flex min-w-fit items-center rounded-full px-2 py-0.5 font-semibold text-xs leading-relaxed outline-focus-ring transition-colors focus-visible:outline-2",
   variants: {
     variant: {
       default:
-        "border-border-element/75 bg-background-element text-foreground-subtle",
+        "inset-ring-border-element-hover bg-background-element text-foreground-subtle",
       primary:
-        "border-primary-border/60 bg-primary-surface/65 text-primary-surface-foreground",
-      warning:
-        "border-warning-border/60 bg-warning-surface/60 text-warning-surface-foreground",
+        "inset-ring-primary-border bg-primary-surface text-primary-surface-foreground",
       danger:
-        "border-danger-border/60 bg-danger-surface/85 text-danger-surface-foreground",
+        "inset-ring-danger-border bg-danger-surface text-danger-surface-foreground",
+      warning:
+        "inset-ring-warning-border bg-warning-surface text-warning-surface-foreground",
       success:
-        "border-success-border/60 bg-success-surface/55 text-success-surface-foreground",
-      info: "border-info-border/60 bg-info-surface/75 text-info-surface-foreground",
-      upsell:
-        "border-upsell-border/60 bg-upsell-surface/85 text-upsell-surface-foreground",
+        "inset-ring-success-border bg-success-surface text-success-surface-foreground",
+      info: "inset-ring-info-border bg-info-surface text-info-surface-foreground",
     },
     soft: {
-      true: "border-transparent",
+      true: "inset-ring-0",
+      false: "",
     },
   },
   defaultVariants: {

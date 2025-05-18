@@ -4,11 +4,10 @@ import * as React from "react";
 import { cn } from "./utils";
 
 const inputVariants = cva({
-  base: "no-drag flex h-[32px] w-full rounded-md border border-border-element/75 bg-transparent py-2 pr-8 pl-2 text-foreground text-sm ring-focus-ring transition-all placeholder:text-foreground-subtle placeholder:text-sm focus-visible:border-transparent focus-visible:outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:text-foreground-subtle disabled:opacity-75 disabled:placeholder:text-foreground-subtle/50 disabled:bg-background-element/50",
+  base: "no-drag inset-ring-1 inset-ring-border-element flex h-9 w-full items-center rounded-md bg-transparent py-2 px-3 text-base text-foreground ring-focus-ring/35 transition-all placeholder:text-foreground-subtle placeholder:text-sm focus-visible:inset-ring-focus-ring focus-visible:outline-none focus-visible:ring-3 disabled:cursor-not-allowed disabled:bg-background-element/50 disabled:text-foreground-subtle disabled:opacity-75 disabled:placeholder:text-foreground-subtle/50 sm:text-sm",
   variants: {
     variant: {
       default: "",
-      file: "overflow-hidden p-0 pe-3 text-sm file:me-3 file:h-full file:border-e file:border-e-border-element/60 file:bg-background-element file:px-3 file:font-medium file:text-foreground file:text-xs file:not-italic disabled:file:text-foreground-subtle/70",
       password: "pe-9",
     },
   },
@@ -21,19 +20,9 @@ export interface InputProps
   extends React.ComponentProps<"input">,
     VariantProps<typeof inputVariants> {
   icon?: React.ReactNode;
-  error?: string | undefined;
 }
 
-function Input({
-  className,
-  type,
-  icon,
-  error,
-  disabled,
-  ...props
-}: InputProps) {
-  const variant = type === "file" ? "file" : "default";
-
+function Input({ className, type, icon, disabled, ...props }: InputProps) {
   if (type === "password") {
     const [isVisible, setIsVisible] = React.useState<boolean>(false);
     const toggleVisibility = () => setIsVisible((prevState) => !prevState);
@@ -44,17 +33,16 @@ function Input({
           disabled={disabled}
           data-slot="input"
           className={cn(
-            inputVariants({ variant, className }),
-            error &&
-              "border-danger-border ring-3 ring-danger-surface/35 focus-visible:border-danger-border focus-visible:ring-3",
-            "peer-focus-visible:border-transparent"
+            inputVariants({ variant: "password", className }),
+            "peer-focus-visible:border-transparent",
+            "pl-3! pr-9!"
           )}
           type={isVisible ? "text" : "password"}
           {...props}
         />
         <button
           disabled={disabled}
-          className="peer absolute inset-y-0 end-0 mt-1.5 mr-2 flex size-5 items-center justify-center rounded-sm text-foreground-subtle ring-focus-ring ring-offset-1 ring-offset-transparent transition-colors hover:text-foreground focus:z-10 focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+          className="peer absolute inset-y-0 end-0 mt-2 mr-3 flex size-5 items-center justify-center rounded-sm text-foreground-subtle ring-focus-ring ring-offset-1 ring-offset-transparent transition-colors hover:text-foreground focus:z-10 focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
           type="button"
           onClick={toggleVisibility}
           aria-label={isVisible ? "Hide password" : "Show password"}
@@ -77,9 +65,7 @@ function Input({
           disabled={disabled}
           data-slot="input"
           className={cn(
-            inputVariants({ variant, className }),
-            error &&
-              "border-danger-border ring-3 ring-danger-surface/35 focus-visible:border-danger-border focus-visible:ring-3",
+            inputVariants({ variant: "default", className }),
             "peer ps-9"
           )}
           type={type}
@@ -95,11 +81,7 @@ function Input({
     <input
       disabled={disabled}
       data-slot="input"
-      className={cn(
-        inputVariants({ variant, className }),
-        error &&
-          "border-danger-border ring-3 ring-danger-surface/35 focus-visible:border-danger-border focus-visible:ring-3"
-      )}
+      className={cn(inputVariants({ variant: "default", className }))}
       type={type}
       {...props}
     />

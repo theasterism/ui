@@ -1,13 +1,57 @@
-@import "./colors.css";
 @import "tw-animate-css";
+
+/* LIGHT MODE * /
+
+
+
+/* Accent */
+@import "@radix-ui/colors/tomato.css";
+@import "@radix-ui/colors/tomato-alpha.css";
+
+/* Neutral */
+@import "@radix-ui/colors/gray.css";
+@import "@radix-ui/colors/gray-alpha.css";
+
+/* Semantic */
+@import "@radix-ui/colors/red.css";
+@import "@radix-ui/colors/red-alpha.css";
+@import "@radix-ui/colors/green.css";
+@import "@radix-ui/colors/green-alpha.css";
+@import "@radix-ui/colors/amber.css";
+@import "@radix-ui/colors/amber-alpha.css";
+@import "@radix-ui/colors/blue.css";
+@import "@radix-ui/colors/blue-alpha.css";
+
+/* DARK MODE */
+
+/* Accent */
+@import "@radix-ui/colors/tomato-dark.css";
+@import "@radix-ui/colors/tomato-dark-alpha.css";
+
+/* Neutral */
+@import "@radix-ui/colors/gray-dark.css";
+@import "@radix-ui/colors/gray-dark-alpha.css";
+
+/* Semantic */
+@import "@radix-ui/colors/red-dark.css";
+@import "@radix-ui/colors/red-dark-alpha.css";
+@import "@radix-ui/colors/green-dark.css";
+@import "@radix-ui/colors/green-dark-alpha.css";
+@import "@radix-ui/colors/amber-dark.css";
+@import "@radix-ui/colors/amber-dark-alpha.css";
+@import "@radix-ui/colors/blue-dark.css";
+@import "@radix-ui/colors/blue-dark-alpha.css";
 
 :root {
   /* Base font size */
   font-size: 16px;
   /* Base border radius */
-  --radius: 6px;
+  --radius: 8px;
   /* code before-after content marker */
   --code-marker: "`";
+
+  --color-white: #fff;
+  --color-black: #000;
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -31,54 +75,53 @@
   --color-background-element: var(--gray-3);
   --color-background-element-hover: var(--gray-4);
   --color-background-element-active: var(--gray-5);
-  --color-border-subtle: var(--gray-6);
-  --color-border-element: var(--gray-7);
-  --color-border-element-hover: var(--gray-8);
+  --color-border-subtle: var(--gray-a6);
+  --color-border-element: var(--gray-a7);
+  --color-border-element-hover: var(--gray-a8);
   --color-solid: var(--gray-9);
-  --color-foreground-subtle: var(--gray-11);
+  --color-solid-hover: var(--gray-10);
+  --color-foreground-subtle: var(--gray-a11);
   --color-foreground: var(--gray-12);
 
-  --color-primary: var(--accent-9);
-  --color-primary-hover: var(--accent-10);
-  --color-primary-border: var(--accent-8);
-  --color-primary-foreground: var(--accent-contrast);
-  --color-primary-surface: var(--accent-surface);
-  --color-primary-surface-foreground: var(--accent-10);
+  --color-primary: var(--tomato-9);
+  --color-primary-hover: var(--tomato-10);
+  --color-primary-border: var(--tomato-a8);
+  --color-primary-foreground: var(--color-white);
+  --color-primary-subtle: var(--tomato-a2);
+  --color-primary-surface: var(--tomato-a3);
+  --color-primary-surface-foreground: var(--tomato-a11);
 
   --color-danger: var(--red-9);
   --color-danger-hover: var(--red-10);
   --color-danger-border: var(--red-a8);
-  --color-danger-foreground: var(--red-contrast);
-  --color-danger-surface: var(--red-surface);
-  --color-danger-surface-foreground: var(--red-10);
+  --color-danger-foreground: var(--color-white);
+  --color-danger-subtle: var(--red-a2);
+  --color-danger-surface: var(--red-a3);
+  --color-danger-surface-foreground: var(--red-a11);
 
-  --color-warning: var(--yellow-9);
-  --color-warning-hover: var(--yellow-10);
-  --color-warning-border: var(--yellow-a8);
-  --color-warning-foreground: var(--yellow-contrast);
-  --color-warning-surface: var(--yellow-surface);
-  --color-warning-surface-foreground: var(--yellow-10);
+  --color-warning: var(--amber-9);
+  --color-warning-hover: var(--amber-10);
+  --color-warning-border: var(--amber-a8);
+  --color-warning-foreground: var(--color-black);
+  --color-warning-subtle: var(--amber-a2);
+  --color-warning-surface: var(--amber-a3);
+  --color-warning-surface-foreground: var(--amber-a11);
 
   --color-success: var(--green-9);
   --color-success-hover: var(--green-10);
   --color-success-border: var(--green-a8);
-  --color-success-foreground: var(--green-contrast);
-  --color-success-surface: var(--green-surface);
-  --color-success-surface-foreground: var(--green-10);
+  --color-success-foreground: var(--color-white);
+  --color-success-subtle: var(--green-a2);
+  --color-success-surface: var(--green-a3);
+  --color-success-surface-foreground: var(--green-a11);
 
   --color-info: var(--blue-9);
   --color-info-hover: var(--blue-10);
   --color-info-border: var(--blue-a8);
-  --color-info-foreground: var(--blue-surface);
-  --color-info-surface: var(--blue-surface);
-  --color-info-surface-foreground: var(--blue-10);
-
-  --color-upsell: var(--violet-9);
-  --color-upsell-hover: var(--violet-10);
-  --color-upsell-border: var(--violet-a8);
-  --color-upsell-foreground: var(--violet-contrast);
-  --color-upsell-surface: var(--violet-surface);
-  --color-upsell-surface-foreground: var(--violet-10);
+  --color-info-foreground: var(--color-white);
+  --color-info-subtle: var(--blue-a2);
+  --color-info-surface: var(--blue-a3);
+  --color-info-surface-foreground: var(--blue-a11);
 
   /* Typography */
   --text-4xl: 2.25rem; /* 36px */
@@ -97,6 +140,9 @@
   --radius-md: var(--radius);
   --radius-sm: calc(var(--radius) - 2px);
   --radius-xs: cal(var(--radius) - 4px);
+
+  /* Shadow */
+  --shadow-1px: inset 0 0 0 1px;
 }
 
 @utility container {
@@ -121,7 +167,7 @@
 
   input::placeholder,
   textarea::placeholder {
-    color: var(--gray-a11);
+    color: var(--gray-11);
   }
 
   body {

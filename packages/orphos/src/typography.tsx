@@ -18,8 +18,8 @@ export const typographyVariants = cva({
       blockquote: "mt-6 border-primary border-l-4 pl-6 italic",
       ul: "my-6 ml-4 list-disc marker:text-primary [&>li]:mt-2 [&>li]:pl-1",
       ol: "my-6 ml-4 list-decimal marker:text-primary [&>li]:mt-2 [&>li]:pl-1",
-      code: "w-fit break-words rounded-sm bg-primary-element px-[0.3rem] py-[0.2rem] text-primary-element-foreground text-sm [box-decoration-break:clone] before:content-(--code-marker) after:content-(--code-marker)",
-      kbd: "inline w-fit rounded-sm border border-border/60 bg-background px-1 text-foreground text-sm [box-decoration-break:clone]",
+      code: "w-fit break-words rounded-sm bg-primary-surface px-[0.3rem] py-[0.075rem] text-primary-surface-foreground text-sm [box-decoration-break:clone] before:content-(--code-marker) after:content-(--code-marker)",
+      kbd: "inline w-fit rounded-sm border border-border-subtle bg-background-subtle px-1.5 py-px text-foreground-subtle text-xs [box-decoration-break:clone]",
     },
   },
   defaultVariants: {

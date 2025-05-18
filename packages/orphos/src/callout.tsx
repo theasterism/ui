@@ -3,69 +3,59 @@ import type { DivElementProps } from "./types";
 import { cn } from "./utils";
 
 const calloutVariants = cva({
-  base: "relative grid w-full grid-cols-[0_1fr] items-start gap-y-0.5 rounded-md p-4 text-sm has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] has-[>svg]:gap-x-3 [&>svg]:size-4.5 [&>svg]:translate-y-0.5 [&>svg]:text-current",
+  base: "relative inset-ring-1 grid w-full grid-cols-[0_1fr] items-start gap-y-0.5 rounded-md p-4 text-sm has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] has-[>svg]:gap-x-3 [&>svg]:size-4.5 [&>svg]:translate-y-0.5 [&>svg]:text-current",
   variants: {
     variant: {
-      default: "border-border-element/75 text-foreground-subtle",
-      primary: "border-primary-border/60 text-primary-surface-foreground",
-      warning: "border-warning-border/60 text-warning-surface-foreground",
-      danger: "border-danger-border/60 text-danger-surface-foreground",
-      success: "border-success-border/60 text-success-surface-foreground",
-      info: "border-info-border/60 text-info-surface-foreground",
-      upsell: "border-upsell-border/60 text-upsell-surface-foreground",
-    },
-    bordered: {
-      true: "border",
-      false: "border border-transparent",
+      default:
+        "inset-ring-border-element-hover bg-background-element text-foreground-subtle",
+      primary: "inset-ring-primary-border text-primary-surface-foreground",
+      warning: "inset-ring-warning-border text-warning-surface-foreground",
+      danger: "inset-ring-danger-border text-danger-surface-foreground",
+      success: "inset-ring-success-border text-success-surface-foreground",
+      info: "inset-ring-info-border text-info-surface-foreground",
     },
   },
   compoundVariants: [
     {
       variant: "default",
-      className: "bg-background-element",
+      className: "bg-background-subtle",
     },
     {
       variant: "primary",
-      className: "bg-primary-surface/65",
+      className: "bg-primary-subtle",
     },
     {
       variant: "warning",
-      className: "bg-warning-surface/60",
+      className: "bg-warning-subtle",
     },
     {
       variant: "danger",
-      className: "bg-danger-surface/85",
+      className: "bg-danger-subtle",
     },
     {
       variant: "success",
-      className: "bg-success-surface/55",
+      className: "bg-success-subtle",
     },
     {
       variant: "info",
-      className: "bg-info-surface/75",
-    },
-    {
-      variant: "upsell",
-      className: "bg-upsell-surface/85",
+      className: "bg-info-subtle",
     },
   ],
   defaultVariants: {
     variant: "default",
-    bordered: false,
   },
 });
 
 function Callout({
   className,
   variant,
-  bordered,
   ...props
 }: DivElementProps & VariantProps<typeof calloutVariants>) {
   return (
     <div
       data-slot="alert"
       role="alert"
-      className={cn(calloutVariants({ variant, bordered }), className)}
+      className={cn(calloutVariants({ variant }), className)}
       {...props}
     />
   );

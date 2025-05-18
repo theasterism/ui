@@ -37,7 +37,7 @@ function DialogOverlay({
     <DialogPrimitive.Overlay
       data-slot="dialog-overlay"
       className={cn(
-        "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/55 data-[state=closed]:animate-out data-[state=open]:animate-in",
+        "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/75 data-[state=closed]:animate-out data-[state=open]:animate-in",
         className
       )}
       {...props}
@@ -56,7 +56,7 @@ function DialogContent({
       <DialogPrimitive.Content
         data-slot="dialog-content"
         className={cn(
-          "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] isolate z-50 grid w-full max-w-[calc(100vw-32px)] xs:max-w-md translate-x-[-50%] translate-y-[-50%] gap-4 overflow-hidden rounded-lg border border-border-element/75 bg-background p-4 duration-200 data-[state=closed]:animate-out data-[state=open]:animate-in",
+          "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed inset-ring-1 inset-ring-border-element top-[50%] left-[50%] isolate z-50 grid w-full max-w-[calc(100vw-32px)] xs:max-w-md translate-x-[-50%] translate-y-[-50%] gap-6 overflow-hidden rounded-xl bg-background-subtle p-6 duration-200 data-[state=closed]:animate-out data-[state=open]:animate-in",
           className
         )}
         {...props}>
@@ -70,7 +70,7 @@ function DialogHeader({ className, ...props }: DivElementProps) {
   return (
     <div
       data-slot="dialog-header"
-      className={cn("flex flex-col gap-1 text-left", className)}
+      className={cn("flex flex-col gap-1.5 text-left", className)}
       {...props}
     />
   );
@@ -81,7 +81,7 @@ function DialogFooter({ className, ...props }: DivElementProps) {
     <div
       data-slot="dialog-footer"
       className={cn(
-        "flex h-auto w-full flex-row justify-between gap-2 sm:justify-end",
+        "flex h-auto w-full flex-row justify-between gap-3",
         className
       )}
       {...props}
@@ -96,7 +96,10 @@ function DialogTitle({
   return (
     <DialogPrimitive.Title
       data-slot="dialog-title"
-      className={cn("font-semibold text-foreground text-xl", className)}
+      className={cn(
+        "font-semibold text-foreground text-xl leading-none",
+        className
+      )}
       {...props}
     />
   );

@@ -4,25 +4,26 @@ import * as React from "react";
 import { cn } from "./utils";
 
 const buttonVariants = cva({
-  base: "inline-flex shrink-0 items-center justify-center gap-x-2 whitespace-nowrap border font-semibold text-sm leading-relaxed ring-focus-ring ring-offset-2 ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  base: "inline-flex shrink-0 items-center justify-center gap-x-2 whitespace-nowrap font-semibold text-sm leading-relaxed outline-focus-ring outline-offset-2 transition-colors focus-visible:outline-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   variants: {
     variant: {
       default:
-        "border border-border-element/75 text-foreground-subtle hover:bg-background-element-hover/75 active:bg-background-element-hover/75",
+        "inset-ring-1 inset-ring-border-element bg-background-element text-foreground-subtle hover:bg-background-element-hover active:bg-background-element-active",
       primary:
-        "border-transparent bg-primary/95 text-primary-foreground hover:bg-primary-hover active:bg-primary-hover",
+        "bg-primary text-primary-foreground hover:bg-primary-hover active:bg-primary-hover active:brightness-[1.08]",
+      secondary:
+        "bg-foreground text-background brightness-95 hover:brightness-100 active:brightness-[1.10]",
       ghost:
-        "border-transparent bg-transparent text-foreground-subtle hover:bg-background-element-hover/75 active:bg-background-element-hover/75",
-      link: "border-transparent bg-transparent text-primary-surface-foreground underline-offset-4 hover:underline",
+        "bg-transparent text-foreground-subtle hover:bg-background-element-hover active:bg-background-element-active",
+      link: "bg-transparent text-primary underline decoration-border-element underline-offset-[2.5px] hover:decoration-primary",
       danger:
-        "border-transparent bg-danger text-danger-foreground hover:bg-danger-hover active:bg-danger-hover",
+        "bg-danger text-danger-foreground hover:bg-danger-hover active:bg-danger-hover active:brightness-[1.08]",
     },
     size: {
-      xs: "h-[28px] rounded-md px-3 text-[0.8125rem]",
-      sm: "h-[30px] rounded-md px-3 text-sm",
-      md: "h-[32px] rounded-md px-4",
-      lg: "h-[38px] rounded-lg px-6",
-      icon: "size-8 rounded-md",
+      sm: "h-8 rounded-md px-2.5 text-sm",
+      md: "h-9 rounded-md px-3.5",
+      lg: "h-10 rounded-md px-4",
+      icon: "size-9 rounded-md",
     },
   },
   defaultVariants: {

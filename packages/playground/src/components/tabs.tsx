@@ -19,13 +19,13 @@ import {
 export function TabsDemo() {
   return (
     <Tabs defaultValue="account" className="w-full max-w-[400px]">
-      <TabsList className="w-full">
+      <TabsList>
         <TabsTrigger value="account">Account</TabsTrigger>
         <TabsTrigger value="password">Password</TabsTrigger>
       </TabsList>
       <TabsContent value="account">
         <Card>
-          <CardHeader className="border-b">
+          <CardHeader>
             <CardTitle>Account</CardTitle>
             <CardDescription>
               Make changes to your account here. Click save when you're done.
@@ -43,14 +43,14 @@ export function TabsDemo() {
               </div>
             </div>
           </CardContent>
-          <CardFooter className="border-t">
+          <CardFooter>
             <Button>Save changes</Button>
           </CardFooter>
         </Card>
       </TabsContent>
       <TabsContent value="password">
         <Card>
-          <CardHeader className="border-b">
+          <CardHeader>
             <CardTitle>Password</CardTitle>
             <CardDescription>
               Change your password here. After saving, you'll be logged out.
@@ -68,7 +68,7 @@ export function TabsDemo() {
               </div>
             </div>
           </CardContent>
-          <CardFooter className="border-t">
+          <CardFooter>
             <Button>Save password</Button>
           </CardFooter>
         </Card>

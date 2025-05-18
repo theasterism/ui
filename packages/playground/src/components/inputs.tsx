@@ -1,3 +1,4 @@
+import { FileUpload } from "@theanalog/orphos/file-upload";
 import { Input } from "@theanalog/orphos/input";
 import { Label } from "@theanalog/orphos/label";
 import { Textarea } from "@theanalog/orphos/textarea";
@@ -62,11 +63,11 @@ export function InputsDemo() {
       <div className="flex w-full xs:flex-row flex-col gap-4">
         <div className="grid w-full items-center gap-2">
           <Label htmlFor="file">File Input</Label>
-          <Input id="file" type="file" />
+          <FileUpload id="file" />
         </div>
         <div className="grid w-full items-center gap-2">
           <Label htmlFor="file-disabled">File Input</Label>
-          <Input id="file-disabled" type="file" disabled />
+          <FileUpload id="file-disabled" disabled />
         </div>
       </div>
       <div className="flex w-full xs:flex-row flex-col gap-4">

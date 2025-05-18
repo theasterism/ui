@@ -2,9 +2,9 @@
   "name": "ui",
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@changesets/cli": "^2.28.1",
+    "@changesets/cli": "^2.29.2",
     "@total-typescript/tsconfig": "^1.0.4",
-    "turbo": "^2.5.0",
+    "turbo": "^2.5.2",
     "typescript": "^5.8.3"
   },
   "license": "MIT",

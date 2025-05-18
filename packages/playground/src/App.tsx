@@ -61,7 +61,7 @@ function App() {
             <hr className="my-4" />
             <div className="flex gap-2">
               <Badge variant="warning">Work In Progress.</Badge>
-              <Badge variant="success">v0</Badge>
+              <Badge variant="info">v0</Badge>
             </div>
           </div>
           <div className="flex flex-col gap-6">
@@ -90,13 +90,10 @@ function App() {
               <Badge variant="warning" soft>
                 Warning
               </Badge>
-              <Badge variant="danger" soft>
-                Danger
-              </Badge>
+              <Badge variant="danger">Danger</Badge>
               <Badge variant="success">Success</Badge>
-              <Badge variant="info">Info</Badge>
-              <Badge variant="upsell" soft>
-                Upsell
+              <Badge variant="info" soft>
+                Info
               </Badge>
             </div>
           </div>
