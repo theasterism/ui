@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.28.0
+
+### Minor Changes
+
+- 68e996e: color palette and component styles change
+
 ## 0.27.0
 
 ### Minor Changes
