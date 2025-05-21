@@ -2,8 +2,6 @@
 
 /* LIGHT MODE * /
 
-
-
 /* Accent */
 @import "@radix-ui/colors/tomato.css";
 @import "@radix-ui/colors/tomato-alpha.css";
@@ -140,9 +138,6 @@
   --radius-md: var(--radius);
   --radius-sm: calc(var(--radius) - 2px);
   --radius-xs: cal(var(--radius) - 4px);
-
-  /* Shadow */
-  --shadow-1px: inset 0 0 0 1px;
 }
 
 @utility container {

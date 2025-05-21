@@ -11,13 +11,11 @@ const buttonVariants = cva({
         "inset-ring-1 inset-ring-border-element bg-background-element text-foreground-subtle hover:bg-background-element-hover active:bg-background-element-active",
       primary:
         "bg-primary text-primary-foreground hover:bg-primary-hover active:bg-primary-hover active:brightness-[1.08]",
-      secondary:
-        "bg-foreground text-background brightness-95 hover:brightness-100 active:brightness-[1.10]",
       ghost:
         "bg-transparent text-foreground-subtle hover:bg-background-element-hover active:bg-background-element-active",
       link: "bg-transparent text-primary underline decoration-border-element underline-offset-[2.5px] hover:decoration-primary",
       danger:
-        "bg-danger text-danger-foreground hover:bg-danger-hover active:bg-danger-hover active:brightness-[1.08]",
+        "inset-ring-1 inset-ring-danger-border bg-danger-surface text-danger-surface-foreground hover:bg-danger hover:text-danger-foreground active:bg-danger-hover active:text-danger-foreground dark:text-danger-foreground",
     },
     size: {
       sm: "h-8 rounded-md px-2.5 text-sm",

@@ -48,7 +48,7 @@ function Slider({
           data-slot="slider-thumb"
           // biome-ignore lint/suspicious/noArrayIndexKey: shut up!
           key={index}
-          className="block h-4 w-4 rounded-full bg-white ring-2 ring-border-element shadow transition-colors focus-visible:outline-none focus-visible:ring-focus-ring disabled:pointer-events-none disabled:opacity-50"
+          className="block h-4 w-4 rounded-full bg-white shadow ring-2 ring-border-element transition-colors focus-visible:outline-none focus-visible:ring-focus-ring disabled:pointer-events-none disabled:opacity-50"
         />
       ))}
     </SliderPrimitive.Root>

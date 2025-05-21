@@ -1,13 +1,13 @@
 "use client";
 
 import {
-  ArrowPathIcon,
   CheckCircleIcon,
   ExclamationCircleIcon,
   ExclamationTriangleIcon,
   InformationCircleIcon,
 } from "@heroicons/react/24/solid";
 import { Toaster as Sonner, type ToasterProps, toast } from "sonner";
+import { Spinner } from "./spinner";
 
 const Toaster = ({ ...props }: ToasterProps) => {
   return (
@@ -35,9 +35,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
           <ExclamationTriangleIcon className="size-5! text-warning-hover!" />
         ),
         error: <ExclamationCircleIcon className="size-5! text-danger!" />,
-        loading: (
-          <ArrowPathIcon className="size-5! animate-spin text-foreground-subtle!" />
-        ),
+        loading: <Spinner className="size-5! text-foreground-subtle!" />,
       }}
     />
   );

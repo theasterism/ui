@@ -57,7 +57,7 @@ function FileUpload({ disabled, ...props }: InputProps) {
     <div className="flex w-full flex-col items-start">
       <div
         className={cn(
-          "no-drag inset-ring-1 inset-ring-border-element flex h-9 w-full cursor-default items-center justify-between rounded-md bg-transparent px-3 py-2 text-sm text-sm ring-focus-ring/35 focus-visible:inset-ring-focus-ring focus-visible:outline-none focus-visible:ring-3 aria-disabled:cursor-not-allowed aria-disabled:bg-background-element/50 aria-disabled:text-foreground-subtle aria-disabled:opacity-75 overflow-hidden"
+          "no-drag inset-ring-1 inset-ring-border-element flex h-9 w-full cursor-default items-center justify-between overflow-hidden rounded-md bg-transparent px-3 py-2 text-sm focus-visible:inset-ring-2 focus-visible:inset-ring-focus-ring focus-visible:outline-none aria-disabled:cursor-not-allowed aria-disabled:bg-background-element/50 aria-disabled:text-foreground-subtle aria-disabled:opacity-75"
         )}
         onClick={handleContainerClick}
         tabIndex={disabled ? -1 : 0} // Only focusable when no file is selected
@@ -69,14 +69,14 @@ function FileUpload({ disabled, ...props }: InputProps) {
         aria-label={
           selectedFile ? `Selected file: ${fileName}` : "Select a file"
         }>
-        <div className="flex items-center mr-2 min-w-0">
+        <div className="mr-2 flex min-w-0 items-center">
           {selectedFile ? (
             <DocumentIcon
               className="mr-2 h-4 w-4 flex-shrink-0 text-foreground-subtle"
               aria-hidden="true"
             />
           ) : (
-            <span className="text-foreground-subtle text-sm truncate">
+            <span className="truncate text-foreground-subtle text-sm">
               {fileName || "No file selected"}
             </span>
           )}

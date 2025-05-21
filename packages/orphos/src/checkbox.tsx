@@ -22,7 +22,7 @@ function Checkbox({
         className={cn(
           "flex items-center justify-center text-current transition-all"
         )}>
-        <CheckIcon className="size-3.5 text-primary-surface-foreground" />
+        <CheckIcon className="size-3.5 text-primary" />
       </CheckboxPrimitive.Indicator>
     </CheckboxPrimitive.Root>
   );
