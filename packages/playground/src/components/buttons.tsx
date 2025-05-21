@@ -5,7 +5,6 @@ export function ButtonsDemo() {
     <div className="z-auto flex w-auto flex-row flex-wrap gap-4">
       <Button>Button text</Button>
       <Button variant="primary">Button text</Button>
-      <Button variant="secondary">Button text</Button>
       <Button variant="ghost">Button text</Button>
       <Button variant="danger">Button text</Button>
       <Button variant="link">Button text</Button>
@@ -18,9 +17,6 @@ export function ButtonDisabledDemo() {
     <div className="z-auto flex w-auto flex-row flex-wrap gap-4">
       <Button disabled>Button text</Button>
       <Button disabled variant="primary">
-        Button text
-      </Button>
-      <Button disabled variant="secondary">
         Button text
       </Button>
       <Button disabled variant="ghost">

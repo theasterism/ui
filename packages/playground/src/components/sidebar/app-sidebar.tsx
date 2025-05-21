@@ -1,212 +1,152 @@
 import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@radix-ui/react-collapsible";
-import { ChevronRightIcon } from "@theanalog/orphos/icons";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@theanalog/orphos/dropdown-menu";
+import {
+  Cog6ToothIcon,
+  EllipsisHorizontalIcon,
+  HomeIcon,
+  PlusIcon,
+  Square2StackIcon,
+  TicketIcon,
+} from "@theanalog/orphos/icons";
 import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
+  SidebarGroupAction,
   SidebarGroupContent,
   SidebarGroupLabel,
   SidebarHeader,
+  SidebarInput,
   SidebarMenu,
+  SidebarMenuAction,
+  SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarRail,
+  SidebarSeparator,
 } from "@theanalog/orphos/sidebar";
 import * as React from "react";
 import { SearchForm } from "./search-form";
-import { VersionSwitcher } from "./version-switcher";
 
-// This is sample data.
-
-const data = {
-  versions: ["1.0.1", "1.1.0-alpha", "2.0.0-beta1"],
-  navMain: [
+const data: {
+  teamSwitcher: Array<{
+    name: string;
+    href: string;
+  }>;
+  mainNav: Array<{
+    label: string;
+    href: string;
+    alerts?: number;
+    icon: any;
+  }>;
+  eventsGroup: {
+    label: string;
+    events: Array<{ label: string; href: string }>;
+  };
+} = {
+  teamSwitcher: [
+    { name: "Tailwind Labs", href: "/" },
+    { name: "Workaction", href: "/" },
+  ],
+  mainNav: [
     {
-      title: "Getting Started",
-      url: "#",
-      items: [
-        {
-          title: "Installation",
-          url: "#",
-        },
-        {
-          title: "Project Structure",
-          url: "#",
-        },
-      ],
+      label: "Home",
+      href: "#",
+      icon: HomeIcon,
     },
     {
-      title: "Building Your Application",
-      url: "#",
-      items: [
-        {
-          title: "Routing",
-          url: "#",
-        },
-        {
-          title: "Data Fetching",
-          url: "#",
-        },
-        {
-          title: "Rendering",
-          url: "#",
-        },
-        {
-          title: "Caching",
-          url: "#",
-        },
-        {
-          title: "Styling",
-          url: "#",
-        },
-        {
-          title: "Optimizing",
-          url: "#",
-        },
-        {
-          title: "Configuring",
-          url: "#",
-        },
-        {
-          title: "Testing",
-          url: "#",
-        },
-        {
-          title: "Authentication",
-          url: "#",
-        },
-        {
-          title: "Deploying",
-          url: "#",
-        },
-        {
-          title: "Upgrading",
-          url: "#",
-        },
-        {
-          title: "Examples",
-          url: "#",
-        },
-      ],
+      label: "Events",
+      href: "#",
+      icon: Square2StackIcon,
+      alerts: 2,
     },
     {
-      title: "API Reference",
-      url: "#",
-      items: [
-        {
-          title: "Components",
-          url: "#",
-        },
-        {
-          title: "File Conventions",
-          url: "#",
-        },
-        {
-          title: "Functions",
-          url: "#",
-        },
-        {
-          title: "next.config.js Options",
-          url: "#",
-        },
-        {
-          title: "CLI",
-          url: "#",
-        },
-        {
-          title: "Edge Runtime",
-          url: "#",
-        },
-      ],
+      label: "Orders",
+      href: "#",
+      icon: TicketIcon,
     },
     {
-      title: "Architecture",
-      url: "#",
-      items: [
-        {
-          title: "Accessibility",
-          url: "#",
-        },
-        {
-          title: "Fast Refresh",
-          url: "#",
-        },
-        {
-          title: "Next.js Compiler",
-          url: "#",
-        },
-        {
-          title: "Supported Browsers",
-          url: "#",
-        },
-        {
-          title: "Turbopack",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Community",
-      url: "#",
-      items: [
-        {
-          title: "Contribution Guide",
-          url: "#",
-        },
-      ],
+      label: "Settings",
+      href: "#",
+      icon: Cog6ToothIcon,
     },
   ],
+  eventsGroup: {
+    label: "Upcoming Events",
+    events: [
+      { label: "Bear Hug", href: "#" },
+      { label: "Viking People", href: "#" },
+      { label: "Six Finger", href: "#" },
+    ],
+  },
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar {...props}>
+    <Sidebar {...props} collapsible="offcanvas" variant="inset">
       <SidebarHeader>
-        <VersionSwitcher
-          versions={data.versions}
-          defaultVersion={data.versions[0]}
-        />
-        <SearchForm />
+        <SidebarMenuButton>
+          <div className="size-5 rounded-full bg-primary" /> The Analog Co.
+        </SidebarMenuButton>
       </SidebarHeader>
-      <SidebarContent className="gap-0">
-        {/* We create a collapsible SidebarGroup for each parent. */}
-        {data.navMain.map((item) => (
-          <Collapsible
-            key={item.title}
-            title={item.title}
-            defaultOpen
-            className="group/collapsible">
-            <SidebarGroup>
-              <SidebarGroupLabel
-                asChild
-                className="group/label hover:bg-background-element-hover/75">
-                <CollapsibleTrigger>
-                  {item.title}{" "}
-                  <ChevronRightIcon className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90" />
-                </CollapsibleTrigger>
-              </SidebarGroupLabel>
-              <CollapsibleContent>
-                <SidebarGroupContent>
-                  <SidebarMenu>
-                    {item.items.map((item) => (
-                      <SidebarMenuItem key={item.title}>
-                        <SidebarMenuButton asChild>
-                          <a href={item.url}>{item.title}</a>
-                        </SidebarMenuButton>
-                      </SidebarMenuItem>
-                    ))}
-                  </SidebarMenu>
-                </SidebarGroupContent>
-              </CollapsibleContent>
-            </SidebarGroup>
-          </Collapsible>
-        ))}
+      <SidebarContent>
+        <SidebarGroup>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {data.mainNav.map((item) => (
+                <SidebarMenuItem key={item.label}>
+                  <SidebarMenuButton asChild>
+                    <a href={item.href}>
+                      <item.icon />
+                      <span>{item.label}</span>
+                    </a>
+                  </SidebarMenuButton>
+                  {item.alerts ? (
+                    <SidebarMenuBadge>{item.alerts}</SidebarMenuBadge>
+                  ) : null}
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+        <SidebarGroup className="mt-2">
+          <SidebarGroupLabel>{data.eventsGroup.label}</SidebarGroupLabel>
+          <SidebarGroupAction title="Add Project">
+            <PlusIcon /> <span className="sr-only">Add Project</span>
+          </SidebarGroupAction>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {data.eventsGroup.events.map((event) => (
+                <SidebarMenuItem key={event.label}>
+                  <SidebarMenuButton asChild>
+                    <a href={event.href}>
+                      <span>{event.label}</span>
+                    </a>
+                  </SidebarMenuButton>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <SidebarMenuAction>
+                        <EllipsisHorizontalIcon />
+                      </SidebarMenuAction>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent side="right" align="start">
+                      <DropdownMenuItem>
+                        <span>Edit Project</span>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        <span>Delete Project</span>
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
       </SidebarContent>
-      <SidebarRail />
     </Sidebar>
   );
 }

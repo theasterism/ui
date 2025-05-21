@@ -18,15 +18,12 @@ import {
 } from "@theanalog/orphos/sidebar";
 import * as React from "react";
 
-export function VersionSwitcher({
-  versions,
-  defaultVersion,
-}: {
-  versions: string[];
-  defaultVersion: string;
-}) {
-  const [selectedVersion, setSelectedVersion] = React.useState(defaultVersion);
-
+export function VersionSwitcher(
+  team: Array<{
+    name: string;
+    href: string;
+  }>
+) {
   return (
     <SidebarMenu>
       <SidebarMenuItem>
@@ -34,32 +31,18 @@ export function VersionSwitcher({
           <DropdownMenuTrigger asChild>
             <SidebarMenuButton
               size="lg"
-              variant="outline"
+              variant="default"
               className="data-[state=open]:bg-background-element data-[state=open]:text-foreground">
               <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-foreground text-background">
                 <RectangleStackIcon className="size-4" />
               </div>
-              <div className="flex flex-col gap-0.5 leading-none">
-                <span className="font-semibold">Documentation</span>
-                <span className="">v{selectedVersion}</span>
-              </div>
+              <div className="flex flex-col gap-0.5 leading-none"></div>
               <ChevronUpDownIcon className="ml-auto" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
             className="w-(--radix-dropdown-menu-trigger-width)"
-            align="start">
-            {versions.map((version) => (
-              <DropdownMenuItem
-                key={version}
-                onSelect={() => setSelectedVersion(version)}>
-                v{version}{" "}
-                {version === selectedVersion && (
-                  <CheckIcon className="ml-auto" />
-                )}
-              </DropdownMenuItem>
-            ))}
-          </DropdownMenuContent>
+            align="start"></DropdownMenuContent>
         </DropdownMenu>
       </SidebarMenuItem>
     </SidebarMenu>
