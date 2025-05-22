@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.29.0
+
+### Minor Changes
+
+- 35ddded: add cropper component and file-upload hook
+
 ## 0.28.1
 
 ### Patch Changes
