@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.28.1
+
+### Patch Changes
+
+- 45818cd: increase sidebar button small variant height
+- 3c448c4: remove sidebar button outline variant border on hover
+
 ## 0.28.0
 
 ### Minor Changes
