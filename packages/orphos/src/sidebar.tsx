@@ -448,7 +448,7 @@ const sidebarMenuButtonVariants = cva({
     variant: {
       default: "hover:bg-background-element-hover",
       outline:
-        "inset-ring-1 inset-ring-border-element bg-background hover:inset-ring-border-element-hover hover:bg-background-element-hover",
+        "inset-ring-1 inset-ring-border-element bg-background hover:inset-ring-0 hover:bg-background-element-hover",
     },
     size: {
       default: "h-9 text-sm",
