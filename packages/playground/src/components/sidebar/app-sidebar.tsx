@@ -88,7 +88,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props} collapsible="offcanvas" variant="inset">
       <SidebarHeader>
-        <SidebarMenuButton>
+        <SidebarMenuButton size="sm">
           <div className="size-5 rounded-full bg-primary" /> The Analog Co.
         </SidebarMenuButton>
       </SidebarHeader>
@@ -114,9 +114,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarGroup>
         <SidebarGroup className="mt-2">
           <SidebarGroupLabel>{data.eventsGroup.label}</SidebarGroupLabel>
-          <SidebarGroupAction title="Add Project">
-            <PlusIcon /> <span className="sr-only">Add Project</span>
-          </SidebarGroupAction>
           <SidebarGroupContent>
             <SidebarMenu>
               {data.eventsGroup.events.map((event) => (
@@ -126,21 +123,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                       <span>{event.label}</span>
                     </a>
                   </SidebarMenuButton>
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <SidebarMenuAction>
-                        <EllipsisHorizontalIcon />
-                      </SidebarMenuAction>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent side="right" align="start">
-                      <DropdownMenuItem>
-                        <span>Edit Project</span>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem>
-                        <span>Delete Project</span>
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
