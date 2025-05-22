@@ -27,6 +27,7 @@ import { ContextMenuDemo } from "./components/context-menu";
 import { DialogDemo } from "./components/dialog";
 import { DropdownDemo } from "./components/dropdown";
 import { IconButtonDemo } from "./components/icon-button";
+import { ImageUploadDemo } from "./components/image-upload";
 import { InputsDemo } from "./components/inputs";
 import { ColorPalette } from "./components/pallete";
 import { PopoverDemo } from "./components/popover";
@@ -185,6 +186,7 @@ function App() {
               Form Components
             </h2>
             <div className="flex w-full max-w-4xl flex-col items-start gap-10">
+              <ImageUploadDemo />
               <InputsDemo />
               <CheckboxDemo />
             </div>

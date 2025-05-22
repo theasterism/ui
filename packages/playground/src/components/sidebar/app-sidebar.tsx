@@ -40,6 +40,7 @@ const data: {
     label: string;
     href: string;
     alerts?: number;
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
     icon: any;
   }>;
   eventsGroup: {
