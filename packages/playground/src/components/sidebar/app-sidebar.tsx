@@ -42,6 +42,7 @@ const data: {
     alerts?: number;
     // biome-ignore lint/suspicious/noExplicitAny: <explanation>
     icon: any;
+    isActive?: boolean;
   }>;
   eventsGroup: {
     label: string;
@@ -57,6 +58,7 @@ const data: {
       label: "Home",
       href: "#",
       icon: HomeIcon,
+      isActive: true,
     },
     {
       label: "Events",
@@ -99,7 +101,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenu>
               {data.mainNav.map((item) => (
                 <SidebarMenuItem key={item.label}>
-                  <SidebarMenuButton asChild>
+                  <SidebarMenuButton asChild isActive={item.isActive}>
                     <a href={item.href}>
                       <item.icon />
                       <span>{item.label}</span>
