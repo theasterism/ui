@@ -322,7 +322,7 @@ function App() {
                 <TooltipTrigger asChild>
                   <Button size="sm">Hover</Button>
                 </TooltipTrigger>
-                <TooltipContent side="top" sideOffset={8} align="start">
+                <TooltipContent side="right" sideOffset={8} align="start">
                   <p>The quick brown fox jumps over the lazy dog.</p>
                 </TooltipContent>
               </Tooltip>
