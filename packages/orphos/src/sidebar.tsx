@@ -140,7 +140,7 @@ function SidebarProvider({
             } as React.CSSProperties
           }
           className={cn(
-            "group/sidebar-wrapper flex min-h-svh w-full has-data-[variant=inset]:bg-background-subtle dark:has-data-[variant=inset]:bg-background-element",
+            "group/sidebar-wrapper flex min-h-svh w-full has-data-[variant=inset]:bg-background-subtle dark:has-data-[variant=inset]:bg-background",
             className
           )}
           {...props}>
@@ -170,7 +170,7 @@ function Sidebar({
       <div
         data-slot="sidebar"
         className={cn(
-          "flex h-full w-(--sidebar-width) flex-col bg-background-subtle text-foreground dark:bg-background-element",
+          "flex h-full w-(--sidebar-width) flex-col bg-background-subtle text-foreground dark:bg-background",
           className
         )}
         {...props}>
@@ -240,7 +240,7 @@ function Sidebar({
         <div
           data-sidebar="sidebar"
           data-slot="sidebar-inner"
-          className="flex h-full w-full flex-col bg-background-subtle group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-border-subtle group-data-[variant=floating]:shadow-sm dark:bg-background-element">
+          className="flex h-full w-full flex-col bg-background-subtle group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-border-subtle group-data-[variant=floating]:shadow-sm dark:bg-background">
           {children}
         </div>
       </div>
@@ -278,8 +278,8 @@ function SidebarInset({ className, ...props }: React.ComponentProps<"main">) {
     <main
       data-slot="sidebar-inset"
       className={cn(
-        "relative flex w-full flex-1 flex-col bg-background",
-        "md:peer-data-[variant=inset]:peer-data-[state=collapsed]:ml-2 md:peer-data-[variant=inset]:m-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow-sm",
+        "relative flex w-full flex-1 flex-col bg-background-subtle",
+        "md:peer-data-[variant=inset]:peer-data-[state=collapsed]:ml-2 md:peer-data-[variant=inset]:inset-ring-1 md:peer-data-[variant=inset]:inset-ring-border-subtle/65 md:peer-data-[variant=inset]:m-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow-xs",
         className
       )}
       {...props}

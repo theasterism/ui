@@ -8,7 +8,7 @@ const badgeVariants = cva({
   variants: {
     variant: {
       default:
-        "inset-ring-border-element-hover bg-background-element text-foreground-subtle",
+        "inset-ring-border-subtle bg-background-element text-foreground-subtle",
       primary:
         "inset-ring-primary-border bg-primary-surface text-primary-surface-foreground",
       danger:

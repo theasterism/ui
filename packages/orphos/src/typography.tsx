@@ -19,7 +19,7 @@ export const typographyVariants = cva({
       ul: "my-6 ml-4 list-disc marker:text-primary [&>li]:mt-2 [&>li]:pl-1",
       ol: "my-6 ml-4 list-decimal marker:text-primary [&>li]:mt-2 [&>li]:pl-1",
       code: "w-fit break-words rounded-sm bg-primary-surface px-[0.3rem] py-[0.075rem] text-primary-surface-foreground text-sm [box-decoration-break:clone] before:content-(--code-marker) after:content-(--code-marker)",
-      kbd: "order inline w-fit rounded-sm bg-background-element-active px-1.5 py-px text-foreground-subtle/75 text-xs [box-decoration-break:clone]",
+      kbd: "order inline w-fit rounded-sm bg-background-element px-1.5 py-px text-foreground/75 text-xs [box-decoration-break:clone] dark:bg-background-element-active dark:text-foreground-subtle/85",
     },
   },
   defaultVariants: {
