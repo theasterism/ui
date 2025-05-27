@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.29.4
+
+### Patch Changes
+
+- 752f348: change hover styles for button active state
+- 1a8111d: fix ringoff color dark theme
+
 ## 0.29.3
 
 ### Patch Changes
