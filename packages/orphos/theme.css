@@ -160,6 +160,11 @@
     border-color: var(--gray-6, currentColor);
   }
 
+  ::selection {
+    color: var(--color-primary-foreground);
+    background-color: var(--color-primary);
+  }
+
   input::placeholder,
   textarea::placeholder {
     color: var(--gray-11);
