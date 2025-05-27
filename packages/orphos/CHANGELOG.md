@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.29.2
+
+### Patch Changes
+
+- b08f988: change button ghost variant text style, change default badge style border and few more subtle changes
+
 ## 0.29.1
 
 ### Patch Changes
