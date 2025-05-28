@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.29.5
+
+### Patch Changes
+
+- e2c2478: fix data-active active state styles
+
 ## 0.29.4
 
 ### Patch Changes
