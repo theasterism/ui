@@ -159,7 +159,7 @@ function App() {
                 variant: "heading2",
                 className: "mt-0!",
               })}>
-              Dialog
+              Dialog / Drawer
             </h2>
             <div className="flex w-full flex-col items-start gap-10">
               <DialogDemo />
