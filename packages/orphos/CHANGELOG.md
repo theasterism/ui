@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.30.0
+
+### Minor Changes
+
+- 9b11f1d: add drawer component
+
 ## 0.29.5
 
 ### Patch Changes
