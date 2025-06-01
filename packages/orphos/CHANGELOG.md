@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.30.1
+
+### Patch Changes
+
+- 5305e80: change default badge background color
+
 ## 0.30.0
 
 ### Minor Changes
