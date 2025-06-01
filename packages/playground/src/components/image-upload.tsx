@@ -289,7 +289,7 @@ export function ImageUploadDemo() {
                   min={1}
                   max={3}
                   step={0.1}
-                  onValueChange={(value) => setZoom(value[0])}
+                  onValueChange={(value) => setZoom(value[0]!)}
                   aria-label="Zoom slider"
                 />
                 <MagnifyingGlassPlusIcon
