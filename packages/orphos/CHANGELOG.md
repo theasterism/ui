@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.30.2
+
+### Patch Changes
+
+- aea3b3d: add background color to tab list
+
 ## 0.30.1
 
 ### Patch Changes
