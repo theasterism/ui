@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.30.3
+
+### Patch Changes
+
+- 277ce6c: change toast bg color
+
 ## 0.30.2
 
 ### Patch Changes
