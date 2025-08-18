@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.31.0
+
+### Minor Changes
+
+- 9b067e2: rename package
+
 ## 0.30.3
 
 ### Patch Changes

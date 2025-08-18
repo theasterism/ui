@@ -1,5 +1,0 @@
----
-"orphos": minor
----
-
-rename package
