@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.32.1
+
+### Patch Changes
+
+- 6cf8cb8: replace Slot from radix-ui with @radix-ui/react-slot and remove uneccessary deps
+
 ## 0.32.0
 
 ### Minor Changes
