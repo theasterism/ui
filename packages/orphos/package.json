@@ -1,5 +1,5 @@
 {
-  "name": "@theanalog/orphos",
+  "name": "orphos",
   "version": "0.30.3",
   "type": "module",
   "license": "MIT",
@@ -11,14 +11,10 @@
     "./package.json": "./package.json",
     "./theme.css": "./theme.css"
   },
-  "files": [
-    "dist",
-    "theme.css",
-    "colors.css"
-  ],
+  "files": ["dist", "theme.css", "package.json", "README.md"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/theanalogcompany/ui.git",
+    "url": "https://github.com/theasterism/ui.git",
     "directory": "packages/orphos"
   },
   "publishConfig": {
@@ -69,6 +65,7 @@
     "@radix-ui/react-tooltip": "^1.2.7",
     "@radix-ui/react-visually-hidden": "^1.2.3",
     "cva": "^1.0.0-beta.4",
+    "input-otp": "^1.4.2",
     "radix-ui": "1.4.2",
     "sonner": "^2.0.3",
     "tailwind-merge": "^3.3.0",

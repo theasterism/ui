@@ -13,11 +13,11 @@
   "scripts": {
     "check": "biome check .",
     "dev": "turbo run dev",
-    "deploy": "turbo run deploy --filter=@theanalog/playground",
+    "deploy": "turbo run deploy --filter=playground",
     "build": "turbo run build",
     "fix": "biome check . --write",
     "format": "biome format . --write",
-    "release": "turbo run build --filter=@theanalog/orphos && changeset publish"
+    "release": "turbo run build --filter=orphos && changeset publish"
   },
   "sideEffects": false,
   "trustedDependencies": [
