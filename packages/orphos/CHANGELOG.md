@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.32.0
+
+### Minor Changes
+
+- 3e054d7: switch to radix-ui
+
 ## 0.31.0
 
 ### Minor Changes
