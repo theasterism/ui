@@ -1,5 +1,5 @@
-import { Button } from "@theanalog/orphos/button";
-import { toast } from "@theanalog/orphos/toast";
+import { Button } from "orphos/button";
+import { toast } from "orphos/toast";
 
 export function ToastDemo() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
-import * as DialogPrimitive from "@radix-ui/react-dialog";
-import * as React from "react";
+import { Dialog as DialogPrimitive } from "radix-ui";
+import type * as React from "react";
 import type { DivElementProps } from "./types";
 import { cn } from "./utils";
 

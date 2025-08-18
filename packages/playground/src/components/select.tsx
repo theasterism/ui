@@ -6,7 +6,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@theanalog/orphos/select";
+} from "orphos/select";
 
 export function SelectScrollable() {
   return (

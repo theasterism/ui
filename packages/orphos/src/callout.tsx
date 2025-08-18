@@ -1,4 +1,4 @@
-import { type VariantProps, cva } from "cva";
+import { cva, type VariantProps } from "cva";
 import type { DivElementProps } from "./types";
 import { cn } from "./utils";
 

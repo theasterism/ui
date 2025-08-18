@@ -1,9 +1,8 @@
 "use client";
 
-import * as ContextMenuPrimitive from "@radix-ui/react-context-menu";
-import * as React from "react";
-
 import { CheckIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import { ContextMenu as ContextMenuPrimitive } from "radix-ui";
+import type * as React from "react";
 import { cn } from "./utils";
 
 function ContextMenu({

@@ -59,10 +59,12 @@
   --breakpoint-xs: 450px;
 
   /* Fonts */
-  --font-sans: InterVariable, Inter, ui-sans-serif, system-ui, sans-serif,
+  --font-sans:
+    InterVariable, Inter, ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-mono: IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, Monaco,
-    Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-mono:
+    IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
 
   /* Colors  */
 
@@ -173,7 +175,9 @@
   body {
     @apply scroll-smooth min-w-[320px] text-base font-sans antialiased;
     letter-spacing: -0.03rem;
-    font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
+    font-feature-settings:
+      "liga" 1,
+      "calt" 1; /* fix for Chrome */
     font-synthesis-weight: none;
     text-rendering: optimizeLegibility;
     -webkit-text-size-adjust: 100%;

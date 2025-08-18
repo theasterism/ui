@@ -12,7 +12,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@theanalog/orphos/context-menu";
+} from "orphos/context-menu";
 
 export function ContextMenuDemo() {
   return (

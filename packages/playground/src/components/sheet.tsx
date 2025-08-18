@@ -1,6 +1,6 @@
-import { Button } from "@theanalog/orphos/button";
-import { Input } from "@theanalog/orphos/input";
-import { Label } from "@theanalog/orphos/label";
+import { Button } from "orphos/button";
+import { Input } from "orphos/input";
+import { Label } from "orphos/label";
 import {
   Sheet,
   SheetClose,
@@ -10,11 +10,9 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@theanalog/orphos/sheet";
+} from "orphos/sheet";
 
 const SHEET_SIDES = ["top", "right", "bottom", "left"] as const;
-
-type SheetSide = (typeof SHEET_SIDES)[number];
 
 export function SheetSide() {
   return (

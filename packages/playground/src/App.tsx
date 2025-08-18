@@ -1,24 +1,16 @@
-import { Badge } from "@theanalog/orphos/badge";
-import { Button } from "@theanalog/orphos/button";
+import { Badge } from "orphos/badge";
+import { Button } from "orphos/button";
 import {
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@theanalog/orphos/card";
-import { Separator } from "@theanalog/orphos/separator";
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from "@theanalog/orphos/sidebar";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@theanalog/orphos/tooltip";
-import { typographyVariants } from "@theanalog/orphos/typography";
+} from "orphos/card";
+import { Separator } from "orphos/separator";
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "orphos/sidebar";
+import { Tooltip, TooltipContent, TooltipTrigger } from "orphos/tooltip";
+import { typographyVariants } from "orphos/typography";
 import { AvatarDemo } from "./components/avatar";
 import { ButtonDisabledDemo, ButtonsDemo } from "./components/buttons";
 import { CalloutDemo } from "./components/callout";
@@ -29,7 +21,6 @@ import { DropdownDemo } from "./components/dropdown";
 import { IconButtonDemo } from "./components/icon-button";
 import { ImageUploadDemo } from "./components/image-upload";
 import { InputsDemo } from "./components/inputs";
-import { ColorPalette } from "./components/pallete";
 import { PopoverDemo } from "./components/popover";
 import { SelectScrollable } from "./components/select";
 import { SheetSide } from "./components/sheet";

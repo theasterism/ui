@@ -3,20 +3,14 @@
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@theanalog/orphos/dropdown-menu";
-import {
-  CheckIcon,
-  ChevronUpDownIcon,
-  RectangleStackIcon,
-} from "@theanalog/orphos/icons";
+} from "orphos/dropdown-menu";
+import { ChevronUpDownIcon, RectangleStackIcon } from "orphos/icons";
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@theanalog/orphos/sidebar";
-import * as React from "react";
+} from "orphos/sidebar";
 
 export function VersionSwitcher(
   team: Array<{

@@ -1,5 +1,5 @@
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/solid";
-import { type VariantProps, cva } from "cva";
+import { cva, type VariantProps } from "cva";
 import * as React from "react";
 import { cn } from "./utils";
 

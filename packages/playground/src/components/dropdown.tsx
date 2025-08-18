@@ -1,4 +1,4 @@
-import { Button } from "@theanalog/orphos/button";
+import { Button } from "orphos/button";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -15,7 +15,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@theanalog/orphos/dropdown-menu";
+} from "orphos/dropdown-menu";
 import React from "react";
 
 type Checked = boolean;

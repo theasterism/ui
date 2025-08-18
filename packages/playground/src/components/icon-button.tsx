@@ -1,5 +1,5 @@
-import { Button } from "@theanalog/orphos/button";
-import { MagnifyingGlassIcon } from "@theanalog/orphos/icons";
+import { Button } from "orphos/button";
+import { MagnifyingGlassIcon } from "orphos/icons";
 
 export function IconButtonDemo() {
   return (

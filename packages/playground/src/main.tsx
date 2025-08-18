@@ -2,10 +2,8 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { ThemeProvider } from "next-themes";
-
-import { TooltipProvider } from "@theanalog/orphos/tooltip";
-
-import { Toaster } from "@theanalog/orphos/toast";
+import { Toaster } from "orphos/toast";
+import { TooltipProvider } from "orphos/tooltip";
 import { App } from "./App";
 
 createRoot(document.getElementById("root")!).render(

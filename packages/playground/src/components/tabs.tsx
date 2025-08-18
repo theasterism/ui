@@ -1,4 +1,4 @@
-import { Button } from "@theanalog/orphos/button";
+import { Button } from "orphos/button";
 import {
   Card,
   CardContent,
@@ -6,15 +6,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@theanalog/orphos/card";
-import { Input } from "@theanalog/orphos/input";
-import { Label } from "@theanalog/orphos/label";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@theanalog/orphos/tabs";
+} from "orphos/card";
+import { Input } from "orphos/input";
+import { Label } from "orphos/label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "orphos/tabs";
 
 export function TabsDemo() {
   return (

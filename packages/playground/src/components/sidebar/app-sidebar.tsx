@@ -1,35 +1,22 @@
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@theanalog/orphos/dropdown-menu";
-import {
   Cog6ToothIcon,
-  EllipsisHorizontalIcon,
   HomeIcon,
-  PlusIcon,
   Square2StackIcon,
   TicketIcon,
-} from "@theanalog/orphos/icons";
+} from "orphos/icons";
 import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
-  SidebarGroupAction,
   SidebarGroupContent,
   SidebarGroupLabel,
   SidebarHeader,
-  SidebarInput,
   SidebarMenu,
-  SidebarMenuAction,
   SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarSeparator,
-} from "@theanalog/orphos/sidebar";
-import * as React from "react";
-import { SearchForm } from "./search-form";
+} from "orphos/sidebar";
+import type * as React from "react";
 
 const data: {
   teamSwitcher: Array<{
@@ -40,7 +27,7 @@ const data: {
     label: string;
     href: string;
     alerts?: number;
-    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    // biome-ignore lint/suspicious/noExplicitAny: shut up!
     icon: any;
     isActive?: boolean;
   }>;

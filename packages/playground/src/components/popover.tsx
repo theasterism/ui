@@ -1,11 +1,7 @@
-import { Button } from "@theanalog/orphos/button";
-import { Input } from "@theanalog/orphos/input";
-import { Label } from "@theanalog/orphos/label";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@theanalog/orphos/popover";
+import { Button } from "orphos/button";
+import { Input } from "orphos/input";
+import { Label } from "orphos/label";
+import { Popover, PopoverContent, PopoverTrigger } from "orphos/popover";
 
 export function PopoverDemo() {
   return (

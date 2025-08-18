@@ -1,10 +1,10 @@
-import { Button } from "@theanalog/orphos/button";
+import { Button } from "orphos/button";
 import {
   Cropper,
   CropperCropArea,
   CropperDescription,
   CropperImage,
-} from "@theanalog/orphos/cropper";
+} from "orphos/cropper";
 import {
   Dialog,
   DialogContent,
@@ -12,16 +12,16 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@theanalog/orphos/dialog";
-import { useFileUpload } from "@theanalog/orphos/hooks/use-file-upload";
+} from "orphos/dialog";
+import { useFileUpload } from "orphos/hooks/use-file-upload";
 import {
   ArrowLeftIcon,
   MagnifyingGlassMinusIcon,
   MagnifyingGlassPlusIcon,
   UserCircleIcon,
   XMarkIcon,
-} from "@theanalog/orphos/icons";
-import { Slider } from "@theanalog/orphos/slider";
+} from "orphos/icons";
+import { Slider } from "orphos/slider";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 type Area = { x: number; y: number; width: number; height: number };

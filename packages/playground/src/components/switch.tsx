@@ -1,5 +1,5 @@
-import { Label } from "@theanalog/orphos/label";
-import { Switch } from "@theanalog/orphos/switch";
+import { Label } from "orphos/label";
+import { Switch } from "orphos/switch";
 
 export function SwitchDemo() {
   return (

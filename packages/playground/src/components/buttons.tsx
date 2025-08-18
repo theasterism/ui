@@ -1,4 +1,4 @@
-import { Button } from "@theanalog/orphos/button";
+import { Button } from "orphos/button";
 
 export function ButtonsDemo() {
   return (

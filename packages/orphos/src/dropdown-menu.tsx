@@ -1,8 +1,8 @@
 "use client";
 
 import { CheckIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
-import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
-import * as React from "react";
+import { DropdownMenu as DropdownMenuPrimitive } from "radix-ui";
+import type * as React from "react";
 import { cn } from "./utils";
 
 function DropdownMenu({

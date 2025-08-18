@@ -1,9 +1,8 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@theanalog/orphos/avatar";
-import { Fragment } from "react/jsx-runtime";
+import { Avatar, AvatarFallback, AvatarImage } from "orphos/avatar";
 
 export function AvatarDemo() {
   return (
-    <Fragment>
+    <>
       <Avatar>
         <AvatarImage
           src="https://github.com/bachiitter.png"
@@ -15,6 +14,6 @@ export function AvatarDemo() {
         <AvatarImage src="" alt="@bachiitter" />
         <AvatarFallback>B</AvatarFallback>
       </Avatar>
-    </Fragment>
+    </>
   );
 }

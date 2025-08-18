@@ -1,8 +1,8 @@
 "use client";
 
-import * as SheetPrimitive from "@radix-ui/react-dialog";
 import { cva } from "cva";
-import * as React from "react";
+import { Dialog as SheetPrimitive } from "radix-ui";
+import type * as React from "react";
 
 import type { DivElementProps } from "./types";
 import { cn } from "./utils";

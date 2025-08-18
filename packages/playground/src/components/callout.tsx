@@ -1,18 +1,13 @@
-import {
-  Callout,
-  CalloutDescription,
-  CalloutTitle,
-} from "@theanalog/orphos/callout";
+import { Callout, CalloutDescription, CalloutTitle } from "orphos/callout";
 import {
   CheckCircleIcon,
   ExclamationTriangleIcon,
   InformationCircleIcon,
-} from "@theanalog/orphos/icons";
-import { Fragment } from "react/jsx-runtime";
+} from "orphos/icons";
 
 export function CalloutDemo() {
   return (
-    <Fragment>
+    <>
       <Callout variant="default">
         <InformationCircleIcon />
         <CalloutTitle>
@@ -67,6 +62,6 @@ export function CalloutDemo() {
           This is an alert with icon, title and description.
         </CalloutDescription>
       </Callout>
-    </Fragment>
+    </>
   );
 }

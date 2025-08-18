@@ -1,8 +1,8 @@
 "use client";
 
 import { Bars3Icon } from "@heroicons/react/24/solid";
-import { Slot } from "@radix-ui/react-slot";
-import { type VariantProps, cva } from "cva";
+import { cva, type VariantProps } from "cva";
+import { Slot } from "radix-ui";
 import * as React from "react";
 import { Button } from "./button";
 import { useIsMobile } from "./hooks/use-mobile";

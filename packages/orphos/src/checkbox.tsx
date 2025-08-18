@@ -1,8 +1,8 @@
 "use client";
 
 import { CheckIcon } from "@heroicons/react/24/solid";
-import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
-import * as React from "react";
+import { Checkbox as CheckboxPrimitive } from "radix-ui";
+import type * as React from "react";
 import { cn } from "./utils";
 
 function Checkbox({

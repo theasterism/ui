@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "@theanalog/orphos/theme.css";
+@import "orphos/theme.css";
 @source "../../orphos/dist";
 
 @layer base {

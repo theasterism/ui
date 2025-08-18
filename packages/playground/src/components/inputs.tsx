@@ -1,7 +1,7 @@
-import { FileUpload } from "@theanalog/orphos/file-upload";
-import { Input } from "@theanalog/orphos/input";
-import { Label } from "@theanalog/orphos/label";
-import { Textarea } from "@theanalog/orphos/textarea";
+import { FileUpload } from "orphos/file-upload";
+import { Input } from "orphos/input";
+import { Label } from "orphos/label";
+import { Textarea } from "orphos/textarea";
 
 const textAreaDemoText = `Here's to the crazy ones.
 The misfits.

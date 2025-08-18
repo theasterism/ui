@@ -1,4 +1,4 @@
-import { Button, buttonVariants } from "@theanalog/orphos/button";
+import { Button, buttonVariants } from "orphos/button";
 import {
   Dialog,
   DialogClose,
@@ -8,7 +8,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@theanalog/orphos/dialog";
+} from "orphos/dialog";
 import {
   Drawer,
   DrawerClose,
@@ -18,11 +18,11 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@theanalog/orphos/drawer";
-import { useMediaQuery } from "@theanalog/orphos/hooks/use-media-query";
-import { Input } from "@theanalog/orphos/input";
-import { Label } from "@theanalog/orphos/label";
-import { cn } from "@theanalog/orphos/utils";
+} from "orphos/drawer";
+import { useMediaQuery } from "orphos/hooks/use-media-query";
+import { Input } from "orphos/input";
+import { Label } from "orphos/label";
+import { cn } from "orphos/utils";
 import { useState } from "react";
 
 export function DialogDemo() {

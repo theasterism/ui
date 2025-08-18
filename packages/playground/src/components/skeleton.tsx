@@ -1,4 +1,4 @@
-import { Skeleton } from "@theanalog/orphos/skeleton";
+import { Skeleton } from "orphos/skeleton";
 
 export function SkeletonDemo() {
   return (

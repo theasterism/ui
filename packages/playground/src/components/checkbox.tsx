@@ -1,11 +1,10 @@
-import { Checkbox } from "@theanalog/orphos/checkbox";
-import { Label } from "@theanalog/orphos/label";
-import { Fragment } from "react";
+import { Checkbox } from "orphos/checkbox";
+import { Label } from "orphos/label";
 import RadioDemo from "./radio-group";
 
 export function CheckboxDemo() {
   return (
-    <Fragment>
+    <>
       <div className="flex w-full flex-col gap-4">
         <div className="flex w-full flex-row gap-4">
           <div className="flex w-full items-center gap-2">
@@ -31,6 +30,6 @@ export function CheckboxDemo() {
       <div className="flex w-full items-center gap-4">
         <RadioDemo />
       </div>
-    </Fragment>
+    </>
   );
 }

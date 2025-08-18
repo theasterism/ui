@@ -167,7 +167,7 @@ export const useFileUpload = (
     });
   }, [onFilesChange]);
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+  // biome-ignore lint/correctness/useExhaustiveDependencies: shut up!
   const addFiles = useCallback(
     (newFiles: FileList | File[]) => {
       if (!newFiles || newFiles.length === 0) return;
@@ -411,5 +411,5 @@ export const formatBytes = (bytes: number, decimals = 2): string => {
   const i = Math.floor(Math.log(bytes) / Math.log(k));
 
   // @ts-expect-error shut up!
-  return Number.parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + sizes[i];
+  return Number.parseFloat((bytes / k ** i).toFixed(dm)) + sizes[i];
 };
