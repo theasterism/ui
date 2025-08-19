@@ -76,7 +76,7 @@ const data: {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar {...props} collapsible="offcanvas" variant="inset">
+    <Sidebar {...props} collapsible="offcanvas" variant="sidebar">
       <SidebarHeader>
         <SidebarMenuButton>
           <div className="size-5 rounded-full bg-primary" /> The Analog Co.
