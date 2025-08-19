@@ -139,7 +139,7 @@
   --radius-lg: calc(var(--radius) + 2px);
   --radius-md: var(--radius);
   --radius-sm: calc(var(--radius) - 2px);
-  --radius-xs: cal(var(--radius) - 4px);
+  --radius-xs: calc(var(--radius) - 4px);
 }
 
 @utility container {
