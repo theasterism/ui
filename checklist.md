@@ -13,7 +13,6 @@
 [ ] date picker
 [x] dialog
 [x] dropdown menu
-[ ] form
 [ ] hover card
 [x] input
 [x] label
