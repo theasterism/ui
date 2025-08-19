@@ -1,5 +1,13 @@
 # @theanalog/orphos
 
+## 0.32.3
+
+### Patch Changes
+
+- 9c7ea49: increase dialog border radius
+- 6b60e6a: change card border radius
+- 341a3a3: change tabs border radius
+
 ## 0.32.2
 
 ### Patch Changes
