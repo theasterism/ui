@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.32.2
+
+### Patch Changes
+
+- 8b14c81: change card background color
+- 1f952e6: remove sidebar borders and fix color inconsistencies
+
 ## 0.32.1
 
 ### Patch Changes
