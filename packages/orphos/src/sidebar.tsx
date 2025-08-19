@@ -1,6 +1,7 @@
 "use client";
 
 import { Bars3Icon } from "@heroicons/react/24/solid";
+import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "cva";
 import * as React from "react";
 import { Button } from "./button";
@@ -22,13 +23,12 @@ import {
   TooltipTrigger,
 } from "./tooltip";
 import { cn } from "./utils";
-import { Slot } from "@radix-ui/react-slot";
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
-const SIDEBAR_WIDTH = "16rem";
+const SIDEBAR_WIDTH = "17rem";
 const SIDEBAR_WIDTH_MOBILE = "20rem";
-const SIDEBAR_WIDTH_ICON = "3rem";
+const SIDEBAR_WIDTH_ICON = "4rem";
 const SIDEBAR_KEYBOARD_SHORTCUT = ".";
 
 type SidebarContextProps = {
@@ -142,7 +142,7 @@ function SidebarProvider({
             } as React.CSSProperties
           }
           className={cn(
-            "group/sidebar-wrapper flex min-h-svh w-full has-data-[variant=inset]:bg-background-subtle dark:has-data-[variant=inset]:bg-background",
+            "group/sidebar-wrapper flex min-h-svh w-full bg-white has-data-[variant=inset]:bg-white dark:bg-background dark:has-data-[variant=inset]:bg-background",
             className
           )}
           {...props}>
@@ -172,7 +172,7 @@ function Sidebar({
       <div
         data-slot="sidebar"
         className={cn(
-          "flex h-full w-(--sidebar-width) flex-col bg-background-subtle text-foreground dark:bg-background",
+          "flex h-full w-(--sidebar-width) flex-col bg-white text-foreground dark:bg-background",
           className
         )}
         {...props}>
@@ -188,7 +188,7 @@ function Sidebar({
           data-sidebar="sidebar"
           data-slot="sidebar"
           data-mobile="true"
-          className="w-(--sidebar-width) bg-background-subtle p-2 text-foreground dark:bg-background-element [&>button]:hidden"
+          className="w-(--sidebar-width) bg-background p-2 text-foreground [&>button]:hidden"
           style={
             {
               "--sidebar-width": SIDEBAR_WIDTH_MOBILE,
@@ -228,21 +228,21 @@ function Sidebar({
       <div
         data-slot="sidebar-container"
         className={cn(
-          "fixed inset-y-0 z-10 hidden h-svh w-(--sidebar-width) transition-[left,right,width] duration-200 ease-linear md:flex",
+          "fixed inset-y-0 z-10 hidden h-svh w-(--sidebar-width) p-2 transition-[left,right,width] duration-200 ease-linear group-data-[variant=floating]:bg-background-subtle md:flex",
           side === "left"
             ? "left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]"
             : "right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]",
           // Adjust the padding for floating and inset variants.
           variant === "floating" || variant === "inset"
-            ? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4))+2px)]"
-            : "group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l",
+            ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4))+2px)]"
+            : "border-border-subtle group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r-0 group-data-[side=right]:border-l-0",
           className
         )}
         {...props}>
         <div
           data-sidebar="sidebar"
           data-slot="sidebar-inner"
-          className="flex h-full w-full flex-col bg-background-subtle group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-border-subtle group-data-[variant=floating]:shadow-sm dark:bg-background">
+          className="flex h-full w-full flex-col bg-white shadow-border-subtle/75 group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:shadow-sm dark:bg-background dark:group-data-[variant=floating]:shadow-none">
           {children}
         </div>
       </div>
@@ -281,7 +281,7 @@ function SidebarInset({ className, ...props }: React.ComponentProps<"main">) {
       data-slot="sidebar-inset"
       className={cn(
         "relative flex w-full flex-1 flex-col bg-background-subtle",
-        "md:peer-data-[variant=inset]:peer-data-[state=collapsed]:ml-2 md:peer-data-[variant=inset]:inset-ring-1 md:peer-data-[variant=inset]:inset-ring-border-subtle/65 md:peer-data-[variant=inset]:m-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow-xs",
+        "md:peer-data-[variant=inset]:peer-data-[state=collapsed]:ml-2 md:peer-data-[variant=inset]:inset-ring-0 md:peer-data-[variant=inset]:inset-ring-border-subtle/65 md:peer-data-[variant=inset]:m-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow-xs",
         className
       )}
       {...props}
@@ -453,7 +453,7 @@ const sidebarMenuButtonVariants = cva({
         "inset-ring-1 inset-ring-border-element bg-background hover:inset-ring-0 hover:bg-background-element-hover",
     },
     size: {
-      default: "h-9 text-sm",
+      default: "h-9 text-sm group-data-[collapsible=icon]:p-1.5!",
       sm: "h-7.5 text-xs",
       lg: "h-12 text-sm group-data-[collapsible=icon]:p-0!",
     },

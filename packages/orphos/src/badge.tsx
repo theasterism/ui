@@ -1,7 +1,7 @@
+import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "cva";
 import type * as React from "react";
 import { cn } from "./utils";
-import { Slot } from "@radix-ui/react-slot";
 
 const badgeVariants = cva({
   base: "inset-ring-1 inline-flex min-w-fit items-center rounded-full px-2 py-0.5 font-semibold text-xs leading-relaxed outline-focus-ring transition-colors focus-visible:outline-2",
