@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.32.4
+
+### Patch Changes
+
+- 7137168: fix sidebar padding
+
 ## 0.32.3
 
 ### Patch Changes
