@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.32.5
+
+### Patch Changes
+
+- b517c57: change stroke-width to strokeWidth
+
 ## 0.32.4
 
 ### Patch Changes
