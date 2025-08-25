@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.32.6
+
+### Patch Changes
+
+- f51c242: fix color inconsistencies
+
 ## 0.32.5
 
 ### Patch Changes
