@@ -11,6 +11,6 @@
   }
 
   body {
-    @apply min-w-[320px] text-foreground overscroll-none;
+    @apply min-w-[320px] text-foreground bg-background overscroll-none;
   }
 }

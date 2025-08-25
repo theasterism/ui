@@ -17,6 +17,7 @@ import {
   SidebarMenuItem,
 } from "orphos/sidebar";
 import type * as React from "react";
+import { SearchForm } from "./search-form";
 
 const data: {
   teamSwitcher: Array<{
@@ -76,9 +77,9 @@ const data: {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar {...props} collapsible="offcanvas" variant="inset">
+    <Sidebar {...props} collapsible="offcanvas" variant="sidebar">
       <SidebarHeader>
-        <SidebarMenuButton>
+        <SidebarMenuButton variant="outline" size="lg">
           <div className="size-5 rounded-full bg-primary" /> The Analog Co.
         </SidebarMenuButton>
       </SidebarHeader>
