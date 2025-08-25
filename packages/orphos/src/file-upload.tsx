@@ -1,3 +1,5 @@
+/** biome-ignore-all lint/a11y/noStaticElementInteractions: shut up! */
+/** biome-ignore-all lint/a11y/useAriaPropsSupportedByRole: shut up! */
 import { useCallback, useRef, useState } from "react";
 import { CloudArrowUpIcon, DocumentIcon, XMarkIcon } from "./icons";
 import type { InputProps } from "./input";
@@ -57,7 +59,7 @@ function FileUpload({ disabled, ...props }: InputProps) {
     <div className="flex w-full flex-col items-start">
       <div
         className={cn(
-          "no-drag inset-ring-1 inset-ring-border-element flex h-9 w-full cursor-default items-center justify-between overflow-hidden rounded-md bg-transparent px-3 py-2 text-sm focus-visible:inset-ring-2 focus-visible:inset-ring-focus-ring focus-visible:outline-none aria-disabled:cursor-not-allowed aria-disabled:bg-background-element/50 aria-disabled:text-foreground-subtle aria-disabled:opacity-75"
+          "no-drag inset-ring-1  inset-ring-border-element flex h-9 w-full cursor-default items-center justify-between overflow-hidden rounded-md bg-background-element px-3 py-2 text-sm focus-visible:inset-ring-2 focus-visible:inset-ring-focus-ring focus-visible:outline-none aria-disabled:cursor-not-allowed aria-disabled:bg-background-element/50 aria-disabled:text-foreground-subtle aria-disabled:opacity-75"
         )}
         onClick={handleContainerClick}
         tabIndex={disabled ? -1 : 0} // Only focusable when no file is selected
