@@ -1,5 +1,16 @@
 # @theanalog/orphos
 
+## 0.33.0
+
+### Minor Changes
+
+- eaddce2: change switch and badge border radius
+- 3c16579: remove border radius
+
+### Patch Changes
+
+- e7aee3e: change code typography element color
+
 ## 0.32.6
 
 ### Patch Changes
