@@ -4,11 +4,11 @@ import type * as React from "react";
 import { cn } from "./utils";
 
 const badgeVariants = cva({
-  base: "inset-ring-1 inline-flex min-w-fit items-center rounded-full px-2 py-0.5 font-semibold text-xs leading-relaxed outline-focus-ring transition-colors focus-visible:outline-2",
+  base: "inset-ring-1 inline-flex min-w-fit items-center rounded-md px-2 py-0.5 font-semibold text-xs leading-relaxed outline-focus-ring transition-colors focus-visible:outline-2",
   variants: {
     variant: {
       default:
-        "inset-ring-border-subtle bg-background-element-hover text-foreground-subtle",
+        "inset-ring-border-element bg-background-element-hover text-foreground-subtle",
       primary:
         "inset-ring-primary-border bg-primary-surface text-primary-surface-foreground",
       danger:
