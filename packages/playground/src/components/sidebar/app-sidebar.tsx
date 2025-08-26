@@ -17,7 +17,6 @@ import {
   SidebarMenuItem,
 } from "orphos/sidebar";
 import type * as React from "react";
-import { SearchForm } from "./search-form";
 
 const data: {
   teamSwitcher: Array<{
