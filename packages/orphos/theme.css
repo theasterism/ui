@@ -42,9 +42,9 @@
 
 :root {
   /* Base font size */
-  font-size: 16px;
+  font-size: 1rem;
   /* Base border radius */
-  --radius: 8px;
+  --radius: 0rem;
   /* code before-after content marker */
   --code-marker: "`";
 
