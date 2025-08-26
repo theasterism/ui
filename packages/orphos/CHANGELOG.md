@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.33.1
+
+### Patch Changes
+
+- e272d54: change toast action and cancel button border radius
+
 ## 0.33.0
 
 ### Minor Changes
