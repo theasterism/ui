@@ -2,6 +2,7 @@ import { Badge } from "orphos/badge";
 import { Button } from "orphos/button";
 import {
   Card,
+  CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
@@ -30,6 +31,8 @@ import { SliderDemo } from "./components/slider";
 import { SwitchDemo } from "./components/switch";
 import { TabsDemo } from "./components/tabs";
 import { ToastDemo } from "./components/toast";
+import { Input } from "orphos/input";
+import { Label } from "orphos/label";
 
 function App() {
   return (
@@ -79,14 +82,11 @@ function App() {
             <div className="flex w-auto flex-row flex-wrap gap-4">
               <Badge>Default</Badge>
               <Badge variant="primary">Primary</Badge>
-              <Badge variant="warning" soft>
-                Warning
-              </Badge>
+              <Badge variant="warning">Warning</Badge>
               <Badge variant="danger">Danger</Badge>
               <Badge variant="success">Success</Badge>
-              <Badge variant="info" soft>
-                Info
-              </Badge>
+              <Badge variant="info">Info</Badge>
+              <Badge variant="outline">Outline</Badge>
             </div>
           </div>
           <div className="flex w-auto flex-col items-start gap-6">
@@ -123,11 +123,43 @@ function App() {
             <div className="flex w-auto flex-row gap-4">
               <Card className={"w-full max-w-[380px]"}>
                 <CardHeader>
-                  <CardTitle>Notifications</CardTitle>
-                  <CardDescription>You have 3 unread messages.</CardDescription>
+                  <CardTitle>Login to your account</CardTitle>
+                  <CardDescription>
+                    Enter your email below to login to your account
+                  </CardDescription>
                 </CardHeader>
-                <CardFooter>
-                  <Button className="w-full">Mark all as read</Button>
+                <CardContent className="flex flex-col gap-6">
+                  <form className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-6">
+                      <div className="grid gap-2">
+                        <Label htmlFor="email">Email</Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          placeholder="m@example.com"
+                          required
+                        />
+                      </div>
+                      <div className="grid gap-2">
+                        <div className="flex items-center">
+                          <Label htmlFor="password">Password</Label>
+                          <a
+                            href="#"
+                            className="ml-auto inline-block text-sm underline-offset-4 hover:underline">
+                            Forgot your password?
+                          </a>
+                        </div>
+                        <Input id="password" type="password" required />
+                      </div>
+                    </div>
+                  </form>
+                </CardContent>
+                <CardFooter className="flex-col gap-2">
+                  <Button variant="primary" type="submit" className="w-full">
+                    Login
+                  </Button>
+
+                  <Button className="w-full">Login with Google</Button>
                 </CardFooter>
               </Card>
             </div>

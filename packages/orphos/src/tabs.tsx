@@ -2,6 +2,7 @@
 
 import { Tabs as TabsPrimitive } from "radix-ui";
 import type * as React from "react";
+
 import { cn } from "./utils";
 
 function Tabs({
@@ -25,7 +26,7 @@ function TabsList({
     <TabsPrimitive.List
       data-slot="tabs-list"
       className={cn(
-        "inset-ring-1 inset-ring-border-element inline-flex h-10 w-fit items-center gap-0 rounded-md bg-transparenttext-foreground p-px",
+        "inset-ring-1 inset-ring-border-subtle inline-flex h-9 w-fit items-center justify-center bg-transparent p-1 text-foreground",
         className
       )}
       {...props}
@@ -41,7 +42,7 @@ function TabsTrigger({
     <TabsPrimitive.Trigger
       data-slot="tabs-trigger"
       className={cn(
-        "inset-ring-border-element inline-flex h-full w-fit items-center justify-center whitespace-nowrap rounded-xs px-3 py-1 font-medium text-foreground-subtle text-sm outline-focus-ring outline-offset-1 transition-all hover:bg-background-element-hover focus-visible:outline-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background-element-active",
+        "inset-ring-border-subtle inline-flex h-[calc(100%-1px)] w-fit flex-1 items-center justify-center gap-1.5 whitespace-nowrap px-2 py-1 font-medium text-base text-foreground-subtle outline-focus-ring outline-offset-1 transition-[color,box-shadow] focus-visible:outline-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background-element-active [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
         className
       )}
       {...props}
@@ -56,10 +57,7 @@ function TabsContent({
   return (
     <TabsPrimitive.Content
       data-slot="tabs-content"
-      className={cn(
-        "rounded-lg ring-focus-ring ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-0",
-        className
-      )}
+      className={cn("flex-1 outline-none", className)}
       {...props}
     />
   );

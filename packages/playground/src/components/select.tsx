@@ -11,7 +11,7 @@ import {
 export function SelectScrollable() {
   return (
     <Select>
-      <SelectTrigger className="w-[280px]">
+      <SelectTrigger>
         <SelectValue placeholder="Select a timezone" />
       </SelectTrigger>
       <SelectContent sideOffset={4}>

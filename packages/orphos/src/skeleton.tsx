@@ -5,10 +5,7 @@ function Skeleton({ className, ...props }: DivElementProps) {
   return (
     <div
       data-slot="skeleton"
-      className={cn(
-        "animate-pulse rounded-sm bg-background-element-active/55",
-        className
-      )}
+      className={cn("animate-pulse bg-background-element-hover", className)}
       {...props}
     />
   );

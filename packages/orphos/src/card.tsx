@@ -6,7 +6,7 @@ function Card({ className, ...props }: DivElementProps) {
     <div
       data-slot="card"
       className={cn(
-        "inset-ring-1 inset-ring-border-subtle flex flex-col gap-6 overflow-hidden rounded-md bg-background-subtle py-6 text-foreground",
+        "inset-ring-1 inset-ring-border-subtle flex flex-col gap-6 overflow-hidden bg-background-subtle py-6 text-foreground",
         className
       )}
       {...props}
@@ -44,7 +44,7 @@ function CardDescription({ className, ...props }: DivElementProps) {
   return (
     <div
       data-slot="card-description"
-      className={cn("text-foreground-subtle text-sm leading-5", className)}
+      className={cn("text-base text-foreground-subtle", className)}
       {...props}
     />
   );

@@ -4,24 +4,24 @@ import type * as React from "react";
 import { cn } from "./utils";
 
 const buttonVariants = cva({
-  base: "inline-flex shrink-0 items-center justify-center gap-x-2 whitespace-nowrap font-semibold text-sm leading-relaxed outline-focus-ring outline-offset-2 transition-colors focus-visible:outline-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  base: "inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap font-medium text-base outline-offset-1 transition-all focus-visible:outline-2 focus-visible:outline-focus-ring active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50 aria-invalid:outline-2 aria-invalid:outline-danger-border [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0",
   variants: {
     variant: {
       default:
-        "inset-ring-1 inset-ring-border-element bg-background-element text-foreground-subtle hover:bg-background-element-hover active:bg-background-element-active",
-      primary:
-        "bg-primary text-primary-foreground hover:bg-primary-hover active:bg-primary-hover active:brightness-[1.08]",
-      ghost:
-        "bg-transparent text-foreground hover:bg-background-element-hover active:bg-background-element-active",
-      link: "bg-transparent text-primary underline decoration-border-element underline-offset-[2.5px] hover:decoration-primary",
+        "inset-ring-1 inset-ring-border-subtle bg-background-element text-foreground-subtle hover:bg-background-element-hover",
+      primary: "bg-primary text-primary-foreground hover:bg-primary-hover",
+      secondary:
+        "bg-foreground text-background hover:brightness-[1.1] hover:contrast-[0.88] hover:saturate-[1.1] dark:hover:brightness-95",
+      ghost: "bg-transparent text-foreground hover:bg-background-element-hover",
+      link: "bg-transparent text-primary underline decoration-border-element underline-offset-[2.5px] hover:decoration-primary active:scale-none",
       danger:
-        "inset-ring-1 inset-ring-danger-border bg-danger-surface text-danger-surface-foreground hover:bg-danger hover:text-danger-foreground active:bg-danger-hover active:text-danger-foreground dark:text-danger-foreground",
+        "active:button-active-filter bg-danger text-danger-foreground hover:bg-danger-hover",
     },
     size: {
-      sm: "h-8 rounded-md px-2.5 text-sm",
-      md: "h-9 rounded-md px-3.5",
-      lg: "h-10 rounded-md px-4",
-      icon: "size-9 rounded-md",
+      sm: "h-8 px-3 [&_svg]:pr-3 [&_svg]:pl-[11px]",
+      md: "h-9 px-4 [&_svg]:pr-4 [&_svg]:pl-[15px]",
+      lg: "h-10 px-4 [&_svg]:pr-4 [&_svg]:pl-[15px]",
+      icon: "size-8.5",
     },
   },
   defaultVariants: {
@@ -30,16 +30,18 @@ const buttonVariants = cva({
   },
 });
 
+type ButtonProps = React.ComponentProps<"button"> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+  };
+
 function Button({
   className,
   variant,
   size,
   asChild = false,
   ...props
-}: React.ComponentProps<"button"> &
-  VariantProps<typeof buttonVariants> & {
-    asChild?: boolean;
-  }) {
+}: ButtonProps) {
   const Comp = asChild ? Slot : "button";
 
   return (
@@ -51,4 +53,4 @@ function Button({
   );
 }
 
-export { Button, buttonVariants };
+export { Button, buttonVariants, type ButtonProps };

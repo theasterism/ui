@@ -1,90 +1,100 @@
 import { cva, type VariantProps } from "cva";
+import { createContext, type ReactNode, useContext } from "react";
+import { Button, type ButtonProps } from "./button";
 import type { DivElementProps } from "./types";
 import { cn } from "./utils";
 
+// 1) create a context for your callout's variant (and outline if needed)
+type CalloutContextValue = {
+  variant: Exclude<VariantProps<typeof calloutVariants>["variant"], undefined>;
+  outline: boolean;
+};
+const CalloutContext = createContext<CalloutContextValue>({
+  variant: "default",
+  outline: false,
+});
+
 const calloutVariants = cva({
-  base: "relative inset-ring-1 grid w-full grid-cols-[0_1fr] items-start gap-y-0.5 rounded-md p-4 text-sm has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] has-[>svg]:gap-x-3 [&>svg]:size-4.5 [&>svg]:translate-y-0.5 [&>svg]:text-current",
+  base: "flex w-full flex-col gap-x-3 gap-y-2 p-4 text-base sm:flex-row sm:items-center sm:justify-between [&_svg]:size-4.5 [&_svg]:text-current",
   variants: {
     variant: {
       default:
-        "inset-ring-border-element-hover bg-background-element text-foreground-subtle",
-      primary: "inset-ring-primary-border text-primary-surface-foreground",
-      warning: "inset-ring-warning-border text-warning-surface-foreground",
-      danger: "inset-ring-danger-border text-danger-surface-foreground",
-      success: "inset-ring-success-border text-success-surface-foreground",
-      info: "inset-ring-info-border text-info-surface-foreground",
+        "inset-ring-border-subtle bg-background-element text-foreground-subtle",
+      primary:
+        "inset-ring-primary-border bg-primary-surface text-primary-surface-foreground",
+      warning:
+        "inset-ring-warning-border bg-warning-surface text-warning-surface-foreground",
+      danger:
+        "inset-ring-danger-border bg-danger-surface text-danger-surface-foreground",
+      success:
+        "inset-ring-success-border bg-success-surface text-success-surface-foreground",
+      info: "inset-ring-info-border bg-info-surface text-info-surface-foreground",
+    },
+    outline: {
+      true: "inset-ring-1 bg-transparent!",
+      false: "",
     },
   },
-  compoundVariants: [
-    {
-      variant: "default",
-      className: "bg-background-subtle",
-    },
-    {
-      variant: "primary",
-      className: "bg-primary-subtle",
-    },
-    {
-      variant: "warning",
-      className: "bg-warning-subtle",
-    },
-    {
-      variant: "danger",
-      className: "bg-danger-subtle",
-    },
-    {
-      variant: "success",
-      className: "bg-success-subtle",
-    },
-    {
-      variant: "info",
-      className: "bg-info-subtle",
-    },
-  ],
   defaultVariants: {
     variant: "default",
+    outline: false,
   },
 });
 
 function Callout({
   className,
-  variant,
+  variant = "default",
+  outline = false,
+  children,
   ...props
-}: DivElementProps & VariantProps<typeof calloutVariants>) {
+}: {
+  children?: ReactNode;
+} & DivElementProps &
+  VariantProps<typeof calloutVariants>) {
+  // 2) wrap your callout in a provider
+  return (
+    <CalloutContext.Provider value={{ variant, outline }}>
+      <div
+        data-slot="alert"
+        role="alert"
+        data-variant={variant}
+        className={cn(calloutVariants({ variant, outline }), className)}
+        {...props}>
+        {children}
+      </div>
+    </CalloutContext.Provider>
+  );
+}
+
+function CalloutMessage({ className, ...props }: DivElementProps) {
   return (
     <div
-      data-slot="alert"
-      role="alert"
-      className={cn(calloutVariants({ variant }), className)}
+      data-slot="alert-message"
+      className={cn("flex items-center gap-x-2", className)}
       {...props}
     />
   );
 }
 
-function CalloutTitle({ className, ...props }: DivElementProps) {
+function CalloutAction({ className, variant: _ignore, ...props }: ButtonProps) {
+  const { variant: callOutVariant, outline } = useContext(CalloutContext);
+
   return (
-    <div
-      data-slot="alert-title"
-      className={cn(
-        "col-start-2 line-clamp-1 min-h-4 font-medium tracking-tight",
-        className
-      )}
+    <Button
+      variant={
+        callOutVariant === "default" && outline
+          ? "default"
+          : callOutVariant === "primary"
+            ? "primary"
+            : callOutVariant === "danger"
+              ? "danger"
+              : "secondary"
+      }
+      data-slot="alert-action"
+      className={cn("w-fit", className)}
       {...props}
     />
   );
 }
 
-function CalloutDescription({ className, ...props }: DivElementProps) {
-  return (
-    <div
-      data-slot="alert-description"
-      className={cn(
-        "col-start-2 grid justify-items-start gap-1 text-sm [&_p]:leading-relaxed",
-        className
-      )}
-      {...props}
-    />
-  );
-}
-
-export { Callout, CalloutTitle, CalloutDescription };
+export { Callout, CalloutMessage, CalloutAction };

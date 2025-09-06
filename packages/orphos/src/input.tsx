@@ -4,7 +4,7 @@ import * as React from "react";
 import { cn } from "./utils";
 
 const inputVariants = cva({
-  base: "no-drag inset-ring-1 inset-ring-border-element flex h-9 w-full items-center rounded-md bg-background-element px-3 py-2 text-base text-foreground transition-all placeholder:text-foreground-subtle placeholder:text-sm focus-visible:inset-ring-2 focus-visible:inset-ring-focus-ring focus-visible:outline-none disabled:cursor-not-allowed disabled:bg-background-element/50 disabled:text-foreground-subtle disabled:opacity-75 disabled:placeholder:text-foreground-subtle/50 sm:text-sm",
+  base: "no-drag inset-ring-1 inset-ring-border-element flex h-9 w-full items-center bg-background-element px-3 py-2 text-foreground text-lg transition-[color,box-shadow] placeholder:text-base placeholder:text-foreground-subtle focus-visible:inset-ring-2 focus-visible:inset-ring-focus-ring focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:inset-ring-2 aria-invalid:inset-ring-danger-border sm:text-base",
   variants: {
     variant: {
       default: "",
@@ -23,8 +23,9 @@ export interface InputProps
 }
 
 function Input({ className, type, icon, disabled, ...props }: InputProps) {
+  const [isVisible, setIsVisible] = React.useState<boolean>(false);
+
   if (type === "password") {
-    const [isVisible, setIsVisible] = React.useState<boolean>(false);
     const toggleVisibility = () => setIsVisible((prevState) => !prevState);
 
     return (
@@ -42,7 +43,7 @@ function Input({ className, type, icon, disabled, ...props }: InputProps) {
         />
         <button
           disabled={disabled}
-          className="peer absolute inset-y-0 end-0 mt-2 mr-3 flex size-5 items-center justify-center rounded-sm text-foreground-subtle ring-focus-ring ring-offset-1 ring-offset-transparent transition-colors hover:text-foreground focus:z-10 focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+          className="peer absolute inset-y-0 end-0 mt-2 mr-3 flex size-5 items-center justify-center text-foreground-subtle ring-focus-ring ring-offset-1 ring-offset-transparent transition-colors hover:text-foreground focus:z-10 focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
           type="button"
           onClick={toggleVisibility}
           aria-label={isVisible ? "Hide password" : "Show password"}

@@ -1,4 +1,5 @@
-import { Callout, CalloutDescription, CalloutTitle } from "orphos/callout";
+import { Button } from "orphos/button";
+import { Callout, CalloutMessage, CalloutAction } from "orphos/callout";
 import {
   CheckCircleIcon,
   ExclamationTriangleIcon,
@@ -9,58 +10,56 @@ export function CalloutDemo() {
   return (
     <>
       <Callout variant="default">
-        <InformationCircleIcon />
-        <CalloutTitle>
-          The selected emails have been marked as spam.
-        </CalloutTitle>
-        <CalloutDescription>
-          This is an alert with icon, title and description.
-        </CalloutDescription>
+        <CalloutMessage>
+          <InformationCircleIcon />
+          This is an alert with icon, title.
+        </CalloutMessage>
+      </Callout>
+      <Callout outline>
+        <CalloutMessage>
+          <InformationCircleIcon />
+          This is an alert with icon, title and action.
+        </CalloutMessage>
+        <CalloutAction>Upgrade</CalloutAction>
+      </Callout>
+      <Callout>
+        <CalloutMessage>
+          <InformationCircleIcon />
+          This is an alert with icon, title and action.
+        </CalloutMessage>
+        <CalloutAction>Upgrade</CalloutAction>
       </Callout>
       <Callout variant="primary">
-        <InformationCircleIcon />
-        <CalloutTitle>
-          The selected emails have been marked as spam.
-        </CalloutTitle>
-        <CalloutDescription>
-          This is an alert with icon, title and description.
-        </CalloutDescription>
+        <CalloutMessage>
+          <InformationCircleIcon />
+          This is an alert with icon, title.
+        </CalloutMessage>
       </Callout>
       <Callout variant="warning">
-        <ExclamationTriangleIcon />
-        <CalloutTitle>
-          The selected emails have been marked as spam.
-        </CalloutTitle>
-        <CalloutDescription>
-          This is an alert with icon, title and description.
-        </CalloutDescription>
+        <CalloutMessage>
+          <ExclamationTriangleIcon />
+          This is an alert with icon, title and action.
+        </CalloutMessage>
+        <CalloutAction>Procced</CalloutAction>
       </Callout>
       <Callout variant="danger">
-        <ExclamationTriangleIcon />
-        <CalloutTitle>
-          The selected emails have been marked as spam.
-        </CalloutTitle>
-        <CalloutDescription>
-          This is an alert with icon, title and description.
-        </CalloutDescription>
+        <CalloutMessage>
+          <ExclamationTriangleIcon />
+          This is an alert with icon, title and action.
+        </CalloutMessage>
+        <CalloutAction>Try again</CalloutAction>
       </Callout>
       <Callout variant="success">
-        <CheckCircleIcon />
-        <CalloutTitle>
-          The selected emails have been marked as spam.
-        </CalloutTitle>
-        <CalloutDescription>
-          This is an alert with icon, title and description.
-        </CalloutDescription>
+        <CalloutMessage>
+          <ExclamationTriangleIcon />
+          This is an alert with icon, title.
+        </CalloutMessage>
       </Callout>
       <Callout variant="info">
-        <CheckCircleIcon />
-        <CalloutTitle>
-          The selected emails have been marked as spam.
-        </CalloutTitle>
-        <CalloutDescription>
-          This is an alert with icon, title and description.
-        </CalloutDescription>
+        <CalloutMessage>
+          <ExclamationTriangleIcon />
+          This is an alert with icon, title.
+        </CalloutMessage>
       </Callout>
     </>
   );

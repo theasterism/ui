@@ -4,36 +4,27 @@ import type * as React from "react";
 import { cn } from "./utils";
 
 const badgeVariants = cva({
-  base: "inset-ring-1 inline-flex min-w-fit items-center rounded-md px-2 py-0.5 font-semibold text-xs leading-relaxed outline-focus-ring transition-colors focus-visible:outline-2",
+  base: "inline-flex min-w-fit items-center gap-2 px-2 py-1 font-medium text-xs [&_svg]:size-4 [&_svg]:pr-2 [&_svg]:pl-[7px]",
   variants: {
     variant: {
-      default:
-        "inset-ring-border-element bg-background-element-hover text-foreground-subtle",
-      primary:
-        "inset-ring-primary-border bg-primary-surface text-primary-surface-foreground",
-      danger:
-        "inset-ring-danger-border bg-danger-surface text-danger-surface-foreground",
-      warning:
-        "inset-ring-warning-border bg-warning-surface text-warning-surface-foreground",
-      success:
-        "inset-ring-success-border bg-success-surface text-success-surface-foreground",
-      info: "inset-ring-info-border bg-info-surface text-info-surface-foreground",
-    },
-    soft: {
-      true: "inset-ring-0",
-      false: "",
+      default: "bg-background-element text-foreground-subtle",
+      primary: "bg-primary-surface text-primary-surface-foreground",
+      danger: "bg-danger-surface text-danger-surface-foreground",
+      warning: "bg-warning-surface text-warning-surface-foreground",
+      success: "bg-success-surface text-success-surface-foreground",
+      info: "bg-info-surface text-info-surface-foreground",
+      outline:
+        "inset-ring-1 inset-ring-border-subtle bg-transparent text-foreground-subtle",
     },
   },
   defaultVariants: {
     variant: "default",
-    soft: false,
   },
 });
 
 function Badge({
   className,
   variant,
-  soft,
   asChild = false,
   ...props
 }: React.ComponentProps<"span"> &
@@ -43,7 +34,7 @@ function Badge({
   return (
     <Comp
       data-slot="badge"
-      className={cn(badgeVariants({ variant, soft }), className)}
+      className={cn(badgeVariants({ variant }), className)}
       {...props}
     />
   );
