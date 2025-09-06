@@ -29,5 +29,6 @@
 [x] tabs
 [x] textarea
 [x] toast
+[x] toggle
 [x] tooltip
 [x] typography
