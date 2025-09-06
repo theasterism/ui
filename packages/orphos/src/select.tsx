@@ -38,7 +38,7 @@ function SelectTrigger({
     <SelectPrimitive.Trigger
       data-slot="select-trigger"
       className={cn(
-        "flex w-fit items-center justify-between whitespace-nowrap border border-border-element bg-background-element px-3 py-2 font-medium text-base outline-offset-1 transition-[color,box-shadow] placeholder:text-foreground-subtle hover:bg-background-element-hover focus-visible:outline-2 focus-visible:outline-focus-ring disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:outline-2 aria-invalid:outline-danger-border data-[size=default]:h-9 data-[size=sm]:h-8 data-[placeholder]:text-foreground-subtle *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-foreground-subtle [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "flex w-fit items-center justify-between whitespace-nowrap border border-border-element bg-background-element px-4 h-9 font-medium text-base outline-offset-1 transition-[color,box-shadow] placeholder:text-foreground-subtle hover:bg-background-element-hover focus-visible:outline-2 focus-visible:outline-focus-ring disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:outline-2 aria-invalid:outline-danger-border data-[size=default]:h-9 data-[size=sm]:h-8 data-[placeholder]:text-foreground-subtle *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-foreground-subtle [&_svg]:pointer-events-none [&_svg]:shrink-0",
         className
       )}
       {...props}>
