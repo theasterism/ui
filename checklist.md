@@ -1,22 +1,21 @@
 # Component List
 
-[x] alert/callout
 [x] avatar
 [x] badge
 [x] button
 [x] card
 [x] checkbox
-[x] collapsible
 [ ] combobox
 [ ] command
 [x] context menu
+[x] cropper
 [ ] date picker
 [x] dialog
+[x] drawer
 [x] dropdown menu
 [ ] hover card
 [x] input
 [x] label
-[x] nav menu
 [x] popover
 [x] radio group
 [x] select
@@ -25,9 +24,10 @@
 [x] sidebar
 [x] skeleton
 [x] slider
+[x] spinner
 [x] switch
-[x] toast
-[ ] table
 [x] tabs
 [x] textarea
+[x] toast
 [x] tooltip
+[x] typography
