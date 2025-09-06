@@ -1,5 +1,16 @@
 # @theanalog/orphos
 
+## 0.34.0
+
+### Minor Changes
+
+- c4e35b5: rework styles
+
+### Patch Changes
+
+- 8daa0d1: change select height and icon button height
+- d26ad5b: add lock files
+
 ## 0.33.1
 
 ### Patch Changes
