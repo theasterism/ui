@@ -1,3 +1,5 @@
+/** biome-ignore-all lint/correctness/useUniqueElementIds: shut up! */
+/** biome-ignore-all lint/a11y/useValidAnchor: shut up! */
 import { Badge } from "orphos/badge";
 import { Button } from "orphos/button";
 import {
@@ -8,8 +10,12 @@ import {
   CardHeader,
   CardTitle,
 } from "orphos/card";
+import { BoldIcon } from "orphos/icons";
+import { Input } from "orphos/input";
+import { Label } from "orphos/label";
 import { Separator } from "orphos/separator";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "orphos/sidebar";
+import { Toggle } from "orphos/toggle";
 import { Tooltip, TooltipContent, TooltipTrigger } from "orphos/tooltip";
 import { typographyVariants } from "orphos/typography";
 import { AvatarDemo } from "./components/avatar";
@@ -31,8 +37,6 @@ import { SliderDemo } from "./components/slider";
 import { SwitchDemo } from "./components/switch";
 import { TabsDemo } from "./components/tabs";
 import { ToastDemo } from "./components/toast";
-import { Input } from "orphos/input";
-import { Label } from "orphos/label";
 
 function App() {
   return (
@@ -330,6 +334,24 @@ function App() {
             </h2>
             <div className="flex items-center gap-4">
               <ToastDemo />
+            </div>
+          </div>
+          <div className="flex flex-col gap-6">
+            <h2
+              className={typographyVariants({
+                variant: "heading2",
+                className: "mt-0!",
+              })}>
+              Toggle
+            </h2>
+            <div className="flex items-center gap-4">
+              <Toggle aria-label="Toggle italic">
+                <BoldIcon className="h-4 w-4" />
+              </Toggle>
+              <Toggle variant="soft" aria-label="Toggle italic">
+                <BoldIcon className="h-4 w-4" />
+                Bold
+              </Toggle>
             </div>
           </div>
           <div className="flex flex-col gap-6">
