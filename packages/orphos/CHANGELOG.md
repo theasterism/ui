@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.35.1
+
+### Patch Changes
+
+- 7ea8bab: increase switch size and change slider thumb size
+
 ## 0.35.0
 
 ### Minor Changes
