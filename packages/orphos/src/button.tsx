@@ -18,9 +18,9 @@ const buttonVariants = cva({
         "active:button-active-filter bg-danger text-danger-foreground hover:bg-danger-hover",
     },
     size: {
-      sm: "h-8 px-3 [&_svg]:pr-3 [&_svg]:pl-[11px]",
-      md: "h-9 px-4 [&_svg]:pr-4 [&_svg]:pl-[15px]",
-      lg: "h-10 px-4 [&_svg]:pr-4 [&_svg]:pl-[15px]",
+      sm: "h-8 px-3 has-[svg]:pr-3 has-[svg]:pl-[11px]",
+      md: "h-9 px-4 has-[svg]:pr-4 has-[svg]:pl-[15px]",
+      lg: "h-10 px-4 has-[svg]:pr-4 has-[svg]:pl-[15px]",
       icon: "size-9",
     },
   },
