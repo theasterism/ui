@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.35.2
+
+### Patch Changes
+
+- 1a98739: change code text size
+
 ## 0.35.1
 
 ### Patch Changes
