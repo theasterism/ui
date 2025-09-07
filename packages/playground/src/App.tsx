@@ -345,12 +345,12 @@ function App() {
               Toggle
             </h2>
             <div className="flex items-center gap-4">
-              <Toggle aria-label="Toggle italic">
+              <Toggle aria-label="Toggle bold">
                 <BoldIcon className="h-4 w-4" />
               </Toggle>
-              <Toggle variant="soft" aria-label="Toggle italic">
+              <Toggle variant="soft" aria-label="Toggle bold">
                 <BoldIcon className="h-4 w-4" />
-                Bold
+                <span> Bold</span>
               </Toggle>
             </div>
           </div>
