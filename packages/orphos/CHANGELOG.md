@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.35.5
+
+### Patch Changes
+
+- 53a8eab: replace tooltip from radix ui with base ui
+
 ## 0.35.4
 
 ### Patch Changes
