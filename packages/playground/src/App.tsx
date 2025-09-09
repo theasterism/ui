@@ -16,7 +16,6 @@ import { Label } from "orphos/label";
 import { Separator } from "orphos/separator";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "orphos/sidebar";
 import { Toggle } from "orphos/toggle";
-import { Tooltip, TooltipContent, TooltipTrigger } from "orphos/tooltip";
 import { typographyVariants } from "orphos/typography";
 import { AvatarDemo } from "./components/avatar";
 import { ButtonDisabledDemo, ButtonsDemo } from "./components/buttons";
@@ -37,6 +36,7 @@ import { SliderDemo } from "./components/slider";
 import { SwitchDemo } from "./components/switch";
 import { TabsDemo } from "./components/tabs";
 import { ToastDemo } from "./components/toast";
+import { TooltipDemo } from "./components/tooltip";
 
 function App() {
   return (
@@ -363,14 +363,7 @@ function App() {
               Tooltip
             </h2>
             <div className="flex w-auto flex-row gap-4">
-              <Tooltip delayDuration={0} open>
-                <TooltipTrigger asChild>
-                  <Button size="sm">Hover</Button>
-                </TooltipTrigger>
-                <TooltipContent side="right" sideOffset={8} align="start">
-                  <p>The quick brown fox jumps over the lazy dog.</p>
-                </TooltipContent>
-              </Tooltip>
+              <TooltipDemo />
             </div>
           </div>
           <div className="flex flex-col gap-6">
