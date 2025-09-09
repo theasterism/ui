@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.35.4
+
+### Patch Changes
+
+- 33fcbbd: change tooltip defaults
+
 ## 0.35.3
 
 ### Patch Changes
