@@ -50,7 +50,7 @@
   --color-black: #000;
 }
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Theme */
 @theme {
