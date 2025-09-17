@@ -11,7 +11,7 @@ import type * as React from "react";
 export function TooltipDemo() {
   return (
     <TooltipProvider>
-      <div className="flex border border-border-subtle p-0.5">
+      <div className="flex rounded-lg border border-border-subtle p-0.5">
         <Tooltip>
           <TooltipTrigger>
             <Button variant="ghost" size="icon" className="transition-none">

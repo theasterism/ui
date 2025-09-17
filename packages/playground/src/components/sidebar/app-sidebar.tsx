@@ -15,6 +15,7 @@ import {
   SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarSeparator,
 } from "orphos/sidebar";
 import type * as React from "react";
 
@@ -76,12 +77,14 @@ const data: {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar {...props} collapsible="offcanvas" variant="sidebar">
+    <Sidebar {...props} collapsible="offcanvas" variant="inset">
       <SidebarHeader>
-        <SidebarMenuButton variant="outline" size="lg">
-          <div className="size-5 rounded-full bg-primary" /> The Analog Co.
+        <SidebarMenuButton>
+          <div className="size-6 rounded-full bg-primary" />
+          <span className="font-semibold">Orhos</span>
         </SidebarMenuButton>
       </SidebarHeader>
+      <SidebarSeparator />
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupContent>
@@ -108,7 +111,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenu>
               {data.eventsGroup.events.map((event) => (
                 <SidebarMenuItem key={event.label}>
-                  <SidebarMenuButton asChild>
+                  <SidebarMenuButton asChild size="sm">
                     <a href={event.href}>
                       <span>{event.label}</span>
                     </a>
