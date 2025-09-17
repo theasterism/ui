@@ -19,12 +19,12 @@ const Toaster = ({ ...props }: ToasterProps) => {
         },
         classNames: {
           toast:
-            "border-0! inset-ring-1! inset-ring-border-subtle! bg-background-subtle! text-foreground! rounded-none!",
+            "border-0! inset-ring-1! inset-ring-border-subtle! bg-background-subtle! text-foreground! rounded-md!",
           description: "text-foreground-subtle!",
           actionButton:
-            "bg-primary! hover:bg-primary-hover! text-primary-foreground! rounded-none!",
+            "bg-primary! hover:bg-primary-hover! text-primary-foreground! rounded-xs!",
           cancelButton:
-            "bg-background-element! hover:bg-background-element-hover! rounded-none! inset-ring-1 inset-ring-border-subtle! hover:inset-ring-border-element-hover! text-foreground-subtle!",
+            "bg-background-element! hover:bg-background-element-hover! rounded-xs! inset-ring-1 inset-ring-border-subtle! hover:inset-ring-border-element-hover! text-foreground-subtle!",
         },
       }}
       {...props}

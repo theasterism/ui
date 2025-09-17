@@ -42,7 +42,7 @@
 
 :root {
   /* Base border radius */
-  --radius: 8px;
+  --radius: 0.5rem;
   /* code before-after content marker */
   --code-marker: "`";
 
@@ -58,7 +58,7 @@
 
   /* Fonts */
   --font-sans:
-    "Geist", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    InterVariable, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-mono:
     "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
@@ -132,7 +132,7 @@
   --text-sm: 0.75rem; /* 12px */
 
   /* Border radius */
-  --radius-2xl: calc(var(--radius) + 6px);
+  --radius-2xl: calc(var(--radius) + 8px);
   --radius-xl: calc(var(--radius) + 4px);
   --radius-lg: calc(var(--radius) + 2px);
   --radius-md: var(--radius);

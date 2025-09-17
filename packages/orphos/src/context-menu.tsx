@@ -65,7 +65,7 @@ function ContextMenuSubTrigger({
       data-slot="context-menu-sub-trigger"
       data-inset={inset}
       className={cn(
-        "relative flex cursor-default select-none items-center px-2 py-1.5 text-base text-foreground outline-hidden focus:bg-background-element-hover data-[state=open]:bg-background-element-active data-[inset]:pl-8",
+        "relative flex cursor-default select-none items-center rounded-md px-2 py-1.5 text-base text-foreground outline-hidden focus:bg-background-element-hover data-[state=open]:bg-background-element-active data-[inset]:pl-8",
         className
       )}
       {...props}>
@@ -83,7 +83,7 @@ function ContextMenuSubContent({
     <ContextMenuPrimitive.SubContent
       data-slot="context-menu-sub-content"
       className={cn(
-        "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 inset-ring-1 inset-ring-border-subtle z-50 min-w-[8rem] origin-(--radix-context-menu-content-transform-origin) overflow-hidden bg-background p-1 text-foreground data-[state=closed]:animate-out data-[state=open]:animate-in",
+        "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 inset-ring-1 inset-ring-border-subtle z-50 min-w-[8rem] origin-(--radix-context-menu-content-transform-origin) overflow-hidden rounded-xl bg-background p-1 text-foreground data-[state=closed]:animate-out data-[state=open]:animate-in",
         className
       )}
       {...props}
@@ -100,7 +100,7 @@ function ContextMenuContent({
       <ContextMenuPrimitive.Content
         data-slot="context-menu-content"
         className={cn(
-          "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 inset-ring-1 inset-ring-border-subtle z-50 max-h-(--radix-context-menu-content-available-height) min-w-[12.5rem] origin-(--radix-context-menu-content-transform-origin) overflow-y-auto overflow-x-hidden bg-background p-1 text-foreground data-[state=closed]:animate-out data-[state=open]:animate-in",
+          "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 inset-ring-1 inset-ring-border-subtle z-50 max-h-(--radix-context-menu-content-available-height) min-w-[12.5rem] origin-(--radix-context-menu-content-transform-origin) overflow-y-auto overflow-x-hidden rounded-xl bg-background p-1 text-foreground data-[state=closed]:animate-out data-[state=open]:animate-in",
           className
         )}
         {...props}
@@ -124,7 +124,7 @@ function ContextMenuItem({
       data-inset={inset}
       data-variant={variant}
       className={cn(
-        "data-[variant=destructive]:*:[svg]:!text-danger relative flex cursor-default select-none items-center gap-2 px-2 py-1.5 text-base text-foreground outline-hidden focus:bg-background-element-hover data-[disabled]:pointer-events-none data-[inset]:pl-8 data-[variant=destructive]:text-danger data-[disabled]:opacity-50 data-[variant=destructive]:focus:bg-danger-surface data-[variant=destructive]:focus:text-danger-surafe-foreground [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-foreground-subtle [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "data-[variant=destructive]:*:[svg]:!text-danger relative flex cursor-default select-none items-center gap-2 rounded-md px-2 py-1.5 text-base text-foreground outline-hidden focus:bg-background-element-hover data-[disabled]:pointer-events-none data-[inset]:pl-8 data-[variant=destructive]:text-danger data-[disabled]:opacity-50 data-[variant=destructive]:focus:bg-danger-surface data-[variant=destructive]:focus:text-danger-surafe-foreground [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-foreground-subtle [&_svg]:pointer-events-none [&_svg]:shrink-0",
         className
       )}
       {...props}
@@ -142,7 +142,7 @@ function ContextMenuCheckboxItem({
     <ContextMenuPrimitive.CheckboxItem
       data-slot="context-menu-checkbox-item"
       className={cn(
-        "relative flex cursor-default select-none items-center gap-2 py-1.5 pr-2 pl-8 text-base text-foreground outline-hidden focus:bg-background-element-hover data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "relative flex cursor-default select-none items-center gap-2 rounded-md py-1.5 pr-2 pl-8 text-base text-foreground outline-hidden focus:bg-background-element-hover data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
         className
       )}
       checked={checked}
@@ -166,7 +166,7 @@ function ContextMenuRadioItem({
     <ContextMenuPrimitive.RadioItem
       data-slot="context-menu-radio-item"
       className={cn(
-        "relative flex cursor-default select-none items-center gap-2 py-1.5 pr-2 pl-8 text-base text-foreground outline-hidden focus:bg-background-element-hover data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "relative flex cursor-default select-none items-center gap-2 rounded-md py-1.5 pr-2 pl-8 text-base text-foreground outline-hidden focus:bg-background-element-hover data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
         className
       )}
       {...props}>

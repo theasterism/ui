@@ -4,7 +4,7 @@ import type * as React from "react";
 import { cn } from "./utils";
 
 const buttonVariants = cva({
-  base: "inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap font-medium text-base outline-offset-1 transition-all focus-visible:outline-2 focus-visible:outline-focus-ring active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50 aria-invalid:outline-2 aria-invalid:outline-danger-border [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0",
+  base: "inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium text-base outline-offset-1 transition-all focus-visible:outline-2 focus-visible:outline-focus-ring active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50 aria-invalid:outline-2 aria-invalid:outline-danger-border [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0",
   variants: {
     variant: {
       default:
