@@ -1,5 +1,15 @@
 # @theanalog/orphos
 
+## 0.36.0
+
+### Minor Changes
+
+- a7ab77d: add border radius
+
+### Patch Changes
+
+- be61f0c: reduce border radius to 6px
+
 ## 0.35.5
 
 ### Patch Changes
