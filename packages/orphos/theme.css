@@ -42,7 +42,7 @@
 
 :root {
   /* Base border radius */
-  --radius: 0.5rem;
+  --radius: 6px;
   /* code before-after content marker */
   --code-marker: "`";
 
@@ -163,6 +163,10 @@
   ::selection {
     color: var(--color-primary-foreground);
     background-color: var(--color-primary);
+  }
+
+  textarea::-webkit-resizer {
+    display: none;
   }
 
   input::placeholder,
