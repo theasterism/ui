@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.36.1
+
+### Patch Changes
+
+- 239e259: change context-menu sub trigger gap
+- 7948a8c: fix context-menu trigger svg size
+
 ## 0.36.0
 
 ### Minor Changes
