@@ -7,14 +7,15 @@ const badgeVariants = cva({
   base: "inline-flex min-w-fit items-center gap-2 rounded-sm px-2 py-1 font-medium text-xs has-[svg]:pr-2 has-[svg]:pl-[7px] [&_svg]:size-4",
   variants: {
     variant: {
-      default: "bg-background-element text-foreground-subtle",
+      default:
+        "bg-background-element text-foreground-subtle [a&]:hover:bg-background-element-hover",
       primary: "bg-primary-surface text-primary-surface-foreground",
       danger: "bg-danger-surface text-danger-surface-foreground",
       warning: "bg-warning-surface text-warning-surface-foreground",
       success: "bg-success-surface text-success-surface-foreground",
       info: "bg-info-surface text-info-surface-foreground",
       outline:
-        "inset-ring-1 inset-ring-border-subtle bg-transparent text-foreground-subtle",
+        "inset-ring-1 inset-ring-border-subtle bg-transparent text-foreground-subtle [a&]:hover:bg-background-element-hover",
     },
   },
   defaultVariants: {

@@ -13,15 +13,17 @@ const buttonVariants = cva({
       secondary:
         "bg-foreground text-background hover:brightness-[1.1] hover:contrast-[0.88] hover:saturate-[1.1] dark:hover:brightness-95",
       ghost: "bg-transparent text-foreground hover:bg-background-element-hover",
-      link: "bg-transparent text-primary underline decoration-border-element underline-offset-[2.5px] hover:decoration-primary active:scale-none",
+      link: "bg-transparent text-info-surface-foreground underline decoration-border-element underline-offset-[2.5px] hover:decoration-info-surface-foreground active:scale-none",
       danger:
         "active:button-active-filter bg-danger text-danger-foreground hover:bg-danger-hover",
     },
     size: {
-      sm: "h-8 px-3 has-[svg]:pr-3 has-[svg]:pl-[11px]",
-      md: "h-9 px-4 has-[svg]:pr-4 has-[svg]:pl-[15px]",
-      lg: "h-10 px-4 has-[svg]:pr-4 has-[svg]:pl-[15px]",
+      sm: "h-8 px-3 has-[>svg]:pr-3 has-[>svg]:pl-[11px]",
+      md: "h-9 px-4 has-[>svg]:pr-4 has-[>svg]:pl-[15px]",
+      lg: "h-10 px-4 has-[>svg]:pr-4 has-[>svg]:pl-[15px]",
       icon: "size-9",
+      "icon-sm": "size-8",
+      "icon-lg": "size-10",
     },
   },
   defaultVariants: {
