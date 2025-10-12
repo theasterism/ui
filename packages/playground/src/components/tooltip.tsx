@@ -18,7 +18,6 @@ export function TooltipDemo() {
               <BoldIcon aria-label="Bold" className="size-4" />
             </Button>
           </TooltipTrigger>
-
           <TooltipPositioner>
             <TooltipContent>Bold</TooltipContent>
           </TooltipPositioner>

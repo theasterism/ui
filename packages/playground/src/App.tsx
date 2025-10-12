@@ -37,6 +37,9 @@ import { SwitchDemo } from "./components/switch";
 import { TabsDemo } from "./components/tabs";
 import { ToastDemo } from "./components/toast";
 import { TooltipDemo } from "./components/tooltip";
+import { FieldChoiceCard, FieldDemo } from "./components/fieldset";
+import { KbdTooltip } from "./components/kbd";
+import { Kbd } from "orphos/kbd";
 
 function App() {
   return (
@@ -218,6 +221,19 @@ function App() {
               <CheckboxDemo />
             </div>
           </div>
+          <div className="flex w-full flex-col items-start gap-6">
+            <h2
+              className={typographyVariants({
+                variant: "heading2",
+                className: "mt-0!",
+              })}>
+              Field
+            </h2>
+            <div className="flex w-full max-w-4xl flex-col items-start gap-10">
+              <FieldDemo />
+              <FieldChoiceCard />
+            </div>
+          </div>
           <div className="flex w-auto flex-col items-start gap-6">
             <h2
               className={typographyVariants({
@@ -227,6 +243,16 @@ function App() {
               Icon Button
             </h2>
             <IconButtonDemo />
+          </div>
+          <div className="flex w-auto flex-col items-start gap-6">
+            <h2
+              className={typographyVariants({
+                variant: "heading2",
+                className: "mt-0!",
+              })}>
+              Kbd
+            </h2>
+            <KbdTooltip />
           </div>
           <div className="flex flex-col gap-6">
             <h2
@@ -446,12 +472,7 @@ function App() {
                 })}>
                 console.log()
               </code>
-              <kbd
-                className={typographyVariants({
-                  variant: "kbd",
-                })}>
-                Shift + Tab
-              </kbd>
+              <Kbd>Tab</Kbd>
             </div>
           </div>
         </div>
