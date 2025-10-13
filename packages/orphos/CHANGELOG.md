@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.37.1
+
+### Patch Changes
+
+- c307d8c: remove border radius
+
 ## 0.37.0
 
 ### Minor Changes
