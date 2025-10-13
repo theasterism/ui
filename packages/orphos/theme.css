@@ -42,7 +42,7 @@
 
 :root {
   /* Base border radius */
-  --radius: 6px;
+  --radius: -10px;
   /* code before-after content marker */
   --code-marker: "`";
 
