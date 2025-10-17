@@ -1,10 +1,9 @@
 /** biome-ignore-all lint/correctness/useUniqueElementIds: shut up! */
 /** biome-ignore-all lint/a11y/useValidAnchor: shut up! */
 
+import { Badge } from "orphos/badge";
 import { BoldIcon } from "orphos/icons";
-import { Input } from "orphos/input";
 import { Kbd } from "orphos/kbd";
-import { Label } from "orphos/label";
 import { Separator } from "orphos/separator";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "orphos/sidebar";
 import { Toggle } from "orphos/toggle";
@@ -12,6 +11,7 @@ import { typographyVariants } from "orphos/typography";
 import { AvatarDemo } from "./components/avatar";
 import { ButtonDisabledDemo, ButtonsDemo } from "./components/buttons";
 import { CalloutDemo } from "./components/callout";
+import { CardDemo } from "./components/card";
 import { CheckboxDemo } from "./components/checkbox";
 import { ContextMenuDemo } from "./components/context-menu";
 import { DialogDemo } from "./components/dialog";
@@ -20,6 +20,7 @@ import { FieldChoiceCard, FieldDemo } from "./components/fieldset";
 import { IconButtonDemo } from "./components/icon-button";
 import { ImageUploadDemo } from "./components/image-upload";
 import { InputsDemo } from "./components/inputs";
+import { ItemDemo } from "./components/item";
 import { KbdTooltip } from "./components/kbd";
 import { PopoverDemo } from "./components/popover";
 import { SelectScrollable } from "./components/select";
@@ -31,8 +32,6 @@ import { SwitchDemo } from "./components/switch";
 import { TabsDemo } from "./components/tabs";
 import { ToastDemo } from "./components/toast";
 import { TooltipDemo } from "./components/tooltip";
-import { CardDemo } from "./components/card";
-import { ItemDemo } from "./components/item";
 
 function App() {
   return (
@@ -54,7 +53,10 @@ function App() {
               Orphos Design System
             </h1>
             <hr className="my-4" />
-            <div className="flex gap-2"></div>
+            <div className="flex gap-2">
+              <Badge variant="warning">Work In Progress.</Badge>
+              <Badge variant="info">v0</Badge>
+            </div>
           </div>
           <div className="flex flex-col gap-6">
             <h2
