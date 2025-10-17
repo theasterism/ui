@@ -28,7 +28,7 @@ import { cn } from "./utils";
 const SIDEBAR_COOKIE_NAME = "sidebar_state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
 const SIDEBAR_WIDTH = "16rem";
-const SIDEBAR_WIDTH_MOBILE = "18rem";
+const SIDEBAR_WIDTH_MOBILE = "16rem";
 const SIDEBAR_WIDTH_ICON = "4rem";
 const SIDEBAR_KEYBOARD_SHORTCUT = ".";
 
@@ -236,18 +236,42 @@ function Sidebar({
           // Adjust the padding for floating and inset variants.
           variant === "floating" || variant === "inset"
             ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4))+2px)] group-data-[variant=floating]:p-2.5"
-            : "border-border-subtle group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r-0 group-data-[side=right]:border-l-0",
+            : "group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l",
           className
         )}
         {...props}>
         <div
           data-sidebar="sidebar"
           data-slot="sidebar-inner"
-          className="flex h-full w-full flex-col bg-background-subtle shadow-border-subtle/75 group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:shadow-sm dark:group-data-[variant=floating]:shadow-none">
+          className="flex h-full w-full flex-col bg-background-subtle shadow-border-subtle/75 group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-border-subtle group-data-[variant=floating]:shadow-sm">
           {children}
         </div>
       </div>
     </div>
+  );
+}
+
+function SidebarRail({ className, ...props }: React.ComponentProps<"button">) {
+  const { toggleSidebar } = useSidebar();
+  return (
+    <button
+      data-sidebar="rail"
+      data-slot="sidebar-rail"
+      aria-label="Toggle Sidebar"
+      tabIndex={-1}
+      onClick={toggleSidebar}
+      title="Toggle Sidebar"
+      className={cn(
+        "-translate-x-1/2 group-data-[side=left]:-right-4 absolute inset-y-0 z-20 hidden w-4 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-border-subtle group-data-[side=right]:left-0 sm:flex",
+        "in-data-[side=left]:cursor-w-resize in-data-[side=right]:cursor-e-resize",
+        "[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize",
+        "group-data-[collapsible=offcanvas]:translate-x-0 hover:group-data-[collapsible=offcanvas]:bg-background-subtle group-data-[collapsible=offcanvas]:after:left-full",
+        "[[data-side=left][data-collapsible=offcanvas]_&]:-right-2",
+        "[[data-side=right][data-collapsible=offcanvas]_&]:-left-2",
+        className
+      )}
+      {...props}
+    />
   );
 }
 
@@ -377,7 +401,7 @@ function SidebarGroupLabel({
       data-slot="sidebar-group-label"
       data-sidebar="group-label"
       className={cn(
-        "flex h-8 rounded-sm shrink-0 items-center px-2 font-medium text-foreground-subtle text-sm outline-hidden ring-focus-ring transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
+        "flex h-8 shrink-0 items-center rounded-sm px-2 font-medium text-foreground-subtle text-sm outline-hidden ring-focus-ring transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
         "group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0",
         className
       )}
@@ -398,7 +422,7 @@ function SidebarGroupAction({
       data-slot="sidebar-group-action"
       data-sidebar="group-action"
       className={cn(
-        "absolute rounded-sm top-3.5 right-3 flex aspect-square w-5 items-center justify-center p-0 text-foreground outline-hidden ring-focus-ring transition-transform hover:bg-background-element-hover focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
+        "absolute top-3.5 right-3 flex aspect-square w-5 items-center justify-center rounded-sm p-0 text-foreground outline-hidden ring-focus-ring transition-transform hover:bg-background-element-hover focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
         // Increases the hit area of the button on mobile.
         "after:-inset-2 after:absolute md:after:hidden",
         "group-data-[collapsible=icon]:hidden",
@@ -446,22 +470,22 @@ function SidebarMenuItem({ className, ...props }: React.ComponentProps<"li">) {
 }
 
 const sidebarMenuButtonVariants = cva({
-  base: "peer/menu-button flex w-full items-center gap-2 overflow-hidden from-primary-surface to-transparent px-2.5 py-2 text-left text-base text-foreground outline-hidden ring-focus-ring rounded-md transition-[width,height,padding] hover:bg-background-element-hover focus-visible:ring-2 active:bg-background-element-active disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-linear-to-r data-[active=true]:font-medium data-[active=true]:text-primary-surface-foreground data-[active=true]:active:bg-primary-subtle data-[active=true]:active:brightness-[1.2] data-[active=true]:hover:bg-primary-subtle data-[state=open]:hover:bg-background-element-hover group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! dark:data-[active=true]:text-primary [&>span:last-child]:truncate [&>svg]:size-5 [&>svg]:shrink-0 [&>svg]:text-foreground-subtle hover:[&>svg]:text-foreground data-[active=true]:[&>svg]:text-primary",
+  base: "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md from-primary-surface to-transparent px-2.5 py-2 text-left text-foreground text-sm outline-hidden ring-focus-ring transition-[width,height,padding] hover:bg-background-element-hover focus-visible:ring-2 active:bg-background-element-active disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-linear-to-r data-[active=true]:font-medium data-[active=true]:text-primary-surface-foreground data-[active=true]:active:bg-primary-subtle data-[active=true]:active:brightness-[1.2] data-[active=true]:hover:bg-primary-subtle data-[state=open]:hover:bg-background-element-hover group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! dark:data-[active=true]:text-primary [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:text-foreground-subtle hover:[&>svg]:text-foreground data-[active=true]:[&>svg]:text-primary",
   variants: {
     variant: {
       default: "hover:bg-background-element-hover",
       outline:
-        "inset-ring-1 inset-ring-border-subtle bg-background-element hover:bg-background-element-hover",
+        "border border-border-subtle bg-background-element hover:bg-background-element-hover",
     },
     size: {
-      default: "h-9 group-data-[collapsible=icon]:p-1.5!",
+      md: "h-8.5 group-data-[collapsible=icon]:p-1.5!",
       sm: "h-7",
       lg: "min-h-12 px-2.5 py-2 group-data-[collapsible=icon]:p-0!",
     },
   },
   defaultVariants: {
     variant: "default",
-    size: "default",
+    size: "sm",
   },
 });
 
@@ -469,7 +493,7 @@ function SidebarMenuButton({
   asChild = false,
   isActive = false,
   variant = "default",
-  size = "default",
+  size = "sm",
   tooltip,
   className,
   ...props
@@ -531,7 +555,7 @@ function SidebarMenuAction({
       data-slot="sidebar-menu-action"
       data-sidebar="menu-action"
       className={cn(
-        "absolute top-1.5 right-1 flex aspect-square w-5 items-center justify-center p-0 text-foreground outline-hidden ring-focus-ring transition-transform hover:bg-background-element-hover focus-visible:ring-2 rounded-sm [&>svg]:size-4 [&>svg]:shrink-0",
+        "absolute top-1.5 right-1 flex aspect-square w-5 items-center justify-center rounded-sm p-0 text-foreground outline-hidden ring-focus-ring transition-transform hover:bg-background-element-hover focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
         // Increases the hit area of the button on mobile.
         "after:-inset-2 after:absolute md:after:hidden",
         "peer-data-[size=sm]/menu-button:top-1.5",
@@ -556,10 +580,10 @@ function SidebarMenuBadge({
       data-slot="sidebar-menu-badge"
       data-sidebar="menu-badge"
       className={cn(
-        "pointer-events-none absolute right-2.5 flex h-5 min-w-5 select-none items-center justify-center bg-danger px-1 py-1 font-medium text-[10px] text-danger-foreground! tabular-nums leading-0! rounded-sm",
+        "pointer-events-none absolute right-2.5 flex h-5 min-w-5 select-none items-center justify-center rounded-sm bg-danger px-1 py-1 font-medium text-[10px] text-danger-foreground! tabular-nums leading-0!",
         "peer-hover/menu-button:text-foreground peer-data-[active=true]/menu-button:text-foreground",
         "peer-data-[size=sm]/menu-button:top-1",
-        "peer-data-[size=default]/menu-button:top-2",
+        "peer-data-[size=md]/menu-button:top-[7px]",
         "peer-data-[size=lg]/menu-button:top-2.5",
         "group-data-[collapsible=icon]:hidden",
         className
@@ -585,7 +609,7 @@ function SidebarMenuSkeleton({
     <div
       data-slot="sidebar-menu-skeleton"
       data-sidebar="menu-skeleton"
-      className={cn("flex h-9 items-center gap-2 px-2 rounded-md", className)}
+      className={cn("flex h-9 items-center gap-2 rounded-md px-2", className)}
       {...props}>
       {showIcon && (
         <Skeleton
@@ -610,6 +634,7 @@ export {
   Sidebar,
   SidebarContent,
   SidebarFooter,
+  SidebarRail,
   SidebarGroup,
   SidebarGroupAction,
   SidebarGroupContent,

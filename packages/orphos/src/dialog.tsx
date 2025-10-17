@@ -3,7 +3,9 @@
 import { Dialog as DialogPrimitive } from "radix-ui";
 import type * as React from "react";
 import type { DivElementProps } from "./types";
+import { typographyVariants } from "./typography";
 import { cn } from "./utils";
+import { XMarkIcon } from "./icons";
 
 function Dialog({
   ...props
@@ -56,7 +58,7 @@ function DialogContent({
       <DialogPrimitive.Content
         data-slot="dialog-content"
         className={cn(
-          "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed inset-ring-1 inset-ring-border-subtle top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-2xl bg-background-subtle p-6 duration-200 data-[state=closed]:animate-out data-[state=open]:animate-in",
+          "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-xl border border-border-subtle bg-background duration-200 data-[state=closed]:animate-out data-[state=open]:animate-in",
           className
         )}
         {...props}>
@@ -66,13 +68,32 @@ function DialogContent({
   );
 }
 
-function DialogHeader({ className, ...props }: DivElementProps) {
+function DialogHeader({
+  className,
+  showCloseButton = true,
+  children,
+  ...props
+}: DivElementProps & {
+  showCloseButton?: boolean;
+}) {
   return (
     <div
       data-slot="dialog-header"
-      className={cn("flex flex-col gap-1.5 text-left", className)}
-      {...props}
-    />
+      className={cn(
+        "flex flex-col gap-1.5 border-b border-b-border-subtle p-4 text-left",
+        className
+      )}
+      {...props}>
+      {showCloseButton && (
+        <DialogPrimitive.Close
+          data-slot="dialog-close"
+          className="absolute top-4.5 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:outline focus:outline-offset-2 disabled:pointer-events-none data-[state=open]:text-foreground-subtle [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0">
+          <XMarkIcon />
+          <span className="sr-only">Close</span>
+        </DialogPrimitive.Close>
+      )}
+      {children}
+    </div>
   );
 }
 
@@ -81,7 +102,7 @@ function DialogFooter({ className, ...props }: DivElementProps) {
     <div
       data-slot="dialog-footer"
       className={cn(
-        "flex flex-col-reverse gap-2 sm:flex-row sm:justify-end",
+        "flex flex-col-reverse gap-2 px-4 pb-4 sm:flex-row sm:justify-end",
         className
       )}
       {...props}
@@ -97,7 +118,10 @@ function DialogTitle({
     <DialogPrimitive.Title
       data-slot="dialog-title"
       className={cn(
-        "font-semibold text-foreground text-xl leading-none",
+        typographyVariants({
+          variant: "heading4",
+          className: "mt-0",
+        }),
         className
       )}
       {...props}
@@ -112,7 +136,7 @@ function DialogDescription({
   return (
     <DialogPrimitive.Description
       data-slot="dialog-description"
-      className={cn("text-base text-foreground-subtle", className)}
+      className={cn("text-sm text-solid-hover", className)}
       {...props}
     />
   );

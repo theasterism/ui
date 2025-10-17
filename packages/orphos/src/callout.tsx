@@ -15,7 +15,7 @@ const CalloutContext = createContext<CalloutContextValue>({
 });
 
 const calloutVariants = cva({
-  base: "flex w-full flex-col gap-x-3 gap-y-2 rounded-xl p-4 text-base sm:flex-row sm:items-center sm:justify-between [&_svg]:size-4.5 [&_svg]:text-current",
+  base: "flex w-full flex-col gap-x-3 gap-y-2 rounded-lg px-4 py-3 text-sm sm:flex-row sm:items-center sm:justify-between [&_svg]:size-4.5 [&_svg]:text-current",
   variants: {
     variant: {
       default:
