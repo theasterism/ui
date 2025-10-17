@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.39.1
+
+### Patch Changes
+
+- 6035f42: remove card shadow
+
 ## 0.39.0
 
 ### Minor Changes
