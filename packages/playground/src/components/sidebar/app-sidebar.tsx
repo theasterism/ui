@@ -15,6 +15,7 @@ import {
   SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarRail,
   SidebarSeparator,
 } from "orphos/sidebar";
 import type * as React from "react";
@@ -91,7 +92,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenu>
               {data.mainNav.map((item) => (
                 <SidebarMenuItem key={item.label}>
-                  <SidebarMenuButton asChild isActive={item.isActive}>
+                  <SidebarMenuButton size="md" asChild isActive={item.isActive}>
                     <a href={item.href}>
                       <item.icon />
                       <span>{item.label}</span>
@@ -122,6 +123,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+      <SidebarRail />
     </Sidebar>
   );
 }

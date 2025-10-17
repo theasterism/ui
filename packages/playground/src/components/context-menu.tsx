@@ -1,12 +1,9 @@
 import {
   ContextMenu,
-  ContextMenuCheckboxItem,
   ContextMenuContent,
   ContextMenuItem,
   ContextMenuLabel,
   ContextMenuPortal,
-  ContextMenuRadioGroup,
-  ContextMenuRadioItem,
   ContextMenuSeparator,
   ContextMenuShortcut,
   ContextMenuSub,
@@ -22,6 +19,8 @@ export function ContextMenuDemo() {
         Right click here
       </ContextMenuTrigger>
       <ContextMenuContent className="w-64">
+        <ContextMenuLabel>Label</ContextMenuLabel>
+        <ContextMenuSeparator />
         <ContextMenuItem>
           Back
           <ContextMenuShortcut>⌘[</ContextMenuShortcut>
@@ -51,21 +50,6 @@ export function ContextMenuDemo() {
             </ContextMenuSubContent>
           </ContextMenuPortal>
         </ContextMenuSub>
-        <ContextMenuSeparator />
-        <ContextMenuCheckboxItem checked>
-          Show Bookmarks Bar
-          <ContextMenuShortcut>⌘⇧B</ContextMenuShortcut>
-        </ContextMenuCheckboxItem>
-        <ContextMenuCheckboxItem>Show Full URLs</ContextMenuCheckboxItem>
-        <ContextMenuSeparator />
-        <ContextMenuRadioGroup value="pedro">
-          <ContextMenuLabel>People</ContextMenuLabel>
-          <ContextMenuSeparator />
-          <ContextMenuRadioItem value="pedro">
-            Pedro Duarte
-          </ContextMenuRadioItem>
-          <ContextMenuRadioItem value="colm">Colm Tuite</ContextMenuRadioItem>
-        </ContextMenuRadioGroup>
       </ContextMenuContent>
     </ContextMenu>
   );

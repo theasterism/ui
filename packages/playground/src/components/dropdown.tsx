@@ -1,13 +1,10 @@
 import { Button } from "orphos/button";
 import {
   DropdownMenu,
-  DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuPortal,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuSub,
@@ -23,6 +20,8 @@ export function DropdownDemo() {
         <Button>Open</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-64" align="start">
+        <DropdownMenuLabel>Label</DropdownMenuLabel>
+        <DropdownMenuSeparator />
         <DropdownMenuItem>
           Back
           <DropdownMenuShortcut>⌘[</DropdownMenuShortcut>
@@ -35,7 +34,6 @@ export function DropdownDemo() {
           Reload
           <DropdownMenuShortcut>⌘R</DropdownMenuShortcut>
         </DropdownMenuItem>
-
         <DropdownMenuSub>
           <DropdownMenuSubTrigger>More Tools</DropdownMenuSubTrigger>
           <DropdownMenuPortal>
@@ -53,21 +51,6 @@ export function DropdownDemo() {
             </DropdownMenuSubContent>
           </DropdownMenuPortal>
         </DropdownMenuSub>
-        <DropdownMenuSeparator />
-        <DropdownMenuCheckboxItem checked>
-          Show Bookmarks Bar
-          <DropdownMenuShortcut>⌘⇧B</DropdownMenuShortcut>
-        </DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem>Show Full URLs</DropdownMenuCheckboxItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuLabel>People</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuRadioGroup value="pedro">
-          <DropdownMenuRadioItem value="pedro">
-            Pedro Duarte
-          </DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="colm">Colm Tuite</DropdownMenuRadioItem>
-        </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>
   );
