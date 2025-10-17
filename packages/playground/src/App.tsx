@@ -32,6 +32,7 @@ import { TabsDemo } from "./components/tabs";
 import { ToastDemo } from "./components/toast";
 import { TooltipDemo } from "./components/tooltip";
 import { CardDemo } from "./components/card";
+import { ItemDemo } from "./components/item";
 
 function App() {
   return (
@@ -174,6 +175,16 @@ function App() {
               Icon Button
             </h2>
             <IconButtonDemo />
+          </div>
+          <div className="flex w-auto flex-col items-start gap-6">
+            <h2
+              className={typographyVariants({
+                variant: "heading2",
+                className: "mt-0!",
+              })}>
+              Item
+            </h2>
+            <ItemDemo />
           </div>
           <div className="flex w-auto flex-col items-start gap-6">
             <h2
