@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.39.0
+
+### Minor Changes
+
+- 3023969: fix badge padding
+
 ## 0.38.0
 
 ### Minor Changes
