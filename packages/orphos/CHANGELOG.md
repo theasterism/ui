@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.40.2
+
+### Patch Changes
+
+- 32e1511: change bg to white dropdown, context menu, popover
+
 ## 0.40.1
 
 ### Patch Changes
