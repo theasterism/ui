@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.40.1
+
+### Patch Changes
+
+- bccd473: change input bg color
+
 ## 0.40.0
 
 ### Minor Changes
