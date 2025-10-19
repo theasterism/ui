@@ -30,7 +30,7 @@ function ItemSeparator({
 }
 
 const itemVariants = cva({
-  base: "group/item flex flex-wrap items-center rounded-md border border-transparent text-sm outline-offset-2 transition-colors duration-100 focus-visible:outline [a]:transition-colors [a]:hover:bg-background-element",
+  base: "group/item flex flex-wrap items-center rounded-md border border-transparent bg-white text-sm outline-offset-2 transition-colors duration-100 focus-visible:outline [a]:transition-colors [a]:hover:bg-background-element",
   variants: {
     variant: {
       default: "bg-white",
