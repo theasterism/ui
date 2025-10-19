@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.40.0
+
+### Minor Changes
+
+- 65f1a25: add cropper component
+
 ## 0.39.1
 
 ### Patch Changes
