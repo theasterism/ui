@@ -4,16 +4,16 @@
     "": {
       "name": "ui",
       "devDependencies": {
-        "@biomejs/biome": "latest",
-        "@changesets/cli": "latest",
-        "@total-typescript/tsconfig": "latest",
-        "turbo": "latest",
-        "typescript": "latest",
+        "@biomejs/biome": "^2.2.6",
+        "@changesets/cli": "^2.29.7",
+        "@total-typescript/tsconfig": "^1.0.4",
+        "turbo": "^2.5.8",
+        "typescript": "^5.9.3",
       },
     },
     "packages/orphos": {
       "name": "orphos",
-      "version": "0.37.0",
+      "version": "0.39.1",
       "dependencies": {
         "@base-ui-components/react": "^1.0.0-beta.4",
         "@fontsource-variable/geist": "^5.2.8",
