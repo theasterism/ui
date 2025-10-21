@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.40.4
+
+### Patch Changes
+
+- 17d53c6: fix spacing
+
 ## 0.40.3
 
 ### Patch Changes
