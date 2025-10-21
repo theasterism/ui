@@ -6,11 +6,11 @@ import type * as React from "react";
 import { cn } from "./utils";
 
 const toggleVariants = cva({
-  base: "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium text-base text-foreground-subtle outline-offset-2 transition-[color,box-shadow] hover:bg-background-element focus-visible:outline active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50 aria-invalid:outline aria-invalid:outline-danger data-[state=on]:bg-background-element-hover data-[state=on]:text-foreground [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+  base: "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium text-base text-foreground outline-offset-2 transition-[color,box-shadow] hover:bg-background-element focus-visible:outline active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50 aria-invalid:outline aria-invalid:outline-danger data-[state=on]:bg-background-element-hover data-[state=on]:text-foreground [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
   variants: {
     variant: {
       default:
-        "border border-border-subtle bg-white hover:bg-background-element hover:text-foreground-subtle",
+        "border border-border-subtle bg-white hover:bg-background-element",
       soft: "bg-transparent",
     },
     size: {
