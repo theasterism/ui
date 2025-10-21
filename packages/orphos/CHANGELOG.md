@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.40.3
+
+### Patch Changes
+
+- dc12e9b: change toggle text color
+
 ## 0.40.2
 
 ### Patch Changes
