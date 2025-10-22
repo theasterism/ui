@@ -1,5 +1,15 @@
 # @theanalog/orphos
 
+## 0.41.0
+
+### Minor Changes
+
+- 2832a1f: add native-select
+
+### Patch Changes
+
+- cd998cb: fix button right margin
+
 ## 0.40.7
 
 ### Patch Changes
