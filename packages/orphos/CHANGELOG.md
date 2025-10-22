@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.40.7
+
+### Patch Changes
+
+- 606a406: align button to input
+- 8e3561e: increase password view toggle click area
+
 ## 0.40.6
 
 ### Patch Changes
