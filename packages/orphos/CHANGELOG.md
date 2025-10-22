@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.40.6
+
+### Patch Changes
+
+- 7e64e45: add shadow on sidebar inset
+
 ## 0.40.5
 
 ### Patch Changes
