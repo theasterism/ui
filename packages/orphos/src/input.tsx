@@ -43,7 +43,7 @@ function Input({ className, type, icon, disabled, ...props }: InputProps) {
         />
         <button
           disabled={disabled}
-          className="peer absolute inset-y-0 end-0 mt-2 mr-3 flex size-5 items-center justify-center text-foreground-subtle ring-focus-ring ring-offset-1 ring-offset-transparent transition-colors hover:text-foreground focus:z-10 focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+          className="peer before:-inset-[7px] absolute inset-y-0 end-0 mt-2 mr-3 flex size-5 items-center justify-center text-foreground-subtle ring-focus-ring ring-offset-1 ring-offset-transparent transition-colors before:absolute hover:text-foreground focus:z-10 focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
           type="button"
           onClick={toggleVisibility}
           aria-label={isVisible ? "Hide password" : "Show password"}
