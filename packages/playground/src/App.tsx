@@ -32,6 +32,7 @@ import { SwitchDemo } from "./components/switch";
 import { TabsDemo } from "./components/tabs";
 import { ToastDemo } from "./components/toast";
 import { TooltipDemo } from "./components/tooltip";
+import { NativeSelectDemo } from "./components/native-select";
 
 function App() {
   return (
@@ -197,6 +198,16 @@ function App() {
               Kbd
             </h2>
             <KbdTooltip />
+          </div>
+          <div className="flex w-auto flex-col items-start gap-6">
+            <h2
+              className={typographyVariants({
+                variant: "heading2",
+                className: "mt-0!",
+              })}>
+              Native Select
+            </h2>
+            <NativeSelectDemo />
           </div>
           <div className="flex flex-col gap-6">
             <h2
