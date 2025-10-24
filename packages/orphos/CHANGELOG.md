@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.41.1
+
+### Patch Changes
+
+- 6f8f5b6: change error message text size for field
+
 ## 0.41.0
 
 ### Minor Changes
