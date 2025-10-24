@@ -14,7 +14,7 @@ export function SelectScrollable() {
       <SelectTrigger>
         <SelectValue placeholder="Select a timezone" />
       </SelectTrigger>
-      <SelectContent sideOffset={24} side="bottom">
+      <SelectContent side="bottom">
         <SelectGroup>
           <SelectLabel>North America</SelectLabel>
           <SelectItem value="est">Eastern Standard Time (EST)</SelectItem>

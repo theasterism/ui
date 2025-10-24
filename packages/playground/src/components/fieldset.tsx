@@ -65,7 +65,7 @@ export function FieldDemo() {
                     <SelectTrigger id="checkout-exp-month-ts6">
                       <SelectValue placeholder="MM" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent side="bottom">
                       <SelectItem value="01">01</SelectItem>
                       <SelectItem value="02">02</SelectItem>
                       <SelectItem value="03">03</SelectItem>
