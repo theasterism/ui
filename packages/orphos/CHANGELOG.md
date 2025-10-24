@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.41.2
+
+### Patch Changes
+
+- 0f83dcd: fix select popover bottom position
+
 ## 0.41.1
 
 ### Patch Changes
