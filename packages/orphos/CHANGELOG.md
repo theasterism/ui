@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.42.1
+
+### Patch Changes
+
+- 8c56730: remove content padding
+- eb03749: remove styles from alert-dialog close and action
+
 ## 0.42.0
 
 ### Minor Changes
