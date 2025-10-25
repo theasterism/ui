@@ -2,10 +2,10 @@
 
 import { Dialog as DialogPrimitive } from "radix-ui";
 import type * as React from "react";
+import { XMarkIcon } from "./icons";
 import type { DivElementProps } from "./types";
 import { typographyVariants } from "./typography";
 import { cn } from "./utils";
-import { XMarkIcon } from "./icons";
 
 function Dialog({
   ...props
