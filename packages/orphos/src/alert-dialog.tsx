@@ -2,9 +2,20 @@
 
 import { AlertDialog as AlertDialogPrimitive } from "radix-ui";
 import type * as React from "react";
-import { buttonVariants } from "./button";
-import { cn } from "./utils";
 import { typographyVariants } from "./typography";
+import { cn } from "./utils";
+
+function AlertDialogAction({
+  ...props
+}: React.ComponentProps<typeof AlertDialogPrimitive.Action>) {
+  return <AlertDialogPrimitive.Action {...props} />;
+}
+
+function AlertDialogCancel({
+  ...props
+}: React.ComponentProps<typeof AlertDialogPrimitive.Cancel>) {
+  return <AlertDialogPrimitive.Cancel {...props} />;
+}
 
 function AlertDialog({
   ...props
@@ -122,30 +133,6 @@ function AlertDialogDescription({
     <AlertDialogPrimitive.Description
       data-slot="alert-dialog-description"
       className={cn("text-sm text-solid-hover", className)}
-      {...props}
-    />
-  );
-}
-
-function AlertDialogAction({
-  className,
-  ...props
-}: React.ComponentProps<typeof AlertDialogPrimitive.Action>) {
-  return (
-    <AlertDialogPrimitive.Action
-      className={cn(buttonVariants(), className)}
-      {...props}
-    />
-  );
-}
-
-function AlertDialogCancel({
-  className,
-  ...props
-}: React.ComponentProps<typeof AlertDialogPrimitive.Cancel>) {
-  return (
-    <AlertDialogPrimitive.Cancel
-      className={cn(buttonVariants({ variant: "ghost" }), className)}
       {...props}
     />
   );
