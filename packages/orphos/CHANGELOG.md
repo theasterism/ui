@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.42.2
+
+### Patch Changes
+
+- cac4703: fix max width alert-dialog
+
 ## 0.42.1
 
 ### Patch Changes
