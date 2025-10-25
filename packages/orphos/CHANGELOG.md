@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.42.0
+
+### Minor Changes
+
+- fb42bac: add alert-dialog
+
 ## 0.41.2
 
 ### Patch Changes
