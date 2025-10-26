@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.43.1
+
+### Patch Changes
+
+- 5fa21fb: change link text color
+
 ## 0.43.0
 
 ### Minor Changes
