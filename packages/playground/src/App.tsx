@@ -33,6 +33,7 @@ import { TabsDemo } from "./components/tabs";
 import { ToastDemo } from "./components/toast";
 import { TooltipDemo } from "./components/tooltip";
 import { NativeSelectDemo } from "./components/native-select";
+import { EmptyInputGroup } from "./components/empty";
 
 function App() {
   return (
@@ -140,6 +141,30 @@ function App() {
             </h2>
             <div className="flex w-full flex-col items-start gap-10">
               <DropdownDemo />
+            </div>
+          </div>
+          <div className="flex w-full flex-col items-start gap-6">
+            <h2
+              className={typographyVariants({
+                variant: "heading2",
+                className: "mt-0!",
+              })}>
+              Dialog / Drawer
+            </h2>
+            <div className="flex w-full flex-col items-start gap-10">
+              <DialogDemo />
+            </div>
+          </div>
+          <div className="flex w-full flex-col items-start gap-6">
+            <h2
+              className={typographyVariants({
+                variant: "heading2",
+                className: "mt-0!",
+              })}>
+              Empty
+            </h2>
+            <div className="flex w-full flex-col items-start gap-10">
+              <EmptyInputGroup />
             </div>
           </div>
           <div className="flex w-full flex-col items-start gap-6">
