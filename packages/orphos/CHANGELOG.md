@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.43.2
+
+### Patch Changes
+
+- 05bb53e: change select sm padding
+- 2b90f41: change text size
+
 ## 0.43.1
 
 ### Patch Changes
