@@ -15,7 +15,7 @@ function Switch({
         "inline-flex shrink-0 items-center align-middle",
         "h-5 w-7.5 py-[0.075rem]",
         "cursor-default rounded-full border border-transparent",
-        "outline-offset-2 focus-visible:outline",
+        "focus-visible:outline-offset-2 focus-visible:outline-2",
         "transition-colors disabled:cursor-not-allowed disabled:opacity-50",
         "before:-inset-[7px] relative before:absolute data-[state=checked]:bg-primary data-[state=unchecked]:bg-background-element data-[state=checked]:hover:bg-primary-hover data-[state=unchecked]:hover:bg-background-element-hover",
         className

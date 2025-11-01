@@ -4,16 +4,16 @@ import type * as React from "react";
 import { cn } from "./utils";
 
 const badgeVariants = cva({
-  base: "inline-flex min-w-fit items-center gap-3 rounded-full px-2 py-0.5 font-medium text-xs has-[svg]:pr-2 has-[svg]:pl-[7px] [&_svg]:size-3",
+  base: "inline-flex min-w-fit items-center gap-3 border rounded-md px-1.5 py-px font-medium text-[11px] has-[svg]:pr-1.5 has-[svg]:pl-[5px] [&_svg]:size-2.5",
   variants: {
     variant: {
       default:
-        "border border-border-subtle bg-transparent text-foreground-subtle [a&]:hover:bg-background-element-hover",
-      primary: "bg-primary-surface text-primary-surface-foreground",
-      danger: "bg-danger-surface text-danger-surface-foreground",
-      warning: "bg-warning-surface text-warning-surface-foreground",
-      success: "bg-success-surface text-success-surface-foreground",
-      info: "bg-info-surface text-info-surface-foreground",
+        "border-border-subtle bg-background-element text-foreground-subtle [a&]:hover:bg-background-element-hover",
+      primary: "border-primary-border bg-primary-subtle text-primary-surface-foreground",
+      danger: "border-danger-border bg-danger-subtle text-danger-surface-foreground",
+      success: "border-success-border bg-success-subtle text-success-surface-foreground",
+      warning: "border-warning-border bg-warning-subtle text-warning-surface-foreground",
+      info: "border-info-border bg-info-subtle text-info-surface-foreground",
     },
   },
   defaultVariants: {

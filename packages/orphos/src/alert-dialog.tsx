@@ -4,17 +4,28 @@ import { AlertDialog as AlertDialogPrimitive } from "radix-ui";
 import type * as React from "react";
 import { typographyVariants } from "./typography";
 import { cn } from "./utils";
+import { buttonVariants } from "./button";
+import type { VariantProps } from "cva";
 
 function AlertDialogAction({
+  className,
+  variant ='danger',
   ...props
-}: React.ComponentProps<typeof AlertDialogPrimitive.Action>) {
-  return <AlertDialogPrimitive.Action {...props} />;
+}: React.ComponentProps<typeof AlertDialogPrimitive.Action> & {
+  variant?: "primary" | "danger"
+}) {
+  return <AlertDialogPrimitive.Action className={cn(buttonVariants({
+    variant
+  }), className)} {...props} />;
 }
 
 function AlertDialogCancel({
+  className,
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Cancel>) {
-  return <AlertDialogPrimitive.Cancel {...props} />;
+  return <AlertDialogPrimitive.Cancel className={cn(buttonVariants({
+    variant: "secondary"
+  }), className)} {...props} />;
 }
 
 function AlertDialog({
@@ -65,7 +76,7 @@ function AlertDialogContent({
       <AlertDialogPrimitive.Content
         data-slot="alert-dialog-content"
         className={cn(
-          "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-xl border border-border-subtle bg-background duration-200 data-[state=closed]:animate-out data-[state=open]:animate-in",
+          "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-6 rounded-xl border p-4 border-border-subtle shadow-sm bg-background duration-150 data-[state=closed]:animate-out data-[state=open]:animate-in sm:max-w-md",
           className
         )}
         {...props}
@@ -82,7 +93,7 @@ function AlertDialogHeader({
     <div
       data-slot="alert-dialog-header"
       className={cn(
-        "flex flex-col gap-1.5 border-b border-b-border-subtle p-4 text-left",
+        "flex flex-col gap-1.5 text-left",
         className
       )}
       {...props}
@@ -98,7 +109,7 @@ function AlertDialogFooter({
     <div
       data-slot="alert-dialog-footer"
       className={cn(
-        "flex flex-col-reverse gap-2 px-4 pb-4 sm:flex-row sm:justify-end",
+        "flex flex-col-reverse gap-1.5 xs:flex-row xs:justify-end",
         className
       )}
       {...props}
@@ -115,7 +126,7 @@ function AlertDialogTitle({
       data-slot="alert-dialog-title"
       className={cn(
         typographyVariants({
-          variant: "heading4",
+          variant: "heading-3",
           className: "mt-0",
         }),
         className

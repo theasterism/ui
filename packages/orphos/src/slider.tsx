@@ -31,7 +31,7 @@ function Slider({
       min={min}
       max={max}
       className={cn(
-        "relative flex w-full touch-none select-none items-center data-[orientation=vertical]:h-full data-[orientation=vertical]:min-h-44 data-[orientation=vertical]:w-auto data-[orientation=vertical]:flex-col data-[disabled]:opacity-50",
+        "relative flex w-full touch-none select-none items-center data-[orientation=vertical]:h-full data-[orientation=vertical]:min-h-44 data-[orientation=vertical]:w-auto data-[orientation=vertical]:flex-col data-disabled:opacity-50",
         className
       )}
       {...props}>
@@ -48,7 +48,7 @@ function Slider({
           data-slot="slider-thumb"
           // biome-ignore lint/suspicious/noArrayIndexKey: shut up!
           key={index}
-          className="block size-4 rounded-full bg-white shadow ring-2 ring-border-element transition-all hover:scale-115 focus-visible:outline-hidden focus-visible:ring-focus-ring disabled:pointer-events-none disabled:opacity-50"
+          className="block size-4 rounded-full bg-white border-2 border-border-element transition-transform hover:scale-115 focus-visible:outline-2 focus-visible:-outline-offset-2 disabled:pointer-events-none disabled:opacity-50"
         />
       ))}
     </SliderPrimitive.Root>

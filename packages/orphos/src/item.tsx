@@ -30,7 +30,7 @@ function ItemSeparator({
 }
 
 const itemVariants = cva({
-  base: "group/item flex flex-wrap items-center rounded-md border border-transparent bg-white text-sm outline-offset-2 transition-colors duration-100 focus-visible:outline [a]:transition-colors [a]:hover:bg-background-element",
+  base: "group/item flex flex-wrap items-center rounded-md border border-transparent bg-white text-sm focus-visible:outline-offset-2 transition-colors duration-100 focus-visible:outline-2 [a]:transition-colors [a]:hover:bg-background-element-hover",
   variants: {
     variant: {
       default: "bg-white",
@@ -38,8 +38,8 @@ const itemVariants = cva({
       muted: "bg-background-subtle",
     },
     size: {
-      default: "gap-4 p-4",
-      sm: "gap-2.5 px-4 py-3",
+      default: "gap-4 p-3.5",
+      sm: "gap-2.5 px-3 py-2",
     },
   },
   defaultVariants: {
@@ -69,7 +69,7 @@ function Item({
 }
 
 const itemMediaVariants = cva({
-  base: "flex shrink-0 items-center justify-center gap-2 group-has-[[data-slot=item-description]]/item:translate-y-0.5 group-has-[[data-slot=item-description]]/item:self-start [&_svg]:pointer-events-none",
+  base: "flex shrink-0 items-center justify-center gap-2 group-has-data-[slot=item-description]/item:translate-y-0.5 group-has-data-[slot=item-description]/item:self-start [&_svg]:pointer-events-none",
   variants: {
     variant: {
       default: "bg-transparent",

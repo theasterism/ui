@@ -1,5 +1,6 @@
 import { cva, type VariantProps } from "cva";
 import { cn } from "./utils";
+import { typographyVariants } from "./typography";
 
 function Empty({ className, ...props }: React.ComponentProps<"div">) {
   return (
@@ -59,7 +60,9 @@ function EmptyTitle({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="empty-title"
-      className={cn("font-medium text-lg tracking-tight", className)}
+      className={cn(typographyVariants({
+        variant: "heading-2"
+      }), className)}
       {...props}
     />
   );
@@ -70,7 +73,7 @@ function EmptyDescription({ className, ...props }: React.ComponentProps<"p">) {
     <div
       data-slot="empty-description"
       className={cn(
-        "text-foreground-subtle text-sm/relaxed [&>a:hover]:text-info-surface-foreground [&>a]:underline [&>a]:underline-offset-4",
+        "text-foreground-subtle text-sm/relaxed [&>a]:text-info-surface-foreground [&>a:hover]:text-info-surface-foreground [&>a:hover]:decoration-info-surface-foreground [&>a]:underline [&>a]:decoration-info-border [&>a]:underline-offset-[2.5px]",
         className
       )}
       {...props}

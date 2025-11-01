@@ -107,7 +107,7 @@ function SheetTitle({
       data-slot="sheet-title"
       className={cn(
         typographyVariants({
-          variant: "heading4",
+          variant: "heading-4",
           className: "mt-0",
         }),
         className

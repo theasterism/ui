@@ -12,7 +12,7 @@ function Checkbox({
     <CheckboxPrimitive.Root
       data-slot="checkbox"
       className={cn(
-        "peer size-3.5 shrink-0 rounded-sm border border-border-element bg-background-element outline-offset-2 hover:border-border-element-hover focus-visible:outline disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:outline aria-invalid:outline-danger data-[state=checked]:border-primary-border data-[state=checked]:bg-primary-surface",
+        "peer size-4.5 shrink-0 rounded-sm border border-border-element bg-white hover:border-border-element-hover focus-visible:outline-2 focus-visible:outline-offset-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:outline-offset-2 aria-invalid:outline-2 aria-invalid:outline-danger data-[state=checked]:border-primary-border data-[state=checked]:bg-primary-surface",
         className
       )}
       {...props}>
@@ -22,7 +22,7 @@ function Checkbox({
           "flex items-center justify-center text-current transition-none"
         )}>
         <svg
-          className="size-2 text-primary"
+          className="size-2.5 text-primary"
           viewBox="0 0 9 9"
           fill="currentcolor"
           xmlns="http://www.w3.org/2000/svg">

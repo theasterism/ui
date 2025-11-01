@@ -32,9 +32,9 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@rsbuild/core": "~1.5.17",
+    "@rsbuild/core": "~1.6.0",
     "@rsbuild/plugin-react": "^1.4.1",
-    "@rslib/core": "^0.15.1",
+    "@rslib/core": "^0.17.0",
     "@types/react": "^19.2.2",
     "react": "^19.2.0",
     "typescript": "^5.9.3"
@@ -42,7 +42,7 @@
   "peerDependencies": {
     "@types/react": "latest",
     "react": ">=18.0.0",
-    "tailwindcss": "^4.1.14"
+    "tailwindcss": "^4.1.16"
   },
   "peerDependenciesMeta": {
     "@types/react": {

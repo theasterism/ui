@@ -58,7 +58,7 @@ function DialogContent({
       <DialogPrimitive.Content
         data-slot="dialog-content"
         className={cn(
-          "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-xl border border-border-subtle bg-background duration-200 data-[state=closed]:animate-out data-[state=open]:animate-in",
+          "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-6 p-4 rounded-xl border border-border-subtle shadow-sm bg-background duration-150 data-[state=closed]:animate-out data-[state=open]:animate-in sm:max-w-md",
           className
         )}
         {...props}>
@@ -80,14 +80,14 @@ function DialogHeader({
     <div
       data-slot="dialog-header"
       className={cn(
-        "flex flex-col gap-1.5 border-b border-b-border-subtle p-4 text-left",
+        "flex flex-col gap-1.5 text-left",
         className
       )}
       {...props}>
       {showCloseButton && (
         <DialogPrimitive.Close
           data-slot="dialog-close"
-          className="absolute top-4.5 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:outline focus:outline-offset-2 disabled:pointer-events-none data-[state=open]:text-foreground-subtle [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0">
+          className="absolute top-5 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus-visible:outline-offset-2 disabled:pointer-events-none data-[state=open]:text-foreground-subtle [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0">
           <XMarkIcon />
           <span className="sr-only">Close</span>
         </DialogPrimitive.Close>
@@ -102,7 +102,7 @@ function DialogFooter({ className, ...props }: DivElementProps) {
     <div
       data-slot="dialog-footer"
       className={cn(
-        "flex flex-col-reverse gap-2 px-4 pb-4 sm:flex-row sm:justify-end",
+        "flex flex-col-reverse gap-1.5 xs:flex-row xs:justify-end",
         className
       )}
       {...props}
@@ -119,7 +119,7 @@ function DialogTitle({
       data-slot="dialog-title"
       className={cn(
         typographyVariants({
-          variant: "heading4",
+          variant: "heading-3",
           className: "mt-0",
         }),
         className

@@ -4,7 +4,7 @@ import * as React from "react";
 import { cn } from "./utils";
 
 const inputVariants = cva({
-  base: "no-drag flex h-8.5 w-full items-center rounded-md border border-border-element bg-white px-3 py-2 text-foreground text-sm outline-offset-[-1px] transition-[color,box-shadow] placeholder:text-sm hover:border-border-element-hover focus-visible:outline disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:outline aria-invalid:outline-danger",
+  base: "no-drag flex h-8.5 w-full items-center rounded-md border border-border-element bg-white px-3 py-2 text-foreground text-sm -outline-offset-1 transition-[color,box-shadow] placeholder:text-sm hover:border-border-element-hover focus-visible:outline-2 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:outline-2 aria-invalid:outline-danger",
   variants: {
     variant: {
       default: "",
@@ -17,12 +17,10 @@ const inputVariants = cva({
 });
 
 export interface InputProps
-  extends React.ComponentProps<"input">,
-    VariantProps<typeof inputVariants> {
-  icon?: React.ReactNode;
+  extends React.ComponentProps<"input"> {
 }
 
-function Input({ className, type, icon, disabled, ...props }: InputProps) {
+function Input({ className, type, disabled, ...props }: InputProps) {
   const [isVisible, setIsVisible] = React.useState<boolean>(false);
 
   if (type === "password") {
@@ -36,14 +34,14 @@ function Input({ className, type, icon, disabled, ...props }: InputProps) {
           className={cn(
             inputVariants({ variant: "password", className }),
             "peer-focus-visible:border-transparent",
-            "pr-9! pl-3!"
+            "pr-8.5! pl-2.5!"
           )}
           type={isVisible ? "text" : "password"}
           {...props}
         />
         <button
           disabled={disabled}
-          className="peer before:-inset-[7px] absolute inset-y-0 end-0 mt-[7.5px] mr-2.5 flex size-5 items-center justify-center text-foreground-subtle ring-focus-ring ring-offset-1 ring-offset-transparent transition-colors before:absolute hover:text-foreground focus:z-10 focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+          className="peer before:-inset-[7px] absolute inset-y-0 end-0 mt-[7.5px] mr-2 flex size-5 rounded-xs items-center justify-center text-foreground-subtle outline-offset-1 transition-colors before:absolute hover:text-foreground focus:z-10 focus-visible:outline-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
           type="button"
           onClick={toggleVisibility}
           aria-label={isVisible ? "Hide password" : "Show password"}
@@ -58,25 +56,6 @@ function Input({ className, type, icon, disabled, ...props }: InputProps) {
       </div>
     );
   }
-
-  if (icon)
-    return (
-      <div className="relative">
-        <input
-          disabled={disabled}
-          data-slot="input"
-          className={cn(
-            inputVariants({ variant: "default", className }),
-            "peer ps-9"
-          )}
-          type={type}
-          {...props}
-        />
-        <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 text-foreground-subtle/80 peer-disabled:opacity-50">
-          {icon}
-        </div>
-      </div>
-    );
 
   return (
     <input

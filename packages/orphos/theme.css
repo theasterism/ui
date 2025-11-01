@@ -23,8 +23,6 @@
 :root {
   /* Base border radius */
   --radius: 6px;
-  /* code before-after content marker */
-  --code-marker: "`";
 
   --color-white: #fff;
   --color-black: #000;
