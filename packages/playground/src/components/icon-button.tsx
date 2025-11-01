@@ -8,10 +8,7 @@ export function IconButtonDemo() {
         <Button size="icon">
           <MagnifyingGlassIcon />
         </Button>
-        <Button size="icon" variant="primary">
-          <MagnifyingGlassIcon />
-        </Button>
-        <Button size="icon" variant="ghost">
+        <Button size="icon" variant="secondary">
           <MagnifyingGlassIcon />
         </Button>
         <Button size="icon" variant="danger">
@@ -22,10 +19,7 @@ export function IconButtonDemo() {
         <Button disabled size="icon">
           <MagnifyingGlassIcon />
         </Button>
-        <Button disabled size="icon" variant="primary">
-          <MagnifyingGlassIcon />
-        </Button>
-        <Button disabled size="icon" variant="ghost">
+        <Button disabled size="icon" variant="secondary">
           <MagnifyingGlassIcon />
         </Button>
         <Button disabled size="icon" variant="danger">

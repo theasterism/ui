@@ -11,15 +11,10 @@ import {
   FieldSet,
   FieldTitle,
 } from "orphos/field";
+import { UserIcon } from "orphos/icons";
 import { Input } from "orphos/input";
 import { RadioGroup, RadioGroupItem } from "orphos/radio-group";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "orphos/select";
+import { Select, SelectOption } from "orphos/select";
 import { Textarea } from "orphos/textarea";
 
 export function FieldDemo() {
@@ -61,42 +56,32 @@ export function FieldDemo() {
                   <FieldLabel htmlFor="checkout-exp-month-ts6">
                     Month
                   </FieldLabel>
-                  <Select defaultValue="">
-                    <SelectTrigger id="checkout-exp-month-ts6">
-                      <SelectValue placeholder="MM" />
-                    </SelectTrigger>
-                    <SelectContent side="bottom">
-                      <SelectItem value="01">01</SelectItem>
-                      <SelectItem value="02">02</SelectItem>
-                      <SelectItem value="03">03</SelectItem>
-                      <SelectItem value="04">04</SelectItem>
-                      <SelectItem value="05">05</SelectItem>
-                      <SelectItem value="06">06</SelectItem>
-                      <SelectItem value="07">07</SelectItem>
-                      <SelectItem value="08">08</SelectItem>
-                      <SelectItem value="09">09</SelectItem>
-                      <SelectItem value="10">10</SelectItem>
-                      <SelectItem value="11">11</SelectItem>
-                      <SelectItem value="12">12</SelectItem>
-                    </SelectContent>
+                  <Select>
+                      <SelectOption value="01">01</SelectOption>
+                      <SelectOption value="02">02</SelectOption>
+                      <SelectOption value="03">03</SelectOption>
+                      <SelectOption value="04">04</SelectOption>
+                      <SelectOption value="05">05</SelectOption>
+                      <SelectOption value="06">06</SelectOption>
+                      <SelectOption value="07">07</SelectOption>
+                      <SelectOption value="08">08</SelectOption>
+                      <SelectOption value="09">09</SelectOption>
+                      <SelectOption value="10">10</SelectOption>
+                      <SelectOption value="11">11</SelectOption>
+                      <SelectOption value="12">12</SelectOption>
                   </Select>
                 </Field>
                 <Field>
                   <FieldLabel htmlFor="checkout-7j9-exp-year-f59">
                     Year
                   </FieldLabel>
-                  <Select defaultValue="">
-                    <SelectTrigger id="checkout-7j9-exp-year-f59">
-                      <SelectValue placeholder="YYYY" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="2024">2024</SelectItem>
-                      <SelectItem value="2025">2025</SelectItem>
-                      <SelectItem value="2026">2026</SelectItem>
-                      <SelectItem value="2027">2027</SelectItem>
-                      <SelectItem value="2028">2028</SelectItem>
-                      <SelectItem value="2029">2029</SelectItem>
-                    </SelectContent>
+                  <Select >
+                      <SelectOption value="2024">2024</SelectOption>
+                      <SelectOption value="2025">2025</SelectOption>
+                      <SelectOption value="2026">2026</SelectOption>
+                      <SelectOption value="2027">2027</SelectOption>
+                      <SelectOption value="2028">2028</SelectOption>
+                      <SelectOption value="2029">2029</SelectOption>
                   </Select>
                 </Field>
                 <Field>
@@ -140,9 +125,9 @@ export function FieldDemo() {
               </Field>
             </FieldGroup>
           </FieldSet>
-          <Field orientation="horizontal">
+          <Field orientation="horizontal" >
             <Button type="submit">Submit</Button>
-            <Button variant="ghost" type="button">
+            <Button variant="secondary" type="button">
               Cancel
             </Button>
           </Field>

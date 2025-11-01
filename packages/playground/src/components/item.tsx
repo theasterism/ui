@@ -23,7 +23,7 @@ export function ItemDemo() {
           <Button size="sm">Action</Button>
         </ItemActions>
       </Item>
-      <Item variant="outline" size="sm" asChild>
+      <Item variant="outline"  asChild>
         <a href="#">
           <ItemMedia>
             <CheckBadgeIcon className="size-5" />

@@ -1,12 +1,10 @@
 import { Button } from "orphos/button";
 
-export function ButtonsDemo() {
+export function ButtonDemo() {
   return (
     <div className="z-auto flex w-auto flex-row flex-wrap gap-4">
       <Button>Button text</Button>
-      <Button variant="primary">Button text</Button>
       <Button variant="secondary">Button text</Button>
-      <Button variant="ghost">Button text</Button>
       <Button aria-invalid="true" variant="danger">
         Button text
       </Button>
@@ -18,14 +16,10 @@ export function ButtonsDemo() {
 export function ButtonDisabledDemo() {
   return (
     <div className="z-auto flex w-auto flex-row flex-wrap gap-4">
-      <Button disabled>Button text</Button>
-      <Button disabled variant="primary">
+      <Button disabled>
         Button text
       </Button>
       <Button disabled variant="secondary">
-        Button text
-      </Button>
-      <Button disabled variant="ghost">
         Button text
       </Button>
       <Button disabled variant="danger">

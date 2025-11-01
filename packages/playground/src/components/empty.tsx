@@ -30,8 +30,7 @@ export function EmptyInputGroup() {
             <MagnifyingGlassIcon />
           </InputGroupAddon>
           <InputGroupAddon align="inline-end">
-            <Kbd>/</Kbd>
-          </InputGroupAddon>
+           <Kbd>⌘</Kbd> <Kbd>K</Kbd>          </InputGroupAddon>
         </InputGroup>
         <EmptyDescription>
           Need help? <a href="#">Contact support</a>

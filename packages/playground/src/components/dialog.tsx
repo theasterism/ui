@@ -3,6 +3,7 @@ import {
   Dialog,
   DialogClose,
   DialogContent,
+  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
@@ -18,16 +19,17 @@ export function DialogDemo() {
       <DialogTrigger asChild>
         <Button>Edit Profile</Button>
       </DialogTrigger>
-      <DialogContent className="gap-6 sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <div className="flex items-center justify-between">
             <DialogTitle>Edit profile</DialogTitle>
-          </div>
+            <DialogDescription>Make changes to your profile here. Click save when you're done.</DialogDescription>
         </DialogHeader>
         <ProfileForm />
         <DialogFooter>
-          <DialogClose className={cn(buttonVariants({}))}>Close</DialogClose>
-          <Button variant="primary" type="submit">
+          <DialogClose className={cn(buttonVariants({
+            variant: "secondary"
+          }))}>Close</DialogClose>
+          <Button type="submit">
             Save changes
           </Button>
         </DialogFooter>
@@ -38,7 +40,7 @@ export function DialogDemo() {
 
 function ProfileForm({ className }: React.ComponentProps<"form">) {
   return (
-    <div className={cn("flex flex-col gap-4 px-4", className)}>
+    <div className={cn("flex flex-col gap-6", className)}>
       <div className="grid gap-1.5">
         <Label htmlFor="name">Name</Label>
         <Input id="name" value="Pedro Duarte" className="col-span-3" />

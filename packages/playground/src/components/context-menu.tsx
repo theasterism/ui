@@ -46,7 +46,7 @@ export function ContextMenuDemo() {
               <ContextMenuSeparator />
               <ContextMenuItem>Developer Tools</ContextMenuItem>
               <ContextMenuSeparator />
-              <ContextMenuItem>Delete</ContextMenuItem>
+              <ContextMenuItem variant="danger" >Delete</ContextMenuItem>
             </ContextMenuSubContent>
           </ContextMenuPortal>
         </ContextMenuSub>

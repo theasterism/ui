@@ -6,6 +6,7 @@ export function ToastDemo() {
     <div className="flex flex-wrap gap-4">
       <Button onClick={() => toast("Here is your toast.")}>Default</Button>
       <Button
+        variant="secondary"
         onClick={() => {
           toast("Default toast", {
             description: "With a description and an icon",
@@ -14,35 +15,35 @@ export function ToastDemo() {
         With description
       </Button>
       <Button
-        variant="ghost"
+        variant="secondary"
         onClick={() => {
           toast.success("Event has been created.");
         }}>
         Success
       </Button>
       <Button
-        variant="ghost"
+        variant="secondary"
         onClick={() => {
           toast.info("Be at the area 10 minutes before the event time.");
         }}>
         Info
       </Button>
       <Button
-        variant="ghost"
+        variant="secondary"
         onClick={() => {
           toast.warning("Event start time cannot be earlier than 8am.");
         }}>
         Warning
       </Button>
       <Button
-        variant="ghost"
+        variant="secondary"
         onClick={() => {
           toast.error("Event has not been created.");
         }}>
         Error
       </Button>
       <Button
-        variant="ghost"
+        variant="secondary"
         onClick={() => {
           toast("Event has been created.", {
             action: {
@@ -54,7 +55,7 @@ export function ToastDemo() {
         Action
       </Button>
       <Button
-        variant="ghost"
+        variant="secondary"
         onClick={() => {
           toast("Event has been created.", {
             cancel: {
@@ -66,7 +67,7 @@ export function ToastDemo() {
         Cancel
       </Button>
       <Button
-        variant="ghost"
+        variant="secondary"
         onClick={() => {
           const myPromise = new Promise<{ name: string }>((resolve) => {
             setTimeout(() => {

@@ -11,10 +11,10 @@ import type * as React from "react";
 export function TooltipDemo() {
   return (
     <TooltipProvider>
-      <div className="flex rounded-lg border border-border-subtle p-0.5">
+      <div className="flex gap-1 p-0.5">
         <Tooltip>
           <TooltipTrigger>
-            <Button variant="ghost" size="icon" className="transition-none">
+            <Button variant="secondary" size="icon" className="transition-none">
               <BoldIcon aria-label="Bold" className="size-4" />
             </Button>
           </TooltipTrigger>
@@ -25,7 +25,7 @@ export function TooltipDemo() {
 
         <Tooltip>
           <TooltipTrigger>
-            <Button variant="ghost" size="icon" className="transition-none">
+            <Button variant="secondary" size="icon" className="transition-none">
               <ItalicIcon aria-label="Italic" className="size-4" />
             </Button>
           </TooltipTrigger>
@@ -36,7 +36,7 @@ export function TooltipDemo() {
 
         <Tooltip>
           <TooltipTrigger>
-            <Button variant="ghost" size="icon" className="transition-none">
+            <Button variant="secondary" size="icon" className="transition-none">
               <UnderlineIcon aria-label="Underline" className="size-4" />
             </Button>
           </TooltipTrigger>

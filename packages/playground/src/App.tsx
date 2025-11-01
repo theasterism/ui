@@ -9,8 +9,8 @@ import { SidebarInset, SidebarProvider, SidebarTrigger } from "orphos/sidebar";
 import { Toggle } from "orphos/toggle";
 import { typographyVariants } from "orphos/typography";
 import { AvatarDemo } from "./components/avatar";
-import { ButtonDisabledDemo, ButtonsDemo } from "./components/buttons";
-import { CalloutDemo } from "./components/callout";
+import { BadgeDemo } from "./components/badge";
+import { ButtonDisabledDemo, ButtonDemo } from "./components/button";
 import { CardDemo } from "./components/card";
 import { CheckboxDemo } from "./components/checkbox";
 import { ContextMenuDemo } from "./components/context-menu";
@@ -18,7 +18,6 @@ import { DialogDemo } from "./components/dialog";
 import { DropdownDemo } from "./components/dropdown";
 import { FieldChoiceCard, FieldDemo } from "./components/fieldset";
 import { IconButtonDemo } from "./components/icon-button";
-import { ImageUploadDemo } from "./components/image-upload";
 import { InputsDemo } from "./components/inputs";
 import { ItemDemo } from "./components/item";
 import { KbdTooltip } from "./components/kbd";
@@ -32,8 +31,9 @@ import { SwitchDemo } from "./components/switch";
 import { TabsDemo } from "./components/tabs";
 import { ToastDemo } from "./components/toast";
 import { TooltipDemo } from "./components/tooltip";
-import { NativeSelectDemo } from "./components/native-select";
 import { EmptyInputGroup } from "./components/empty";
+import { AlertDialogDemo } from "./components/alert-dialog";
+import { InputGroupDemo } from "./components/input-group";
 
 function App() {
   return (
@@ -49,7 +49,7 @@ function App() {
           <div>
             <h1
               className={typographyVariants({
-                variant: "heading1",
+                variant: "heading-1",
                 className: "mt-12",
               })}>
               Orphos Design System
@@ -63,7 +63,19 @@ function App() {
           <div className="flex flex-col gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
+                className: "mt-0!",
+              })}>
+              Alert Dialog
+            </h2>
+            <div className="flex w-auto flex-row flex-wrap gap-4">
+              <AlertDialogDemo />
+            </div>
+          </div>
+          <div className="flex flex-col gap-6">
+            <h2
+              className={typographyVariants({
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Avatar
@@ -75,30 +87,28 @@ function App() {
           <div className="flex w-auto flex-col items-start gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
+                className: "mt-0!",
+              })}>
+              Badge
+            </h2>
+            <BadgeDemo />
+          </div>
+          <div className="flex w-auto flex-col items-start gap-6">
+            <h2
+              className={typographyVariants({
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Button
             </h2>
-            <ButtonsDemo />
+            <ButtonDemo />
             <ButtonDisabledDemo />
           </div>
           <div className="flex w-auto flex-col items-start gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
-                className: "mt-0!",
-              })}>
-              Callout
-            </h2>
-            <div className="flex w-full max-w-xl flex-col gap-4">
-              <CalloutDemo />
-            </div>
-          </div>
-          <div className="flex w-auto flex-col items-start gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Card
@@ -110,7 +120,7 @@ function App() {
           <div className="flex w-full flex-col items-start gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Context Menu
@@ -122,10 +132,10 @@ function App() {
           <div className="flex w-full flex-col items-start gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
-              Dialog / Drawer
+              Dialog
             </h2>
             <div className="flex w-full flex-col items-start gap-10">
               <DialogDemo />
@@ -134,7 +144,7 @@ function App() {
           <div className="flex w-full flex-col items-start gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Dropdown Menu
@@ -146,19 +156,7 @@ function App() {
           <div className="flex w-full flex-col items-start gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
-                className: "mt-0!",
-              })}>
-              Dialog / Drawer
-            </h2>
-            <div className="flex w-full flex-col items-start gap-10">
-              <DialogDemo />
-            </div>
-          </div>
-          <div className="flex w-full flex-col items-start gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Empty
@@ -170,21 +168,7 @@ function App() {
           <div className="flex w-full flex-col items-start gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
-                className: "mt-0!",
-              })}>
-              Form Components
-            </h2>
-            <div className="flex w-full max-w-4xl flex-col items-start gap-10">
-              <ImageUploadDemo />
-              <InputsDemo />
-              <CheckboxDemo />
-            </div>
-          </div>
-          <div className="flex w-full flex-col items-start gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Field
@@ -197,7 +181,7 @@ function App() {
           <div className="flex w-auto flex-col items-start gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Icon Button
@@ -207,7 +191,17 @@ function App() {
           <div className="flex w-auto flex-col items-start gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
+                className: "mt-0!",
+              })}>
+              Input Group
+            </h2>
+            <InputGroupDemo />
+          </div>
+          <div className="flex w-auto flex-col items-start gap-6">
+            <h2
+              className={typographyVariants({
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Item
@@ -217,27 +211,17 @@ function App() {
           <div className="flex w-auto flex-col items-start gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Kbd
             </h2>
             <KbdTooltip />
           </div>
-          <div className="flex w-auto flex-col items-start gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading2",
-                className: "mt-0!",
-              })}>
-              Native Select
-            </h2>
-            <NativeSelectDemo />
-          </div>
           <div className="flex flex-col gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Popover
@@ -249,7 +233,7 @@ function App() {
           <div className="flex flex-col gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Select
@@ -261,7 +245,7 @@ function App() {
           <div className="flex flex-col gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Separator
@@ -273,7 +257,7 @@ function App() {
           <div className="flex flex-col gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Sheet
@@ -285,7 +269,7 @@ function App() {
           <div className="flex flex-col gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Skeleton
@@ -297,7 +281,7 @@ function App() {
           <div className="flex flex-col gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Slider
@@ -309,7 +293,7 @@ function App() {
           <div className="flex flex-col gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Switch
@@ -321,7 +305,7 @@ function App() {
           <div className="flex flex-col gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Tabs
@@ -333,7 +317,7 @@ function App() {
           <div className="flex flex-col gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Toast
@@ -345,7 +329,7 @@ function App() {
           <div className="flex flex-col gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Toggle
@@ -363,7 +347,7 @@ function App() {
           <div className="flex flex-col gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
                 className: "mt-0!",
               })}>
               Tooltip
@@ -375,34 +359,34 @@ function App() {
           <div className="flex flex-col gap-6">
             <h2
               className={typographyVariants({
-                variant: "heading2",
+                variant: "heading-2",
               })}>
               Typography
             </h2>
             <div className="flex w-auto flex-col gap-4">
               <h1
                 className={typographyVariants({
-                  variant: "heading1",
+                  variant: "heading-1",
                 })}>
                 The principles of the typographic craft are difficult to master
               </h1>
               <h2
                 className={typographyVariants({
-                  variant: "heading2",
+                  variant: "heading-2",
                   className: "mt-0!",
                 })}>
                 The principles of the typographic craft are difficult to master
               </h2>
               <h3
                 className={typographyVariants({
-                  variant: "heading3",
+                  variant: "heading-3",
                   className: "mt-0!",
                 })}>
                 The principles of the typographic craft are difficult to master
               </h3>
               <h4
                 className={typographyVariants({
-                  variant: "heading4",
+                  variant: "heading-4",
                   className: "mt-0!",
                 })}>
                 The principles of the typographic craft are difficult to master
