@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.44.0
+
+### Minor Changes
+
+- 88bc878: fix border-radius inconsistencies
+
 ## 0.43.2
 
 ### Patch Changes
