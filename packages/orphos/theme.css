@@ -1,24 +1,5 @@
 @import "tw-animate-css";
-
-/* LIGHT MODE * /
-
-/* Accent */
-@import "@radix-ui/colors/tomato.css";
-@import "@radix-ui/colors/tomato-alpha.css";
-
-/* Neutral */
-@import "@radix-ui/colors/gray.css";
-@import "@radix-ui/colors/gray-alpha.css";
-
-/* Semantic */
-@import "@radix-ui/colors/red.css";
-@import "@radix-ui/colors/red-alpha.css";
-@import "@radix-ui/colors/green.css";
-@import "@radix-ui/colors/green-alpha.css";
-@import "@radix-ui/colors/amber.css";
-@import "@radix-ui/colors/amber-alpha.css";
-@import "@radix-ui/colors/blue.css";
-@import "@radix-ui/colors/blue-alpha.css";
+@import "./colors.css";
 
 :root {
   /* Base border radius */
@@ -50,56 +31,56 @@
 
   --color-background: var(--gray-1);
   --color-background-subtle: var(--gray-2);
-  --color-background-element: var(--gray-a3);
-  --color-background-element-hover: var(--gray-a4);
-  --color-background-element-active: var(--gray-a5);
-  --color-border-subtle: var(--gray-a6);
-  --color-border-element: var(--gray-a7);
-  --color-border-element-hover: var(--gray-a8);
+  --color-background-element: var(--gray-3);
+  --color-background-element-hover: var(--gray-4);
+  --color-background-element-active: var(--gray-5);
+  --color-border-subtle: var(--gray-6);
+  --color-border-element: var(--gray-7);
+  --color-border-element-hover: var(--gray-8);
   --color-solid: var(--gray-9);
   --color-solid-hover: var(--gray-10);
-  --color-foreground-subtle: var(--gray-a11);
+  --color-foreground-subtle: var(--gray-11);
   --color-foreground: var(--gray-12);
 
   --color-primary: var(--tomato-9);
   --color-primary-hover: var(--tomato-10);
-  --color-primary-border: var(--tomato-a6);
+  --color-primary-border: var(--tomato-6);
   --color-primary-foreground: var(--color-white);
-  --color-primary-subtle: var(--tomato-a2);
-  --color-primary-surface: var(--tomato-a3);
-  --color-primary-surface-foreground: var(--tomato-a11);
+  --color-primary-subtle: var(--tomato-2);
+  --color-primary-surface: var(--tomato-3);
+  --color-primary-surface-foreground: var(--tomato-11);
 
   --color-danger: var(--red-9);
   --color-danger-hover: var(--red-10);
-  --color-danger-border: var(--red-a6);
+  --color-danger-border: var(--red-6);
   --color-danger-foreground: var(--color-white);
-  --color-danger-subtle: var(--red-a2);
-  --color-danger-surface: var(--red-a3);
-  --color-danger-surface-foreground: var(--red-a11);
+  --color-danger-subtle: var(--red-2);
+  --color-danger-surface: var(--red-3);
+  --color-danger-surface-foreground: var(--red-11);
 
-  --color-warning: var(--amber-9);
-  --color-warning-hover: var(--amber-10);
-  --color-warning-border: var(--amber-a6);
+  --color-warning: var(--yellow-9);
+  --color-warning-hover: var(--yellow-10);
+  --color-warning-border: var(--yellow-6);
   --color-warning-foreground: var(--color-black);
-  --color-warning-subtle: var(--amber-a2);
-  --color-warning-surface: var(--amber-a3);
-  --color-warning-surface-foreground: var(--amber-a11);
+  --color-warning-subtle: var(--yellow-2);
+  --color-warning-surface: var(--yellow-3);
+  --color-warning-surface-foreground: var(--yellow-11);
 
   --color-success: var(--green-9);
   --color-success-hover: var(--green-10);
-  --color-success-border: var(--green-a6);
+  --color-success-border: var(--green-6);
   --color-success-foreground: var(--color-white);
-  --color-success-subtle: var(--green-a2);
-  --color-success-surface: var(--green-a3);
-  --color-success-surface-foreground: var(--green-a11);
+  --color-success-subtle: var(--green-2);
+  --color-success-surface: var(--green-3);
+  --color-success-surface-foreground: var(--green-11);
 
   --color-info: var(--blue-9);
   --color-info-hover: var(--blue-10);
-  --color-info-border: var(--blue-a6);
+  --color-info-border: var(--blue-6);
   --color-info-foreground: var(--color-white);
-  --color-info-subtle: var(--blue-a2);
-  --color-info-surface: var(--blue-a3);
-  --color-info-surface-foreground: var(--blue-a11);
+  --color-info-subtle: var(--blue-2);
+  --color-info-surface: var(--blue-3);
+  --color-info-surface-foreground: var(--blue-11);
 
   /* Border radius */
   --radius-2xl: calc(var(--radius) + 8px);

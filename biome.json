@@ -7,8 +7,7 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "experimentalScannerIgnores": ["dist"],
-    "includes": ["**", "!**/dist", ""]
+    "includes": ["**", "!**/dist", "", "!!**/dist"]
   },
   "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "formatter": {
@@ -56,7 +55,7 @@
   "css": {
     "parser": {
       "cssModules": false,
-      "allowWrongLineComments": true
+      "tailwindDirectives": true
     },
     "linter": {
       "enabled": false

@@ -1,0 +1,70 @@
+@import "@radix-ui/colors/tomato.css";
+
+:root {
+  /* Neutral */
+  --gray-1: oklch(0.993 0 0);
+  --gray-2: oklch(0.982 0 0);
+  --gray-3: oklch(0.961 0 0);
+  --gray-4: oklch(0.94 0 0);
+  --gray-5: oklch(0.918 0 0);
+  --gray-6: oklch(0.894 0 0);
+  --gray-7: oklch(0.865 0 0);
+  --gray-8: oklch(0.818 0 0);
+  --gray-9: oklch(0.649 0 0);
+  --gray-10: oklch(0.606 0 0);
+  --gray-11: oklch(0.503 0 0);
+  --gray-12: oklch(0.375 0 0);
+
+  /* Semantic */
+  --red-1: oklch(0.99 0.008 25);
+  --red-2: oklch(0.982 0.015 25);
+  --red-3: oklch(0.966 0.038 25);
+  --red-4: oklch(0.948 0.057 25);
+  --red-5: oklch(0.926 0.076 25);
+  --red-6: oklch(0.898 0.096 25);
+  --red-7: oklch(0.859 0.118 25);
+  --red-8: oklch(0.803 0.145 25);
+  --red-9: oklch(0.657 0.183 25);
+  --red-10: oklch(0.615 0.189 25);
+  --red-11: oklch(0.497 0.152 25);
+  --red-12: oklch(0.372 0.1 25);
+
+  --green-1: oklch(0.989 0.01 145);
+  --green-2: oklch(0.978 0.018 145);
+  --green-3: oklch(0.956 0.042 145);
+  --green-4: oklch(0.931 0.062 145);
+  --green-5: oklch(0.902 0.082 145);
+  --green-6: oklch(0.868 0.102 145);
+  --green-7: oklch(0.823 0.125 145);
+  --green-8: oklch(0.762 0.153 145);
+  --green-9: oklch(0.623 0.178 145);
+  --green-10: oklch(0.579 0.179 145);
+  --green-11: oklch(0.464 0.143 145);
+  --green-12: oklch(0.348 0.095 145);
+
+  --yellow-1: oklch(0.991 0.01 91);
+  --yellow-2: oklch(0.985 0.021 91);
+  --yellow-3: oklch(0.972 0.049 91);
+  --yellow-4: oklch(0.96 0.074 91);
+  --yellow-5: oklch(0.943 0.098 91);
+  --yellow-6: oklch(0.92 0.122 91);
+  --yellow-7: oklch(0.886 0.147 91);
+  --yellow-8: oklch(0.835 0.176 91);
+  --yellow-9: oklch(0.725 0.187 91);
+  --yellow-10: oklch(0.667 0.177 91);
+  --yellow-11: oklch(0.527 0.136 91);
+  --yellow-12: oklch(0.385 0.088 91);
+
+  --blue-1: oklch(0.989 0.008 252);
+  --blue-2: oklch(0.978 0.014 252);
+  --blue-3: oklch(0.958 0.035 252);
+  --blue-4: oklch(0.936 0.053 252);
+  --blue-5: oklch(0.912 0.071 252);
+  --blue-6: oklch(0.88 0.09 252);
+  --blue-7: oklch(0.836 0.112 252);
+  --blue-8: oklch(0.772 0.142 252);
+  --blue-9: oklch(0.629 0.187 252);
+  --blue-10: oklch(0.587 0.193 252);
+  --blue-11: oklch(0.471 0.155 252);
+  --blue-12: oklch(0.353 0.103 252);
+}
