@@ -12,17 +12,13 @@ import { AvatarDemo } from "./components/avatar";
 import { BadgeDemo } from "./components/badge";
 import { ButtonDisabledDemo, ButtonDemo } from "./components/button";
 import { CardDemo } from "./components/card";
-import { CheckboxDemo } from "./components/checkbox";
 import { ContextMenuDemo } from "./components/context-menu";
 import { DialogDemo } from "./components/dialog";
 import { DropdownDemo } from "./components/dropdown";
-import { FieldChoiceCard, FieldDemo } from "./components/fieldset";
 import { IconButtonDemo } from "./components/icon-button";
-import { InputsDemo } from "./components/inputs";
 import { ItemDemo } from "./components/item";
 import { KbdTooltip } from "./components/kbd";
 import { PopoverDemo } from "./components/popover";
-import { SelectScrollable } from "./components/select";
 import { SheetSide } from "./components/sheet";
 import { AppSidebar } from "./components/sidebar/app-sidebar";
 import { SkeletonDemo } from "./components/skeleton";
@@ -165,19 +161,6 @@ function App() {
               <EmptyInputGroup />
             </div>
           </div>
-          <div className="flex w-full flex-col items-start gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Field
-            </h2>
-            <div className="flex w-full max-w-4xl flex-col items-start gap-10">
-              <FieldDemo />
-              <FieldChoiceCard />
-            </div>
-          </div>
           <div className="flex w-auto flex-col items-start gap-6">
             <h2
               className={typographyVariants({
@@ -228,18 +211,6 @@ function App() {
             </h2>
             <div className="flex w-auto flex-row gap-4">
               <PopoverDemo />
-            </div>
-          </div>
-          <div className="flex flex-col gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Select
-            </h2>
-            <div className="flex w-auto flex-row gap-4">
-              <SelectScrollable />
             </div>
           </div>
           <div className="flex flex-col gap-6">
