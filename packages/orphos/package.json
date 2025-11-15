@@ -9,11 +9,13 @@
       "types": "./dist/*.d.ts"
     },
     "./package.json": "./package.json",
-    "./theme.css": "./theme.css"
+    "./theme.css": "./theme.css",
+    "./colors.css": "./colors.css"
   },
   "files": [
     "dist",
     "theme.css",
+    "colors.css",
     "package.json",
     "README.md"
   ],
