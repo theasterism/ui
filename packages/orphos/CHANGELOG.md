@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.45.2
+
+### Patch Changes
+
+- df0478c: update menus and select item border radius
+
 ## 0.45.1
 
 ### Patch Changes
