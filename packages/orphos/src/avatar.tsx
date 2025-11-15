@@ -1,6 +1,7 @@
 "use client";
 
-import { Avatar as AvatarPrimitive } from "radix-ui";
+import { Avatar as AvatarPrimitive } from "@base-ui-components/react/avatar";
+import Avvvatars from "avvvatars-react";
 
 import type * as React from "react";
 import { cn } from "./utils";
@@ -13,7 +14,7 @@ function Avatar({
     <AvatarPrimitive.Root
       data-slot="avatar"
       className={cn(
-        "relative flex size-8.5 shrink-0 overflow-hidden rounded-full",
+        "relative flex size-8.5 shrink-0 select-none overflow-hidden rounded-full align-middle text-sm",
         className
       )}
       {...props}
@@ -27,25 +28,30 @@ function AvatarImage({
 }: React.ComponentProps<typeof AvatarPrimitive.Image>) {
   return (
     <AvatarPrimitive.Image
-      className={cn("aspect-square size-full", className)}
+      data-slot="avatar-image"
+      className={cn("aspect-square size-full object-cover", className)}
       {...props}
     />
   );
 }
 
-function AvatarFallback({
-  className,
-  ...props
-}: React.ComponentProps<typeof AvatarPrimitive.Fallback>) {
+type AvatarFallbackProps = React.ComponentProps<
+  typeof AvatarPrimitive.Fallback
+> & {
+  value: string;
+};
+
+function AvatarFallback({ className, value, ...props }: AvatarFallbackProps) {
   return (
     <AvatarPrimitive.Fallback
       data-slot="avatar-fallback"
       className={cn(
-        "inline-flex size-full items-center justify-center rounded-full bg-foreground font-medium text-background text-sm",
+        "inline-flex size-full items-center justify-center rounded-full font-medium",
         className
       )}
-      {...props}
-    />
+      {...props}>
+      <Avvvatars value={value} style="character" size={34} />
+    </AvatarPrimitive.Fallback>
   );
 }
 

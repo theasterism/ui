@@ -2,8 +2,8 @@ import { cva, type VariantProps } from "cva";
 import { useMemo } from "react";
 import { Label } from "./label";
 import { Separator } from "./separator";
-import { cn } from "./utils";
 import { typographyVariants } from "./typography";
+import { cn } from "./utils";
 
 function FieldSet({ className, ...props }: React.ComponentProps<"fieldset">) {
   return (
@@ -30,7 +30,7 @@ function FieldLegend({
       data-variant={variant}
       className={cn(
         typographyVariants({
-          variant: "strong"
+          variant: "strong",
         }),
         "mb-1.5",
         "data-[variant=legend]:text-base",
@@ -66,7 +66,7 @@ const fieldVariants = cva({
         "has-[>[data-slot=field-content]]:items-start has-[>[data-slot=field-content]]:[&>[role=checkbox],[role=radio]]:mt-px",
       ],
       responsive: [
-        "@md/field-group:flex-row flex-col @md/field-group:items-center @md/field-group:*:w-auto *:w-full [&>.sr-only]:w-auto",
+        "@md/field-group:flex-row flex-col @md/field-group:items-center *:w-full @md/field-group:*:w-auto [&>.sr-only]:w-auto",
         "@md/field-group:*:data-[slot=field-label]:flex-auto",
         "@md/field-group:has-[>[data-slot=field-content]]:items-start @md/field-group:has-[>[data-slot=field-content]]:[&>[role=checkbox],[role=radio]]:mt-px",
       ],
@@ -83,6 +83,7 @@ function Field({
   ...props
 }: React.ComponentProps<"div"> & VariantProps<typeof fieldVariants>) {
   return (
+    // biome-ignore lint/a11y/useSemanticElements: shut up!
     <div
       role="group"
       data-slot="field"
@@ -144,7 +145,7 @@ function FieldDescription({ className, ...props }: React.ComponentProps<"p">) {
       className={cn(
         "font-normal text-foreground-subtle text-sm leading-normal group-has-data-[orientation=horizontal]/field:text-balance",
         "nth-last-2:-mt-1 [[data-variant=legend]+&]:-mt-1.5 last:mt-0",
-        "[&>a]:text-info-surface-foreground [&>a:hover]:text-info-surface-foreground [&>a:hover]:decoration-info-surface-foreground [&>a]:underline [&>a]:decoration-info-border [&>a]:underline-offset-[2.5px]",
+        "[&>a:hover]:text-info-surface-foreground [&>a:hover]:decoration-info-surface-foreground [&>a]:text-info-surface-foreground [&>a]:underline [&>a]:decoration-info-border [&>a]:underline-offset-[2.5px]",
         className
       )}
       {...props}
@@ -205,6 +206,7 @@ function FieldError({
       <ul className="ml-4 flex list-disc flex-col gap-1">
         {errors.map(
           (error, index) =>
+            // biome-ignore lint/suspicious/noArrayIndexKey: shut up!
             error?.message && <li key={index}>{error.message}</li>
         )}
       </ul>

@@ -1,8 +1,8 @@
 "use client";
 
-import { Dialog as DialogPrimitive } from "radix-ui";
+import { Dialog as DialogPrimitive } from "@base-ui-components/react/dialog";
 import type * as React from "react";
-import { XMarkIcon } from "./icons";
+import { IconX } from "./icons";
 import type { DivElementProps } from "./types";
 import { typographyVariants } from "./typography";
 import { cn } from "./utils";
@@ -34,12 +34,12 @@ function DialogClose({
 function DialogOverlay({
   className,
   ...props
-}: React.ComponentProps<typeof DialogPrimitive.Overlay>) {
+}: React.ComponentProps<typeof DialogPrimitive.Backdrop>) {
   return (
-    <DialogPrimitive.Overlay
+    <DialogPrimitive.Backdrop
       data-slot="dialog-overlay"
       className={cn(
-        "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50 data-[state=closed]:animate-out data-[state=open]:animate-in",
+        "data-closed:fade-out-0 data-open:fade-in-0 fixed inset-0 z-50 bg-background/60 data-closed:animate-out data-open:animate-in",
         className
       )}
       {...props}
@@ -51,19 +51,25 @@ function DialogContent({
   className,
   children,
   ...props
-}: React.ComponentProps<typeof DialogPrimitive.Content>) {
+}: React.ComponentProps<typeof DialogPrimitive.Popup>) {
   return (
     <DialogPortal data-slot="dialog-portal">
       <DialogOverlay />
-      <DialogPrimitive.Content
+
+      <DialogPrimitive.Popup
         data-slot="dialog-content"
         className={cn(
-          "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-6 p-4 rounded-xl border border-border-subtle shadow-sm bg-background duration-150 data-[state=closed]:animate-out data-[state=open]:animate-in sm:max-w-md",
+          "fixed z-50 grid w-full bg-background text-popover-foreground sm:max-w-[calc(100%-2rem)]",
+          "gap-4 rounded-xl border p-4 outline-none duration-150 sm:max-w-lg sm:scale-[calc(1-0.1*var(--nested-dialogs))]",
+          "fixed bottom-0 w-full sm:top-[50%] sm:bottom-auto sm:left-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%]",
+          "duration-150",
+          "data-closed:fade-out-0 data-closed:zoom-out-95 data-closed:animate-out",
+          "data-open:fade-in-0 data-open:zoom-in-95 data-open:animate-in",
           className
         )}
         {...props}>
         {children}
-      </DialogPrimitive.Content>
+      </DialogPrimitive.Popup>
     </DialogPortal>
   );
 }
@@ -79,16 +85,13 @@ function DialogHeader({
   return (
     <div
       data-slot="dialog-header"
-      className={cn(
-        "flex flex-col gap-1.5 text-left",
-        className
-      )}
+      className={cn("flex flex-col gap-1.5 text-left", className)}
       {...props}>
       {showCloseButton && (
         <DialogPrimitive.Close
           data-slot="dialog-close"
-          className="absolute top-5 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus-visible:outline-offset-2 disabled:pointer-events-none data-[state=open]:text-foreground-subtle [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0">
-          <XMarkIcon />
+          className="absolute end-2 top-3.5 inline-flex size-7 shrink-0 cursor-pointer items-center justify-center rounded-md border border-transparent text-foreground-muted transition-[color,background-color,box-shadow,opacity] pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0">
+          <IconX />
           <span className="sr-only">Close</span>
         </DialogPrimitive.Close>
       )}
@@ -102,7 +105,7 @@ function DialogFooter({ className, ...props }: DivElementProps) {
     <div
       data-slot="dialog-footer"
       className={cn(
-        "flex flex-col-reverse gap-1.5 xs:flex-row xs:justify-end",
+        "flex xs:flex-row flex-col-reverse xs:justify-end gap-1.5",
         className
       )}
       {...props}
@@ -132,11 +135,11 @@ function DialogTitle({
 function DialogDescription({
   className,
   ...props
-}: React.ComponentProps<typeof DialogPrimitive.DialogDescription>) {
+}: React.ComponentProps<typeof DialogPrimitive.Description>) {
   return (
     <DialogPrimitive.Description
       data-slot="dialog-description"
-      className={cn("text-sm text-solid-hover", className)}
+      className={cn("text-foreground-muted text-sm", className)}
       {...props}
     />
   );

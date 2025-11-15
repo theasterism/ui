@@ -1,12 +1,13 @@
 "use client";
 
-import { Slider as SliderPrimitive } from "radix-ui";
+import { Slider as SliderPrimitive } from "@base-ui-components/react/slider";
 import * as React from "react";
 
 import { cn } from "./utils";
 
 function Slider({
   className,
+  children,
   defaultValue,
   value,
   min = 0,
@@ -26,31 +27,37 @@ function Slider({
   return (
     <SliderPrimitive.Root
       data-slot="slider"
+      thumbAlignment="edge"
       defaultValue={defaultValue}
       value={value}
       min={min}
       max={max}
-      className={cn(
-        "relative flex w-full touch-none select-none items-center data-[orientation=vertical]:h-full data-[orientation=vertical]:min-h-44 data-[orientation=vertical]:w-auto data-[orientation=vertical]:flex-col data-disabled:opacity-50",
-        className
-      )}
+      className="data-[orientation=horizontal]:w-full"
       {...props}>
-      <SliderPrimitive.Track
-        data-slot="slider-track"
-        className="relative grow overflow-hidden rounded-full bg-background-element-hover data-[orientation=horizontal]:h-1.5 data-[orientation=vertical]:h-full data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-1.5">
-        <SliderPrimitive.Range
-          data-slot="slider-range"
-          className="absolute bg-primary data-[orientation=horizontal]:h-full data-[orientation=vertical]:w-full"
-        />
-      </SliderPrimitive.Track>
-      {Array.from({ length: _values.length }, (_, index) => (
-        <SliderPrimitive.Thumb
-          data-slot="slider-thumb"
-          // biome-ignore lint/suspicious/noArrayIndexKey: shut up!
-          key={index}
-          className="block size-4 rounded-full bg-white border-2 border-border-element transition-transform hover:scale-115 focus-visible:outline-2 focus-visible:-outline-offset-2 disabled:pointer-events-none disabled:opacity-50"
-        />
-      ))}
+      {children}
+      <SliderPrimitive.Control
+        data-slot="slider-control"
+        className={cn(
+          "flex touch-none select-none data-[disabled]:pointer-events-none data-[orientation=vertical]:h-full data-[orientation=vertical]:min-h-44 data-[orientation=horizontal]:w-full data-[orientation=horizontal]:min-w-44 data-[orientation=vertical]:flex-col data-disabled:opacity-60",
+          className
+        )}>
+        <SliderPrimitive.Track
+          data-slot="slider-track"
+          className="relative grow select-none before:absolute before:rounded-full before:bg-background-element-hover data-[orientation=horizontal]:h-1.5 data-[orientation=vertical]:h-full data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-1 data-[orientation=horizontal]:before:inset-x-0.5 data-[orientation=vertical]:before:inset-x-0 data-[orientation=horizontal]:before:inset-y-0 data-[orientation=vertical]:before:inset-y-0.5">
+          <SliderPrimitive.Indicator
+            data-slot="slider-range"
+            className="select-none rounded-full bg-primary data-[orientation=horizontal]:ms-0.5 data-[orientation=vertical]:mb-0.5"
+          />
+          {Array.from({ length: _values.length }, (_, index) => (
+            <SliderPrimitive.Thumb
+              data-slot="slider-thumb"
+              // biome-ignore lint/suspicious/noArrayIndexKey: shut up!
+              key={index}
+              className="block size-4 shrink-0 select-none rounded-full border-2 bg-background-element before:absolute before:inset-0 before:rounded-full focus-visible:outline-2 has-focus-visible:outline-2 data-dragging:outline-2 data-dragging:outline-focus-ring [&:is(:focus-visible,[data-dragging])]:shadow-none"
+            />
+          ))}
+        </SliderPrimitive.Track>
+      </SliderPrimitive.Control>
     </SliderPrimitive.Root>
   );
 }

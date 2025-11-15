@@ -33,15 +33,13 @@ function TooltipTrigger({
 
 function TooltipPositioner({
   className,
-  sideOffset = 10,
   ...props
 }: React.ComponentProps<typeof TooltipPrimitive.Positioner>) {
   return (
     <TooltipPrimitive.Portal>
       <TooltipPrimitive.Positioner
         data-slot="tooltip-positioner"
-        sideOffset={sideOffset}
-        className={cn("z-50", className)}
+        className={cn(className)}
         {...props}
       />
     </TooltipPrimitive.Portal>
@@ -51,28 +49,41 @@ function TooltipPositioner({
 function TooltipContent({
   className,
   children,
+  align,
+  side,
+  sideOffset = 10,
   ...props
-}: React.ComponentProps<typeof TooltipPrimitive.Popup>) {
+}: React.ComponentProps<typeof TooltipPrimitive.Popup> & {
+  align?: TooltipPrimitive.Positioner.Props["align"];
+  side?: TooltipPrimitive.Positioner.Props["side"];
+  sideOffset?: TooltipPrimitive.Positioner.Props["sideOffset"];
+}) {
   return (
-    <TooltipPrimitive.Popup
-      data-slot="tooltip-content"
-      className={cn(
-        "z-100 w-fit origin-(--transform-origin) text-balance rounded-md bg-foreground px-2 py-1 text-background text-xs transition-[transform,scale,opacity] data-[ending-style]:scale-90 data-[starting-style]:scale-90 data-[ending-style]:opacity-0 data-[starting-style]:opacity-0 data-[instant]:duration-0",
-        className
-      )}
-      {...props}>
-      {children}
-      <TooltipPrimitive.Arrow
+    <TooltipPositioner
+      className="z-50"
+      sideOffset={sideOffset}
+      align={align}
+      side={side}>
+      <TooltipPrimitive.Popup
+        data-slot="tooltip-content"
         className={cn(
-          "z-50 size-2 rotate-45 bg-foreground fill-foreground",
-          "data-[side=bottom]:-translate-y-1/2 data-[side=bottom]:top-[0.2px]",
-          "data-[side=top]:bottom-[0.2px] data-[side=top]:translate-y-1/2",
-          "data-[side=left]:right-0 data-[side=left]:translate-x-1/2",
-          "data-[side=right]:-translate-x-1/2 data-[side=right]:left-[0.2px]",
+          "z-100 w-fit origin-(--transform-origin) text-balance rounded-md bg-foreground px-2 py-1 text-background text-xs transition-[transform,scale,opacity] data-[ending-style]:scale-90 data-[starting-style]:scale-90 data-[ending-style]:opacity-0 data-[starting-style]:opacity-0 data-[instant]:duration-0",
           className
         )}
-      />
-    </TooltipPrimitive.Popup>
+        {...props}>
+        {children}
+        <TooltipPrimitive.Arrow
+          className={cn(
+            "z-50 size-2 rotate-45 bg-foreground fill-foreground",
+            "data-[side=bottom]:-translate-y-1/2 data-[side=bottom]:top-[0.2px]",
+            "data-[side=top]:bottom-[0.2px] data-[side=top]:translate-y-1/2",
+            "data-[side=left]:right-0 data-[side=left]:translate-x-1/2",
+            "data-[side=right]:-translate-x-1/2 data-[side=right]:left-[0.2px]",
+            className
+          )}
+        />
+      </TooltipPrimitive.Popup>
+    </TooltipPositioner>
   );
 }
 

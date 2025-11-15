@@ -1,18 +1,22 @@
-import { Slot } from "@radix-ui/react-slot";
+import { mergeProps } from "@base-ui-components/react/merge-props";
+import { useRender } from "@base-ui-components/react/use-render";
 import { cva, type VariantProps } from "cva";
-import type * as React from "react";
 import { cn } from "./utils";
 
 const badgeVariants = cva({
-  base: "inline-flex min-w-fit items-center gap-3 border rounded-md px-1.5 py-px font-medium text-[11px] has-[svg]:pr-1.5 has-[svg]:pl-[5px] [&_svg]:size-2.5",
+  base: "inline-flex min-w-fit items-center gap-1 rounded-md border px-1.5 py-px font-medium text-[11px] has-[svg]:gap-[3px] has-[svg]:pr-1.5 has-[svg]:pl-[5px] [&_svg]:size-3",
   variants: {
     variant: {
       default:
-        "border-border-subtle bg-background-element text-foreground-subtle [a&]:hover:bg-background-element-hover",
-      primary: "border-primary-border bg-primary-subtle text-primary-surface-foreground",
-      danger: "border-danger-border bg-danger-subtle text-danger-surface-foreground",
-      success: "border-success-border bg-success-subtle text-success-surface-foreground",
-      warning: "border-warning-border bg-warning-subtle text-warning-surface-foreground",
+        "border-border-subtle bg-background text-foreground-subtle dark:bg-background-element [a&]:hover:bg-background-element-hover",
+      primary:
+        "border-primary-border bg-primary-subtle text-primary-surface-foreground",
+      danger:
+        "border-danger-border bg-danger-subtle text-danger-surface-foreground",
+      success:
+        "border-success-border bg-success-subtle text-success-surface-foreground",
+      warning:
+        "border-warning-border bg-warning-subtle text-warning-surface-foreground",
       info: "border-info-border bg-info-subtle text-info-surface-foreground",
     },
   },
@@ -21,22 +25,21 @@ const badgeVariants = cva({
   },
 });
 
-function Badge({
-  className,
-  variant,
-  asChild = false,
-  ...props
-}: React.ComponentProps<"span"> &
-  VariantProps<typeof badgeVariants> & { asChild?: boolean }) {
-  const Comp = asChild ? Slot : "span";
+interface BadgeProps extends useRender.ComponentProps<"span"> {
+  variant?: VariantProps<typeof badgeVariants>["variant"];
+}
 
-  return (
-    <Comp
-      data-slot="badge"
-      className={cn(badgeVariants({ variant }), className)}
-      {...props}
-    />
-  );
+function Badge({ className, variant, render, ...props }: BadgeProps) {
+  const defaultProps = {
+    "data-slot": "badge",
+    className: cn(badgeVariants({ variant, className })),
+  };
+
+  return useRender({
+    defaultTagName: "span",
+    render,
+    props: mergeProps<"span">(defaultProps, props),
+  });
 }
 
 export { Badge, badgeVariants };

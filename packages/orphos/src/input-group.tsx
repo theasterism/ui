@@ -10,11 +10,12 @@ import { cn } from "./utils";
 
 function InputGroup({ className, ...props }: React.ComponentProps<"div">) {
   return (
+    // biome-ignore lint/a11y/useSemanticElements: shut up!
     <div
       data-slot="input-group"
       role="group"
       className={cn(
-        "group/input-group relative flex w-full items-center rounded-md border border-border-element transition-[color,box-shadow]",
+        "group/input-group relative flex w-full items-center rounded-md border bg-background-element transition-[color,box-shadow]",
         "h-8.5 min-w-0 has-[>textarea]:h-auto",
 
         // Variants based on alignment.
@@ -23,7 +24,7 @@ function InputGroup({ className, ...props }: React.ComponentProps<"div">) {
         "has-[>[data-align=block-start]]:h-auto has-[>[data-align=block-start]]:flex-col has-[>[data-align=block-start]]:[&>input]:pb-3",
         "has-[>[data-align=block-end]]:h-auto has-[>[data-align=block-end]]:flex-col has-[>[data-align=block-end]]:[&>input]:pt-3",
         // Focus state.
-        "has-[[data-slot=input-group-control]:focus-visible]:outline-2 has-[[data-slot=input-group-control]:focus-visible]:-outline-offset-1",
+        "has-[[data-slot=input-group-control]:focus-visible]:-outline-offset-1 has-[[data-slot=input-group-control]:focus-visible]:outline-2",
         // Error state.
         "has-[[data-slot][aria-invalid=true]]:outline-2 has-[[data-slot][aria-invalid=true]]:outline-danger has-[[data-slot][aria-invalid=true]]:outline-offset-1",
 
@@ -35,18 +36,18 @@ function InputGroup({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 const inputGroupAddonVariants = cva({
-  base: "flex h-auto cursor-text select-none items-center justify-center gap-2 py-1.5 font-medium text-foreground-subtle text-sm group-data-[disabled=true]/input-group:opacity-50 [&>kbd]:rounded-[calc(var(--radius)-3px)] [&>svg:not([class*='size-'])]:size-4",
+  base: "flex h-auto cursor-text select-none items-center justify-center gap-1.5 py-1.5 font-medium text-foreground-subtle text-sm group-data-[disabled=true]/input-group:opacity-50 [&>kbd]:rounded-[calc(var(--radius)-3px)] [&>svg:not([class*='size-'])]:size-4",
   variants: {
     align: {
-           "inline-start":
-             "order-first pl-3 has-[>button]:ml-[-0.45rem] has-[>kbd]:ml-[-0.35rem]",
-           "inline-end":
-             "order-last pr-3 has-[>button]:mr-[-0.45rem] has-[>kbd]:mr-[-0.35rem]",
-           "block-start":
-             "order-first w-full justify-start px-3 pt-3 [.border-b]:pb-3 group-has-[>input]/input-group:pt-2.5",
-           "block-end":
-             "order-last w-full justify-start px-3 pb-3 [.border-t]:pt-3 group-has-[>input]/input-group:pb-2.5",
-         },
+      "inline-start":
+        "order-first pl-2.5 has-[>button]:ml-[-0.35rem] has-[>kbd]:ml-[-0.25rem] has-[>svg]:pl-2",
+      "inline-end":
+        "order-last pr-2.5 has-[>button]:mr-[-0.35rem] has-[>kbd]:mr-[-0.25rem]",
+      "block-start":
+        "order-first w-full justify-start px-3 pt-3 group-has-[>input]/input-group:pt-2.5 [.border-b]:pb-3",
+      "block-end":
+        "order-last w-full justify-start px-3 pb-3 group-has-[>input]/input-group:pb-2.5 [.border-t]:pt-3",
+    },
   },
   defaultVariants: {
     align: "inline-start",
@@ -59,6 +60,7 @@ function InputGroupAddon({
   ...props
 }: React.ComponentProps<"div"> & VariantProps<typeof inputGroupAddonVariants>) {
   return (
+    // biome-ignore lint/a11y/useSemanticElements: shut up!
     <div
       role="group"
       data-slot="input-group-addon"
@@ -81,7 +83,8 @@ const inputGroupButtonVariants = cva({
     size: {
       xs: "h-6 gap-1 rounded-sm px-2 has-[>svg]:px-2 [&>svg:not([class*='size-'])]:size-3.5",
       sm: "h-7 gap-1.5 rounded-md px-2.5 has-[>svg]:px-2.5",
-      "icon-xs": "size-6 rounded-sm p-0 has-[>svg]:p-0",
+      "icon-xs":
+        "size-6 rounded-sm p-0 has-[>svg]:p-0 [&>svg:not([class*='size-'])]:size-3.5",
       "icon-sm": "size-7 p-0 has-[>svg]:p-0",
     },
   },
@@ -93,7 +96,7 @@ const inputGroupButtonVariants = cva({
 function InputGroupButton({
   className,
   type = "button",
-  variant = "ghost",
+  variant = "default",
   size = "xs",
   ...props
 }: Omit<React.ComponentProps<typeof Button>, "size"> &

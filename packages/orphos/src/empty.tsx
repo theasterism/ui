@@ -1,13 +1,13 @@
 import { cva, type VariantProps } from "cva";
-import { cn } from "./utils";
 import { typographyVariants } from "./typography";
+import { cn } from "./utils";
 
 function Empty({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="empty"
       className={cn(
-        "flex min-w-0 flex-1 flex-col items-center justify-center gap-6 text-balance rounded-lg border-dashed p-6 text-center md:p-12",
+        "flex min-w-0 flex-1 flex-col items-center justify-center gap-6 text-balance rounded-xl border-dashed p-6 text-center md:p-12",
         className
       )}
       {...props}
@@ -33,7 +33,7 @@ const emptyMediaVariants = cva({
   variants: {
     variant: {
       default: "bg-transparent",
-      icon: "flex size-10 shrink-0 items-center justify-center rounded-lg bg-background-element text-foreground [&_svg:not([class*='size-'])]:size-6",
+      icon: "flex size-12 shrink-0 items-center justify-center rounded-lg border border-dashed text-foreground [&_svg:not([class*='size-'])]:size-6",
     },
   },
   defaultVariants: {
@@ -60,9 +60,13 @@ function EmptyTitle({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="empty-title"
-      className={cn(typographyVariants({
-        variant: "heading-2"
-      }), className)}
+      className={cn(
+        typographyVariants({
+          variant: "heading-2",
+          className: "mt-0",
+        }),
+        className
+      )}
       {...props}
     />
   );
@@ -73,7 +77,7 @@ function EmptyDescription({ className, ...props }: React.ComponentProps<"p">) {
     <div
       data-slot="empty-description"
       className={cn(
-        "text-foreground-subtle text-sm/relaxed [&>a]:text-info-surface-foreground [&>a:hover]:text-info-surface-foreground [&>a:hover]:decoration-info-surface-foreground [&>a]:underline [&>a]:decoration-info-border [&>a]:underline-offset-[2.5px]",
+        "text-foreground-subtle text-sm/relaxed [&>a:hover]:text-info-surface-foreground [&>a:hover]:decoration-info-surface-foreground [&>a]:text-info-surface-foreground [&>a]:underline [&>a]:decoration-info-border [&>a]:underline-offset-[2.5px]",
         className
       )}
       {...props}
