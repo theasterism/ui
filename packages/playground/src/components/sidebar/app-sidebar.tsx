@@ -1,9 +1,4 @@
-import {
-  Cog6ToothIcon,
-  HomeIcon,
-  Square2StackIcon,
-  TicketIcon,
-} from "orphos/icons";
+import { IconHome, IconSettings, IconStack2, IconTicket } from "orphos/icons";
 import {
   Sidebar,
   SidebarContent,
@@ -46,24 +41,24 @@ const data: {
     {
       label: "Home",
       href: "#",
-      icon: HomeIcon,
+      icon: IconHome,
       isActive: true,
     },
     {
       label: "Events",
       href: "#",
-      icon: Square2StackIcon,
+      icon: IconStack2,
       alerts: 2,
     },
     {
       label: "Orders",
       href: "#",
-      icon: TicketIcon,
+      icon: IconTicket,
     },
     {
       label: "Settings",
       href: "#",
-      icon: Cog6ToothIcon,
+      icon: IconSettings,
     },
   ],
   eventsGroup: {
@@ -92,12 +87,17 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenu>
               {data.mainNav.map((item) => (
                 <SidebarMenuItem key={item.label}>
-                  <SidebarMenuButton size="md" asChild isActive={item.isActive}>
-                    <a href={item.href}>
-                      <item.icon />
-                      <span>{item.label}</span>
-                    </a>
-                  </SidebarMenuButton>
+                  <SidebarMenuButton
+                    size="md"
+                    render={
+                      <a href={item.href}>
+                        <item.icon />
+                        <span>{item.label}</span>
+                      </a>
+                    }
+                    isActive={item.isActive}
+                  />
+
                   {item.alerts ? (
                     <SidebarMenuBadge>{item.alerts}</SidebarMenuBadge>
                   ) : null}
@@ -112,11 +112,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenu>
               {data.eventsGroup.events.map((event) => (
                 <SidebarMenuItem key={event.label}>
-                  <SidebarMenuButton asChild size="sm">
-                    <a href={event.href}>
-                      <span>{event.label}</span>
-                    </a>
-                  </SidebarMenuButton>
+                  <SidebarMenuButton
+                    render={
+                      <a href={event.href}>
+                        <span>{event.label}</span>
+                      </a>
+                    }
+                    size="sm"
+                  />
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>

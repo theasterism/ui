@@ -14,7 +14,7 @@ export function KbdTooltip() {
       <div className="flex flex-wrap gap-4">
         <Tooltip>
           <TooltipTrigger>
-            <Button variant="secondary" size="sm">Save</Button>
+            <Button size="sm">Save</Button>
           </TooltipTrigger>
           <TooltipPositioner>
             <TooltipContent>
@@ -26,7 +26,7 @@ export function KbdTooltip() {
         </Tooltip>
         <Tooltip>
           <TooltipTrigger>
-            <Button variant="secondary" size="sm">Print</Button>
+            <Button size="sm">Print</Button>
           </TooltipTrigger>
           <TooltipPositioner>
             <TooltipContent>

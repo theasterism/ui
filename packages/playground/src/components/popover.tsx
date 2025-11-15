@@ -1,21 +1,25 @@
 import { Button } from "orphos/button";
 import { Input } from "orphos/input";
 import { Label } from "orphos/label";
-import { Popover, PopoverContent, PopoverTrigger } from "orphos/popover";
+import {
+  Popover,
+  PopoverContent,
+  PopoverDescription,
+  PopoverTitle,
+  PopoverTrigger,
+} from "orphos/popover";
 
 export function PopoverDemo() {
   return (
     <Popover>
-      <PopoverTrigger asChild>
-        <Button variant="secondary" >Open popover</Button>
-      </PopoverTrigger>
+      <PopoverTrigger render={<Button>Open popover</Button>} />
       <PopoverContent className="w-80">
         <div className="grid gap-4">
-          <div className="space-y-2">
-            <h4 className="font-medium leading-none">Dimensions</h4>
-            <p className="text-foreground-subtle text-sm">
+          <div className="grid gap-1.5">
+            <PopoverTitle>Dimensions</PopoverTitle>
+            <PopoverDescription>
               Set the dimensions for the layer.
-            </p>
+            </PopoverDescription>
           </div>
           <div className="grid gap-2">
             <div className="grid grid-cols-3 items-center gap-4">

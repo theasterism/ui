@@ -8,11 +8,11 @@ export function AvatarDemo() {
           src="https://github.com/bachiitter.png"
           alt="@bachiitter"
         />
-        <AvatarFallback>B</AvatarFallback>
+        <AvatarFallback value="B" />
       </Avatar>
       <Avatar>
         <AvatarImage src="" alt="@bachiitter" />
-        <AvatarFallback>B</AvatarFallback>
+        <AvatarFallback value="B" />
       </Avatar>
     </>
   );

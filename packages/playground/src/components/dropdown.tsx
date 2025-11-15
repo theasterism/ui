@@ -3,8 +3,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
+  DropdownMenuPositioner,
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuSub,
@@ -16,12 +15,8 @@ import {
 export function DropdownDemo() {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button>Open</Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-64" align="start">
-        <DropdownMenuLabel>Label</DropdownMenuLabel>
-        <DropdownMenuSeparator />
+      <DropdownMenuTrigger render={<Button>Open</Button>} />
+      <DropdownMenuContent align="start">
         <DropdownMenuItem>
           Back
           <DropdownMenuShortcut>⌘[</DropdownMenuShortcut>
@@ -36,7 +31,7 @@ export function DropdownDemo() {
         </DropdownMenuItem>
         <DropdownMenuSub>
           <DropdownMenuSubTrigger>More Tools</DropdownMenuSubTrigger>
-          <DropdownMenuPortal>
+          <DropdownMenuPositioner alignOffset={-5} sideOffset={2}>
             <DropdownMenuSubContent className="w-48">
               <DropdownMenuItem>
                 Save Page As...
@@ -47,9 +42,9 @@ export function DropdownDemo() {
               <DropdownMenuSeparator />
               <DropdownMenuItem>Developer Tools</DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem variant="danger" >Delete</DropdownMenuItem>
+              <DropdownMenuItem variant="danger">Delete</DropdownMenuItem>
             </DropdownMenuSubContent>
-          </DropdownMenuPortal>
+          </DropdownMenuPositioner>
         </DropdownMenuSub>
       </DropdownMenuContent>
     </DropdownMenu>

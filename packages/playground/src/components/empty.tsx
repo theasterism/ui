@@ -3,9 +3,10 @@ import {
   EmptyContent,
   EmptyDescription,
   EmptyHeader,
+  EmptyMedia,
   EmptyTitle,
 } from "orphos/empty";
-import { MagnifyingGlassIcon } from "orphos/icons";
+import { IconDeviceDesktopX, IconSearch } from "orphos/icons";
 import {
   InputGroup,
   InputGroupAddon,
@@ -17,6 +18,9 @@ export function EmptyInputGroup() {
   return (
     <Empty>
       <EmptyHeader>
+        <EmptyMedia variant="icon">
+          <IconDeviceDesktopX />
+        </EmptyMedia>
         <EmptyTitle>404 - Not Found</EmptyTitle>
         <EmptyDescription>
           The page you&apos;re looking for doesn&apos;t exist. Try searching for
@@ -27,10 +31,11 @@ export function EmptyInputGroup() {
         <InputGroup className="sm:w-3/4">
           <InputGroupInput placeholder="Try searching for pages..." />
           <InputGroupAddon>
-            <MagnifyingGlassIcon />
+            <IconSearch />
           </InputGroupAddon>
           <InputGroupAddon align="inline-end">
-           <Kbd>⌘</Kbd> <Kbd>K</Kbd>          </InputGroupAddon>
+            <Kbd>⌘</Kbd> <Kbd>K</Kbd>{" "}
+          </InputGroupAddon>
         </InputGroup>
         <EmptyDescription>
           Need help? <a href="#">Contact support</a>

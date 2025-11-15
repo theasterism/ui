@@ -2,10 +2,8 @@ import {
   ContextMenu,
   ContextMenuContent,
   ContextMenuItem,
-  ContextMenuLabel,
-  ContextMenuPortal,
+  ContextMenuPositioner,
   ContextMenuSeparator,
-  ContextMenuShortcut,
   ContextMenuSub,
   ContextMenuSubContent,
   ContextMenuSubTrigger,
@@ -18,38 +16,26 @@ export function ContextMenuDemo() {
       <ContextMenuTrigger className="flex h-[100px] w-[200px] select-none items-center justify-center rounded-xl border border-dashed text-base">
         Right click here
       </ContextMenuTrigger>
-      <ContextMenuContent className="w-64">
-        <ContextMenuLabel>Label</ContextMenuLabel>
-        <ContextMenuSeparator />
-        <ContextMenuItem>
-          Back
-          <ContextMenuShortcut>⌘[</ContextMenuShortcut>
-        </ContextMenuItem>
-        <ContextMenuItem disabled>
-          Forward
-          <ContextMenuShortcut>⌘]</ContextMenuShortcut>
-        </ContextMenuItem>
-        <ContextMenuItem>
-          Reload
-          <ContextMenuShortcut>⌘R</ContextMenuShortcut>
-        </ContextMenuItem>
+      <ContextMenuContent>
+        <ContextMenuItem>Add to Library</ContextMenuItem>
         <ContextMenuSub>
-          <ContextMenuSubTrigger>More Tools</ContextMenuSubTrigger>
-          <ContextMenuPortal>
-            <ContextMenuSubContent className="w-48">
-              <ContextMenuItem>
-                Save Page As...
-                <ContextMenuShortcut>⇧⌘S</ContextMenuShortcut>
-              </ContextMenuItem>
-              <ContextMenuItem>Create Shortcut...</ContextMenuItem>
-              <ContextMenuItem>Name Window...</ContextMenuItem>
+          <ContextMenuSubTrigger>Add to Playlist</ContextMenuSubTrigger>
+          <ContextMenuPositioner alignOffset={-5} sideOffset={2}>
+            <ContextMenuSubContent>
+              <ContextMenuItem>Get up!</ContextMenuItem>
+              <ContextMenuItem>Inside Out</ContextMenuItem>
+              <ContextMenuItem>Night Beats</ContextMenuItem>
               <ContextMenuSeparator />
-              <ContextMenuItem>Developer Tools</ContextMenuItem>
-              <ContextMenuSeparator />
-              <ContextMenuItem variant="danger" >Delete</ContextMenuItem>
+              <ContextMenuItem>New Playlist...</ContextMenuItem>
             </ContextMenuSubContent>
-          </ContextMenuPortal>
+          </ContextMenuPositioner>
         </ContextMenuSub>
+        <ContextMenuSeparator />
+        <ContextMenuItem>Play Next</ContextMenuItem>
+        <ContextMenuItem>Play Last</ContextMenuItem>
+        <ContextMenuSeparator />
+        <ContextMenuItem>Favorite</ContextMenuItem>
+        <ContextMenuItem variant="danger">Delete</ContextMenuItem>
       </ContextMenuContent>
     </ContextMenu>
   );

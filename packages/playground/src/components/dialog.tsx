@@ -16,20 +16,18 @@ import { cn } from "orphos/utils";
 export function DialogDemo() {
   return (
     <Dialog>
-      <DialogTrigger asChild>
-        <Button>Edit Profile</Button>
-      </DialogTrigger>
+      <DialogTrigger render={<Button>Edit Profile</Button>}></DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-            <DialogTitle>Edit profile</DialogTitle>
-            <DialogDescription>Make changes to your profile here. Click save when you're done.</DialogDescription>
+          <DialogTitle>Edit profile</DialogTitle>
+          <DialogDescription>
+            Make changes to your profile here. Click save when you're done.
+          </DialogDescription>
         </DialogHeader>
         <ProfileForm />
         <DialogFooter>
-          <DialogClose className={cn(buttonVariants({
-            variant: "secondary"
-          }))}>Close</DialogClose>
-          <Button type="submit">
+          <DialogClose className={cn(buttonVariants({}))}>Close</DialogClose>
+          <Button variant="primary" type="submit">
             Save changes
           </Button>
         </DialogFooter>

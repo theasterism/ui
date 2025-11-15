@@ -19,9 +19,8 @@ export function SheetSide() {
     <div className="grid grid-cols-2 gap-2">
       {SHEET_SIDES.map((side) => (
         <Sheet key={side}>
-          <SheetTrigger asChild>
-            <Button variant="secondary" >{side}</Button>
-          </SheetTrigger>
+          <SheetTrigger render={<Button>{side}</Button>} />
+
           <SheetContent side={side}>
             <SheetHeader>
               <SheetTitle>Edit profile</SheetTitle>
@@ -40,9 +39,9 @@ export function SheetSide() {
               </div>{" "}
             </div>
             <SheetFooter>
-              <SheetClose asChild>
-                <Button type="submit">Save changes</Button>
-              </SheetClose>
+              <SheetClose
+                render={<Button type="submit">Save changes</Button>}
+              />
             </SheetFooter>
           </SheetContent>
         </Sheet>

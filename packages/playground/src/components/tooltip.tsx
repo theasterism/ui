@@ -14,35 +14,29 @@ export function TooltipDemo() {
       <div className="flex gap-1 p-0.5">
         <Tooltip>
           <TooltipTrigger>
-            <Button variant="secondary" size="icon" className="transition-none">
+            <Button size="icon" className="transition-none">
               <BoldIcon aria-label="Bold" className="size-4" />
             </Button>
           </TooltipTrigger>
-          <TooltipPositioner>
-            <TooltipContent>Bold</TooltipContent>
-          </TooltipPositioner>
+          <TooltipContent>Bold</TooltipContent>
         </Tooltip>
 
         <Tooltip>
           <TooltipTrigger>
-            <Button variant="secondary" size="icon" className="transition-none">
+            <Button size="icon" className="transition-none">
               <ItalicIcon aria-label="Italic" className="size-4" />
             </Button>
           </TooltipTrigger>
-          <TooltipPositioner>
-            <TooltipContent>Italic</TooltipContent>
-          </TooltipPositioner>
+          <TooltipContent>Italic</TooltipContent>
         </Tooltip>
 
         <Tooltip>
           <TooltipTrigger>
-            <Button variant="secondary" size="icon" className="transition-none">
+            <Button size="icon" className="transition-none">
               <UnderlineIcon aria-label="Underline" className="size-4" />
             </Button>
           </TooltipTrigger>
-          <TooltipPositioner>
-            <TooltipContent>Underline</TooltipContent>
-          </TooltipPositioner>
+          <TooltipContent>Underline</TooltipContent>
         </Tooltip>
       </div>
     </TooltipProvider>

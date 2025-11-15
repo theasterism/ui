@@ -40,7 +40,7 @@ export function CardDemo() {
                   href="#"
                   className={typographyVariants({
                     variant: "link",
-                    className: "text-sm ml-auto"
+                    className: "text-sm ml-auto",
                   })}>
                   Forgot your password?
                 </a>
@@ -54,7 +54,7 @@ export function CardDemo() {
         <Button variant="primary" type="submit" className="w-full">
           Login
         </Button>
-        <Button variant="secondary" className="w-full">Login with Google</Button>
+        <Button className="w-full">Login with Google</Button>
       </CardFooter>
     </Card>
   );

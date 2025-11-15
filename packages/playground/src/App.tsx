@@ -2,23 +2,31 @@
 /** biome-ignore-all lint/a11y/useValidAnchor: shut up! */
 
 import { Badge } from "orphos/badge";
-import { BoldIcon } from "orphos/icons";
+import { IconBold } from "orphos/icons";
 import { Kbd } from "orphos/kbd";
+import { Label } from "orphos/label";
 import { Separator } from "orphos/separator";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "orphos/sidebar";
+import { Spinner } from "orphos/spinner";
+import { Textarea } from "orphos/textarea";
 import { Toggle } from "orphos/toggle";
 import { typographyVariants } from "orphos/typography";
 import { AvatarDemo } from "./components/avatar";
 import { BadgeDemo } from "./components/badge";
-import { ButtonDisabledDemo, ButtonDemo } from "./components/button";
+import { ButtonDemo, ButtonDisabledDemo } from "./components/button";
 import { CardDemo } from "./components/card";
+import { CheckboxDemo } from "./components/checkbox";
 import { ContextMenuDemo } from "./components/context-menu";
 import { DialogDemo } from "./components/dialog";
 import { DropdownDemo } from "./components/dropdown";
-import { IconButtonDemo } from "./components/icon-button";
-import { ItemDemo } from "./components/item";
+import { EmptyInputGroup } from "./components/empty";
+import { FieldDemo } from "./components/field";
+import { InputGroupDemo } from "./components/input-group";
 import { KbdTooltip } from "./components/kbd";
+import { ColorPalette } from "./components/pallete";
 import { PopoverDemo } from "./components/popover";
+import RadioDemo from "./components/radio-group";
+import { SelectDemo } from "./components/select";
 import { SheetSide } from "./components/sheet";
 import { AppSidebar } from "./components/sidebar/app-sidebar";
 import { SkeletonDemo } from "./components/skeleton";
@@ -27,9 +35,6 @@ import { SwitchDemo } from "./components/switch";
 import { TabsDemo } from "./components/tabs";
 import { ToastDemo } from "./components/toast";
 import { TooltipDemo } from "./components/tooltip";
-import { EmptyInputGroup } from "./components/empty";
-import { AlertDialogDemo } from "./components/alert-dialog";
-import { InputGroupDemo } from "./components/input-group";
 
 function App() {
   return (
@@ -57,16 +62,7 @@ function App() {
             </div>
           </div>
           <div className="flex flex-col gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Alert Dialog
-            </h2>
-            <div className="flex w-auto flex-row flex-wrap gap-4">
-              <AlertDialogDemo />
-            </div>
+            <ColorPalette />
           </div>
           <div className="flex flex-col gap-6">
             <h2
@@ -112,6 +108,16 @@ function App() {
             <div className="flex w-full max-w-xl flex-col gap-4">
               <CardDemo />
             </div>
+          </div>
+          <div className="flex flex-col gap-6">
+            <h2
+              className={typographyVariants({
+                variant: "heading-2",
+                className: "mt-0!",
+              })}>
+              Checkbox
+            </h2>
+            <CheckboxDemo />
           </div>
           <div className="flex w-full flex-col items-start gap-6">
             <h2
@@ -161,15 +167,15 @@ function App() {
               <EmptyInputGroup />
             </div>
           </div>
-          <div className="flex w-auto flex-col items-start gap-6">
+          <div className="flex w-full flex-col items-start gap-6">
             <h2
               className={typographyVariants({
                 variant: "heading-2",
                 className: "mt-0!",
               })}>
-              Icon Button
+              Field
             </h2>
-            <IconButtonDemo />
+            <FieldDemo />
           </div>
           <div className="flex w-auto flex-col items-start gap-6">
             <h2
@@ -180,16 +186,6 @@ function App() {
               Input Group
             </h2>
             <InputGroupDemo />
-          </div>
-          <div className="flex w-auto flex-col items-start gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Item
-            </h2>
-            <ItemDemo />
           </div>
           <div className="flex w-auto flex-col items-start gap-6">
             <h2
@@ -212,6 +208,28 @@ function App() {
             <div className="flex w-auto flex-row gap-4">
               <PopoverDemo />
             </div>
+          </div>
+          <div className="flex flex-col gap-6">
+            <h2
+              className={typographyVariants({
+                variant: "heading-2",
+                className: "mt-0!",
+              })}>
+              Radio
+            </h2>
+            <div className="flex w-auto flex-row gap-4">
+              <RadioDemo />
+            </div>
+          </div>
+          <div className="flex flex-col gap-6">
+            <h2
+              className={typographyVariants({
+                variant: "heading-2",
+                className: "mt-0!",
+              })}>
+              Select
+            </h2>
+            <SelectDemo />
           </div>
           <div className="flex flex-col gap-6">
             <h2
@@ -267,6 +285,18 @@ function App() {
                 variant: "heading-2",
                 className: "mt-0!",
               })}>
+              Spinner
+            </h2>
+            <div className="flex w-auto flex-row gap-4">
+              <Spinner className="size-8" />
+            </div>
+          </div>
+          <div className="flex flex-col gap-6">
+            <h2
+              className={typographyVariants({
+                variant: "heading-2",
+                className: "mt-0!",
+              })}>
               Switch
             </h2>
             <div className="flex w-auto flex-row gap-4">
@@ -291,6 +321,19 @@ function App() {
                 variant: "heading-2",
                 className: "mt-0!",
               })}>
+              Textarea
+            </h2>
+            <div className="grid w-full max-w-sm items-center gap-1.5">
+              <Label htmlFor="message">Your message</Label>
+              <Textarea placeholder="Type your message here." id="message" />
+            </div>
+          </div>
+          <div className="flex flex-col gap-6">
+            <h2
+              className={typographyVariants({
+                variant: "heading-2",
+                className: "mt-0!",
+              })}>
               Toast
             </h2>
             <div className="flex items-center gap-4">
@@ -307,10 +350,10 @@ function App() {
             </h2>
             <div className="flex items-center gap-4">
               <Toggle aria-label="Toggle bold">
-                <BoldIcon className="h-4 w-4" />
+                <IconBold />
               </Toggle>
               <Toggle variant="soft" aria-label="Toggle bold">
-                <BoldIcon className="h-4 w-4" />
+                <IconBold />
                 <span> Bold</span>
               </Toggle>
             </div>
