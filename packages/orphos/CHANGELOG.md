@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.45.0
+
+### Minor Changes
+
+- 3ae8161: migrate from radix-ui primitives to base-ui
+- 1db1f9c: update color palette
+
 ## 0.44.0
 
 ### Minor Changes
