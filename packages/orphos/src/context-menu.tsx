@@ -107,6 +107,7 @@ function ContextMenuContent({
 }) {
   return (
     <ContextMenuPositioner
+      className="z-50"
       sideOffset={sideOffset}
       align={align}
       alignOffset={alignOffset}>

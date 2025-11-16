@@ -116,6 +116,7 @@ function DropdownMenuContent({
 }) {
   return (
     <DropdownMenuPositioner
+      className="z-50"
       sideOffset={sideOffset}
       align={align}
       alignOffset={alignOffset}>
