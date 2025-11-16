@@ -175,7 +175,7 @@ function Sidebar({
       <div
         data-slot="sidebar"
         className={cn(
-          "flex h-full w-(--sidebar-width) flex-col bg-background text-foreground",
+          "flex h-full w-(--sidebar-width) flex-col bg-background-subtle text-foreground",
           className
         )}
         {...props}>
@@ -191,7 +191,7 @@ function Sidebar({
           data-sidebar="sidebar"
           data-slot="sidebar"
           data-mobile="true"
-          className="w-(--sidebar-width) bg-background p-0 text-foreground [&>button]:hidden"
+          className="w-(--sidebar-width) bg-background-subtle p-0 text-foreground [&>button]:hidden"
           style={
             {
               "--sidebar-width": SIDEBAR_WIDTH_MOBILE,
@@ -238,7 +238,7 @@ function Sidebar({
           // Adjust the padding for floating and inset variants.
           variant === "floating" || variant === "inset"
             ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4))+2px)] group-data-[variant=floating]:p-2.5"
-            : "group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l",
+            : "group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-0 group-data-[side=right]:border-0",
           className
         )}
         {...props}>
@@ -335,7 +335,7 @@ function SidebarGroup({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="sidebar-group"
       data-sidebar="group"
-      className={cn("relative flex w-full min-w-0 flex-col p-4", className)}
+      className={cn("relative flex w-full min-w-0 flex-col px-4", className)}
       {...props}
     />
   );
@@ -480,7 +480,7 @@ function SidebarMenuItem({ className, ...props }: React.ComponentProps<"li">) {
 }
 
 const sidebarMenuButtonVariants = cva({
-  base: "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md border border-transparent px-2.5 py-2 text-left text-foreground-subtle text-sm transition-[transform,color,scale] duration-150 hover:bg-background-element-hover focus-visible:outline-2 active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:border-border-subtle data-[active=true]:bg-background-element data-[active=true]:font-medium data-[active=true]:text-foreground data-[active=true]:active:scale-[0.97] data-[active=true]:hover:bg-background-element-hover data-[state=open]:hover:bg-background-element-hover group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:text-foreground-subtle data-[active=true]:[&>svg]:text-foreground",
+  base: "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md border border-transparent px-2 py-2 text-left text-foreground-subtle text-sm transition-[transform,color,scale] duration-150 hover:bg-background-element-hover focus-visible:outline-2 active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:border-border-subtle data-[active=true]:bg-background-element data-[active=true]:font-medium data-[active=true]:text-foreground data-[active=true]:active:scale-[0.97] data-[active=true]:hover:bg-background-element-hover data-[state=open]:hover:bg-background-element-hover group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:text-foreground-subtle data-[active=true]:[&>svg]:text-foreground",
   variants: {
     variant: {
       default: "hover:bg-background-element-hover",
@@ -490,7 +490,7 @@ const sidebarMenuButtonVariants = cva({
     size: {
       md: "h-8.5 text-sm",
       sm: "h-7 text-[13px]",
-      lg: "min-h-12 group-data-[collapsible=icon]:p-0!",
+      lg: "min-h-10 group-data-[collapsible=icon]:p-0!",
     },
   },
   defaultVariants: {
@@ -598,7 +598,7 @@ function SidebarMenuBadge({
       data-slot="sidebar-menu-badge"
       data-sidebar="menu-badge"
       className={cn(
-        "pointer-events-none absolute right-2 flex h-5 min-w-5 select-none items-center justify-center rounded-sm bg-danger px-1 py-1 font-medium text-[10px] text-danger-foreground! tabular-nums leading-0!",
+        "pointer-events-none absolute right-[9px] flex h-5 min-w-5 select-none items-center justify-center rounded-sm bg-danger px-1 py-1 font-medium text-[10px] text-danger-foreground! tabular-nums leading-0!",
         "peer-hover/menu-button:text-foreground peer-data-[active=true]/menu-button:text-foreground",
         "peer-data-[size=sm]/menu-button:top-1",
         "peer-data-[size=md]/menu-button:top-[7px]",
