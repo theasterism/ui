@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.45.4
+
+### Patch Changes
+
+- d9a85a7: change subtle background color and remove sidebar border
+- 69713bd: remove inset border
+
 ## 0.45.3
 
 ### Patch Changes
