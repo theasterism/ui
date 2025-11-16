@@ -73,14 +73,13 @@ const data: {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar {...props} collapsible="offcanvas" variant="inset">
+    <Sidebar {...props} collapsible="offcanvas" variant="sidebar">
       <SidebarHeader>
-        <SidebarMenuButton>
+        <SidebarMenuButton size="lg">
           <div className="size-6 rounded-full bg-primary" />
           <span className="font-semibold">Orhos</span>
         </SidebarMenuButton>
       </SidebarHeader>
-      <SidebarSeparator />
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupContent>
