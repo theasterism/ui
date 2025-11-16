@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.45.3
+
+### Patch Changes
+
+- da62a09: fix menu z-index
+
 ## 0.45.2
 
 ### Patch Changes
