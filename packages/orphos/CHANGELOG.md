@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.45.8
+
+### Patch Changes
+
+- bae1056: fix border
+
 ## 0.45.7
 
 ### Patch Changes
