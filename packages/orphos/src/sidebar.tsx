@@ -515,7 +515,7 @@ function SidebarMenuButton({
     render ? undefined : "button";
   const defaultProps = {
     "data-slot": "sidebar-menu-button",
-    "data-sidebar": "menu-action",
+    "data-sidebar": "menu-button",
     "data-size": size,
     "data-active": isActive,
     className: cn(sidebarMenuButtonVariants({ variant, size }), className),
