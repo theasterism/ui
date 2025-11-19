@@ -11,7 +11,6 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarRail,
-  SidebarSeparator,
 } from "orphos/sidebar";
 import type * as React from "react";
 
@@ -73,7 +72,7 @@ const data: {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar {...props} collapsible="offcanvas" variant="inset">
+    <Sidebar {...props} collapsible="offcanvas" variant="sidebar">
       <SidebarHeader>
         <SidebarMenuButton size="lg">
           <div className="size-6 rounded-full bg-primary" />
@@ -87,7 +86,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               {data.mainNav.map((item) => (
                 <SidebarMenuItem key={item.label}>
                   <SidebarMenuButton
-                    size="md"
                     render={
                       <a href={item.href}>
                         <item.icon />

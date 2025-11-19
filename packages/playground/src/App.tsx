@@ -41,12 +41,12 @@ function App() {
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2">
-          <div className="flex items-center gap-2 px-4.5">
+        <header className="flex h-14 shrink-0 items-center gap-2">
+          <div className="flex items-center gap-2 px-4">
             <SidebarTrigger />
           </div>
         </header>
-        <div className="flex flex-1 flex-col gap-20 overflow-auto p-6">
+        <div className="flex flex-1 flex-col gap-20 overflow-auto p-4">
           <div>
             <h1
               className={typographyVariants({
