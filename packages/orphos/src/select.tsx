@@ -81,11 +81,9 @@ function SelectContent({
   className,
   children,
   sideOffset = 4,
-  alignItemWithTrigger = false,
   ...props
 }: SelectPrimitive.Popup.Props & {
   sideOffset?: SelectPrimitive.Positioner.Props["sideOffset"];
-  alignItemWithTrigger?: SelectPrimitive.Positioner.Props["alignItemWithTrigger"];
 }) {
   return (
     <SelectPrimitive.Portal>
@@ -93,7 +91,7 @@ function SelectContent({
         data-slot="select-positioner"
         className="z-50 select-none"
         sideOffset={sideOffset}
-        alignItemWithTrigger={alignItemWithTrigger}>
+        alignItemWithTrigger={false}>
         <SelectPrimitive.Popup
           className={cn(
             "data-closed:fade-out-0 data-open:fade-in-0 data-closed:zoom-out-95 data-open:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:-translate-y-1 origin-[var(--transform-origin)] data-closed:animate-out"
