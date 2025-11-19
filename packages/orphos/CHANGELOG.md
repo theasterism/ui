@@ -1,5 +1,14 @@
 # @theanalog/orphos
 
+## 0.45.9
+
+### Patch Changes
+
+- 6e5eb0f: remove align with trigger for select
+- bf7ef05: change sidebar trigger button size
+- ef54b7d: fix menu z index
+- 0b9e068: fix select top side position
+
 ## 0.45.8
 
 ### Patch Changes
