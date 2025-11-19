@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.45.6
+
+### Patch Changes
+
+- e52201d: fix sidebar button border
+
 ## 0.45.5
 
 ### Patch Changes
