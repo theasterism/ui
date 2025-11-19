@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.45.7
+
+### Patch Changes
+
+- 1031ffe: fix typo
+
 ## 0.45.6
 
 ### Patch Changes
