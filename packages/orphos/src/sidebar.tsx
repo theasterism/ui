@@ -477,12 +477,12 @@ function SidebarMenuItem({ className, ...props }: React.ComponentProps<"li">) {
 }
 
 const sidebarMenuButtonVariants = cva({
-  base: "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left text-sm transition-[width,height,padding] hover:bg-background-element-hover hover:text-foreground focus-visible:outline-2 active:bg-background-element-active active:text-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-background-element-active data-[active=true]:font-medium data-[active=true]:text-foreground data-[state=open]:hover:bg-background-element-hover data-[state=open]:hover:text-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
+  base: "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md border border-transparent p-2 text-left text-sm transition-[width,height,padding] hover:bg-background-element-hover hover:text-foreground focus-visible:outline-2 active:bg-background-element-active active:text-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-background-element-active data-[active=true]:font-medium data-[active=true]:text-foreground data-[state=open]:hover:bg-background-element-hover data-[state=open]:hover:text-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
   variants: {
     variant: {
       default: "hover:bg-background-element-hover hover:text-foreground",
       outline:
-        "bg-background-element shadow-[0_0_0_1px_hsl(var(--border-subtle))] hover:bg-background-element-hover hover:text-foreground",
+        "border-border-subtle bg-background-element hover:bg-background-element-hover hover:text-foreground",
     },
     size: {
       default: "h-8 text-sm",
