@@ -60,7 +60,7 @@ function DialogContent({
         data-slot="dialog-content"
         className={cn(
           "fixed z-50 grid w-full bg-background text-popover-foreground sm:max-w-[calc(100%-2rem)]",
-          "gap-4 rounded-xl border p-4 outline-none duration-150 sm:max-w-lg sm:scale-[calc(1-0.1*var(--nested-dialogs))]",
+          "gap-4 rounded-xl border-t p-4 outline-none duration-150 sm:max-w-lg sm:scale-[calc(1-0.1*var(--nested-dialogs))] sm:border",
           "fixed bottom-0 w-full sm:top-[50%] sm:bottom-auto sm:left-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%]",
           "duration-150",
           "data-closed:fade-out-0 data-closed:zoom-out-95 data-closed:animate-out",
