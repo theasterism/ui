@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.45.5
+
+### Patch Changes
+
+- ad7156c: update sidebar styles
+
 ## 0.45.4
 
 ### Patch Changes
