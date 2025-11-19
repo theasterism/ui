@@ -31,7 +31,10 @@ export function DropdownDemo() {
         </DropdownMenuItem>
         <DropdownMenuSub>
           <DropdownMenuSubTrigger>More Tools</DropdownMenuSubTrigger>
-          <DropdownMenuPositioner alignOffset={-5} sideOffset={2}>
+          <DropdownMenuPositioner
+            alignOffset={-4}
+            sideOffset={2}
+            collisionPadding={10}>
             <DropdownMenuSubContent className="w-48">
               <DropdownMenuItem>
                 Save Page As...
