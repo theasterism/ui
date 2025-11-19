@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.45.10
+
+### Patch Changes
+
+- 5130f54: change text-muted and subtle color
+
 ## 0.45.9
 
 ### Patch Changes
