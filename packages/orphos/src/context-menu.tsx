@@ -249,7 +249,7 @@ function ContextMenuPositioner({
   return (
     <ContextMenuPortal>
       <ContextMenuPrimitive.Positioner
-        className="outline-hidden"
+        className="z-50 outline-hidden"
         data-slot="context-menu-positioner"
         {...props}
       />

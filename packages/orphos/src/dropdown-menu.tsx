@@ -258,7 +258,7 @@ function DropdownMenuPositioner({
   return (
     <DropdownMenuPortal>
       <DropdownMenuPrimitive.Positioner
-        className="outline-hidden"
+        className="z-50 outline-hidden"
         data-slot="dropdown-menu-positioner"
         {...props}
       />
