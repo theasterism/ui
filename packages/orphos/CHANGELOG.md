@@ -1,5 +1,13 @@
 # @theanalog/orphos
 
+## 0.45.11
+
+### Patch Changes
+
+- a6b963d: fix sidebar mobile width
+- 232ef90: update deps
+- a6be70c: change card, dialog borde radius
+
 ## 0.45.10
 
 ### Patch Changes
