@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.45.12
+
+### Patch Changes
+
+- ac7e07b: change dialog and sheet gap
+
 ## 0.45.11
 
 ### Patch Changes
