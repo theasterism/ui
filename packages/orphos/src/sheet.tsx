@@ -61,7 +61,7 @@ function SheetContent({
       <SheetPrimitive.Popup
         data-slot="sheet-content"
         className={cn(
-          "fixed z-50 flex flex-col gap-4 bg-background transition ease-in-out data-closed:animate-out data-open:animate-in data-closed:duration-150 data-open:duration-150",
+          "fixed z-50 flex flex-col gap-6 bg-background transition ease-in-out data-closed:animate-out data-open:animate-in data-closed:duration-150 data-open:duration-150",
           side === "right" &&
             "data-closed:slide-out-to-right data-open:slide-in-from-right inset-y-0 right-0 h-full w-3/4 border-l border-l-border-subtle sm:max-w-sm",
           side === "left" &&
