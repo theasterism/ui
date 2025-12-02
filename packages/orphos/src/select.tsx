@@ -19,59 +19,25 @@ function SelectTrigger({
 }: SelectPrimitive.Trigger.Props) {
   return (
     <SelectPrimitive.Trigger
-      nativeButton={true}
-      render={(props) => <button {...props} />}
       className={cn(
-        "-outline-offset-1 flex h-8.5 w-fit items-center justify-between gap-2 whitespace-nowrap rounded-md border bg-background-element px-2.5 py-2 text-sm transition-[color,box-shadow] hover:bg-background-element-hover focus-visible:outline-2 aria-invalid:outline-2 aria-invalid:outline-danger data-disabled:pointer-events-none data-disabled:cursor-not-allowed data-popup-open:bg-background-element-hover data-disabled:opacity-50",
+        "-outline-offset-1 flex h-8.5 w-fit items-center justify-between gap-2 whitespace-nowrap rounded-md border bg-background-element px-2.5 py-2 text-sm transition-[color,box-shadow] hover:bg-background-element-hover focus-visible:outline-2 aria-invalid:outline-2 aria-invalid:outline-danger data-disabled:pointer-events-none data-disabled:cursor-not-allowed data-popup-open:bg-background-element-hover data-placeholder:text-foreground-subtle! data-disabled:opacity-50",
         className
       )}
+      data-slot="select-trigger"
       {...props}>
       {children}
-      <SelectPrimitive.Icon
-        render={<IconSelector className="size-4 opacity-50" />}
-      />
+      <SelectPrimitive.Icon>
+        <IconSelector className="size-4 opacity-50" />
+      </SelectPrimitive.Icon>
     </SelectPrimitive.Trigger>
   );
 }
 
-function SelectValue({
-  className,
-  placeholder,
-  ...props
-}: SelectPrimitive.Value.Props & {
-  placeholder?: string;
-}) {
-  if (!placeholder) {
-    return (
-      <SelectPrimitive.Value
-        data-slot="select-value"
-        className={cn("pointer-events-none cursor-default", className)}
-        {...props}
-      />
-    );
-  }
+function SelectValue({ className, ...props }: SelectPrimitive.Value.Props) {
   return (
     <SelectPrimitive.Value
-      render={(_, { value }) => {
-        if (value) {
-          return (
-            <SelectPrimitive.Value
-              className="pointer-events-none cursor-default"
-              data-slot="select-value"
-              {...props}
-            />
-          );
-        }
-
-        // Placeholder
-        return (
-          <span
-            data-slot="select-value"
-            className="pointer-events-none cursor-default text-foreground-subtle">
-            {placeholder}
-          </span>
-        );
-      }}
+      data-slot="select-value"
+      className={cn("pointer-events-none cursor-default truncate", className)}
       {...props}
     />
   );
