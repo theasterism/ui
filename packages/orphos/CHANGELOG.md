@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.45.13
+
+### Patch Changes
+
+- 32c7820: update deps
+
 ## 0.45.12
 
 ### Patch Changes
