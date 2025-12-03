@@ -1,8 +1,8 @@
 "use client";
 
 import { Dialog as DialogPrimitive } from "@base-ui-components/react/dialog";
+import { IconX } from "@tabler/icons-react";
 import type * as React from "react";
-import { IconX } from "./icons";
 import type { DivElementProps } from "./types";
 import { typographyVariants } from "./typography";
 import { cn } from "./utils";
