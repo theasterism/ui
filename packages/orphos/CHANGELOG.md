@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.46.0
+
+### Minor Changes
+
+- 738bfaf: remove unnecessary colors
+
 ## 0.45.15
 
 ### Patch Changes
