@@ -5,7 +5,7 @@ import { IconEye, IconEyeOff } from "./icons";
 import { cn } from "./utils";
 
 const inputVariants = cva({
-  base: "no-drag -outline-offset-1 flex h-8.5 w-full items-center rounded-md border bg-background-element px-2.5 py-2 text-foreground text-sm transition-colors placeholder:text-sm focus-visible:outline-2 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:outline-2 aria-invalid:outline-danger",
+  base: "no-drag -outline-offset-1 flex h-8.5 w-full items-center rounded-md border bg-background-element px-2.5 py-2 text-foreground text-sm transition-colors placeholder:text-foreground-subtle placeholder:text-sm focus-visible:outline-2 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:outline-2 aria-invalid:outline-danger",
   variants: {
     variant: {
       default: "",
