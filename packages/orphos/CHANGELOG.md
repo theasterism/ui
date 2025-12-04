@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.45.14
+
+### Patch Changes
+
+- 284176c: change menu group label color
+
 ## 0.45.13
 
 ### Patch Changes
