@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.47.1
+
+### Patch Changes
+
+- a67e5bf: update menu colors
+
 ## 0.47.0
 
 ### Minor Changes
