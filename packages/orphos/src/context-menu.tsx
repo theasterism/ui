@@ -67,7 +67,7 @@ function ContextMenuSubTrigger({
       data-slot="context-menu-sub-trigger"
       data-inset={inset}
       className={cn(
-        "relative flex h-8 cursor-default select-none items-center gap-2 rounded-xs py-2 pr-[2.5px] pl-2 text-foreground-subtle text-sm outline-hidden data-highlighted:bg-background-element-hover data-popup-open:bg-background-element-hover data-inset:pl-8 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-foreground-subtle [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "relative flex h-8 cursor-default select-none items-center gap-2 rounded-xs py-2 pr-[2.5px] pl-2 text-foreground text-sm outline-hidden data-highlighted:bg-background-element-hover data-popup-open:bg-background-element-hover data-inset:pl-8 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-foreground-subtle [&_svg]:pointer-events-none [&_svg]:shrink-0",
         className
       )}
       {...props}>
@@ -138,7 +138,7 @@ function ContextMenuItem({
       data-inset={inset}
       data-variant={variant}
       className={cn(
-        "relative flex h-8 cursor-default select-none items-center gap-2 rounded-xs p-2 text-foreground-subtle text-sm outline-hidden data-[variant=danger]:data-highlighted:text-danger-surface-foreground data-disabled:pointer-events-none data-highlighted:bg-background-element-hover data-inset:pl-8 data-[variant=danger]:text-danger-surface-foreground data-disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-foreground-subtle [&_svg]:pointer-events-none [&_svg]:shrink-0 data-[variant=danger]:*:[svg]:text-danger-surface-foreground!",
+        "relative flex h-8 cursor-default select-none items-center gap-2 rounded-xs p-2 text-foreground text-sm outline-hidden data-[variant=danger]:data-highlighted:text-danger data-disabled:pointer-events-none data-highlighted:bg-background-element-hover data-inset:pl-8 data-[variant=danger]:text-danger data-disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-foreground-subtle [&_svg]:pointer-events-none [&_svg]:shrink-0 data-[variant=danger]:*:[svg]:text-danger!",
         className
       )}
       {...props}
@@ -156,7 +156,7 @@ function ContextMenuCheckboxItem({
     <ContextMenuPrimitive.CheckboxItem
       data-slot="context-menu-checkbox-item"
       className={cn(
-        "relative flex h-8 cursor-default select-none items-center gap-2 rounded-xs py-2 pr-2 pl-8 text-foreground-subtle text-sm outline-hidden data-[disabled]:pointer-events-none data-highlighted:bg-background-element-hover data-[disabled]:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "relative flex h-8 cursor-default select-none items-center gap-2 rounded-xs py-2 pr-2 pl-8 text-foreground text-sm outline-hidden data-[disabled]:pointer-events-none data-highlighted:bg-background-element-hover data-[disabled]:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
         className
       )}
       checked={checked}
@@ -180,7 +180,7 @@ function ContextMenuRadioItem({
     <ContextMenuPrimitive.RadioItem
       data-slot="context-menu-radio-item"
       className={cn(
-        "relative flex h-8 cursor-default select-none items-center gap-2 rounded-xs py-2 pr-2 pl-8 text-foreground-subtle text-sm outline-hidden data-[disabled]:pointer-events-none data-highlighted:bg-background-element-hover data-[disabled]:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "relative flex h-8 cursor-default select-none items-center gap-2 rounded-xs py-2 pr-2 pl-8 text-foreground text-sm outline-hidden data-[disabled]:pointer-events-none data-highlighted:bg-background-element-hover data-[disabled]:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
         className
       )}
       {...props}>

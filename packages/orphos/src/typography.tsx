@@ -15,7 +15,7 @@ export const typographyVariants = cva({
         "mt-8 scroll-m-20 text-balance font-semibold text-foreground text-xl leading-[1.3]",
       "heading-4":
         "mt-8 scroll-m-20 text-balance font-semibold text-foreground text-lg leading-[1.125]",
-      link: "font-medium text-info-surface-foreground underline decoration-info-border underline-offset-[2.5px] hover:decoration-info-surface-foreground",
+      link: "font-medium text-info underline decoration-info-border underline-offset-[2.5px] hover:decoration-info",
       blockquote:
         "mt-4 border-primary border-l-4 pl-4 text-foreground-subtle italic",
       ul: "my-4 ml-4 list-disc text-foreground-subtle marker:text-foreground [&>li]:mt-2 [&>li]:pl-1",

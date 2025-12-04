@@ -49,40 +49,30 @@
   --color-primary-border: var(--tomato-6);
   --color-primary-foreground: var(--color-white);
   --color-primary-subtle: var(--tomato-2);
-  --color-primary-surface: var(--tomato-3);
-  --color-primary-surface-foreground: var(--tomato-11);
 
   --color-danger: var(--red-9);
   --color-danger-hover: var(--red-10);
   --color-danger-border: var(--red-6);
   --color-danger-foreground: var(--color-white);
   --color-danger-subtle: var(--red-2);
-  --color-danger-surface: var(--red-3);
-  --color-danger-surface-foreground: var(--red-11);
 
   --color-warning: var(--yellow-9);
   --color-warning-hover: var(--yellow-10);
   --color-warning-border: var(--yellow-6);
   --color-warning-foreground: var(--color-black);
   --color-warning-subtle: var(--yellow-2);
-  --color-warning-surface: var(--yellow-3);
-  --color-warning-surface-foreground: var(--yellow-11);
 
   --color-success: var(--green-9);
   --color-success-hover: var(--green-10);
   --color-success-border: var(--green-6);
   --color-success-foreground: var(--color-white);
   --color-success-subtle: var(--green-2);
-  --color-success-surface: var(--green-3);
-  --color-success-surface-foreground: var(--green-11);
 
   --color-info: var(--blue-9);
   --color-info-hover: var(--blue-10);
   --color-info-border: var(--blue-6);
   --color-info-foreground: var(--color-white);
   --color-info-subtle: var(--blue-2);
-  --color-info-surface: var(--blue-3);
-  --color-info-surface-foreground: var(--blue-11);
 
   /* Border radius */
   --radius-2xl: calc(var(--radius) + 8px);
