@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.47.4
+
+### Patch Changes
+
+- 69d2861: change background color mix
+
 ## 0.47.3
 
 ### Patch Changes
