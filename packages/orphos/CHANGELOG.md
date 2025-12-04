@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.47.2
+
+### Patch Changes
+
+- 3ad045f: remove muted foreground
+
 ## 0.47.1
 
 ### Patch Changes
