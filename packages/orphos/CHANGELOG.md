@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.46.1
+
+### Patch Changes
+
+- b5c5f7c: change menu group label text size
+
 ## 0.46.0
 
 ### Minor Changes
