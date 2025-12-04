@@ -90,7 +90,7 @@ function DialogHeader({
       {showCloseButton && (
         <DialogPrimitive.Close
           data-slot="dialog-close"
-          className="absolute end-2 top-3.5 inline-flex size-7 shrink-0 cursor-pointer items-center justify-center rounded-md border border-transparent text-foreground-muted transition-[color,background-color,box-shadow,opacity] pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0">
+          className="absolute end-2 top-3.5 inline-flex size-7 shrink-0 cursor-pointer items-center justify-center rounded-md border border-transparent text-foreground-subtle transition-[color,background-color,box-shadow,opacity] pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0">
           <IconX />
           <span className="sr-only">Close</span>
         </DialogPrimitive.Close>
@@ -139,7 +139,7 @@ function DialogDescription({
   return (
     <DialogPrimitive.Description
       data-slot="dialog-description"
-      className={cn("text-foreground-muted text-sm", className)}
+      className={cn("text-foreground-subtle text-sm", className)}
       {...props}
     />
   );
