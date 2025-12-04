@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.47.3
+
+### Patch Changes
+
+- 15b974f: change input placeholder color
+
 ## 0.47.2
 
 ### Patch Changes
