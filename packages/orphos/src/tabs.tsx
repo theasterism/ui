@@ -38,7 +38,7 @@ function TabsList({
       <TabsPrimitive.Indicator
         data-slot="tab-indicator"
         className={cn(
-          "-translate-y-(--active-tab-bottom) absolute bottom-0 left-0 h-(--active-tab-height) w-(--active-tab-width) translate-x-(--active-tab-left) transition-[width,translate] duration-250 ease-in-out",
+          "-translate-y-(--active-tab-bottom) absolute bottom-0 left-0 h-(--active-tab-height) w-(--active-tab-width) translate-x-(--active-tab-left) transition-[width,translate] duration-200 ease-in-out",
           "-z-1 rounded-md border bg-background-element shadow-xs"
         )}
       />

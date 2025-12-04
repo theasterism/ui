@@ -31,18 +31,17 @@
 
   --color-focus-ring: var(--blue-8);
 
-  --color-background: var(--gray-1);
-  --color-background-subtle: var(--gray-2);
-  --color-background-element: var(--gray-3);
-  --color-background-element-hover: var(--gray-4);
-  --color-background-element-active: var(--gray-5);
-  --color-border-subtle: var(--gray-6);
-  --color-border-element: var(--gray-7);
-  --color-border-element-hover: var(--gray-8);
-  --color-solid: var(--gray-9);
-  --color-foreground-muted: var(--gray-10);
-  --color-foreground-subtle: var(--gray-11);
-  --color-foreground: var(--gray-12);
+  --color-background: var(--background);
+  --color-background-subtle: var(--background-subtle);
+  --color-background-element: var(--background-element);
+  --color-background-element-hover: var(--background-element-hover);
+  --color-background-element-active: var(--background-element-active);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-element: var(--border-element);
+  --color-border-element-hover: var(--border-element-hover);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-foreground-subtle: var(--foreground-subtle);
+  --color-foreground: var(--foreground);
 
   --color-primary: var(--tomato-9);
   --color-primary-hover: var(--tomato-10);
@@ -56,11 +55,11 @@
   --color-danger-foreground: var(--color-white);
   --color-danger-subtle: var(--red-2);
 
-  --color-warning: var(--yellow-9);
-  --color-warning-hover: var(--yellow-10);
-  --color-warning-border: var(--yellow-6);
+  --color-warning: var(--amber-9);
+  --color-warning-hover: var(--amber-11);
+  --color-warning-border: var(--amber-6);
   --color-warning-foreground: var(--color-black);
-  --color-warning-subtle: var(--yellow-2);
+  --color-warning-subtle: var(--amber-2);
 
   --color-success: var(--green-9);
   --color-success-hover: var(--green-10);
