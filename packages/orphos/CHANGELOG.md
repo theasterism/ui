@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.47.0
+
+### Minor Changes
+
+- 24df442: update neutral color palette
+
 ## 0.46.1
 
 ### Patch Changes
