@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.45.15
+
+### Patch Changes
+
+- 88ca84d: fix dependency error
+
 ## 0.45.14
 
 ### Patch Changes
