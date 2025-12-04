@@ -34,7 +34,7 @@
 
   --background: color-mix(
     in oklch,
-    var(--color-neutral-950) 60%,
+    var(--color-neutral-950) 90%,
     var(--color-neutral-900)
   );
   --background-subtle: color-mix(
