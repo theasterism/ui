@@ -52,6 +52,9 @@
       "optional": true
     }
   },
+  "overrides": {
+    "cva": "1.0.0-beta.4"
+  },
   "dependencies": {
     "@base-ui-components/react": "^1.0.0-beta.7",
     "@origin-space/image-cropper": "^0.1.9",
