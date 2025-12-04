@@ -66,7 +66,7 @@ function SelectContent({
           <SelectScrollUpButton />
           <SelectPrimitive.List
             className={cn(
-              "relative z-50 block max-h-(--available-height) min-w-(--anchor-width) origin-[var(--transform-origin)] overflow-y-auto overflow-x-hidden rounded-md border bg-background-element p-1 text-foreground outline-hidden",
+              "relative z-50 block max-h-(--available-height) min-w-(--anchor-width) origin-[var(--transform-origin)] overflow-y-auto overflow-x-hidden rounded-md border bg-background-subtle p-1 text-foreground outline-hidden",
               className
             )}>
             {children}
