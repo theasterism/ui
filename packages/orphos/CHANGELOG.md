@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.49.1
+
+### Patch Changes
+
+- 9963472: fix checkbox and radio icon positioning and code style
+- 34886e9: Update select item text color and sheet close button focus outline
+
 ## 0.49.0
 
 ### Minor Changes
