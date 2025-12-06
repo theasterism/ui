@@ -1,6 +1,3 @@
-import { Button } from "orphos/button";
-import { Input } from "orphos/input";
-import { Label } from "orphos/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "orphos/tabs";
 
 export function TabsDemo() {
