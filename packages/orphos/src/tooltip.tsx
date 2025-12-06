@@ -24,7 +24,7 @@ function TooltipTrigger({
   return (
     <TooltipPrimitive.Trigger
       data-slot="tooltip-trigger"
-      // biome-ignore lint/suspicious/noExplicitAny: shut up!
+      // biome-ignore lint/suspicious/noExplicitAny: Children can be React element or render function, both accepted by base-ui
       render={children ? (children as any) : render}
       {...props}
     />
