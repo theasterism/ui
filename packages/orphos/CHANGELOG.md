@@ -1,5 +1,12 @@
 # @theanalog/orphos
 
+## 0.47.5
+
+### Patch Changes
+
+- f0dd2ea: fix sidebar infinite(may be)
+- d28e41e: update deps
+
 ## 0.47.4
 
 ### Patch Changes
