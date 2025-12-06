@@ -1,13 +1,13 @@
 "use client";
 
 import { Toast } from "@base-ui-components/react/toast";
-import { buttonVariants } from "./button";
 import {
   IconAlertTriangleFilled,
   IconCircleCheckFilled,
   IconExclamationCircleFilled,
   IconInfoCircleFilled,
 } from "@tabler/icons-react";
+import { buttonVariants } from "./button";
 import { Spinner } from "./spinner";
 import { cn } from "./utils";
 
@@ -123,7 +123,7 @@ function ToastList({ position = "bottom-right" }: { position: ToastPosition }) {
                 <div className="flex gap-2">
                   {Icon && (
                     <div
-                      className="mt-.5 [&>svg]:h-[1lh] [&>svg]:w-4.5 [&_svg]:pointer-events-none [&_svg]:shrink-0"
+                      className="mt-.5 [&>svg]:h-lh [&>svg]:w-4.5 [&_svg]:pointer-events-none [&_svg]:shrink-0"
                       data-slot="toast-icon">
                       <Icon className="in-data-[type=error]:text-danger-hover in-data-[type=info]:text-info-hover in-data-[type=success]:text-success-hover in-data-[type=warning]:text-warning" />
                     </div>

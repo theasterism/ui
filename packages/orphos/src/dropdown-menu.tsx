@@ -1,8 +1,12 @@
 "use client";
 
 import { Menu as DropdownMenuPrimitive } from "@base-ui-components/react/menu";
+import {
+  IconCheck,
+  IconChevronRight,
+  IconCircleFilled,
+} from "@tabler/icons-react";
 import type * as React from "react";
-import { IconCheck, IconChevronRight, IconCircleFilled } from "@tabler/icons-react";
 import { cn } from "./utils";
 
 function DropdownMenu({
@@ -161,9 +165,9 @@ function DropdownMenuCheckboxItem({
 }: React.ComponentProps<typeof DropdownMenuPrimitive.CheckboxItem>) {
   return (
     <DropdownMenuPrimitive.CheckboxItem
-      data-slot="context-menu-checkbox-item"
+      data-slot="dropdown-menu-checkbox-item"
       className={cn(
-        "relative flex h-8 cursor-default select-none items-center gap-2 rounded-xs py-2 pr-2 pl-8 text-foreground text-sm outline-hidden data-[disabled]:pointer-events-none data-highlighted:bg-background-element-hover data-[disabled]:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "relative flex h-8 cursor-default select-none items-center gap-2 rounded-xs py-2 pr-2 pl-8 text-foreground text-sm outline-hidden data-disabled:pointer-events-none data-highlighted:bg-background-element-hover data-disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
         className
       )}
       checked={checked}
@@ -185,9 +189,9 @@ function DropdownMenuRadioItem({
 }: React.ComponentProps<typeof DropdownMenuPrimitive.RadioItem>) {
   return (
     <DropdownMenuPrimitive.RadioItem
-      data-slot="context-menu-radio-item"
+      data-slot="dropdown-menu-radio-item"
       className={cn(
-        "relative flex h-8 cursor-default select-none items-center gap-2 rounded-xs py-2 pr-2 pl-8 text-foreground text-sm outline-hidden data-[disabled]:pointer-events-none data-highlighted:bg-background-element-hover data-[disabled]:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "relative flex h-8 cursor-default select-none items-center gap-2 rounded-xs py-2 pr-2 pl-8 text-foreground text-sm outline-hidden data-disabled:pointer-events-none data-highlighted:bg-background-element-hover data-disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
         className
       )}
       {...props}>

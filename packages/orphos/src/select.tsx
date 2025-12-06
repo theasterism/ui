@@ -1,13 +1,13 @@
 "use client";
 
 import { Select as SelectPrimitive } from "@base-ui-components/react/select";
-import type * as React from "react";
 import {
   IconCheck,
   IconChevronDown,
   IconChevronUp,
   IconSelector,
 } from "@tabler/icons-react";
+import type * as React from "react";
 import { cn } from "./utils";
 
 const Select = SelectPrimitive.Root;
@@ -60,13 +60,13 @@ function SelectContent({
         alignItemWithTrigger={false}>
         <SelectPrimitive.Popup
           className={cn(
-            "data-closed:fade-out-0 data-open:fade-in-0 data-closed:zoom-out-95 data-open:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[var(--transform-origin)] data-closed:animate-out"
+            "data-closed:fade-out-0 data-open:fade-in-0 data-closed:zoom-out-95 data-open:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-(--transform-origin) data-closed:animate-out"
           )}
           {...props}>
           <SelectScrollUpButton />
           <SelectPrimitive.List
             className={cn(
-              "relative z-50 block max-h-(--available-height) min-w-(--anchor-width) origin-[var(--transform-origin)] overflow-y-auto overflow-x-hidden rounded-md border bg-background-subtle p-1 text-foreground outline-hidden",
+              "relative z-50 block max-h-(--available-height) min-w-(--anchor-width) origin-(--transform-origin) overflow-y-auto overflow-x-hidden rounded-md border bg-background-subtle p-1 text-foreground outline-hidden",
               className
             )}>
             {children}
@@ -133,7 +133,7 @@ function SelectScrollUpButton({
     <SelectPrimitive.ScrollUpArrow
       data-slot="select-scroll-up-button"
       className={cn(
-        "top-px left-[1px] z-[100] flex w-[calc(100%-2px)] cursor-default items-center justify-center rounded-t-md bg-background-element py-1",
+        "top-px left-px z-100 flex w-[calc(100%-2px)] cursor-default items-center justify-center rounded-t-md bg-background-element py-1",
         className
       )}
       {...props}>
@@ -150,7 +150,7 @@ function SelectScrollDownButton({
     <SelectPrimitive.ScrollDownArrow
       data-slot="select-scroll-down-button"
       className={cn(
-        "bottom-px left-[1px] z-[100] flex w-[calc(100%-2px)] cursor-default items-center justify-center rounded-b-md bg-background-element py-1",
+        "bottom-px left-px z-100 flex w-[calc(100%-2px)] cursor-default items-center justify-center rounded-b-md bg-background-element py-1",
         className
       )}
       {...props}>
