@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.48.0
+
+### Minor Changes
+
+- b1c276c: refactor Sidebar state, remove unused props, and improve `formatBytes` utility
+
 ## 0.47.6
 
 ### Patch Changes
