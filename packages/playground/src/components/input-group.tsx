@@ -10,7 +10,7 @@ import {
   IconPlug,
   IconSearch,
   IconSend,
-} from "orphos/icons";
+} from "@tabler/icons-react";
 import {
   InputGroup,
   InputGroupAddon,

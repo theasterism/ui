@@ -2,7 +2,7 @@
 /** biome-ignore-all lint/a11y/useValidAnchor: shut up! */
 
 import { Badge } from "orphos/badge";
-import { IconBold } from "orphos/icons";
+import { IconBold } from "@tabler/icons-react";
 import { Kbd } from "orphos/kbd";
 import { Label } from "orphos/label";
 import { Separator } from "orphos/separator";

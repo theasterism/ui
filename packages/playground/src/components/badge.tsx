@@ -1,5 +1,5 @@
 import { Badge } from "orphos/badge";
-import { IconChecks } from "orphos/icons";
+import { IconChecks } from "@tabler/icons-react";
 
 export function BadgeDemo() {
   return (

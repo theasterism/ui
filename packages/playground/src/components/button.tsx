@@ -1,5 +1,5 @@
 import { Button } from "orphos/button";
-import { IconArrowUpRight, IconCloudDownload } from "orphos/icons";
+import { IconArrowUpRight, IconCloudDownload } from "@tabler/icons-react";
 import { Spinner } from "orphos/spinner";
 
 export function ButtonDemo() {

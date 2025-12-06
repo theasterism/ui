@@ -14,7 +14,7 @@
     },
     "packages/orphos": {
       "name": "orphos",
-      "version": "0.47.5",
+      "version": "0.48.0",
       "dependencies": {
         "@base-ui-components/react": "^1.0.0-rc.0",
         "@origin-space/image-cropper": "^0.1.9",
@@ -34,7 +34,6 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "@tabler/icons-react": "latest",
         "@types/react": "latest",
         "react": ">=18.0.0",
         "tailwindcss": "^4.1.17",
@@ -50,6 +49,7 @@
         "@fontsource/geist": "^5.2.8",
         "@fontsource/geist-mono": "^5.2.7",
         "@fontsource/jetbrains-mono": "^5.2.8",
+        "@tabler/icons-react": "^3.35.0",
         "@tailwindcss/vite": "4.1.17",
         "babel-plugin-react-compiler": "^1.0.0",
         "next-themes": "^0.4.6",

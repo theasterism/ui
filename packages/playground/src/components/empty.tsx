@@ -6,7 +6,7 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "orphos/empty";
-import { IconDeviceDesktopX, IconSearch } from "orphos/icons";
+import { IconDeviceDesktopX, IconSearch } from "@tabler/icons-react";
 import {
   InputGroup,
   InputGroupAddon,

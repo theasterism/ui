@@ -1,4 +1,4 @@
-import { IconHome, IconSettings, IconStack2, IconTicket } from "orphos/icons";
+import { IconHome, IconSettings, IconStack2, IconTicket } from "@tabler/icons-react";
 import {
   Sidebar,
   SidebarContent,
