@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.47.6
+
+### Patch Changes
+
+- a2e0a1e: fix cva version
+
 ## 0.47.5
 
 ### Patch Changes
