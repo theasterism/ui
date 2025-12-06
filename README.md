@@ -37,6 +37,40 @@ Import Tailwind CSS and the theme in your main CSS file:
 @source "../node_modules/orphos/dist";
 ```
 
+### Portal Stacking Context
+
+Base UI uses portals for components that render popups (Dialog, Popover, Select, etc.).
+To ensure portaled components always appear on top of the entire page, add the following style to your application layout:
+
+```tsx
+// layout.tsx
+<body>
+  <div className="root">
+    {children}
+  </div>
+</body>
+```
+
+```css
+/* styles.css */
+.root {
+  isolation: isolate;
+}
+```
+
+This creates a separate stacking context for your application's `.root` element, ensuring popups appear above page contents without `z-index` conflicts.
+
+### iOS 26+ Safari Support
+
+Starting with iOS 26, Safari allows content beneath the UI chrome to be visible. For backdrops (used by Dialog, Sheet, etc.) to cover the entire visual viewport after scrolling, add:
+
+```css
+/* styles.css */
+body {
+  position: relative;
+}
+```
+
 ## Usage
 
 ```tsx
