@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.49.0
+
+### Minor Changes
+
+- cb3b98c: remove icons export
+
 ## 0.48.0
 
 ### Minor Changes
