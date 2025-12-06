@@ -2,7 +2,6 @@ import { Button } from "orphos/button";
 import {
   Tooltip,
   TooltipContent,
-  TooltipPositioner,
   TooltipProvider,
   TooltipTrigger,
 } from "orphos/tooltip";
