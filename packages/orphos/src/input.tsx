@@ -1,7 +1,7 @@
 import { Input as InputPrimitive } from "@base-ui-components/react/input";
 import { cva } from "cva";
 import * as React from "react";
-import { IconEye, IconEyeOff } from "./icons";
+import { IconEye, IconEyeOff } from "@tabler/icons-react";
 import { cn } from "./utils";
 
 const inputVariants = cva({

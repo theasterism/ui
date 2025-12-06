@@ -43,7 +43,6 @@
   },
   "peerDependencies": {
     "@types/react": "latest",
-    "@tabler/icons-react": "latest",
     "react": ">=18.0.0",
     "tailwindcss": "^4.1.17"
   },

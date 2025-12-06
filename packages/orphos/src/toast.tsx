@@ -7,7 +7,7 @@ import {
   IconCircleCheckFilled,
   IconExclamationCircleFilled,
   IconInfoCircleFilled,
-} from "./icons";
+} from "@tabler/icons-react";
 import { Spinner } from "./spinner";
 import { cn } from "./utils";
 

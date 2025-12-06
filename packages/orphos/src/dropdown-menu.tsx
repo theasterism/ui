@@ -2,7 +2,7 @@
 
 import { Menu as DropdownMenuPrimitive } from "@base-ui-components/react/menu";
 import type * as React from "react";
-import { IconCheck, IconChevronRight, IconCircleFilled } from "./icons";
+import { IconCheck, IconChevronRight, IconCircleFilled } from "@tabler/icons-react";
 import { cn } from "./utils";
 
 function DropdownMenu({

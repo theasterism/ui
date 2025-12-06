@@ -2,7 +2,7 @@
 
 import { Checkbox as CheckboxPrimitive } from "@base-ui-components/react/checkbox";
 import type * as React from "react";
-import { IconCheck, IconMinus } from "./icons";
+import { IconCheck, IconMinus } from "@tabler/icons-react";
 import { cn } from "./utils";
 
 function Checkbox({
