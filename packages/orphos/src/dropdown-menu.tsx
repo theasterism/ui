@@ -105,13 +105,11 @@ function DropdownMenuContent({
   className,
   align = "center",
   alignOffset = 0,
-  side,
   sideOffset = 4,
   ...props
 }: React.ComponentProps<typeof DropdownMenuPrimitive.Popup> & {
   align?: DropdownMenuPrimitive.Positioner.Props["align"];
   alignOffset?: DropdownMenuPrimitive.Positioner.Props["alignOffset"];
-  side?: DropdownMenuPrimitive.Positioner.Props["side"];
   sideOffset?: DropdownMenuPrimitive.Positioner.Props["sideOffset"];
 }) {
   return (

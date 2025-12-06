@@ -102,7 +102,6 @@ function ContextMenuContent({
 }: React.ComponentProps<typeof ContextMenuPrimitive.Popup> & {
   align?: ContextMenuPrimitive.Positioner.Props["align"];
   alignOffset?: ContextMenuPrimitive.Positioner.Props["alignOffset"];
-  side?: ContextMenuPrimitive.Positioner.Props["side"];
   sideOffset?: ContextMenuPrimitive.Positioner.Props["sideOffset"];
 }) {
   return (

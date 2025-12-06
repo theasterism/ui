@@ -51,7 +51,7 @@ function Slider({
           {Array.from({ length: _values.length }, (_, index) => (
             <SliderPrimitive.Thumb
               data-slot="slider-thumb"
-              // biome-ignore lint/suspicious/noArrayIndexKey: shut up!
+              // biome-ignore lint/suspicious/noArrayIndexKey: Slider thumbs have no stable ID, index matches value order
               key={index}
               className="block size-4 shrink-0 select-none rounded-full border-2 bg-background-element before:absolute before:inset-0 before:rounded-full focus-visible:outline-2 has-focus-visible:outline-2 data-dragging:outline-2 data-dragging:outline-focus-ring [&:is(:focus-visible,[data-dragging])]:shadow-none"
             />

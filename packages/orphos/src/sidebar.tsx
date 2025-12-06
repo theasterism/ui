@@ -1,5 +1,5 @@
-/** biome-ignore-all lint/correctness/useExhaustiveDependencies: shut up! */
-/** biome-ignore-all lint/suspicious/noDocumentCookie: shu up! */
+/** biome-ignore-all lint/correctness/useExhaustiveDependencies: Uses refs to avoid re-render cascade */
+/** biome-ignore-all lint/suspicious/noDocumentCookie: Sidebar state persistence requires direct cookie access */
 "use client";
 
 import { mergeProps } from "@base-ui-components/react/merge-props";
@@ -82,37 +82,42 @@ function SidebarProvider({
 
   const [_open, _setOpen] = React.useState(defaultOpen);
   const open = openProp ?? _open;
-  const openRef = React.useRef(open)
-  openRef.current = open
+  const openRef = React.useRef(open);
+  openRef.current = open;
+
+  // Use ref to avoid recreating setOpen when parent doesn't memoize onOpenChange
+  const setOpenPropRef = React.useRef(setOpenProp);
+  setOpenPropRef.current = setOpenProp;
 
   const setOpen = React.useCallback(
     (value: boolean | ((value: boolean) => boolean)) => {
-      const openState = typeof value === "function" ? value(openRef.current) : value
-      if (setOpenProp) {
-        setOpenProp(openState)
+      const openState =
+        typeof value === "function" ? value(openRef.current) : value;
+      if (setOpenPropRef.current) {
+        setOpenPropRef.current(openState);
       } else {
-        _setOpen(openState)
+        _setOpen(openState);
       }
 
       // This sets the cookie to keep the sidebar state.
-      document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`
+      document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
     },
-    [setOpenProp]
-  )
+    []
+  );
 
   React.useEffect(() => {
     // Only restore state from cookie if the component is uncontrolled
-    if (openProp !== undefined) return
+    if (openProp !== undefined) return;
 
     const cookieValue = document.cookie
       .split("; ")
       .find((row) => row.startsWith(`${SIDEBAR_COOKIE_NAME}=`))
-      ?.split("=")[1]
+      ?.split("=")[1];
 
     if (cookieValue) {
-      _setOpen(cookieValue === "true")
+      _setOpen(cookieValue === "true");
     }
-  }, [])
+  }, []);
 
   const toggleSidebar = React.useCallback(() => {
     return isMobile ? setOpenMobile((open) => !open) : setOpen((open) => !open);
@@ -422,10 +427,9 @@ function SidebarGroup({ className, ...props }: React.ComponentProps<"div">) {
 
 function SidebarGroupLabel({
   className,
-  asChild = false,
   render,
   ...props
-}: useRender.ComponentProps<"div"> & { asChild?: boolean }) {
+}: useRender.ComponentProps<"div">) {
   const typeValue = render ? undefined : "div";
   const defaultProps = {
     "data-slot": "sidebar-group-label",

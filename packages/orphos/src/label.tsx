@@ -1,4 +1,4 @@
-/** biome-ignore-all lint/a11y/noLabelWithoutControl: shut up! */
+/** biome-ignore-all lint/a11y/noLabelWithoutControl: Label component is used with external form controls via htmlFor prop */
 import { cn } from "./utils";
 
 function Label({ className, ...props }: React.ComponentProps<"label">) {

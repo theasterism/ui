@@ -409,7 +409,7 @@ export const formatBytes = (bytes: number, decimals = 2): string => {
   const sizes = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
 
   const i = Math.floor(Math.log(bytes) / Math.log(k));
+  const unit = sizes[i] ?? "Bytes";
 
-  // @ts-expect-error shut up!
-  return Number.parseFloat((bytes / k ** i).toFixed(dm)) + sizes[i];
+  return `${Number.parseFloat((bytes / k ** i).toFixed(dm))} ${unit}`;
 };

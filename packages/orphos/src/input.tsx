@@ -21,6 +21,7 @@ export interface InputProps extends React.ComponentProps<"input"> {}
 
 function Input({ className, type, disabled, ...props }: InputProps) {
   const [isVisible, setIsVisible] = React.useState<boolean>(false);
+  const inputId = React.useId();
 
   if (type === "password") {
     const toggleVisibility = () => setIsVisible((prevState) => !prevState);
@@ -28,6 +29,7 @@ function Input({ className, type, disabled, ...props }: InputProps) {
     return (
       <div className="relative">
         <InputPrimitive
+          id={inputId}
           disabled={disabled}
           data-slot="input"
           className={cn(
@@ -45,7 +47,7 @@ function Input({ className, type, disabled, ...props }: InputProps) {
           onClick={toggleVisibility}
           aria-label={isVisible ? "Hide password" : "Show password"}
           aria-pressed={isVisible}
-          aria-controls="password">
+          aria-controls={inputId}>
           {isVisible ? (
             <IconEyeOff className="size-4 stroke-2" aria-hidden="true" />
           ) : (

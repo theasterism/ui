@@ -1,4 +1,4 @@
-/** biome-ignore-all lint/a11y/useKeyWithClickEvents: shut up! */
+/** biome-ignore-all lint/a11y/useKeyWithClickEvents: Click handlers focus input, keyboard access not needed */
 "use client";
 
 import { cva, type VariantProps } from "cva";
@@ -10,7 +10,7 @@ import { cn } from "./utils";
 
 function InputGroup({ className, ...props }: React.ComponentProps<"div">) {
   return (
-    // biome-ignore lint/a11y/useSemanticElements: shut up!
+    // biome-ignore lint/a11y/useSemanticElements: InputGroup uses role="group" for form field grouping
     <div
       data-slot="input-group"
       role="group"
@@ -60,7 +60,7 @@ function InputGroupAddon({
   ...props
 }: React.ComponentProps<"div"> & VariantProps<typeof inputGroupAddonVariants>) {
   return (
-    // biome-ignore lint/a11y/useSemanticElements: shut up!
+    // biome-ignore lint/a11y/useSemanticElements: Addon uses role="group" for accessory grouping
     <div
       role="group"
       data-slot="input-group-addon"

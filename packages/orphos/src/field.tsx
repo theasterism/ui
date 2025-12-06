@@ -83,7 +83,7 @@ function Field({
   ...props
 }: React.ComponentProps<"div"> & VariantProps<typeof fieldVariants>) {
   return (
-    // biome-ignore lint/a11y/useSemanticElements: shut up!
+    // biome-ignore lint/a11y/useSemanticElements: Field component uses role="group" for proper form semantics
     <div
       role="group"
       data-slot="field"
@@ -206,7 +206,7 @@ function FieldError({
       <ul className="ml-4 flex list-disc flex-col gap-1">
         {errors.map(
           (error, index) =>
-            // biome-ignore lint/suspicious/noArrayIndexKey: shut up!
+            // biome-ignore lint/suspicious/noArrayIndexKey: Error messages have no stable ID, index is appropriate here
             error?.message && <li key={index}>{error.message}</li>
         )}
       </ul>
