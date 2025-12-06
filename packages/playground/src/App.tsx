@@ -1,6 +1,3 @@
-/** biome-ignore-all lint/correctness/useUniqueElementIds: shut up! */
-/** biome-ignore-all lint/a11y/useValidAnchor: shut up! */
-
 import { Badge } from "orphos/badge";
 import { IconBold } from "@tabler/icons-react";
 import { Kbd } from "orphos/kbd";
@@ -26,6 +23,7 @@ import { KbdTooltip } from "./components/kbd";
 import { ColorPalette } from "./components/pallete";
 import { PopoverDemo } from "./components/popover";
 import RadioDemo from "./components/radio-group";
+import { Section } from "./components/section";
 import { SelectDemo } from "./components/select";
 import { SheetSide } from "./components/sheet";
 import { AppSidebar } from "./components/sidebar/app-sidebar";
@@ -33,6 +31,7 @@ import { SkeletonDemo } from "./components/skeleton";
 import { SliderDemo } from "./components/slider";
 import { SwitchDemo } from "./components/switch";
 import { TabsDemo } from "./components/tabs";
+import { ThemeToggle } from "./components/theme-toggle";
 import { ToastDemo } from "./components/toast";
 import { TooltipDemo } from "./components/tooltip";
 
@@ -41,375 +40,283 @@ function App() {
     <SidebarProvider sidebarWidthMobile="16rem">
       <AppSidebar />
       <SidebarInset>
-        <header className="flex h-14 shrink-0 items-center gap-2">
-          <div className="flex items-center gap-2 px-4">
+        <header className="flex h-14 shrink-0 items-center justify-between gap-2 border-b px-4">
+          <div className="flex items-center gap-2">
             <SidebarTrigger />
+            <Separator orientation="vertical" className="h-4!" />
+            <span className="font-medium text-sm">Component Library</span>
           </div>
+          <ThemeToggle />
         </header>
-        <div className="flex flex-1 flex-col gap-20 overflow-auto p-4">
-          <div>
+
+        <main className="flex flex-1 flex-col gap-16 overflow-auto p-6 md:p-8 lg:p-12">
+          {/* Hero Section */}
+          <div className="max-w-3xl">
             <h1
               className={typographyVariants({
                 variant: "heading-1",
-                className: "mt-12",
               })}>
               Orphos Design System
             </h1>
-            <hr className="my-4" />
-            <div className="flex gap-2">
-              <Badge variant="warning">Work In Progress.</Badge>
-              <Badge variant="info">v0</Badge>
+            <p className="mt-2 text-foreground-subtle text-lg">
+              A modern React UI component library built on Base UI and Tailwind
+              CSS v4.
+            </p>
+            <div className="mt-4 flex gap-2">
+              <Badge variant="success">v0.48.0</Badge>
+              <Badge variant="info">React 19</Badge>
+              <Badge variant="warning">Tailwind v4</Badge>
             </div>
           </div>
-          <div className="flex flex-col gap-6">
+
+          {/* Color Palette */}
+          <Section title="Colors">
             <ColorPalette />
-          </div>
-          <div className="flex flex-col gap-6">
+          </Section>
+
+          {/* Form Controls */}
+          <div className="space-y-16">
             <h2
               className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
+                variant: "heading-1",
+                className: "border-b pb-4 text-2xl!",
               })}>
-              Avatar
+              Form Controls
             </h2>
-            <div className="flex w-auto flex-row flex-wrap gap-4">
-              <AvatarDemo />
-            </div>
-          </div>
-          <div className="flex w-auto flex-col items-start gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Badge
-            </h2>
-            <BadgeDemo />
-          </div>
-          <div className="flex w-auto flex-col items-start gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Button
-            </h2>
-            <ButtonDemo />
-            <ButtonDisabledDemo />
-          </div>
-          <div className="flex w-auto flex-col items-start gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Card
-            </h2>
-            <div className="flex w-full max-w-xl flex-col gap-4">
-              <CardDemo />
-            </div>
-          </div>
-          <div className="flex flex-col gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Checkbox
-            </h2>
-            <CheckboxDemo />
-          </div>
-          <div className="flex w-full flex-col items-start gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Context Menu
-            </h2>
-            <div className="flex w-full flex-col items-start gap-10">
-              <ContextMenuDemo />
-            </div>
-          </div>
-          <div className="flex w-full flex-col items-start gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Dialog
-            </h2>
-            <div className="flex w-full flex-col items-start gap-10">
-              <DialogDemo />
-            </div>
-          </div>
-          <div className="flex w-full flex-col items-start gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Dropdown Menu
-            </h2>
-            <div className="flex w-full flex-col items-start gap-10">
-              <DropdownDemo />
-            </div>
-          </div>
-          <div className="flex w-full flex-col items-start gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Empty
-            </h2>
-            <div className="flex w-full flex-col items-start gap-10">
-              <EmptyInputGroup />
-            </div>
-          </div>
-          <div className="flex w-full flex-col items-start gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Field
-            </h2>
-            <FieldDemo />
-          </div>
-          <div className="flex w-auto flex-col items-start gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Input Group
-            </h2>
-            <InputGroupDemo />
-          </div>
-          <div className="flex w-auto flex-col items-start gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Kbd
-            </h2>
-            <KbdTooltip />
-          </div>
-          <div className="flex flex-col gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Popover
-            </h2>
-            <div className="flex w-auto flex-row gap-4">
-              <PopoverDemo />
-            </div>
-          </div>
-          <div className="flex flex-col gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Radio
-            </h2>
-            <div className="flex w-auto flex-row gap-4">
+
+            <Section title="Button">
+              <ButtonDemo />
+              <div className="mt-4">
+                <p className="mb-2 font-medium text-foreground-subtle text-sm">
+                  Disabled States
+                </p>
+                <ButtonDisabledDemo />
+              </div>
+            </Section>
+
+            <Section title="Input Group">
+              <InputGroupDemo />
+            </Section>
+
+            <Section title="Select">
+              <SelectDemo />
+            </Section>
+
+            <Section title="Checkbox">
+              <CheckboxDemo />
+            </Section>
+
+            <Section title="Radio">
               <RadioDemo />
-            </div>
-          </div>
-          <div className="flex flex-col gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Select
-            </h2>
-            <SelectDemo />
-          </div>
-          <div className="flex flex-col gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Separator
-            </h2>
-            <div className="flex w-auto flex-row gap-4">
-              <Separator />
-            </div>
-          </div>
-          <div className="flex flex-col gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Sheet
-            </h2>
-            <div className="flex w-auto flex-row gap-4">
-              <SheetSide />
-            </div>
-          </div>
-          <div className="flex flex-col gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Skeleton
-            </h2>
-            <div className="flex w-auto flex-row gap-4">
-              <SkeletonDemo />
-            </div>
-          </div>
-          <div className="flex flex-col gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Slider
-            </h2>
-            <div className="flex w-auto flex-row gap-4">
-              <SliderDemo />
-            </div>
-          </div>
-          <div className="flex flex-col gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Spinner
-            </h2>
-            <div className="flex w-auto flex-row gap-4">
-              <Spinner className="size-8" />
-            </div>
-          </div>
-          <div className="flex flex-col gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Switch
-            </h2>
-            <div className="flex w-auto flex-row gap-4">
+            </Section>
+
+            <Section title="Switch">
               <SwitchDemo />
-            </div>
+            </Section>
+
+            <Section title="Slider">
+              <SliderDemo />
+            </Section>
+
+            <Section title="Textarea">
+              <div className="grid w-full max-w-sm gap-1.5">
+                <Label htmlFor="message">Your message</Label>
+                <Textarea placeholder="Type your message here..." id="message" />
+              </div>
+            </Section>
+
+            <Section title="Field">
+              <FieldDemo />
+            </Section>
           </div>
-          <div className="flex flex-col gap-6">
+
+          {/* Data Display */}
+          <div className="space-y-16">
             <h2
               className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
+                variant: "heading-1",
+                className: "border-b pb-4 text-2xl!",
               })}>
-              Tabs
+              Data Display
             </h2>
-            <div className="flex w-auto flex-row gap-4">
-              <TabsDemo />
-            </div>
+
+            <Section title="Avatar">
+              <AvatarDemo />
+            </Section>
+
+            <Section title="Badge">
+              <BadgeDemo />
+            </Section>
+
+            <Section title="Card">
+              <div className="max-w-md">
+                <CardDemo />
+              </div>
+            </Section>
+
+            <Section title="Skeleton">
+              <SkeletonDemo />
+            </Section>
+
+            <Section title="Empty">
+              <EmptyInputGroup />
+            </Section>
           </div>
-          <div className="flex flex-col gap-6">
+
+          {/* Feedback */}
+          <div className="space-y-16">
             <h2
               className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
+                variant: "heading-1",
+                className: "border-b pb-4 text-2xl!",
               })}>
-              Textarea
+              Feedback
             </h2>
-            <div className="grid w-full max-w-sm items-center gap-1.5">
-              <Label htmlFor="message">Your message</Label>
-              <Textarea placeholder="Type your message here." id="message" />
-            </div>
-          </div>
-          <div className="flex flex-col gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Toast
-            </h2>
-            <div className="flex items-center gap-4">
+
+            <Section title="Toast">
               <ToastDemo />
-            </div>
+            </Section>
+
+            <Section title="Spinner">
+              <div className="flex items-center gap-4">
+                <Spinner className="size-4" />
+                <Spinner className="size-6" />
+                <Spinner className="size-8" />
+              </div>
+            </Section>
           </div>
-          <div className="flex flex-col gap-6">
+
+          {/* Overlays */}
+          <div className="space-y-16">
             <h2
               className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
+                variant: "heading-1",
+                className: "border-b pb-4 text-2xl!",
               })}>
-              Toggle
+              Overlays
             </h2>
-            <div className="flex items-center gap-4">
-              <Toggle aria-label="Toggle bold">
-                <IconBold />
-              </Toggle>
-              <Toggle variant="soft" aria-label="Toggle bold">
-                <IconBold />
-                <span> Bold</span>
-              </Toggle>
-            </div>
-          </div>
-          <div className="flex flex-col gap-6">
-            <h2
-              className={typographyVariants({
-                variant: "heading-2",
-                className: "mt-0!",
-              })}>
-              Tooltip
-            </h2>
-            <div className="flex w-auto flex-row gap-4">
+
+            <Section title="Dialog">
+              <DialogDemo />
+            </Section>
+
+            <Section title="Sheet">
+              <SheetSide />
+            </Section>
+
+            <Section title="Popover">
+              <PopoverDemo />
+            </Section>
+
+            <Section title="Tooltip">
               <TooltipDemo />
-            </div>
+            </Section>
+
+            <Section title="Dropdown Menu">
+              <DropdownDemo />
+            </Section>
+
+            <Section title="Context Menu">
+              <ContextMenuDemo />
+            </Section>
           </div>
-          <div className="flex flex-col gap-6">
+
+          {/* Navigation */}
+          <div className="space-y-16">
             <h2
               className={typographyVariants({
-                variant: "heading-2",
+                variant: "heading-1",
+                className: "border-b pb-4 text-2xl!",
+              })}>
+              Navigation
+            </h2>
+
+            <Section title="Tabs">
+              <TabsDemo />
+            </Section>
+          </div>
+
+          {/* Misc */}
+          <div className="space-y-16">
+            <h2
+              className={typographyVariants({
+                variant: "heading-1",
+                className: "border-b pb-4 text-2xl!",
+              })}>
+              Miscellaneous
+            </h2>
+
+            <Section title="Toggle">
+              <div className="flex items-center gap-4">
+                <Toggle aria-label="Toggle bold">
+                  <IconBold />
+                </Toggle>
+                <Toggle variant="soft" aria-label="Toggle bold">
+                  <IconBold />
+                  <span>Bold</span>
+                </Toggle>
+              </div>
+            </Section>
+
+            <Section title="Kbd">
+              <KbdTooltip />
+            </Section>
+
+            <Section title="Separator">
+              <div className="flex h-8 items-center gap-4">
+                <span>Left</span>
+                <Separator orientation="vertical" />
+                <span>Right</span>
+              </div>
+              <Separator className="my-4" />
+              <div className="flex gap-4">
+                <span>Top</span>
+                <span>Bottom</span>
+              </div>
+            </Section>
+          </div>
+
+          {/* Typography */}
+          <div className="space-y-16">
+            <h2
+              className={typographyVariants({
+                variant: "heading-1",
+                className: "border-b pb-4 text-2xl!",
               })}>
               Typography
             </h2>
-            <div className="flex w-auto flex-col gap-4">
-              <h1
-                className={typographyVariants({
-                  variant: "heading-1",
-                })}>
-                The principles of the typographic craft are difficult to master
-              </h1>
-              <h2
-                className={typographyVariants({
-                  variant: "heading-2",
-                  className: "mt-0!",
-                })}>
-                The principles of the typographic craft are difficult to master
-              </h2>
-              <h3
-                className={typographyVariants({
-                  variant: "heading-3",
-                  className: "mt-0!",
-                })}>
-                The principles of the typographic craft are difficult to master
-              </h3>
-              <h4
-                className={typographyVariants({
-                  variant: "heading-4",
-                  className: "mt-0!",
-                })}>
-                The principles of the typographic craft are difficult to master
-              </h4>
-              <p
-                className={typographyVariants({
-                  variant: "paragraph",
-                  className: "mt-0!",
-                })}>
+
+            <Section title="Headings">
+              <div className="space-y-4">
+                <h1 className={typographyVariants({ variant: "heading-1" })}>
+                  Heading 1
+                </h1>
+                <h2
+                  className={typographyVariants({
+                    variant: "heading-2",
+                    className: "mt-0!",
+                  })}>
+                  Heading 2
+                </h2>
+                <h3
+                  className={typographyVariants({
+                    variant: "heading-3",
+                    className: "mt-0!",
+                  })}>
+                  Heading 3
+                </h3>
+                <h4
+                  className={typographyVariants({
+                    variant: "heading-4",
+                    className: "mt-0!",
+                  })}>
+                  Heading 4
+                </h4>
+              </div>
+            </Section>
+
+            <Section title="Text Styles">
+              <p className={typographyVariants({ variant: "paragraph" })}>
                 The goal of typography is to relate font size, line height, and
                 line width in a proportional way that maximizes beauty and makes
                 reading easier and more pleasant.
@@ -417,36 +324,36 @@ function App() {
               <blockquote
                 className={typographyVariants({
                   variant: "blockquote",
-                  className: "mt-6",
+                  className: "mt-4",
                 })}>
-                Styles come and go. Good design is a language, not a style
+                &ldquo;Styles come and go. Good design is a language, not a
+                style.&rdquo;
               </blockquote>
-              <ul
-                className={typographyVariants({
-                  variant: "ul",
-                })}>
-                <li>1st level of puns: 5 gold coins</li>
-                <li>2nd level of jokes: 10 gold coins</li>
-                <li>3rd level of one-liners : 20 gold coins</li>
-              </ul>
-              <ol
-                className={typographyVariants({
-                  variant: "ol",
-                })}>
-                <li>1st level of puns: 5 gold coins</li>
-                <li>2nd level of jokes: 10 gold coins</li>
-                <li>3rd level of one-liners : 20 gold coins</li>
-              </ol>
-              <code
-                className={typographyVariants({
-                  variant: "code",
-                })}>
-                console.log()
+              <code className={typographyVariants({ variant: "code" })}>
+                npm install orphos
               </code>
-              <Kbd>Tab</Kbd>
-            </div>
+              <div className="mt-4 flex gap-2">
+                <Kbd>⌘</Kbd>
+                <Kbd>K</Kbd>
+              </div>
+            </Section>
+
+            <Section title="Lists">
+              <div className="grid gap-8 md:grid-cols-2">
+                <ul className={typographyVariants({ variant: "ul" })}>
+                  <li>Unordered list item 1</li>
+                  <li>Unordered list item 2</li>
+                  <li>Unordered list item 3</li>
+                </ul>
+                <ol className={typographyVariants({ variant: "ol" })}>
+                  <li>Ordered list item 1</li>
+                  <li>Ordered list item 2</li>
+                  <li>Ordered list item 3</li>
+                </ol>
+              </div>
+            </Section>
           </div>
-        </div>
+        </main>
       </SidebarInset>
     </SidebarProvider>
   );
