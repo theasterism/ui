@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.50.0
+
+### Minor Changes
+
+- 125df0a: upgrade to base-ui v1
+
 ## 0.49.1
 
 ### Patch Changes
