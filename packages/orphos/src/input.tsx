@@ -1,4 +1,4 @@
-import { Input as InputPrimitive } from "@base-ui-components/react/input";
+import { Input as InputPrimitive } from "@base-ui/react/input";
 import { IconEye, IconEyeOff } from "@tabler/icons-react";
 import { cva } from "cva";
 import * as React from "react";

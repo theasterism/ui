@@ -2,8 +2,8 @@
 /** biome-ignore-all lint/suspicious/noDocumentCookie: Sidebar state persistence requires direct cookie access */
 "use client";
 
-import { mergeProps } from "@base-ui-components/react/merge-props";
-import { useRender } from "@base-ui-components/react/use-render";
+import { mergeProps } from "@base-ui/react/merge-props";
+import { useRender } from "@base-ui/react/use-render";
 import { IconLayoutSidebarFilled } from "@tabler/icons-react";
 import { cva, type VariantProps } from "cva";
 import * as React from "react";
