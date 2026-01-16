@@ -114,7 +114,6 @@
 
   body {
     @apply scroll-smooth min-w-[320px] text-base font-sans;
-    letter-spacing: -0.03rem;
     font-feature-settings:
       "liga" 1,
       "calt" 1; /* fix for Chrome */
