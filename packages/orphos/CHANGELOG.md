@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.50.1
+
+### Patch Changes
+
+- 03978d3: remove letter spacing
+
 ## 0.50.0
 
 ### Minor Changes
