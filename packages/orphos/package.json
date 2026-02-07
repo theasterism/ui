@@ -21,7 +21,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/theasterism/ui.git",
+    "url": "git+https://github.com/theasterism/ui.git",
     "directory": "packages/orphos"
   },
   "publishConfig": {
