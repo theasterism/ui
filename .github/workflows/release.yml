@@ -6,7 +6,7 @@ on:
       - dev
 
 permissions:
-  id-token: write  # Required for OIDC
+  id-token: write  # Required for Open ID Connect
   contents: write
   pull-requests: write
 
