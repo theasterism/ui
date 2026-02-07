@@ -6,7 +6,7 @@ on:
       - dev
 
 permissions:
-  id-token: write  # Required for Open ID Connect
+  id-token: write
   contents: write
   pull-requests: write
 
@@ -24,12 +24,13 @@ jobs:
       - uses: actions/setup-node@v4
         with: 
           node-version: "24"
+          registry-url: "https://registry.npmjs.org"
+      - run: npm install -g npm@latest
       - run: bun install
+      # - run: echo "//registry.npmjs.org/:_authToken=" > ~/.npmrc
       - id: changesets
         uses: changesets/action@v1
         with:
           publish: bun run release
         env:
-          NPM_CONFIG_PROVENANCE: false
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
