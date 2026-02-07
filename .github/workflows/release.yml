@@ -30,6 +30,6 @@ jobs:
         with:
           publish: bun run release
         env:
-          NPM_CONFIG_PROVENANCE: true
+          NPM_CONFIG_PROVENANCE: false
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
