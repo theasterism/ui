@@ -6,6 +6,7 @@ import type * as React from "react";
 import type { DivElementProps } from "./types";
 import { typographyVariants } from "./typography";
 import { cn } from "./utils";
+import { Button } from "./button";
 
 function Dialog({
   ...props
@@ -60,7 +61,7 @@ function DialogContent({
         data-slot="dialog-content"
         className={cn(
           "fixed z-50 grid w-full bg-background text-popover-foreground sm:max-w-[calc(100%-2rem)]",
-          "gap-6 rounded-2xl border-t p-4 outline-none duration-150 sm:max-w-lg sm:scale-[calc(1-0.1*var(--nested-dialogs))] sm:border",
+          "gap-4 rounded-2xl border-t outline-none duration-150 sm:max-w-lg sm:scale-[calc(1-0.1*var(--nested-dialogs))] sm:border",
           "fixed bottom-0 w-full sm:top-[50%] sm:bottom-auto sm:left-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%]",
           "duration-150",
           "data-closed:fade-out-0 data-closed:zoom-out-95 data-closed:animate-out",
@@ -85,12 +86,16 @@ function DialogHeader({
   return (
     <div
       data-slot="dialog-header"
-      className={cn("flex flex-col gap-1.5 text-left", className)}
+      className={cn(
+        "flex flex-col gap-1.5 border-b border-b-border-subtle p-4 text-left",
+        className
+      )}
       {...props}>
       {showCloseButton && (
         <DialogPrimitive.Close
+          render={<Button variant="ghost" size="icon-sm" />}
           data-slot="dialog-close"
-          className="absolute end-2 top-3.5 inline-flex size-7 shrink-0 cursor-pointer items-center justify-center rounded-md border border-transparent text-foreground-subtle transition-[color,background-color,box-shadow,opacity] pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0">
+          className="absolute end-3 top-2.5">
           <IconX />
           <span className="sr-only">Close</span>
         </DialogPrimitive.Close>
@@ -105,7 +110,7 @@ function DialogFooter({ className, ...props }: DivElementProps) {
     <div
       data-slot="dialog-footer"
       className={cn(
-        "flex xs:flex-row flex-col-reverse xs:justify-end gap-1.5",
+        "flex xs:flex-row flex-col-reverse xs:justify-end gap-1.5 border-t border-t-border-subtle p-4",
         className
       )}
       {...props}
@@ -122,8 +127,8 @@ function DialogTitle({
       data-slot="dialog-title"
       className={cn(
         typographyVariants({
-          variant: "heading-3",
-          className: "mt-0",
+          variant: "strong",
+          className: "mt-0 leading-none",
         }),
         className
       )}

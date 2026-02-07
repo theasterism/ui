@@ -18,8 +18,8 @@ export const typographyVariants = cva({
       link: "font-medium text-info underline decoration-info-border underline-offset-[2.5px] hover:decoration-info",
       blockquote:
         "mt-4 border-primary border-l-4 pl-4 text-foreground-subtle italic",
-      ul: "my-4 ml-4 list-disc text-foreground-subtle marker:text-foreground [&>li]:mt-2 [&>li]:pl-1",
-      ol: "my-4 ml-4 list-decimal text-foreground-subtle marker:text-foreground [&>li]:mt-2 [&>li]:pl-1",
+      ul: "my-4 list-disc pl-7.5 text-foreground-subtle marker:text-foreground [&>li]:mt-2",
+      ol: "my-4 text-foreground-subtle marker:text-foreground [&>li]:mt-2 [&>li]:pl-7.5",
       code: "wrap-break-word w-fit rounded-sm border bg-background-element px-[0.3rem] py-[0.075rem] text-foreground-subtle text-sm",
     },
   },

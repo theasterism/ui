@@ -46,31 +46,31 @@
   --color-primary-hover: var(--tomato-10);
   --color-primary-border: var(--tomato-6);
   --color-primary-foreground: var(--color-white);
-  --color-primary-subtle: var(--tomato-2);
+  --color-primary-subtle: var(--tomato-3);
 
   --color-danger: var(--red-9);
   --color-danger-hover: var(--red-10);
   --color-danger-border: var(--red-6);
   --color-danger-foreground: var(--color-white);
-  --color-danger-subtle: var(--red-2);
+  --color-danger-subtle: var(--red-3);
 
   --color-warning: var(--amber-9);
   --color-warning-hover: var(--amber-11);
   --color-warning-border: var(--amber-6);
   --color-warning-foreground: var(--color-black);
-  --color-warning-subtle: var(--amber-2);
+  --color-warning-subtle: var(--amber-3);
 
   --color-success: var(--green-9);
   --color-success-hover: var(--green-10);
   --color-success-border: var(--green-6);
   --color-success-foreground: var(--color-white);
-  --color-success-subtle: var(--green-2);
+  --color-success-subtle: var(--green-3);
 
   --color-info: var(--blue-9);
   --color-info-hover: var(--blue-10);
   --color-info-border: var(--blue-6);
   --color-info-foreground: var(--color-white);
-  --color-info-subtle: var(--blue-2);
+  --color-info-subtle: var(--blue-3);
 
   /* Border radius */
   --radius-2xl: calc(var(--radius) + 8px);
@@ -117,5 +117,23 @@
     font-feature-settings:
       "liga" 1,
       "calt" 1; /* fix for Chrome */
+  }
+
+  ol {
+    counter-reset: item;
+    padding-left: 0;
+  }
+
+  ol > li {
+    counter-increment: item;
+    position: relative;
+  }
+
+  ol > li::before {
+    content: counter(item, decimal) ".";
+    text-align: right;
+    width: 1.25em;
+    position: absolute;
+    left: 0;
   }
 }
