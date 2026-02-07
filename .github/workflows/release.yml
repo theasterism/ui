@@ -6,6 +6,7 @@ on:
       - dev
 
 permissions:
+  id-token: write  # Required for OIDC
   contents: write
   pull-requests: write
 
@@ -18,12 +19,19 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - uses: actions/setup-node@v4
+        with: 
+          node-version: "24"
+          registry-url: "https://registry.npmjs.org"
       - run: bun install
       - id: changesets
         uses: changesets/action@v1
         with:
-          publish: bun release
+          publish: npm publish
         env:
+          NPM_CONFIG_PROVENANCE: false
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
