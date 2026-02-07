@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.50.2
+
+### Patch Changes
+
+- e4594f5: minor fixes
+
 ## 0.50.1
 
 ### Patch Changes
