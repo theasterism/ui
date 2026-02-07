@@ -3,7 +3,6 @@ import {
   Dialog,
   DialogClose,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
@@ -20,11 +19,10 @@ export function DialogDemo() {
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>Edit profile</DialogTitle>
-          <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
-          </DialogDescription>
         </DialogHeader>
-        <ProfileForm />
+        <div className="px-4">
+          <ProfileForm />
+        </div>
         <DialogFooter>
           <DialogClose className={cn(buttonVariants({}))}>Close</DialogClose>
           <Button variant="primary" type="submit">

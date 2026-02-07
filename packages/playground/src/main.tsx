@@ -1,6 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "@fontsource/jetbrains-mono";
+import "@fontsource/geist/latin.css";
+import "@fontsource/geist-mono/latin.css";
+import "@fontsource/jetbrains-mono/latin.css";
 import "./index.css";
 import { ToastProvider } from "orphos/toast";
 import { TooltipProvider } from "orphos/tooltip";

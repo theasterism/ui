@@ -14,7 +14,7 @@
     },
     "packages/orphos": {
       "name": "orphos",
-      "version": "0.49.1",
+      "version": "0.50.0",
       "dependencies": {
         "@base-ui/react": "^1.0.0",
         "@origin-space/image-cropper": "^0.1.9",

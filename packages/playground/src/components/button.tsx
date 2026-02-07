@@ -1,5 +1,5 @@
-import { Button } from "orphos/button";
 import { IconArrowUpRight, IconCloudDownload } from "@tabler/icons-react";
+import { Button } from "orphos/button";
 import { Spinner } from "orphos/spinner";
 
 export function ButtonDemo() {
@@ -26,10 +26,11 @@ export function ButtonDemo() {
         </div>
       </div>
       <div className="z-auto flex w-auto flex-row flex-wrap gap-4">
-        <Button>Button text</Button>
-        <Button variant="primary">Button text</Button>
-        <Button variant="danger">Button text</Button>
-        <Button variant="link">Button text</Button>
+        <Button>Button</Button>
+        <Button variant="primary">Button</Button>
+        <Button variant="ghost">Button</Button>
+        <Button variant="danger">Button</Button>
+        <Button variant="link">Button</Button>
       </div>
       <div className="z-auto flex w-auto flex-row flex-wrap gap-4">
         <Button>
@@ -48,6 +49,9 @@ export function ButtonDisabledDemo() {
     <div className="z-auto flex w-auto flex-row flex-wrap gap-4">
       <Button disabled>Button text</Button>
       <Button disabled variant="primary">
+        Button text
+      </Button>
+      <Button disabled variant="ghost">
         Button text
       </Button>
       <Button disabled variant="danger">

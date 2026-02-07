@@ -1,4 +1,3 @@
-import { IconHome, IconSettings, IconStack2, IconTicket } from "@tabler/icons-react";
 import {
   Sidebar,
   SidebarContent,
@@ -7,121 +6,105 @@ import {
   SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
-  SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarRail,
 } from "orphos/sidebar";
 import type * as React from "react";
+import { AppLink } from "../../router";
+import { slugify } from "../../utils/slug";
 
-const data: {
-  teamSwitcher: Array<{
-    name: string;
-    href: string;
-  }>;
-  mainNav: Array<{
-    label: string;
-    href: string;
-    alerts?: number;
-    // biome-ignore lint/suspicious/noExplicitAny: shut up!
-    icon: any;
-    isActive?: boolean;
-  }>;
-  eventsGroup: {
-    label: string;
-    events: Array<{ label: string; href: string }>;
-  };
-} = {
-  teamSwitcher: [
-    { name: "Tailwind Labs", href: "/" },
-    { name: "Workaction", href: "/" },
-  ],
-  mainNav: [
-    {
-      label: "Home",
-      href: "#",
-      icon: IconHome,
-      isActive: true,
-    },
-    {
-      label: "Events",
-      href: "#",
-      icon: IconStack2,
-      alerts: 2,
-    },
-    {
-      label: "Orders",
-      href: "#",
-      icon: IconTicket,
-    },
-    {
-      label: "Settings",
-      href: "#",
-      icon: IconSettings,
-    },
-  ],
-  eventsGroup: {
-    label: "Upcoming Events",
-    events: [
-      { label: "Bear Hug", href: "#" },
-      { label: "Viking People", href: "#" },
-      { label: "Six Finger", href: "#" },
+const navSections = [
+  {
+    label: "Getting Started",
+    items: ["Installation", "Setup", "Usage", "Platform Notes"],
+  },
+  {
+    label: "Foundations",
+    items: ["Colors", "Typography"],
+  },
+  {
+    label: "Form Controls",
+    items: [
+      "Button",
+      "Input Group",
+      "Select",
+      "Checkbox",
+      "Radio",
+      "Switch",
+      "Slider",
+      "Textarea",
+      "Field",
     ],
   },
-};
+  {
+    label: "Data Display",
+    items: ["Avatar", "Badge", "Card", "Skeleton", "Empty"],
+  },
+  {
+    label: "Feedback",
+    items: ["Toast", "Spinner"],
+  },
+  {
+    label: "Overlays",
+    items: [
+      "Dialog",
+      "Sheet",
+      "Popover",
+      "Tooltip",
+      "Dropdown Menu",
+      "Context Menu",
+    ],
+  },
+  {
+    label: "Navigation",
+    items: ["Tabs"],
+  },
+  {
+    label: "Utilities",
+    items: ["Toggle", "Kbd", "Separator"],
+  },
+];
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props} collapsible="offcanvas" variant="sidebar">
       <SidebarHeader>
-        <SidebarMenuButton size="lg">
-          <div className="size-6 rounded-full bg-primary" />
-          <span className="font-semibold">Orhos</span>
-        </SidebarMenuButton>
+        <SidebarMenuButton
+          size="lg"
+          render={
+            <AppLink href="/">
+              <div className="flex size-7 items-center justify-center rounded-full bg-primary" />
+              <div className="flex flex-col">
+                <span className="font-semibold">Orphos</span>
+                <span className="text-xs text-foreground-subtle">
+                  Component Library
+                </span>
+              </div>
+            </AppLink>
+          }
+        />
       </SidebarHeader>
       <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {data.mainNav.map((item) => (
-                <SidebarMenuItem key={item.label}>
-                  <SidebarMenuButton
-                    render={
-                      <a href={item.href}>
-                        <item.icon />
-                        <span>{item.label}</span>
-                      </a>
-                    }
-                    isActive={item.isActive}
-                  />
-
-                  {item.alerts ? (
-                    <SidebarMenuBadge>{item.alerts}</SidebarMenuBadge>
-                  ) : null}
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-        <SidebarGroup className="mt-2">
-          <SidebarGroupLabel>{data.eventsGroup.label}</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {data.eventsGroup.events.map((event) => (
-                <SidebarMenuItem key={event.label}>
-                  <SidebarMenuButton
-                    render={
-                      <a href={event.href}>
-                        <span>{event.label}</span>
-                      </a>
-                    }
-                    size="sm"
-                  />
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
+        {navSections.map((section) => (
+          <SidebarGroup key={section.label} className="mt-2 first:mt-0">
+            <SidebarGroupLabel>{section.label}</SidebarGroupLabel>
+            <SidebarGroupContent>
+              <SidebarMenu>
+                {section.items.map((item) => (
+                  <SidebarMenuItem key={item}>
+                    <SidebarMenuButton
+                      size="sm"
+                      render={
+                        <AppLink href={`#${slugify(item)}`}>{item}</AppLink>
+                      }
+                    />
+                  </SidebarMenuItem>
+                ))}
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </SidebarGroup>
+        ))}
       </SidebarContent>
       <SidebarRail />
     </Sidebar>

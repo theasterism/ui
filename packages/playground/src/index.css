@@ -3,6 +3,14 @@
 @source "../../orphos/dist";
 
 @layer base {
+  :root {
+    --font-sans: "Geist", "Inter Variable", "SF Pro Display", -apple-system,
+      BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+      "Open Sans", "Helvetica Neue", sans-serif;
+    --font-mono: "Geist Mono", "JetBrains Mono", ui-monospace, "SF Mono",
+      "Menlo", monospace;
+  }
+
   * {
     -webkit-tap-highlight-color: transparent;
     font-synthesis-weight: none;
@@ -12,5 +20,79 @@
 
   body {
     @apply min-w-[320px] text-foreground bg-background overscroll-none;
+    position: relative;
+    background-image:
+      radial-gradient(
+        1200px circle at 8% -15%,
+        color-mix(in oklch, var(--color-primary-subtle) 60%, transparent),
+        transparent 58%
+      ),
+      radial-gradient(
+        900px circle at 90% 0%,
+        color-mix(in oklch, var(--color-info-subtle) 55%, transparent),
+        transparent 52%
+      ),
+      radial-gradient(
+        color-mix(in oklch, var(--color-border-subtle) 30%, transparent) 1px,
+        transparent 1px
+      );
+    background-size: auto, auto, 26px 26px;
+    background-position: center, center, top left;
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  @keyframes page-fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .page-flow > * {
+    animation: page-fade-up 0.7s ease both;
+  }
+
+  .page-flow > *:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .page-flow > *:nth-child(2) {
+    animation-delay: 0.06s;
+  }
+  .page-flow > *:nth-child(3) {
+    animation-delay: 0.12s;
+  }
+  .page-flow > *:nth-child(4) {
+    animation-delay: 0.18s;
+  }
+  .page-flow > *:nth-child(5) {
+    animation-delay: 0.24s;
+  }
+  .page-flow > *:nth-child(6) {
+    animation-delay: 0.3s;
+  }
+  .page-flow > *:nth-child(7) {
+    animation-delay: 0.36s;
+  }
+  .page-flow > *:nth-child(8) {
+    animation-delay: 0.42s;
+  }
+  .page-flow > *:nth-child(9) {
+    animation-delay: 0.48s;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.32em] text-foreground-subtle;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .page-flow > * {
+      animation: none;
+    }
   }
 }
