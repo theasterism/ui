@@ -36,13 +36,13 @@ function App() {
       <AppSidebar />
       <SidebarInset>
         <div className="flex min-h-0 flex-1 flex-col">
-          <header className="flex h-14 shrink-0 items-center gap-2 sticky top-0 inset-x-0 border-b border-border-subtle">
-            <div className="flex items-center gap-2 px-4">
+          <header className="sticky inset-x-0 top-0 w-full flex h-14 shrink-0 items-center gap-2 border-border-subtle border-b">
+            <div className="flex w-full items-center justify-between gap-2 px-4">
               <SidebarTrigger />
               <ThemeToggle />
             </div>
           </header>
-          <div className="min-h-0 flex-1 overflow-y-auto flex flex-col gap-16 px-6 py-10">
+          <div className="flex min-h-0 flex-1 flex-col gap-16 overflow-y-auto px-6 py-10">
             <div>
               <div className="prose">
                 <h1>Orphos Design System</h1>
