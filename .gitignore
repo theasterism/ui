@@ -4,6 +4,7 @@
 *.log*
 
 .turbo
+.agent
 
 # Dist
 node_modules

@@ -117,6 +117,61 @@ function LoginCard() {
 }
 ```
 
+## Typography
+
+`typographyVariants` maps semantic content to a consistent type scale.
+
+Use semantic HTML and apply classes per element role.
+
+Available variants: `small`, `strong`, `paragraph`, `heading-1`, `heading-2`, `heading-3`, `heading-4`, `heading-5`, `link`, `blockquote`, `ul`, `ol`, `code`, `lead`, `large`, `muted`.
+
+```tsx
+import { typographyVariants } from 'orphos/typography'
+
+function Article() {
+  return (
+    <article>
+      <h1 className={typographyVariants({ variant: "heading-1" })}>
+        Design system foundations
+      </h1>
+      <h2 className={typographyVariants({ variant: "heading-2" })}>
+        Build consistent interfaces
+      </h2>
+      <h3 className={typographyVariants({ variant: "heading-3" })}>Compose reusable primitives</h3>
+      <h4 className={typographyVariants({ variant: "heading-4" })}>Ship polished details</h4>
+      <h5 className={typographyVariants({ variant: "heading-5" })}>Implementation notes</h5>
+      <p className={typographyVariants({ variant: "lead" })}>
+        Orphos provides composable primitives with consistent spacing and
+        interaction states.
+      </p>
+      <p className={typographyVariants({ variant: "paragraph" })}>
+        Use typography variants to keep hierarchy and readability consistent
+        across your app.
+      </p>
+      <p className={typographyVariants({ variant: "large" })}>This release is ready for QA.</p>
+      <p className={typographyVariants({ variant: "muted" })}>Secondary details belong in muted text.</p>
+      <p className={typographyVariants({ variant: "small" })}>Workspace slug</p>
+      <strong className={typographyVariants({ variant: "strong" })}>API keys are write-only.</strong>
+      <blockquote className={typographyVariants({ variant: "blockquote" })}>
+        Consistency is what makes a design system dependable.
+      </blockquote>
+      <ul className={typographyVariants({ variant: "ul" })}>
+        <li>Tokenized colors and spacing</li>
+        <li>Accessible interaction states</li>
+      </ul>
+      <ol className={typographyVariants({ variant: "ol" })}>
+        <li>Install dependencies</li>
+        <li>Import theme styles</li>
+      </ol>
+      <code className={typographyVariants({ variant: "code" })}>bun add orphos</code>
+      <a href="#" className={typographyVariants({ variant: "link" })}>
+        Open component docs
+      </a>
+    </article>
+  )
+}
+```
+
 ## Components
 
 | Component | Description |
