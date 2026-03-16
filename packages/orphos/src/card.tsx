@@ -1,13 +1,17 @@
 import type * as React from "react";
-import { typographyVariants } from "./typography";
 import { cn } from "./utils";
 
-function Card({ className, ...props }: React.ComponentProps<"div">) {
+function Card({
+  className,
+  size = "default",
+  ...props
+}: React.ComponentProps<"div"> & { size?: "default" | "sm" }) {
   return (
     <div
       data-slot="card"
+      data-size={size}
       className={cn(
-        "flex flex-col gap-6 rounded-2xl border bg-background-subtle p-4 text-foreground",
+        "group/card flex flex-col gap-4 overflow-hidden rounded-xl bg-background-element py-4 text-foreground text-sm ring-1 ring-border-subtle has-[>img:first-child]:pt-0 has-data-[slot=card-footer]:pb-0 data-[size=sm]:gap-3 data-[size=sm]:py-3 data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl",
         className
       )}
       {...props}
@@ -20,7 +24,7 @@ function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="card-header"
       className={cn(
-        "@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 has-data-[slot=card-action]:grid-cols-[1fr_auto]",
+        "@container/card-header group/card-header grid auto-rows-min items-start gap-1 rounded-t-xl px-4 has-data-[slot=card-action]:grid-cols-[1fr_auto] has-data-[slot=card-description]:grid-rows-[auto_auto] group-data-[size=sm]/card:px-3 [.border-b]:pb-4",
         className
       )}
       {...props}
@@ -33,10 +37,7 @@ function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="card-title"
       className={cn(
-        typographyVariants({
-          variant: "heading-3",
-          className: "mt-0!",
-        }),
+        "font-medium text-base leading-snug tracking-tight group-data-[size=sm]/card:text-sm",
         className
       )}
       {...props}
@@ -68,14 +69,23 @@ function CardAction({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 function CardContent({ className, ...props }: React.ComponentProps<"div">) {
-  return <div data-slot="card-content" className={cn(className)} {...props} />;
+  return (
+    <div
+      data-slot="card-content"
+      className={cn("px-4 group-data-[size=sm]/card:px-3", className)}
+      {...props}
+    />
+  );
 }
 
 function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-footer"
-      className={cn("flex items-center", className)}
+      className={cn(
+        "flex items-center rounded-b-xl px-4 pb-4 group-data-[size=sm]/card:px-3 group-data-[size=sm]/card:pb-3",
+        className
+      )}
       {...props}
     />
   );

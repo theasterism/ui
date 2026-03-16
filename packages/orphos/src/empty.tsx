@@ -1,5 +1,4 @@
 import { cva, type VariantProps } from "cva";
-import { typographyVariants } from "./typography";
 import { cn } from "./utils";
 
 function Empty({ className, ...props }: React.ComponentProps<"div">) {
@@ -7,7 +6,7 @@ function Empty({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="empty"
       className={cn(
-        "flex min-w-0 flex-1 flex-col items-center justify-center gap-6 text-balance rounded-xl border-dashed p-6 text-center md:p-12",
+        "flex w-full min-w-0 flex-1 flex-col items-center justify-center gap-4 text-balance rounded-xl border-dashed p-6 text-center",
         className
       )}
       {...props}
@@ -33,7 +32,7 @@ const emptyMediaVariants = cva({
   variants: {
     variant: {
       default: "bg-transparent",
-      icon: "flex size-12 shrink-0 items-center justify-center rounded-lg border border-dashed text-foreground [&_svg:not([class*='size-'])]:size-6",
+      icon: "flex size-10 shrink-0 items-center justify-center rounded-lg bg-background-element-hover text-foreground [&_svg:not([class*='size-'])]:size-5",
     },
   },
   defaultVariants: {
@@ -60,13 +59,7 @@ function EmptyTitle({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="empty-title"
-      className={cn(
-        typographyVariants({
-          variant: "heading-2",
-          className: "mt-0",
-        }),
-        className
-      )}
+      className={cn("font-medium text-sm tracking-tight", className)}
       {...props}
     />
   );
@@ -74,10 +67,10 @@ function EmptyTitle({ className, ...props }: React.ComponentProps<"div">) {
 
 function EmptyDescription({ className, ...props }: React.ComponentProps<"p">) {
   return (
-    <div
+    <p
       data-slot="empty-description"
       className={cn(
-        "text-foreground-subtle text-sm/relaxed [&>a:hover]:decoration-info [&>a]:text-info [&>a]:underline [&>a]:decoration-info-border [&>a]:underline-offset-[2.5px]",
+        "text-foreground-subtle text-sm/relaxed *:[a]:text-info *:[a]:underline *:[a]:decoration-info-border *:[a]:underline-offset-3 *:[a]:hover:decoration-info",
         className
       )}
       {...props}
@@ -90,7 +83,7 @@ function EmptyContent({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="empty-content"
       className={cn(
-        "flex w-full min-w-0 max-w-sm flex-col items-center gap-4 text-balance text-sm",
+        "flex w-full min-w-0 max-w-sm flex-col items-center gap-2 text-balance text-sm",
         className
       )}
       {...props}

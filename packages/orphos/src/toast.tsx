@@ -58,7 +58,7 @@ function ToastList({ position = "bottom-right" }: { position: ToastPosition }) {
           // Horizontal positioning
           "data-[position*=left]:left-(--toast-inset)",
           "data-[position*=right]:right-(--toast-inset)",
-          "data-[position*=center]:-translate-x-1/2 data-[position*=center]:left-1/2"
+          "data-[position*=center]:left-1/2 data-[position*=center]:-translate-x-1/2"
         )}
         data-slot="toast-viewport"
         data-position={position}>
@@ -79,7 +79,7 @@ function ToastList({ position = "bottom-right" }: { position: ToastPosition }) {
                     : ["right", isTop ? "up" : "down"]
               }
               className={cn(
-                "absolute z-[calc(9999-var(--toast-index))] h-(--toast-calc-height) w-full select-none rounded-md border bg-background-subtle bg-clip-padding p-3 text-foreground shadow-lg [transition:transform_.5s_cubic-bezier(.22,1,.36,1),opacity_.5s,height_.15s] before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-md)-1px)]",
+                "absolute z-[calc(9999-var(--toast-index))] h-(--toast-calc-height) w-full select-none rounded-md border bg-background-element bg-clip-padding p-3 text-foreground shadow-lg [transition:transform_.5s_cubic-bezier(.22,1,.36,1),opacity_.5s,height_.15s] before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-md)-1px)]",
                 // Base positioning using data-position
                 "data-[position*=right]:right-0 data-[position*=right]:left-auto",
                 "data-[position*=left]:right-auto data-[position*=left]:left-0",
@@ -130,11 +130,11 @@ function ToastList({ position = "bottom-right" }: { position: ToastPosition }) {
                   )}
                   <div className="flex flex-col gap-0.5">
                     <Toast.Title
-                      className="font-medium text-foreground"
+                      className="font-semibold text-foreground text-sm"
                       data-slot="toast-title"
                     />
                     <Toast.Description
-                      className="text-[13px] text-foreground-subtle"
+                      className="text-foreground-subtle text-sm"
                       data-slot="toast-description"
                     />
                   </div>

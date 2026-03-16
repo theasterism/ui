@@ -13,15 +13,17 @@ function Checkbox({
     <CheckboxPrimitive.Root
       data-slot="checkbox"
       className={cn(
-        "peer before:-inset-[7px] relative flex size-4 shrink-0 items-center justify-center rounded-xs border bg-background-element before:absolute focus-visible:outline-2 focus-visible:outline-offset-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:outline-2 aria-invalid:outline-danger aria-invalid:outline-offset-2 data-checked:border-transparent data-checked:bg-primary data-indeterminate:bg-primary",
+        "group before:-inset-1.75 relative flex size-4 shrink-0 items-center justify-center rounded-sm border border-border-subtle bg-background-element transition-colors before:absolute focus-visible:outline-2 focus-visible:outline-offset-2 group-has-disabled/field:opacity-50 aria-invalid:outline-2 aria-invalid:outline-danger aria-invalid:outline-offset-2 data-disabled:pointer-events-none data-disabled:cursor-not-allowed data-checked:border-primary-border data-indeterminate:border-primary-border data-checked:bg-primary data-indeterminate:bg-primary data-disabled:opacity-50",
         className
       )}
       {...props}>
       <CheckboxPrimitive.Indicator
         data-slot="checkbox-indicator"
-        className={cn("group flex text-current")}>
-        <IconMinus className="hidden size-3 text-primary-foreground group-data-indeterminate:inline" />
-        <IconCheck className="hidden size-3 text-primary-foreground group-data-checked:inline" />
+        className={cn(
+          "flex items-center justify-center text-current transition-none [&>svg]:size-3"
+        )}>
+        <IconMinus className="hidden text-primary-foreground group-data-indeterminate:inline" />
+        <IconCheck className="hidden text-primary-foreground group-data-checked:inline" />
       </CheckboxPrimitive.Indicator>
     </CheckboxPrimitive.Root>
   );

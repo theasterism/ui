@@ -5,7 +5,7 @@ import * as React from "react";
 import { cn } from "./utils";
 
 const inputVariants = cva({
-  base: "no-drag -outline-offset-1 flex h-8.5 w-full items-center rounded-md border bg-background-element px-2.5 py-2 text-foreground text-sm transition-colors placeholder:text-foreground-subtle placeholder:text-sm focus-visible:outline-2 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:outline-2 aria-invalid:outline-danger",
+  base: "no-drag flex h-8.5 w-full min-w-0 items-center rounded-md border bg-background-element px-2.5 py-1 text-foreground text-sm -outline-offset-1 transition-colors placeholder:text-foreground-subtle placeholder:text-sm focus-visible:outline-2 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:outline-2 aria-invalid:outline-danger",
   variants: {
     variant: {
       default: "",
@@ -42,7 +42,7 @@ function Input({ className, type, disabled, ...props }: InputProps) {
         />
         <button
           disabled={disabled}
-          className="peer before:-inset-[7px] absolute inset-y-0 end-0 mt-[7.5px] mr-2 flex size-5 items-center justify-center rounded-xs text-foreground-subtle outline-offset-1 transition-colors before:absolute hover:text-foreground focus:z-10 focus-visible:outline-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+          className="peer absolute inset-y-0 right-0 mt-[7.5px] mr-2 flex size-5 items-center justify-center rounded-xs text-foreground-subtle outline-offset-1 transition-colors before:absolute before:-inset-1.75 hover:text-foreground focus:z-10 focus-visible:outline-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
           type="button"
           onClick={toggleVisibility}
           aria-label={isVisible ? "Hide password" : "Show password"}

@@ -30,7 +30,7 @@ function TabsList({
     <TabsPrimitive.List
       data-slot="tabs-list"
       className={cn(
-        "relative z-0 flex w-fit items-center justify-center gap-x-0.5 rounded-md bg-background-element-hover p-0 data-[orientation=vertical]:flex-col",
+        "relative z-0 flex w-fit items-center justify-center gap-x-0.5 rounded-lg bg-background-element-hover p-0.5 data-[orientation=vertical]:flex-col",
         className
       )}
       {...props}>
@@ -38,8 +38,8 @@ function TabsList({
       <TabsPrimitive.Indicator
         data-slot="tab-indicator"
         className={cn(
-          "-translate-y-(--active-tab-bottom) absolute bottom-0 left-0 h-(--active-tab-height) w-(--active-tab-width) translate-x-(--active-tab-left) transition-[width,translate] duration-200 ease-in-out",
-          "-z-1 rounded-md border bg-background-element shadow-xs"
+          "absolute bottom-0 left-0 h-(--active-tab-height) w-(--active-tab-width) translate-x-(--active-tab-left) -translate-y-(--active-tab-bottom) transition-[width,translate] duration-150 ease-in-out",
+          "-z-1 rounded-md border-0 bg-background-element shadow-xs"
         )}
       />
     </TabsPrimitive.List>
@@ -54,8 +54,7 @@ function TabsTrigger({
     <TabsPrimitive.Tab
       data-slot="tabs-trigger"
       className={cn(
-        // "flex h-8 w-fit flex-1 shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-transparent px-3 font-medium text-foreground-subtle text-sm transition-[color,box-shadow] focus-visible:outline-2 focus-visible:outline-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
-        "flex flex-1 shrink-0 cursor-pointer items-center justify-center whitespace-nowrap rounded-md border border-transparent font-medium text-foreground-subtle text-sm transition-[color,background-color,box-shadow] focus-visible:outline-2 data-disabled:pointer-events-none data-disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "flex flex-1 shrink-0 cursor-default items-center justify-center whitespace-nowrap rounded-md border border-transparent font-medium text-foreground-subtle text-sm transition-[color,background-color,box-shadow] focus-visible:outline-2 data-disabled:pointer-events-none data-disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
         "hover:text-foreground data-selected:text-foreground",
         "gap-1.5 px-[calc(--spacing(2.5)-1px)] py-[calc(--spacing(1.5)-1px)]",
         "data-[orientation=vertical]:w-full data-[orientation=vertical]:justify-start",

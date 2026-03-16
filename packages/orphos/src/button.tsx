@@ -1,11 +1,9 @@
-import { mergeProps } from "@base-ui/react/merge-props";
-import { useRender } from "@base-ui/react/use-render";
+import { Button as ButtonPrimitive } from "@base-ui/react/button";
 import { cva, type VariantProps } from "cva";
-import type * as React from "react";
 import { cn } from "./utils";
 
 const buttonVariants = cva({
-  base: "inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-md border border-transparent font-medium text-sm transition-[transform,color,scale] duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-[0.97] disabled:pointer-events-none disabled:select-none disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0",
+  base: "group/button inline-flex shrink-0 select-none items-center justify-center gap-2 whitespace-nowrap rounded-md border border-transparent bg-clip-padding font-medium text-sm transition-all focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
   variants: {
     variant: {
       default:
@@ -30,24 +28,19 @@ const buttonVariants = cva({
   },
 });
 
-interface ButtonProps extends useRender.ComponentProps<"button"> {
-  variant?: VariantProps<typeof buttonVariants>["variant"];
-  size?: VariantProps<typeof buttonVariants>["size"];
+function Button({
+  className,
+  variant = "default",
+  size = "md",
+  ...props
+}: ButtonPrimitive.Props & VariantProps<typeof buttonVariants>) {
+  return (
+    <ButtonPrimitive
+      data-slot="button"
+      className={cn(buttonVariants({ variant, size, className }))}
+      {...props}
+    />
+  );
 }
 
-function Button({ className, variant, size, render, ...props }: ButtonProps) {
-  const typeValue: React.ButtonHTMLAttributes<HTMLButtonElement>["type"] =
-    render ? undefined : "button";
-  const defaultProps = {
-    "data-slot": "button",
-    className: cn(buttonVariants({ variant, size, className })),
-    type: typeValue,
-  };
-  return useRender({
-    defaultTagName: "button",
-    render,
-    props: mergeProps<"button">(defaultProps, props),
-  });
-}
-
-export { Button, buttonVariants, type ButtonProps };
+export { Button, buttonVariants };
