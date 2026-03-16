@@ -36,7 +36,7 @@ function App() {
       <AppSidebar />
       <SidebarInset>
         <div className="flex min-h-0 flex-1 flex-col">
-          <header className="flex h-14 shrink-0 items-center gap-2 sticky top-0 inset-x-0 border-b border-border-subtle/60">
+          <header className="flex h-14 shrink-0 items-center gap-2 sticky top-0 inset-x-0 border-b border-border-subtle">
             <div className="flex items-center gap-2 px-4">
               <SidebarTrigger />
               <ThemeToggle />
