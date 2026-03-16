@@ -1,12 +1,15 @@
 import { IconPlus } from "@tabler/icons-react";
 import {
   ContextMenu,
+  ContextMenuCheckboxItem,
   ContextMenuContent,
   ContextMenuGroup,
   ContextMenuItem,
   ContextMenuLabel,
-  ContextMenuPositioner,
+  ContextMenuRadioGroup,
+  ContextMenuRadioItem,
   ContextMenuSeparator,
+  ContextMenuShortcut,
   ContextMenuSub,
   ContextMenuSubContent,
   ContextMenuSubTrigger,
@@ -21,29 +24,54 @@ export function ContextMenuDemo() {
       </ContextMenuTrigger>
       <ContextMenuContent>
         <ContextMenuGroup>
-          <ContextMenuLabel>TITLE</ContextMenuLabel>
-          <ContextMenuItem>Add to Library</ContextMenuItem>
+          <ContextMenuItem>
+            Back
+            <ContextMenuShortcut>⌘[</ContextMenuShortcut>
+          </ContextMenuItem>
+          <ContextMenuItem disabled>
+            Forward
+            <ContextMenuShortcut>⌘]</ContextMenuShortcut>
+          </ContextMenuItem>
+          <ContextMenuItem>
+            Reload
+            <ContextMenuShortcut>⌘R</ContextMenuShortcut>
+          </ContextMenuItem>
           <ContextMenuSub>
-            <ContextMenuSubTrigger>Add to Playlist</ContextMenuSubTrigger>
-            <ContextMenuPositioner alignOffset={-4} sideOffset={2}>
-              <ContextMenuSubContent>
-                <ContextMenuItem inset>Get up!</ContextMenuItem>
-                <ContextMenuItem inset>Inside Out</ContextMenuItem>
-                <ContextMenuItem inset> Night Beats</ContextMenuItem>
-                <ContextMenuSeparator />
-                <ContextMenuItem>
-                  <IconPlus /> New Playlist...
-                </ContextMenuItem>
-              </ContextMenuSubContent>
-            </ContextMenuPositioner>
+            <ContextMenuSubTrigger>More Tools</ContextMenuSubTrigger>
+            <ContextMenuSubContent className="w-44">
+              <ContextMenuGroup>
+                <ContextMenuItem>Save Page...</ContextMenuItem>
+                <ContextMenuItem>Create Shortcut...</ContextMenuItem>
+                <ContextMenuItem>Name Window...</ContextMenuItem>
+              </ContextMenuGroup>
+              <ContextMenuSeparator />
+              <ContextMenuGroup>
+                <ContextMenuItem>Developer Tools</ContextMenuItem>
+              </ContextMenuGroup>
+              <ContextMenuSeparator />
+              <ContextMenuGroup>
+                <ContextMenuItem variant="danger">Delete</ContextMenuItem>
+              </ContextMenuGroup>
+            </ContextMenuSubContent>
           </ContextMenuSub>
         </ContextMenuGroup>
         <ContextMenuSeparator />
-        <ContextMenuItem>Play Next</ContextMenuItem>
-        <ContextMenuItem>Play Last</ContextMenuItem>
+        <ContextMenuGroup>
+          <ContextMenuCheckboxItem checked>
+            Show Bookmarks
+          </ContextMenuCheckboxItem>
+          <ContextMenuCheckboxItem>Show Full URLs</ContextMenuCheckboxItem>
+        </ContextMenuGroup>
         <ContextMenuSeparator />
-        <ContextMenuItem>Favorite</ContextMenuItem>
-        <ContextMenuItem variant="danger">Delete</ContextMenuItem>
+        <ContextMenuGroup>
+          <ContextMenuRadioGroup value="pedro">
+            <ContextMenuLabel>People</ContextMenuLabel>
+            <ContextMenuRadioItem value="pedro">
+              Pedro Duarte
+            </ContextMenuRadioItem>
+            <ContextMenuRadioItem value="colm">Colm Tuite</ContextMenuRadioItem>
+          </ContextMenuRadioGroup>
+        </ContextMenuGroup>
       </ContextMenuContent>
     </ContextMenu>
   );

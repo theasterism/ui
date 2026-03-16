@@ -43,23 +43,3 @@ export function ButtonDemo() {
     </div>
   );
 }
-
-export function ButtonDisabledDemo() {
-  return (
-    <div className="z-auto flex w-auto flex-row flex-wrap gap-4">
-      <Button disabled>Button text</Button>
-      <Button disabled variant="primary">
-        Button text
-      </Button>
-      <Button disabled variant="ghost">
-        Button text
-      </Button>
-      <Button disabled variant="danger">
-        Button text
-      </Button>
-      <Button disabled variant="link">
-        Button text
-      </Button>
-    </div>
-  );
-}

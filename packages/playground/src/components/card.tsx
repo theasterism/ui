@@ -1,6 +1,7 @@
 import { Button } from "orphos/button";
 import {
   Card,
+  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
@@ -9,8 +10,6 @@ import {
 } from "orphos/card";
 import { Input } from "orphos/input";
 import { Label } from "orphos/label";
-import { typographyVariants } from "orphos/typography";
-import { cn } from "orphos/utils";
 
 export function CardDemo() {
   return (
@@ -20,11 +19,14 @@ export function CardDemo() {
         <CardDescription>
           Enter your email below to login to your account
         </CardDescription>
+        <CardAction>
+          <Button variant="link">Sign Up</Button>
+        </CardAction>
       </CardHeader>
       <CardContent>
         <form>
           <div className="flex flex-col gap-6">
-            <div className="grid gap-1.5">
+            <div className="grid gap-2">
               <Label htmlFor="email">Email</Label>
               <Input
                 id="email"
@@ -33,15 +35,12 @@ export function CardDemo() {
                 required
               />
             </div>
-            <div className="grid gap-1.5">
+            <div className="grid gap-2">
               <div className="flex items-center">
                 <Label htmlFor="password">Password</Label>
                 <a
                   href="#"
-                  className={typographyVariants({
-                    variant: "link",
-                    className: "text-sm ml-auto",
-                  })}>
+                  className="ml-auto inline-block text-sm underline-offset-4 hover:underline">
                   Forgot your password?
                 </a>
               </div>
@@ -50,7 +49,7 @@ export function CardDemo() {
           </div>
         </form>
       </CardContent>
-      <CardFooter className="flex-col gap-1.5">
+      <CardFooter className="flex-col gap-2">
         <Button variant="primary" type="submit" className="w-full">
           Login
         </Button>

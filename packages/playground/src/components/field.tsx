@@ -13,7 +13,9 @@ import { Input } from "orphos/input";
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
+  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "orphos/select";
@@ -23,7 +25,6 @@ const months: Array<{
   label: string;
   value: string | null;
 }> = [
-  { label: "MM", value: null },
   {
     label: "01",
     value: "01",
@@ -77,7 +78,6 @@ const years: Array<{
   label: string;
   value: string | null;
 }> = [
-  { label: "YYYY", value: null },
   {
     label: "2025",
     value: "2025",
@@ -141,14 +141,17 @@ export function FieldDemo() {
                   </FieldLabel>
                   <Select items={months}>
                     <SelectTrigger id="checkout-exp-month-ts6">
-                      <SelectValue />
+                      <SelectValue placeholder="Month" />
                     </SelectTrigger>
                     <SelectContent>
-                      {months.map((item) => (
-                        <SelectItem key={item.value} value={item.value}>
-                          {item.label}
-                        </SelectItem>
-                      ))}
+                      <SelectGroup>
+                        <SelectLabel>Months</SelectLabel>
+                        {months.map((item) => (
+                          <SelectItem key={item.value} value={item.value}>
+                            {item.label}
+                          </SelectItem>
+                        ))}
+                      </SelectGroup>
                     </SelectContent>
                   </Select>
                 </Field>
@@ -158,14 +161,17 @@ export function FieldDemo() {
                   </FieldLabel>
                   <Select items={years}>
                     <SelectTrigger id="checkout-7j9-exp-year-f59">
-                      <SelectValue />
+                      <SelectValue placeholder="Year" />
                     </SelectTrigger>
                     <SelectContent>
-                      {years.map((item) => (
-                        <SelectItem key={item.value} value={item.value}>
-                          {item.label}
-                        </SelectItem>
-                      ))}
+                      <SelectGroup>
+                        <SelectLabel>Years</SelectLabel>
+                        {years.map((item) => (
+                          <SelectItem key={item.value} value={item.value}>
+                            {item.label}
+                          </SelectItem>
+                        ))}
+                      </SelectGroup>
                     </SelectContent>
                   </Select>
                 </Field>

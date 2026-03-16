@@ -1,16 +1,16 @@
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "orphos/dropdown-menu";
-import {
   IconCheck,
   IconInfoCircle,
   IconPlug,
   IconSearch,
   IconSend,
 } from "@tabler/icons-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "orphos/dropdown-menu";
 import {
   InputGroup,
   InputGroupAddon,
@@ -83,7 +83,7 @@ export function InputGroupDemo() {
         </InputGroupAddon>
       </InputGroup>
       <InputGroup>
-        <InputGroupInput placeholder="@shadcn" />
+        <InputGroupInput placeholder="@username" />
         <InputGroupAddon align="inline-end">
           <div className="flex size-4 items-center justify-center rounded-full bg-primary text-primary-foreground">
             <IconCheck className="size-2.5" />

@@ -1,7 +1,6 @@
-import { Button, buttonVariants } from "orphos/button";
+import { Button } from "orphos/button";
 import {
   Dialog,
-  DialogClose,
   DialogContent,
   DialogFooter,
   DialogHeader,
@@ -15,16 +14,13 @@ import { cn } from "orphos/utils";
 export function DialogDemo() {
   return (
     <Dialog>
-      <DialogTrigger render={<Button>Edit Profile</Button>}></DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogTrigger render={<Button>Edit Profile</Button>} />
+      <DialogContent className="sm:max-w-sm">
         <DialogHeader>
           <DialogTitle>Edit profile</DialogTitle>
         </DialogHeader>
-        <div className="px-4">
-          <ProfileForm />
-        </div>
-        <DialogFooter>
-          <DialogClose className={cn(buttonVariants({}))}>Close</DialogClose>
+        <ProfileForm />
+        <DialogFooter showCloseButton>
           <Button variant="primary" type="submit">
             Save changes
           </Button>

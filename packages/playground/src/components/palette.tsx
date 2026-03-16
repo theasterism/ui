@@ -35,7 +35,7 @@ function ColorPalette() {
             })}>
             {group.title}
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2">
             {group.swatches.map((swatch) => (
               <div key={swatch.label} className="flex items-center gap-2">
                 <div
@@ -44,7 +44,7 @@ function ColorPalette() {
                     swatch.className
                   )}
                 />
-                <span className="text-xs text-foreground-subtle">
+                <span className="text-foreground-subtle text-xs">
                   {swatch.label}
                 </span>
               </div>
