@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.52.0
+
+### Minor Changes
+
+- 35e1847: remove inset shadow
+
 ## 0.51.0
 
 ### Minor Changes
