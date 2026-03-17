@@ -1,3 +1,5 @@
+@import "@radix-ui/colors/tomato.css";
+@import "@radix-ui/colors/tomato-dark.css";
 @import "@radix-ui/colors/red.css";
 @import "@radix-ui/colors/red-dark.css";
 @import "@radix-ui/colors/green.css";
@@ -37,19 +39,6 @@
   --gray-a10: #00000088;
   --gray-a11: #000000a6;
   --gray-a12: #000000de;
-
-  --lime-1: #f0f1ef;
-  --lime-2: #ebeee5;
-  --lime-3: #e0eac8;
-  --lime-4: #d5e3ae;
-  --lime-5: #c8d996;
-  --lime-6: #b9cb84;
-  --lime-7: #a6b86e;
-  --lime-8: #8ea34a;
-  --lime-9: #b8d455;
-  --lime-10: #aeca43;
-  --lime-11: #5b6b1e;
-  --lime-12: #383f23;
 }
 
 @supports (color: color(display-p3 1 1 1)) {
@@ -84,19 +73,6 @@
       --gray-a10: color(display-p3 0 0 0 / 0.5328);
       --gray-a11: color(display-p3 0 0 0 / 0.6516);
       --gray-a12: color(display-p3 0 0 0 / 0.8689);
-
-      --lime-1: oklch(95.7% 0.0034 120.4);
-      --lime-2: oklch(94.5% 0.0124 120.4);
-      --lime-3: oklch(92.1% 0.0458 120.4);
-      --lime-4: oklch(89.2% 0.0715 120.4);
-      --lime-5: oklch(85.7% 0.0909 120.4);
-      --lime-6: oklch(81.2% 0.0956 120.4);
-      --lime-7: oklch(75.2% 0.101 120.4);
-      --lime-8: oklch(68% 0.1176 120.4);
-      --lime-9: oklch(82.5% 0.1555 120.4);
-      --lime-10: oklch(79.3% 0.1608 120.4);
-      --lime-11: oklch(49.9% 0.1029 120.4);
-      --lime-12: oklch(35.3% 0.0453 120.4);
     }
   }
 }
@@ -130,19 +106,6 @@
   --gray-a10: #ffffff74;
   --gray-a11: #ffffffb0;
   --gray-a12: #ffffffed;
-
-  --lime-1: #0c0e08;
-  --lime-2: #161810;
-  --lime-3: #232716;
-  --lime-4: #2d331b;
-  --lime-5: #384020;
-  --lime-6: #444e28;
-  --lime-7: #535e33;
-  --lime-8: #65723d;
-  --lime-9: #d3f072;
-  --lime-10: #cbe47c;
-  --lime-11: #cae37b;
-  --lime-12: #e6f4c2;
 }
 
 @supports (color: color(display-p3 1 1 1)) {
@@ -176,19 +139,6 @@
       --gray-a10: color(display-p3 1 1 1 / 0.4545);
       --gray-a11: color(display-p3 1 1 1 / 0.6901);
       --gray-a12: color(display-p3 1 1 1 / 0.9298);
-
-      --lime-1: oklch(15.9% 0.0116 120.4);
-      --lime-2: oklch(20.5% 0.0154 120.4);
-      --lime-3: oklch(26.3% 0.0294 120.4);
-      --lime-4: oklch(31% 0.0419 120.4);
-      --lime-5: oklch(35.5% 0.0518 120.4);
-      --lime-6: oklch(40.4% 0.0586 120.4);
-      --lime-7: oklch(46.1% 0.0658 120.4);
-      --lime-8: oklch(52.7% 0.0773 120.4);
-      --lime-9: oklch(90.9% 0.1555 120.4);
-      --lime-10: oklch(87.9% 0.1331 120.4);
-      --lime-11: oklch(87.6% 0.1331 120.4);
-      --lime-12: oklch(94.5% 0.0673 120.4);
     }
   }
 }
