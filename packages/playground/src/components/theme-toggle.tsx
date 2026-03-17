@@ -11,7 +11,7 @@ function ThemeToggle() {
       size="icon-sm"
       aria-label="Toggle theme"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-      {theme === "light" ? <IconSun /> : <IconMoon />}
+      {theme === "dark" ? <IconSun /> : <IconMoon />}
     </Button>
   );
 }
