@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.53.1
+
+### Patch Changes
+
+- c947cde: add sidebar menu item gap
+
 ## 0.53.0
 
 ### Minor Changes
