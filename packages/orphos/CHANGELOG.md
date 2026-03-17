@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.53.0
+
+### Minor Changes
+
+- 5a851ca: change accent color
+
 ## 0.52.0
 
 ### Minor Changes
