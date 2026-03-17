@@ -4,13 +4,13 @@ import { cva, type VariantProps } from "cva";
 import { cn } from "./utils";
 
 const badgeVariants = cva({
-  base: "inline-flex h-5 w-fit items-center gap-1 rounded-md border px-1.5 py-px font-medium text-[11px] transition-all has-data-[icon=inline-start]:pl-1.25 has-data-[icon=inline-end]:pr-1.25 [&_svg]:size-3! group/badge shrink-0 overflow-hidden whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2 [&>svg]:pointer-events-none",
+  base: "group/badge inline-flex h-5 w-fit shrink-0 items-center gap-1 overflow-hidden whitespace-nowrap rounded-md border px-1.5 py-px font-medium text-[11px] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 has-data-[icon=inline-end]:pr-1.25 has-data-[icon=inline-start]:pl-1.25 [&>svg]:pointer-events-none [&_svg]:size-3!",
   variants: {
     variant: {
       default:
         "border-border-subtle bg-background-element text-foreground-subtle [a]:hover:bg-background-element-hover",
       primary:
-        "border-primary-border bg-primary-subtle text-(--lime-11) [a]:hover:border-(--lime-11)/70",
+        "border-primary-border bg-primary-subtle text-primary [a]:hover:border-primary-border/50",
       danger:
         "border-danger-border bg-danger-subtle text-danger-hover [a]:hover:border-danger",
       success:
