@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.53.2
+
+### Patch Changes
+
+- d89d173: fix marker styling and change switch thumb color
+
 ## 0.53.1
 
 ### Patch Changes
