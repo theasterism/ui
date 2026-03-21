@@ -140,11 +140,7 @@
     --prose-strong-color: var(--foreground);
     --prose-link-color: var(--blue-9);
     --prose-code-color: var(--foreground);
-    --prose-marker-color: color-mix(
-      in oklab,
-      var(--foreground-subtle) 50%,
-      transparent
-    );
+    --prose-marker-color: var(--foreground);
     --prose-link-underline-color: var(--blue-a8);
     --prose-th-borders: var(--border-subtle);
     --prose-td-borders: color-mix(
@@ -222,30 +218,34 @@
 
     /* Lists */
     ol:where(:not(.not-prose, .not-prose *)) {
-      padding-left: calc(var(--spacing) * 6);
-      list-style-type: decimal;
+      padding-left: 0;
+      counter-reset: item;
+      list-style: none;
     }
 
     ol li:where(:not(.not-prose, .not-prose *)) {
-      padding-left: calc(var(--spacing) * 2);
+      position: relative;
+      padding-left: calc(var(--spacing) * 7);
+      counter-increment: item;
+    }
+
+    ol li:where(:not(.not-prose, .not-prose *))::before {
+      font-weight: 500;
+      color: var(--prose-marker-color);
+      content: counter(item, decimal) ".";
+      text-align: right;
+      width: 1.25em;
+      position: absolute;
+      left: 0;
     }
 
     ol li + li:where(:not(.not-prose, .not-prose *)) {
       margin-top: calc(var(--spacing) * 3);
     }
 
-    ol li:where(:not(.not-prose, .not-prose *))::marker {
-      font-weight: 500;
-      color: var(--prose-strong-color);
-    }
-
     ul:where(:not(.not-prose, .not-prose *)) {
-      padding-left: calc(var(--spacing) * 6);
+      padding-left: calc(var(--spacing) * 7);
       list-style-type: disc;
-    }
-
-    ul li:where(:not(.not-prose, .not-prose *)) {
-      padding-left: calc(var(--spacing) * 2);
     }
 
     ul li + li:where(:not(.not-prose, .not-prose *)) {
