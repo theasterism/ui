@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.53.5
+
+### Patch Changes
+
+- 6616216: change input and textarea text size
+
 ## 0.53.4
 
 ### Patch Changes
