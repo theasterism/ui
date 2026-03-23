@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.53.4
+
+### Patch Changes
+
+- 3d980ef: remove alpha colors
+
 ## 0.53.3
 
 ### Patch Changes
