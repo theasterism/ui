@@ -15,7 +15,7 @@ import { docsNavSections } from "../../docs-nav";
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar {...props} variant="inset">
+    <Sidebar {...props}>
       <SidebarHeader>
         <SidebarMenuButton size="lg">
           <div className="flex size-7 items-center justify-center rounded-full bg-primary" />
