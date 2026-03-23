@@ -5,7 +5,7 @@ import * as React from "react";
 import { cn } from "./utils";
 
 const inputVariants = cva({
-  base: "no-drag flex h-8.5 w-full min-w-0 items-center rounded-md border bg-background-element px-2.5 py-1 text-foreground text-sm -outline-offset-1 transition-colors placeholder:text-foreground-subtle placeholder:text-sm focus-visible:outline-2 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:outline-2 aria-invalid:outline-danger",
+  base: "no-drag flex h-8.5 w-full min-w-0 items-center rounded-md border bg-background-element px-2.5 py-1 text-foreground text-regular -outline-offset-1 transition-colors placeholder:text-foreground-subtle placeholder:text-regular focus-visible:outline-2 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:outline-2 aria-invalid:outline-danger",
   variants: {
     variant: {
       default: "",

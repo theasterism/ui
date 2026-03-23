@@ -71,7 +71,7 @@ function ContextMenuSubTrigger({
       data-slot="context-menu-sub-trigger"
       data-inset={inset}
       className={cn(
-        "relative flex h-7.5 cursor-default select-none items-center gap-2 rounded-sm py-1.5 pr-0.75 pl-2.5 text-foreground text-sm outline-hidden data-highlighted:bg-background-element-hover data-popup-open:bg-background-element-hover data-inset:pl-8.5 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-foreground-subtle [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "relative flex h-7.5 cursor-default select-none items-center gap-2 rounded-sm py-1.5 pr-0.75 pl-2.5 text-foreground text-small outline-hidden data-highlighted:bg-background-element-hover data-popup-open:bg-background-element-hover data-inset:pl-8.5 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-foreground-subtle [&_svg]:pointer-events-none [&_svg]:shrink-0",
         className
       )}
       {...props}>
@@ -146,7 +146,7 @@ function ContextMenuItem({
       data-inset={inset}
       data-variant={variant}
       className={cn(
-        "relative flex h-7.5 cursor-default select-none items-center gap-2 rounded-sm px-2.5 py-1.5 text-foreground text-sm outline-hidden data-[variant=danger]:data-highlighted:bg-danger-subtle data-[variant=danger]:data-highlighted:text-danger data-disabled:pointer-events-none data-highlighted:bg-background-element-hover data-inset:pl-8.5 data-[variant=danger]:text-danger data-disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-foreground-subtle [&_svg]:pointer-events-none [&_svg]:shrink-0 data-[variant=danger]:*:[svg]:text-danger!",
+        "relative flex h-7.5 cursor-default select-none items-center gap-2 rounded-sm px-2.5 py-1.5 text-foreground text-small outline-hidden data-[variant=danger]:data-highlighted:bg-danger-subtle data-[variant=danger]:data-highlighted:text-danger data-disabled:pointer-events-none data-highlighted:bg-background-element-hover data-inset:pl-8.5 data-[variant=danger]:text-danger data-disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-foreground-subtle [&_svg]:pointer-events-none [&_svg]:shrink-0 data-[variant=danger]:*:[svg]:text-danger!",
         className
       )}
       {...props}
@@ -164,7 +164,7 @@ function ContextMenuCheckboxItem({
     <ContextMenuPrimitive.CheckboxItem
       data-slot="context-menu-checkbox-item"
       className={cn(
-        "relative flex h-7.5 cursor-default select-none items-center gap-2 rounded-sm py-1.5 pr-2.5 pl-8.5 text-foreground text-sm outline-hidden data-disabled:pointer-events-none data-highlighted:bg-background-element-hover data-disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "relative flex h-7.5 cursor-default select-none items-center gap-2 rounded-sm py-1.5 pr-2.5 pl-8.5 text-foreground text-small outline-hidden data-disabled:pointer-events-none data-highlighted:bg-background-element-hover data-disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
         className
       )}
       checked={checked}
@@ -188,7 +188,7 @@ function ContextMenuRadioItem({
     <ContextMenuPrimitive.RadioItem
       data-slot="context-menu-radio-item"
       className={cn(
-        "relative flex h-7.5 cursor-default select-none items-center gap-2 rounded-sm py-1.5 pr-2.5 pl-8 text-foreground text-sm outline-hidden data-disabled:pointer-events-none data-highlighted:bg-background-element-hover data-disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "relative flex h-7.5 cursor-default select-none items-center gap-2 rounded-sm py-1.5 pr-2.5 pl-8 text-foreground text-small outline-hidden data-disabled:pointer-events-none data-highlighted:bg-background-element-hover data-disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
         className
       )}
       {...props}>
@@ -214,7 +214,7 @@ function ContextMenuLabel({
       data-slot="context-menu-label"
       data-inset={inset}
       className={cn(
-        "px-2 py-1.5 font-medium text-foreground-subtle text-xs data-inset:pl-8",
+        "px-2 py-1.5 font-medium text-foreground-subtle text-micro data-inset:pl-8",
         className
       )}
       {...props}
@@ -243,7 +243,7 @@ function ContextMenuShortcut({
     <span
       data-slot="context-menu-shortcut"
       className={cn(
-        "-mr-0.75 ml-auto text-foreground-subtle text-xs tracking-widest",
+        "-mr-0.75 ml-auto text-foreground-subtle text-micro tracking-widest",
         className
       )}
       {...props}

@@ -15,7 +15,7 @@ function InputGroup({ className, ...props }: React.ComponentProps<"div">) {
       data-slot="input-group"
       role="group"
       className={cn(
-        "group/input-group relative flex w-full items-center rounded-md border bg-background-element transition-[color,box-shadow]",
+        "group/input-group relative flex w-full items-center rounded-md border border-border-subtle bg-background-element transition-[color,box-shadow]",
         "h-8.5 min-w-0 has-[>textarea]:h-auto",
         // Variants based on alignment.
         "has-[>[data-align=inline-start]]:[&>input]:pl-2",
@@ -34,7 +34,7 @@ function InputGroup({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 const inputGroupAddonVariants = cva({
-  base: "flex h-auto cursor-text select-none items-center justify-center gap-2 py-1.5 font-medium text-foreground-subtle text-sm group-data-[disabled=true]/input-group:opacity-50 [&>kbd]:rounded-[calc(var(--radius)-3px)] [&>svg:not([class*='size-'])]:size-4",
+  base: "flex h-auto cursor-text select-none items-center justify-center gap-2 py-1.5 font-medium text-foreground-subtle text-small group-data-[disabled=true]/input-group:opacity-50 [&>kbd]:rounded-[calc(var(--radius)-3px)] [&>svg:not([class*='size-'])]:size-4",
   variants: {
     align: {
       "inline-start":
@@ -76,7 +76,7 @@ function InputGroupAddon({
 }
 
 const inputGroupButtonVariants = cva({
-  base: "flex items-center gap-2 text-sm shadow-none",
+  base: "flex items-center gap-2 text-small shadow-none",
   variants: {
     size: {
       xs: "h-6 gap-1 rounded-sm px-2 has-[>svg]:px-2 [&>svg:not([class*='size-'])]:size-3.5",
@@ -116,7 +116,7 @@ function InputGroupText({ className, ...props }: React.ComponentProps<"span">) {
   return (
     <span
       className={cn(
-        "flex items-center gap-2 text-foreground-subtle text-sm [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none",
+        "flex items-center gap-2 text-foreground-subtle text-small [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none",
         className
       )}
       {...props}

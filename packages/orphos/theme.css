@@ -6,15 +6,9 @@
 
 :root {
   /* Base border radius */
-  --radius: 6px;
-
+  --radius: 0.375rem;
   --color-white: oklch(1 0 0);
   --color-black: oklch(0 0 0);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Theme */
@@ -28,8 +22,17 @@
     "Helvetica Neue", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", "Menlo", monospace;
 
-  /* Colors  */
+  --text-micro: 0.6875rem;
+  --text-mini: 0.75rem;
+  --text-small: 0.8125rem;
+  --text-regular: 0.9375rem;
+  --text-large: 1.125rem;
+  --text-title1: 2rem;
+  --text-title2: 1.5rem;
+  --text-title3: 1.25rem;
+  --text-title4: 1.125rem;
 
+  /* Colors  */
   --color-focus-ring: var(--blue-8);
 
   --color-background: var(--background);
@@ -82,26 +85,6 @@
   --radius-xs: calc(var(--radius) - 4px);
 }
 
-@utility container {
-  margin-inline: auto;
-  padding-inline: 1.5rem;
-  @media (width >= theme(--breakpoint-xs)) {
-    max-width: none;
-  }
-  @media (width >= 1400px) {
-    max-width: 1400px;
-  }
-}
-
-@utility no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-
 @layer base {
   * {
     @apply border-border-subtle outline-focus-ring;
@@ -117,12 +100,15 @@
   }
 
   body {
-    @apply scroll-smooth min-w-[320px] text-base font-sans;
-    font-feature-settings:
-      "liga" 1,
-      "calt" 1; /* fix for Chrome */
-    font-synthesis-weight: none;
-    text-rendering: optimizeLegibility;
+    @apply scroll-smooth min-w-[320px] leading-normal text-regular font-sans;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    -webkit-text-size-adjust: 100%;
+    font-feature-settings: "calt"; /* fix for Chrome */
   }
 
   textarea::-webkit-resizer {
@@ -152,9 +138,7 @@
     --prose-blockquote-border-color: var(--tomato-9);
 
     color: var(--prose-color);
-    font-size: var(--text-base);
-    line-height: 1.75;
-    white-space: normal;
+    @apply leading-[1.7] whitespace-normal text-regular;
 
     /* Spacing between elements */
     *:where(:not(.not-prose, .not-prose *))
@@ -164,36 +148,36 @@
 
     /* Headings */
     h1:where(:not(.not-prose, .not-prose *)) {
-      font-size: 1.75rem;
+      font-size: var(--text-title1);
       line-height: 1.25;
       letter-spacing: -0.025em;
       color: var(--prose-heading-color);
-      font-weight: var(--font-weight-semibold);
+      font-weight: var(--font-weight-medium);
       margin-top: calc(var(--spacing) * 16);
     }
 
     h2:where(:not(.not-prose, .not-prose *)) {
-      font-size: 1.5rem;
+      font-size: var(--text-title2);
       line-height: 1.35;
       letter-spacing: -0.025em;
       color: var(--prose-heading-color);
-      font-weight: var(--font-weight-semibold);
+      font-weight: var(--font-weight-medium);
       margin-top: calc(var(--spacing) * 14);
     }
 
     h3:where(:not(.not-prose, .not-prose *)) {
-      font-size: 1.25rem;
+      font-size: var(--text-title3);
       line-height: 1.4;
       color: var(--prose-heading-color);
-      font-weight: var(--font-weight-semibold);
+      font-weight: var(--font-weight-medium);
       margin-top: calc(var(--spacing) * 12);
     }
 
     h4:where(:not(.not-prose, .not-prose *)) {
-      font-size: var(--text-base);
+      font-size: var(--text-large);
       line-height: 1.5;
       color: var(--prose-heading-color);
-      font-weight: var(--font-weight-semibold);
+      font-weight: var(--font-weight-medium);
       margin-top: calc(var(--spacing) * 10);
     }
 
@@ -282,7 +266,7 @@
       font-variant-ligatures: none;
       font-family: var(--font-mono);
       font-weight: var(--font-weight-medium);
-      font-size: 0.875em;
+      font-size: var(--text-small);
       color: var(--prose-code-color);
       background-color: var(--background-element-hover);
       padding: 0.125rem 0.375rem;
@@ -290,7 +274,7 @@
     }
 
     :is(h2, h3, h4) code:where(:not(.not-prose, .not-prose *)) {
-      font-weight: var(--font-weight-semibold);
+      font-weight: var(--font-weight-medium);
     }
 
     /* Remove backticks from inline code */
@@ -310,7 +294,7 @@
       background-color: transparent;
       padding: 0;
       border-radius: 0;
-      font-size: var(--text-sm);
+      font-size: var(--text-small);
       line-height: 1.75;
     }
 
@@ -324,7 +308,7 @@
       table-layout: auto;
       margin-top: calc(var(--spacing) * 8);
       margin-bottom: calc(var(--spacing) * 8);
-      font-size: var(--text-sm);
+      font-size: var(--text-small);
       line-height: 1.5;
     }
 
@@ -403,7 +387,7 @@
     figcaption:where(:not(.not-prose, .not-prose *)) {
       margin-top: calc(var(--spacing) * 3);
       text-align: center;
-      font-size: var(--text-sm);
+      font-size: var(--text-small);
       font-style: italic;
       color: var(--prose-color);
     }
@@ -415,6 +399,10 @@
       border-radius: var(--radius-lg);
     }
 
+    kbd:where(:not(.not-prose, .not-prose *)) {
+      @apply pointer-events-none inline-flex h-5 w-fit min-w-5 select-none items-center justify-center gap-1 rounded-sm bg-background-element-hover px-1 font-medium font-sans text-foreground-subtle text-small;
+    }
+
     /* First and last child margin reset */
     :first-child:where(:not(.not-prose, .not-prose *)) {
       margin-top: 0;
@@ -423,5 +411,25 @@
     :last-child:where(:not(.not-prose, .not-prose *)) {
       margin-bottom: 0;
     }
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  @media (width >= theme(--breakpoint-xs)) {
+    max-width: none;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }

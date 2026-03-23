@@ -30,8 +30,8 @@ function FieldLegend({
       className={cn(
         "font-medium",
         "mb-1",
-        "data-[variant=legend]:text-base",
-        "data-[variant=label]:text-sm",
+        "data-[variant=legend]:text-regular",
+        "data-[variant=label]:text-small",
         className
       )}
       {...props}
@@ -127,7 +127,7 @@ function FieldTitle({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="field-label"
       className={cn(
-        "flex w-fit items-center gap-2 font-medium text-sm leading-snug group-data-[disabled=true]/field:opacity-50",
+        "flex w-fit items-center gap-2 font-medium text-small leading-snug group-data-[disabled=true]/field:opacity-50",
         className
       )}
       {...props}
@@ -140,7 +140,7 @@ function FieldDescription({ className, ...props }: React.ComponentProps<"p">) {
     <p
       data-slot="field-description"
       className={cn(
-        "text-left text-foreground-subtle text-sm leading-normal",
+        "text-left text-foreground-subtle text-small leading-normal",
         "group-has-data-[orientation=horizontal]/field:text-balance",
         "nth-last-2:-mt-1 last:mt-0 [[data-variant=legend]+&]:-mt-1",
         "*:[a]:text-info *:[a]:underline *:[a]:decoration-info-border *:[a]:underline-offset-3 *:[a]:hover:decoration-info",
@@ -163,7 +163,7 @@ function FieldSeparator({
       data-slot="field-separator"
       data-content={!!children}
       className={cn(
-        "relative -my-2 h-5 text-sm group-data-[variant=outline]/field-group:-mb-2",
+        "relative -my-2 h-5 text-small group-data-[variant=outline]/field-group:-mb-2",
         className
       )}
       {...props}>
@@ -222,7 +222,7 @@ function FieldError({
     <div
       role="alert"
       data-slot="field-error"
-      className={cn("font-normal text-danger text-xs", className)}
+      className={cn("font-normal text-danger text-micro", className)}
       {...props}>
       {content}
     </div>

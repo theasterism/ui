@@ -79,7 +79,7 @@ function ToastList({ position = "bottom-right" }: { position: ToastPosition }) {
                     : ["right", isTop ? "up" : "down"]
               }
               className={cn(
-                "absolute z-[calc(9999-var(--toast-index))] h-(--toast-calc-height) w-full select-none rounded-md border bg-background-element bg-clip-padding p-3 text-foreground shadow-lg [transition:transform_.5s_cubic-bezier(.22,1,.36,1),opacity_.5s,height_.15s] before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-md)-1px)]",
+                "absolute z-[calc(9999-var(--toast-index))] h-(--toast-calc-height) w-full select-none rounded-md border border-border-subtle bg-background-element bg-clip-padding p-3 text-foreground shadow-lg [transition:transform_.5s_cubic-bezier(.22,1,.36,1),opacity_.5s,height_.15s] before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-md)-1px)]",
                 // Base positioning using data-position
                 "data-[position*=right]:right-0 data-[position*=right]:left-auto",
                 "data-[position*=left]:right-auto data-[position*=left]:left-0",
@@ -119,7 +119,7 @@ function ToastList({ position = "bottom-right" }: { position: ToastPosition }) {
                 "data-expanded:data-ending-style:data-[swipe-direction=up]:[transform:translateY(calc(var(--toast-swipe-movement-y)-100%-var(--toast-inset)))]",
                 "data-expanded:data-ending-style:data-[swipe-direction=down]:[transform:translateY(calc(var(--toast-swipe-movement-y)+100%+var(--toast-inset)))]"
               )}>
-              <Toast.Content className="flex items-center justify-between gap-1.5 overflow-hidden text-sm transition-opacity duration-250 data-behind:pointer-events-none data-expanded:pointer-events-auto data-behind:opacity-0 data-expanded:opacity-100">
+              <Toast.Content className="flex items-center justify-between gap-1.5 overflow-hidden text-small! transition-opacity duration-250 data-behind:pointer-events-none data-expanded:pointer-events-auto data-behind:opacity-0 data-expanded:opacity-100">
                 <div className="flex gap-2">
                   {Icon && (
                     <div
@@ -130,11 +130,11 @@ function ToastList({ position = "bottom-right" }: { position: ToastPosition }) {
                   )}
                   <div className="flex flex-col gap-0.5">
                     <Toast.Title
-                      className="font-semibold text-foreground text-sm"
+                      className="font-semibold text-foreground text-small"
                       data-slot="toast-title"
                     />
                     <Toast.Description
-                      className="text-foreground-subtle text-sm"
+                      className="text-foreground-subtle text-small"
                       data-slot="toast-description"
                     />
                   </div>

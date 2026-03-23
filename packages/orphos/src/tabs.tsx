@@ -54,7 +54,7 @@ function TabsTrigger({
     <TabsPrimitive.Tab
       data-slot="tabs-trigger"
       className={cn(
-        "flex flex-1 shrink-0 cursor-default items-center justify-center whitespace-nowrap rounded-md border border-transparent font-medium text-foreground-subtle text-sm transition-[color,background-color,box-shadow] focus-visible:outline-2 data-disabled:pointer-events-none data-disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "flex flex-1 shrink-0 cursor-default items-center justify-center whitespace-nowrap rounded-md border border-transparent font-medium text-foreground-subtle text-small transition-[color,background-color,box-shadow] focus-visible:outline-2 data-disabled:pointer-events-none data-disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
         "hover:text-foreground data-selected:text-foreground",
         "gap-1.5 px-[calc(--spacing(2.5)-1px)] py-[calc(--spacing(1.5)-1px)]",
         "data-[orientation=vertical]:w-full data-[orientation=vertical]:justify-start",
