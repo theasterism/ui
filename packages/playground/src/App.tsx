@@ -325,8 +325,8 @@ function App() {
                     depends on the choices we make today.
                   </em>
                 </p>
+                <kbd>Tab</kbd>
               </div>
-              <Kbd className="ml-1">Tab</Kbd>
             </div>
           </div>
         </div>

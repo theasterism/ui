@@ -36,7 +36,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 {section.items.map((item) => {
                   return (
                     <SidebarMenuItem key={item.slug}>
-                      <SidebarMenuButton size="sm">
+                      <SidebarMenuButton size="default">
                         {item.title}
                       </SidebarMenuButton>
                     </SidebarMenuItem>
