@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.53.3
+
+### Patch Changes
+
+- 4cfd143: change text-size
+
 ## 0.53.2
 
 ### Patch Changes
