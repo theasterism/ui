@@ -1,3 +1,5 @@
+@import "@radix-ui/colors/gray.css";
+@import "@radix-ui/colors/gray-dark.css";
 @import "@radix-ui/colors/tomato.css";
 @import "@radix-ui/colors/tomato-dark.css";
 @import "@radix-ui/colors/red.css";
@@ -10,94 +12,51 @@
 @import "@radix-ui/colors/blue-dark.css";
 
 :root,
-.light,
-.light-theme {
-  --color-background: #fbfbfb;
-
-  --gray-1: #f7f7f7;
-  --gray-2: #f0f0f0;
-  --gray-3: #e6e6e6;
-  --gray-4: #dddddd;
-  --gray-5: #d2d2d2;
-  --gray-6: #c9c9c9;
-  --gray-7: #bebebe;
-  --gray-8: #aaaaaa;
-  --gray-9: #7c7c7c;
-  --gray-10: #727272;
-  --gray-11: #606060;
-  --gray-12: #202020;
-}
-
-@supports (color: color(display-p3 1 1 1)) {
-  @media (color-gamut: p3) {
-    :root,
-    .light,
-    .light-theme {
-      --color-background: oklch(98.73% 0 139.47);
-
-      --gray-1: oklch(97.7% 0 none);
-      --gray-2: oklch(95.4% 0 none);
-      --gray-3: oklch(92.4% 0 none);
-      --gray-4: oklch(89.8% 0 none);
-      --gray-5: oklch(86.3% 0 none);
-      --gray-6: oklch(83.6% 0 none);
-      --gray-7: oklch(80.1% 0 none);
-      --gray-8: oklch(73.9% 0 none);
-      --gray-9: oklch(58.8% 0 none);
-      --gray-10: oklch(55.2% 0 none);
-      --gray-11: oklch(48.8% 0 none);
-      --gray-12: oklch(24.3% 0 none);
-    }
-  }
-}
-
-.dark,
-.dark-theme {
-  --color-background: #1a1a1a;
-
-  --gray-1: #0d0d0d;
-  --gray-2: #181818;
-  --gray-: #222;
-  --gray-3: #292929;
-  --gray-4: #313131;
-  --gray-6: #3a3a3a;
-  --gray-7: #484848;
-  --gray-8: #606060;
-  --gray-9: #6e6e6e;
-  --gray-10: #7b7b7b;
-  --gray-11: #b4b4b4;
-  --gray-12: #eee;
-}
-
-@supports (color: color(display-p3 1 1 1)) {
-  @media (color-gamut: p3) {
-    .dark,
-    .dark-theme {
-      --color-background: oklch(0.218 0 0);
-
-      --gray-1: oklch(15.9% 0 none);
-      --gray-2: oklch(21% 0 none);
-      --gray-: oklch(25.2% 0 none);
-      --gray-3: oklch(28.2% 0 none);
-      --gray-4: oklch(31.3% 0 none);
-      --gray-6: oklch(34.9% 0 none);
-      --gray-7: oklch(40.2% 0 none);
-      --gray-8: oklch(48.8% 0 none);
-      --gray-9: oklch(53.8% 0 none);
-      --gray-10: oklch(58.4% 0 none);
-      --gray-11: oklch(77% 0 none);
-      --gray-12: oklch(94.9% 0 none);
-    }
-  }
-}
-
-:root {
-  --background: var(--gray-1);
+.light {
+  --background: color-mix(in oklch, var(--color-white) 20%, var(--gray-1));
+  --background-landing: var(--gray-1);
   --background-subtle: var(--gray-2);
-  --background-element: var(--color-background);
+  --background-element: var(--color-white);
   --background-element-hover: var(--gray-3);
   --background-element-active: var(--gray-4);
-  --border-subtle: var(--gray-4);
+  --border: var(--gray-7);
+  --border-subtle: var(--gray-5);
+  --ring: var(--blue-8);
   --foreground-subtle: var(--gray-11);
   --foreground: var(--gray-12);
+
+  --sidebar: var(--color-white);
+}
+
+.dark {
+  --background: color-mix(in oklch, var(--color-black) 20%, var(--gray-1));
+  --background-landing: var(--gray-1);
+  --background-subtle: color-mix(
+    in oklch,
+    var(--color-black) 10%,
+    var(--gray-2)
+  );
+  --background-element: color-mix(
+    in oklch,
+    var(--color-black) 20%,
+    var(--gray-3)
+  );
+  --background-element-hover: color-mix(
+    in oklch,
+    var(--color-black) 10%,
+    var(--gray-4)
+  );
+
+  --background-element-active: color-mix(
+    in oklch,
+    var(--color-black) 8%,
+    var(--gray-5)
+  );
+  --border: color-mix(in oklch, var(--color-black) 10%, var(--gray-6));
+  --border-subtle: color-mix(in oklch, var(--color-black) 25%, var(--gray-6));
+  --ring: var(--blue-8);
+  --foreground-subtle: var(--gray-11);
+  --foreground: var(--gray-12);
+
+  --sidebar: color-mix(in oklch, var(--color-black) 9%, var(--gray-1));
 }

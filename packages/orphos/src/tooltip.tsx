@@ -75,10 +75,10 @@ function TooltipContent({
         <TooltipPrimitive.Arrow
           className={cn(
             "z-50 size-2 rotate-45 bg-foreground fill-foreground",
-            "data-[side=bottom]:-translate-y-1/2 data-[side=bottom]:top-[0.2px]",
+            "data-[side=bottom]:top-[0.2px] data-[side=bottom]:-translate-y-1/2",
             "data-[side=top]:bottom-[0.2px] data-[side=top]:translate-y-1/2",
             "data-[side=left]:right-0 data-[side=left]:translate-x-1/2",
-            "data-[side=right]:-translate-x-1/2 data-[side=right]:left-[0.2px]",
+            "data-[side=right]:left-[0.2px] data-[side=right]:-translate-x-1/2",
             className
           )}
         />
@@ -89,8 +89,8 @@ function TooltipContent({
 
 export {
   Tooltip,
-  TooltipTrigger,
   TooltipContent,
-  TooltipProvider,
   TooltipPositioner,
+  TooltipProvider,
+  TooltipTrigger,
 };
