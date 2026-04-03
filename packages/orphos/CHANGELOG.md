@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.54.0
+
+### Minor Changes
+
+- 78ef71a: change color palette
+
 ## 0.53.5
 
 ### Patch Changes
