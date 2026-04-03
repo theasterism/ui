@@ -4,8 +4,9 @@
     "jsx": "react-jsx",
     "module": "ES2022",
     "moduleResolution": "Bundler",
-    "isolatedModules": true
+    "isolatedModules": true,
+    "rootDir": "./src"
   },
-  "include": ["src"],
+  "include": ["./src/*.tsx", "./src/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

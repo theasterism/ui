@@ -1,13 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "@fontsource/geist/latin.css";
-import "@fontsource/geist-mono/latin.css";
-import "@fontsource/jetbrains-mono/latin.css";
+import "@fontsource-variable/inter/wght.css";
+import "@fontsource-variable/inter/wght-italic.css";
+import "@fontsource-variable/jetbrains-mono/wght.css";
 import "./index.css";
+import { ThemeProvider } from "next-themes";
 import { ToastProvider } from "orphos/toast";
 import { TooltipProvider } from "orphos/tooltip";
 import { App } from "./App";
-import { ThemeProvider } from "next-themes";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

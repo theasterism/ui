@@ -3,7 +3,6 @@
 
 import { IconBold } from "@tabler/icons-react";
 import { Badge } from "orphos/badge";
-import { Kbd } from "orphos/kbd";
 import { Separator } from "orphos/separator";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "orphos/sidebar";
 import { Toggle } from "orphos/toggle";
@@ -26,9 +25,9 @@ import { SkeletonDemo } from "./components/skeleton";
 import { SliderDemo } from "./components/slider";
 import { SwitchDemo } from "./components/switch";
 import { TabsDemo } from "./components/tabs";
+import { ThemeToggle } from "./components/theme-toggle";
 import { ToastDemo } from "./components/toast";
 import { TooltipDemo } from "./components/tooltip";
-import { ThemeToggle } from "./components/theme-toggle";
 
 function App() {
   return (
@@ -36,7 +35,7 @@ function App() {
       <AppSidebar />
       <SidebarInset>
         <div className="flex min-h-0 flex-1 flex-col">
-          <header className="sticky inset-x-0 top-0 flex h-14 w-full shrink-0 items-center gap-2 border-border-subtle border-b">
+          <header className="sticky inset-x-0 top-0 flex h-12.25 w-full shrink-0 items-center gap-2 border-b border-b-border-subtle bg-sidebar">
             <div className="flex w-full items-center justify-between gap-2 px-4">
               <SidebarTrigger />
               <ThemeToggle />
