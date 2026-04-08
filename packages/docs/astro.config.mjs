@@ -13,5 +13,7 @@ export default defineConfig({
     // @ts-expect-error shut up!
     plugins: [tailwindcss()],
   },
+  server: {
+    port: 3627,
+  },
 });
-
