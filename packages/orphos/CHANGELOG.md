@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.54.2
+
+### Patch Changes
+
+- 5f975b9: change sidebar width
+
 ## 0.54.1
 
 ### Patch Changes
