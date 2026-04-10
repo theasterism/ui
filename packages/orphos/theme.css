@@ -94,13 +94,8 @@
     @apply border-border outline-focus-ring;
   }
 
-  ::selection {
-    color: var(--color-primary-foreground);
-    background-color: var(--tomato-9);
-  }
-
   body {
-    @apply scroll-smooth min-w-[320px] leading-normal text-regular font-sans;
+    @apply scroll-smooth min-w-[320px] leading-normal text-regular font-sans selection:text-primary-foreground selection:bg-primary;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizelegibility;
