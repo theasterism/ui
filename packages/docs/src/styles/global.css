@@ -1,1 +1,9 @@
 @import "tailwindcss";
+@import "orphos/theme.css";
+@source "../../node_modules/orphos/dist";
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
