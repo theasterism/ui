@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.54.3
+
+### Patch Changes
+
+- ac6662b: fix sidebar backdrop
+
 ## 0.54.2
 
 ### Patch Changes
