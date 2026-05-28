@@ -48,11 +48,11 @@
 
   --color-sidebar: var(--sidebar);
 
-  --color-primary: var(--tomato-9);
-  --color-primary-hover: var(--tomato-10);
-  --color-primary-border: var(--tomato-6);
+  --color-primary: var(--accent-9);
+  --color-primary-hover: var(--accent-10);
+  --color-primary-border: var(--accent-6);
   --color-primary-foreground: var(--color-white);
-  --color-primary-subtle: var(--tomato-2);
+  --color-primary-subtle: var(--accent-2);
 
   --color-danger: var(--red-9);
   --color-danger-hover: var(--red-10);
@@ -126,7 +126,7 @@
     --prose-th-borders: var(--border);
     --prose-td-borders: var(--border-subtle);
     --prose-hr-color: var(--color-border-subtle);
-    --prose-blockquote-border-color: var(--tomato-9);
+    --prose-blockquote-border-color: var(--accent-9);
 
     color: var(--prose-color);
     @apply leading-[1.7] whitespace-normal text-regular;

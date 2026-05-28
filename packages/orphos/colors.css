@@ -1,7 +1,5 @@
 @import "@radix-ui/colors/gray.css";
 @import "@radix-ui/colors/gray-dark.css";
-@import "@radix-ui/colors/tomato.css";
-@import "@radix-ui/colors/tomato-dark.css";
 @import "@radix-ui/colors/red.css";
 @import "@radix-ui/colors/red-dark.css";
 @import "@radix-ui/colors/green.css";
@@ -10,6 +8,132 @@
 @import "@radix-ui/colors/amber-dark.css";
 @import "@radix-ui/colors/blue.css";
 @import "@radix-ui/colors/blue-dark.css";
+
+:root,
+.light,
+.light-theme {
+  --accent-1: #f1f1f3;
+  --accent-2: #eaecf3;
+  --accent-3: #e0e4f2;
+  --accent-4: #d2daf6;
+  --accent-5: #c3cef7;
+  --accent-6: #b1bff8;
+  --accent-7: #9bacef;
+  --accent-8: #7d90e7;
+  --accent-9: #5b6cff;
+  --accent-10: #505ef0;
+  --accent-11: #3a42c3;
+  --accent-12: #222a63;
+
+  --accent-a1: #3535b504;
+  --accent-a2: #0d3bdd0b;
+  --accent-a3: #0232dc15;
+  --accent-a4: #3c67ff2f;
+  --accent-a5: #426aff46;
+  --accent-a6: #3d63ff5d;
+  --accent-a7: #0331e75e;
+  --accent-a8: #0229da7d;
+  --accent-a9: #5b6cff;
+  --accent-a10: #0116efac;
+  --accent-a11: #010cb4c3;
+  --accent-a12: #010a4cdc;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root,
+    .light,
+    .light-theme {
+      --accent-1: oklch(95.9% 0.0019 273);
+      --accent-2: oklch(94.4% 0.0094 273);
+      --accent-3: oklch(92% 0.0196 273);
+      --accent-4: oklch(89.2% 0.0388 273);
+      --accent-5: oklch(85.7% 0.0585 273);
+      --accent-6: oklch(81.5% 0.0811 273);
+      --accent-7: oklch(75.6% 0.0994 273);
+      --accent-8: oklch(67.7% 0.1302 273);
+      --accent-9: oklch(60.2% 0.2167 273);
+      --accent-10: oklch(55.9% 0.2167 273);
+      --accent-11: oklch(45.9% 0.1971 273);
+      --accent-12: oklch(31.3% 0.1002 273);
+
+      --accent-a1: color(display-p3 0.0549 0.0549 0.6588 / 0.013);
+      --accent-a2: color(display-p3 0.0039 0.1922 0.7686 / 0.041);
+      --accent-a3: color(display-p3 0.0039 0.1529 0.8078 / 0.078);
+      --accent-a4: color(display-p3 0.0078 0.2078 0.9569 / 0.136);
+      --accent-a5: color(display-p3 0.0039 0.1882 0.9608 / 0.193);
+      --accent-a6: color(display-p3 0.0039 0.1686 0.9451 / 0.263);
+      --accent-a7: color(display-p3 0.0039 0.149 0.8471 / 0.353);
+      --accent-a8: color(display-p3 0.0039 0.1176 0.8 / 0.472);
+      --accent-a9: color(display-p3 0 0 1 / 0.182);
+      --accent-a10: color(display-p3 0 0.0667 0.8784 / 0.66);
+      --accent-a11: color(display-p3 0 0.0314 0.6667 / 0.755);
+      --accent-a12: color(display-p3 0 0.0275 0.2706 / 0.853);
+    }
+  }
+}
+
+.dark,
+.dark-theme {
+  --accent-1: #151928;
+  --accent-2: #171c2e;
+  --accent-3: #1e2554;
+  --accent-4: #242c6f;
+  --accent-5: #2b3482;
+  --accent-6: #333e92;
+  --accent-7: #3d4aa6;
+  --accent-8: #4756c3;
+  --accent-9: #5b6cff;
+  --accent-10: #505ef0;
+  --accent-11: #9ab0ff;
+  --accent-12: #d6e0ff;
+
+  --accent-a1: #000bfa10;
+  --accent-a2: #0031f817;
+  --accent-a3: #2a46fe41;
+  --accent-a4: #354bff5f;
+  --accent-a5: #4054ff74;
+  --accent-a6: #4a5fff86;
+  --accent-a7: #5469ff9c;
+  --accent-a8: #576bfebd;
+  --accent-a9: #5b6cff;
+  --accent-a10: #5362feef;
+  --accent-a11: #9ab0ff;
+  --accent-a12: #d6e0ff;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    .dark,
+    .dark-theme {
+      --accent-1: oklch(21.8% 0.0303 273);
+      --accent-2: oklch(23% 0.0372 273);
+      --accent-3: oklch(28.8% 0.0856 273);
+      --accent-4: oklch(32.9% 0.1161 273);
+      --accent-5: oklch(36.8% 0.1296 273);
+      --accent-6: oklch(40.6% 0.1367 273);
+      --accent-7: oklch(45.1% 0.1485 273);
+      --accent-8: oklch(50.4% 0.1696 273);
+      --accent-9: oklch(60.2% 0.2167 273);
+      --accent-10: oklch(55.9% 0.2167 273);
+      --accent-11: oklch(77.7% 0.153 273);
+      --accent-12: oklch(91.1% 0.0527 273);
+
+      --accent-a1: color(display-p3 0 0.0353 0.9961 / 0.057);
+      --accent-a2: color(display-p3 0.0078 0.2 1 / 0.083);
+      --accent-a3: color(display-p3 0.1843 0.2824 1 / 0.241);
+      --accent-a4: color(display-p3 0.2353 0.302 1 / 0.354);
+      --accent-a5: color(display-p3 0.2745 0.3373 1 / 0.433);
+      --accent-a6: color(display-p3 0.3137 0.3843 1 / 0.503);
+      --accent-a7: color(display-p3 0.3569 0.4235 1 / 0.586);
+      --accent-a8: color(display-p3 0.3647 0.4314 0.9961 / 0.708);
+      --accent-a9: color(display-p3 0.3804 0.4314 1 / 0.961);
+      --accent-a10: color(display-p3 0.349 0.4 1 / 0.896);
+      --accent-a11: color(display-p3 0.6314 0.702 1 / 0.974);
+      --accent-a12: color(display-p3 0.8588 0.8902 1 / 0.987);
+    }
+  }
+}
 
 :root,
 .light {

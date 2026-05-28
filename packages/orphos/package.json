@@ -42,7 +42,7 @@
     "typescript": "^6.0.2"
   },
   "peerDependencies": {
-    "@types/react": "latest",
+    "@types/react": ">=19.2.15",
     "react": ">=19.2.5",
     "tailwindcss": "^4.2.2"
   },
