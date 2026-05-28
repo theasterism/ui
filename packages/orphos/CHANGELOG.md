@@ -1,5 +1,11 @@
 # @theanalog/orphos
 
+## 0.55.0
+
+### Minor Changes
+
+- 13ccd32: change accent color
+
 ## 0.54.3
 
 ### Patch Changes
