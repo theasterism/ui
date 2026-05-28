@@ -1,0 +1,12 @@
+packages:
+  - packages/*
+allowBuilds:
+  core-js: true
+  esbuild: true
+  sharp: true
+  workerd: false
+overrides:
+  "cva": "1.0.0-beta.4"
+minimumReleaseAge: 7200
+minimumReleaseAgeExclude:
+  - "sst"
