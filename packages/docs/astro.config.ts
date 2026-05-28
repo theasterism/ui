@@ -1,5 +1,4 @@
-// @ts-check
-
+import cloudflare from "@astrojs/cloudflare";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
@@ -37,4 +36,10 @@ export default defineConfig({
       provider: fontProviders.fontsource(),
     },
   ],
+  adapter: cloudflare({
+    imageService: {
+      build: "compile",
+      runtime: "passthrough",
+    },
+  }),
 });

@@ -2,6 +2,18 @@
 import { Font } from "astro:assets";
 import "../styles/global.css";
 import { CONFIG } from "../lib/config";
+import { cn } from "orphos/utils";
+import { buttonVariants } from "orphos/button";
+import { GithubLink } from "../components/github-link.tsx";
+
+const NAV_LINKS: Array<{
+  label: string;
+  href: string;
+}> = [
+  { label: "Components", href: "#components" },
+  { label: "Docs", href: "#setup" },
+  { label: "Changelog", href: "https://github.com/theasterism/ui/releases" },
+];
 
 interface Props {
   title?: string;
@@ -19,7 +31,7 @@ const metaDescription = description ? description : CONFIG.description;
 // const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
-<html lang="en">
+<html lang="en" >
   <head lang="en">
     <!-- Global Metadata -->
     <meta charset="UTF-8">
@@ -31,7 +43,7 @@ const metaDescription = description ? description : CONFIG.description;
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content={metaTitle} />
-    <link rel="manifest" href="/site.webmanifest" />
+    <!-- <link rel="manifest" href="/site.webmanifest" /> -->
 
     <!-- Primary Meta Tags -->
     <title>{metaTitle}</title>
@@ -64,8 +76,44 @@ const metaDescription = description ? description : CONFIG.description;
       class="z-50 absolute! top-0 left-0 bg-foreground text-background p-2! sr-only focus:not-sr-only"
       >Skip to content</a
     >
-    <main id="main-content" >
-      <slot />
-    </main>
+    <div class="min-h-screen bg-background">
+      <nav id="site-nav" class="sticky top-0 z-50 bg-background-landing">
+      <div class="max-w-5xl mx-auto px-6 flex items-center justify-between h-14 w-full">
+      <a
+          href="/"
+          class="flex items-center text-foreground relative before:absolute before:-inset-1.75"
+        >
+          <div class="w-5.5 h-5.5 bg-primary rounded-md grid place-items-center">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+              <circle cx="3.5" cy="3.5" r="2.5" fill="white" />
+              <circle cx="9.5" cy="3.5" r="2.5" fill="white" opacity=".4" />
+              <circle cx="3.5" cy="9.5" r="2.5" fill="white" opacity=".4" />
+              <circle cx="9.5" cy="9.5" r="2.5" fill="white" />
+            </svg>
+          </div>
+          <span class="sr-only" >orphos</span>
+        </a>
+      <ul class="hidden md:flex items-center list-none">
+          {NAV_LINKS.map((link) => (
+            <li>
+              <a
+              href={link.href}
+              class:list={cn(buttonVariants({
+                variant: "ghost",
+              }))}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div class="flex items-center gap-2">
+          <GithubLink client:load />
+        </div>
+      </div>
+      
+    </nav>
+          <slot />
+    </div>
   </body>
 </html>

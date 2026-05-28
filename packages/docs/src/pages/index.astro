@@ -1,7 +1,141 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { cn } from "orphos/utils";
+import { buttonVariants } from "orphos/button";
+import { IconComponents, IconDownload } from "@tabler/icons-react";
 ---
 
-<BaseLayout>
-	<h1 >Astro</h1>
+<BaseLayout description="Orphos helps you ship React interfaces faster with accessible components built on Base UI and Tailwind CSS v4.">
+  <main id="main-content">
+    <section class="pt-20 pb-16">
+      <div class="max-w-5xl mx-auto px-6 w-full">
+        <div class="max-w-[680px]">
+          <h1
+            class="text-[clamp(36px,6vw,56px)] font-bold tracking-[-0.03em] leading-[1.08] text-balance"
+            style={{ animation: 'fadeUp 400ms ease 80ms both' }}
+          >
+            Build React UIs faster.
+            <br />
+            Skip rebuilding forms,
+            <br />
+            menus, and dialogs.
+          </h1>
+
+          <p
+            class="mt-5 text-[17px] leading-[1.65] text-foreground-subtle font-normal text-pretty max-w-[520px]"
+            style={{ animation: 'fadeUp 400ms ease 160ms both' }}
+          >
+            Orphos is open source and built on Base UI plus Tailwind CSS v4.
+            Start with accessible primitives, then style every detail to match your product.
+          </p>
+
+          <div
+            class="flex flex-wrap items-center gap-2.5 mt-8"
+            style={{ animation: 'fadeUp 400ms ease 240ms both' }}
+          >
+            <a
+              class:list={cn(
+                buttonVariants({
+                  variant: "primary",
+                  size: "lg",
+                }),
+              )}
+              href="#setup"
+            >
+              <IconDownload />
+              Install Orphos
+            </a>
+            <a
+              href="#components"
+              class:list={cn(
+                buttonVariants({
+                  size: "lg",
+                }),
+              )}
+            >
+              <IconComponents />
+              See components
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="setup" class="py-14 border-t border-border-subtle">
+      <div class="max-w-5xl mx-auto px-6 w-full">
+        <div class="max-w-[760px]">
+          <h2 class="text-[clamp(26px,4vw,34px)] font-semibold tracking-[-0.02em] text-balance">
+            Install once. Start building.
+          </h2>
+          <p class="mt-3 text-[16px] leading-[1.65] text-foreground-subtle max-w-[620px]">
+            Add the package, import the theme, and render your first component in minutes.
+            No custom build step, and no locked-in visual style.
+          </p>
+
+          <div class="mt-6 rounded-xl bg-background-element ring-1 ring-border-subtle p-4 overflow-x-auto">
+            <code class="font-mono text-sm">bun add orphos</code>
+          </div>
+
+          <ol class="mt-6 grid gap-3 md:grid-cols-3">
+            <li class="rounded-xl bg-background-element ring-1 ring-border-subtle p-4 text-sm leading-6">
+              <strong class="block text-foreground">1. Install dependencies</strong>
+              Add <code class="font-mono">orphos</code> and peer dependencies.
+            </li>
+            <li class="rounded-xl bg-background-element ring-1 ring-border-subtle p-4 text-sm leading-6">
+              <strong class="block text-foreground">2. Import theme CSS</strong>
+              Include <code class="font-mono">orphos/theme.css</code> in your global styles.
+            </li>
+            <li class="rounded-xl bg-background-element ring-1 ring-border-subtle p-4 text-sm leading-6">
+              <strong class="block text-foreground">3. Build with primitives</strong>
+              Compose accessible components and style them your way.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="components" class="py-14 border-t border-border-subtle">
+      <div class="max-w-5xl mx-auto px-6 w-full">
+        <div class="max-w-[760px]">
+          <h2 class="text-[clamp(26px,4vw,34px)] font-semibold tracking-[-0.02em] text-balance">
+            Components you'll actually use
+          </h2>
+          <p class="mt-3 text-[16px] leading-[1.65] text-foreground-subtle max-w-[620px]">
+            You get form controls, overlays, navigation, feedback, and layout primitives for everyday screens.
+          </p>
+
+          <div class="mt-6 grid gap-3 md:grid-cols-3">
+            <article class="rounded-xl bg-background-element ring-1 ring-border-subtle p-4">
+              <h3 class="font-medium">Forms</h3>
+              <p class="mt-2 text-sm leading-6 text-foreground-subtle">Input, Textarea, Select, Checkbox, Switch, and Radio Group.</p>
+            </article>
+            <article class="rounded-xl bg-background-element ring-1 ring-border-subtle p-4">
+              <h3 class="font-medium">Overlays</h3>
+              <p class="mt-2 text-sm leading-6 text-foreground-subtle">Dialog, Sheet, Popover, Tooltip, and Toast.</p>
+            </article>
+            <article class="rounded-xl bg-background-element ring-1 ring-border-subtle p-4">
+              <h3 class="font-medium">Navigation and layout</h3>
+              <p class="mt-2 text-sm leading-6 text-foreground-subtle">Tabs, Sidebar, Dropdown Menu, Context Menu, Card, and more.</p>
+            </article>
+          </div>
+
+          <div class="mt-8">
+            <a
+              class:list={cn(
+                buttonVariants({
+                  size: "lg",
+                }),
+              )}
+              href="https://github.com/theasterism/ui#components"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <IconComponents />
+              View all components on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </BaseLayout>
